@@ -1,0 +1,1812 @@
+"AWT-EventQueue-0" prio=0 tid=0x0 nid=0x0 runnable
+     java.lang.Thread.State: RUNNABLE
+
+	at br.com.gitflowhelper.git.GitCommandExecutor.run(GitCommandExecutor.java:30)
+	at br.com.gitflowhelper.popup.GitFlowPopup$2.lambda$actionPerformed$0(GitFlowPopup.java:74)
+	at br.com.gitflowhelper.popup.GitFlowPopup$2$$Lambda$3610/0x000000d001a92320.accept(Unknown Source)
+	at br.com.gitflowhelper.dialog.NameDialog.doOKAction(NameDialog.java:32)
+	at com.intellij.openapi.ui.DialogWrapper$OkAction.doAction(DialogWrapper.java:1924)
+	at com.intellij.openapi.ui.DialogWrapper$DialogWrapperAction.actionPerformed(DialogWrapper.java:1875)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2313)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6657)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3385)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6422)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5027)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4855)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4969)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4583)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4524)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2809)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4855)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:794)
+	at java.desktop/java.awt.EventQueue$3.run(EventQueue.java:739)
+	at java.desktop/java.awt.EventQueue$3.run(EventQueue.java:733)
+	at java.base@17.0.9/java.security.AccessController.executePrivileged(AccessController.java:776)
+	at java.base@17.0.9/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base@17.0.9/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.base@17.0.9/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:97)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:766)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:764)
+	at java.base@17.0.9/java.security.AccessController.executePrivileged(AccessController.java:776)
+	at java.base@17.0.9/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base@17.0.9/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:763)
+	at com.intellij.ide.IdeEventQueue.defaultDispatchEvent(IdeEventQueue.kt:695)
+	at com.intellij.ide.IdeEventQueue.dispatchMouseEvent(IdeEventQueue.kt:635)
+	at com.intellij.ide.IdeEventQueue._dispatchEvent$lambda$10(IdeEventQueue.kt:580)
+	at com.intellij.ide.IdeEventQueue$$Lambda$1242/0x000000d000b1b5d8.run(Unknown Source)
+	at com.intellij.openapi.application.impl.RwLockHolder.runWithEnabledImplicitRead(RwLockHolder.kt:75)
+	at com.intellij.openapi.application.impl.RwLockHolder.runWithImplicitRead(RwLockHolder.kt:67)
+	at com.intellij.ide.IdeEventQueue._dispatchEvent(IdeEventQueue.kt:580)
+	at com.intellij.ide.IdeEventQueue.access$_dispatchEvent(IdeEventQueue.kt:72)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1$1.compute(IdeEventQueue.kt:355)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1$1.compute(IdeEventQueue.kt:354)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.computePrioritized(CoreProgressManager.java:793)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1.invoke(IdeEventQueue.kt:354)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1.invoke(IdeEventQueue.kt:349)
+	at com.intellij.ide.IdeEventQueueKt.performActivity$lambda$1(IdeEventQueue.kt:1014)
+	at com.intellij.ide.IdeEventQueueKt$$Lambda$799/0x000000d000771aa8.run(Unknown Source)
+	at com.intellij.openapi.application.TransactionGuardImpl.performActivity(TransactionGuardImpl.java:106)
+	at com.intellij.ide.IdeEventQueueKt.performActivity(IdeEventQueue.kt:1014)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent$lambda$7(IdeEventQueue.kt:349)
+	at com.intellij.ide.IdeEventQueue$$Lambda$791/0x000000d00076d0e0.run(Unknown Source)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runIntendedWriteActionOnCurrentThread(ApplicationImpl.java:843)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent(IdeEventQueue.kt:391)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:207)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:128)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:121)
+	at java.desktop/java.awt.WaitDispatchSupport$2.run(WaitDispatchSupport.java:191)
+	at java.desktop/java.awt.WaitDispatchSupport$4.run(WaitDispatchSupport.java:236)
+	at java.desktop/java.awt.WaitDispatchSupport$4.run(WaitDispatchSupport.java:234)
+	at java.base@17.0.9/java.security.AccessController.executePrivileged(AccessController.java:776)
+	at java.base@17.0.9/java.security.AccessController.doPrivileged(AccessController.java:318)
+	at java.desktop/java.awt.WaitDispatchSupport.enter(WaitDispatchSupport.java:234)
+	at java.desktop/java.awt.Dialog.lambda$show$2(Dialog.java:1081)
+	at java.desktop/java.awt.Dialog$$Lambda$321/0x000000d0003cd960.run(Unknown Source)
+	at java.desktop/sun.awt.SunToolkit.performOnMainThreadIfNeeded(SunToolkit.java:2170)
+	at java.desktop/java.awt.Dialog.show(Dialog.java:1041)
+	at com.intellij.openapi.ui.impl.DialogWrapperPeerImpl$MyDialog.show(DialogWrapperPeerImpl.java:875)
+	at com.intellij.openapi.ui.impl.DialogWrapperPeerImpl.show(DialogWrapperPeerImpl.java:474)
+	at com.intellij.openapi.ui.DialogWrapper.doShow(DialogWrapper.java:1733)
+	at com.intellij.openapi.ui.DialogWrapper.show(DialogWrapper.java:1682)
+	at br.com.gitflowhelper.popup.GitFlowPopup$2.actionPerformed(GitFlowPopup.java:78)
+	at com.intellij.openapi.actionSystem.ex.ActionUtil.doPerformActionOrShowPopup(ActionUtil.java:344)
+	at com.intellij.openapi.actionSystem.ex.ActionUtil.lambda$performActionDumbAwareWithCallbacks$4(ActionUtil.java:318)
+	at com.intellij.openapi.actionSystem.ex.ActionUtil$$Lambda$3504/0x000000d001bfc248.run(Unknown Source)
+	at com.intellij.openapi.actionSystem.ex.ActionUtil.performDumbAwareWithCallbacks(ActionUtil.java:381)
+	at com.intellij.openapi.actionSystem.ex.ActionUtil.performActionDumbAwareWithCallbacks(ActionUtil.java:318)
+	at com.intellij.openapi.actionSystem.ex.ActionUtil.invokeAction(ActionUtil.java:553)
+	at com.intellij.ui.popup.ActionPopupStep.performAction(ActionPopupStep.java:258)
+	at com.intellij.ui.popup.ActionPopupStep.lambda$onChosen$3(ActionPopupStep.java:235)
+	at com.intellij.ui.popup.ActionPopupStep$$Lambda$3502/0x000000d001befc50.run(Unknown Source)
+	at com.intellij.ui.popup.AbstractPopup.lambda$dispose$18(AbstractPopup.java:1733)
+	at com.intellij.ui.popup.AbstractPopup$$Lambda$3503/0x000000d001bfc000.run(Unknown Source)
+	at com.intellij.openapi.wm.impl.FocusManagerImpl.lambda$doWhenFocusSettlesDown$3(FocusManagerImpl.java:169)
+	at com.intellij.openapi.wm.impl.FocusManagerImpl$$Lambda$1544/0x000000d000ea7360.run(Unknown Source)
+	at com.intellij.util.ui.EdtInvocationManager.invokeLaterIfNeeded(EdtInvocationManager.java:33)
+	at com.intellij.ide.IdeEventQueue.ifFocusEventsInTheQueue(IdeEventQueue.kt:220)
+	at com.intellij.ide.IdeEventQueue.executeWhenAllFocusEventsLeftTheQueue(IdeEventQueue.kt:186)
+	at com.intellij.openapi.wm.impl.FocusManagerImpl.doWhenFocusSettlesDown(FocusManagerImpl.java:165)
+	at com.intellij.openapi.wm.impl.FocusManagerImpl.doWhenFocusSettlesDown(FocusManagerImpl.java:159)
+	at com.intellij.ui.popup.AbstractPopup.dispose(AbstractPopup.java:1731)
+	at com.intellij.ui.popup.WizardPopup.dispose(WizardPopup.java:161)
+	at com.intellij.ui.popup.list.ListPopupImpl.dispose(ListPopupImpl.java:407)
+	at com.intellij.ui.popup.PopupFactoryImpl$ActionGroupPopup.dispose(PopupFactoryImpl.java:293)
+	at com.intellij.openapi.util.ObjectTree.runWithTrace(ObjectTree.java:130)
+	at com.intellij.openapi.util.ObjectTree.executeAll(ObjectTree.java:162)
+	at com.intellij.openapi.util.Disposer.dispose(Disposer.java:250)
+	at com.intellij.openapi.util.Disposer.dispose(Disposer.java:238)
+	at com.intellij.ui.popup.WizardPopup.disposeAllParents(WizardPopup.java:269)
+	at com.intellij.ui.popup.WizardPopup.disposeAllParents(WizardPopup.java:271)
+	at com.intellij.ui.popup.list.ListPopupImpl.disposePopup(ListPopupImpl.java:518)
+	at com.intellij.ui.popup.list.ListPopupImpl.handleNextStep(ListPopupImpl.java:542)
+	at com.intellij.ui.popup.list.ListPopupImpl._handleSelect(ListPopupImpl.java:505)
+	at com.intellij.ui.popup.list.ListPopupImpl.handleSelect(ListPopupImpl.java:449)
+	at com.intellij.ui.popup.list.ListPopupImpl$MyMouseListener.mouseReleased(ListPopupImpl.java:745)
+	at java.desktop/java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:298)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6657)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3385)
+	at com.intellij.ui.popup.list.ListPopupImpl$MyList.processMouseEvent(ListPopupImpl.java:810)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6422)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5027)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4855)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4969)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4583)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4524)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2809)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4855)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:794)
+	at java.desktop/java.awt.EventQueue$3.run(EventQueue.java:739)
+	at java.desktop/java.awt.EventQueue$3.run(EventQueue.java:733)
+	at java.base@17.0.9/java.security.AccessController.executePrivileged(AccessController.java:776)
+	at java.base@17.0.9/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base@17.0.9/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.base@17.0.9/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:97)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:766)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:764)
+	at java.base@17.0.9/java.security.AccessController.executePrivileged(AccessController.java:776)
+	at java.base@17.0.9/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base@17.0.9/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:763)
+	at com.intellij.ide.IdeEventQueue.defaultDispatchEvent(IdeEventQueue.kt:695)
+	at com.intellij.ide.IdeEventQueue.dispatchMouseEvent(IdeEventQueue.kt:635)
+	at com.intellij.ide.IdeEventQueue._dispatchEvent$lambda$10(IdeEventQueue.kt:580)
+	at com.intellij.ide.IdeEventQueue$$Lambda$1242/0x000000d000b1b5d8.run(Unknown Source)
+	at com.intellij.openapi.application.impl.RwLockHolder.runWithEnabledImplicitRead(RwLockHolder.kt:75)
+	at com.intellij.openapi.application.impl.RwLockHolder.runWithImplicitRead(RwLockHolder.kt:67)
+	at com.intellij.ide.IdeEventQueue._dispatchEvent(IdeEventQueue.kt:580)
+	at com.intellij.ide.IdeEventQueue.access$_dispatchEvent(IdeEventQueue.kt:72)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1$1.compute(IdeEventQueue.kt:355)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1$1.compute(IdeEventQueue.kt:354)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.computePrioritized(CoreProgressManager.java:793)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1.invoke(IdeEventQueue.kt:354)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1.invoke(IdeEventQueue.kt:349)
+	at com.intellij.ide.IdeEventQueueKt.performActivity$lambda$1(IdeEventQueue.kt:1014)
+	at com.intellij.ide.IdeEventQueueKt$$Lambda$799/0x000000d000771aa8.run(Unknown Source)
+	at com.intellij.openapi.application.TransactionGuardImpl.performActivity(TransactionGuardImpl.java:114)
+	at com.intellij.ide.IdeEventQueueKt.performActivity(IdeEventQueue.kt:1014)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent$lambda$7(IdeEventQueue.kt:349)
+	at com.intellij.ide.IdeEventQueue$$Lambda$791/0x000000d00076d0e0.run(Unknown Source)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runIntendedWriteActionOnCurrentThread(ApplicationImpl.java:848)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent(IdeEventQueue.kt:391)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:207)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:128)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:117)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:105)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:92)
+
+"BaseDataReader: error stream of fsnotifier" prio=0 tid=0x0 nid=0x0 runnable
+     java.lang.Thread.State: RUNNABLE
+ (in native)
+	at java.base@17.0.9/java.io.FileInputStream.readBytes(Native Method)
+	at java.base@17.0.9/java.io.FileInputStream.read(FileInputStream.java:276)
+	at java.base@17.0.9/java.io.BufferedInputStream.read1(BufferedInputStream.java:282)
+	at java.base@17.0.9/java.io.BufferedInputStream.read(BufferedInputStream.java:343)
+	at java.base@17.0.9/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base@17.0.9/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base@17.0.9/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base@17.0.9/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base@17.0.9/java.io.Reader.read(Reader.java:250)
+	at com.intellij.util.io.BaseOutputReader.readAvailableBlocking(BaseOutputReader.java:148)
+	at com.intellij.util.io.BaseDataReader.readAvailable(BaseDataReader.java:72)
+	at com.intellij.util.io.BaseDataReader.doRun(BaseDataReader.java:153)
+	at com.intellij.util.io.BaseDataReader$$Lambda$520/0x000000d00059bd20.run(Unknown Source)
+	at com.intellij.util.ConcurrencyUtil.runUnderThreadName(ConcurrencyUtil.java:218)
+	at com.intellij.util.io.BaseDataReader.lambda$start$0(BaseDataReader.java:48)
+	at com.intellij.util.io.BaseDataReader$$Lambda$519/0x000000d00059b690.run(Unknown Source)
+	at java.base@17.0.9/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base@17.0.9/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base@17.0.9/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base@17.0.9/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:702)
+	at java.base@17.0.9/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:699)
+	at java.base@17.0.9/java.security.AccessController.executePrivileged(AccessController.java:776)
+	at java.base@17.0.9/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base@17.0.9/java.util.concurrent.Executors$PrivilegedThreadFactory$1.run(Executors.java:699)
+	at java.base@17.0.9/java.lang.Thread.run(Thread.java:840)
+
+"BaseDataReader: output stream of fsnotifier" prio=0 tid=0x0 nid=0x0 runnable
+     java.lang.Thread.State: RUNNABLE
+ (in native)
+	at java.base@17.0.9/java.io.FileInputStream.readBytes(Native Method)
+	at java.base@17.0.9/java.io.FileInputStream.read(FileInputStream.java:276)
+	at java.base@17.0.9/java.io.BufferedInputStream.read1(BufferedInputStream.java:282)
+	at java.base@17.0.9/java.io.BufferedInputStream.read(BufferedInputStream.java:343)
+	at java.base@17.0.9/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:270)
+	at java.base@17.0.9/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:313)
+	at java.base@17.0.9/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base@17.0.9/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base@17.0.9/java.io.Reader.read(Reader.java:250)
+	at com.intellij.util.io.BaseOutputReader.readAvailableBlocking(BaseOutputReader.java:148)
+	at com.intellij.util.io.BaseDataReader.readAvailable(BaseDataReader.java:72)
+	at com.intellij.util.io.BaseDataReader.doRun(BaseDataReader.java:153)
+	at com.intellij.util.io.BaseDataReader$$Lambda$520/0x000000d00059bd20.run(Unknown Source)
+	at com.intellij.util.ConcurrencyUtil.runUnderThreadName(ConcurrencyUtil.java:218)
+	at com.intellij.util.io.BaseDataReader.lambda$start$0(BaseDataReader.java:48)
+	at com.intellij.util.io.BaseDataReader$$Lambda$519/0x000000d00059b690.run(Unknown Source)
+	at java.base@17.0.9/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base@17.0.9/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base@17.0.9/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base@17.0.9/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:702)
+	at java.base@17.0.9/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:699)
+	at java.base@17.0.9/java.security.AccessController.executePrivileged(AccessController.java:776)
+	at java.base@17.0.9/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base@17.0.9/java.util.concurrent.Executors$PrivilegedThreadFactory$1.run(Executors.java:699)
+	at java.base@17.0.9/java.lang.Thread.run(Thread.java:840)
+
+"DefaultDispatcher-worker-7" prio=0 tid=0x0 nid=0x0 runnable
+     java.lang.Thread.State: RUNNABLE
+
+	at com.jetbrains.rd.platform.codeWithMe.C.I.b.Q.b(Q.java:691)
+	at com.jetbrains.rd.platform.codeWithMe.C.I.b.Q.b(Q.java:70)
+	at com.jetbrains.rd.platform.codeWithMe.C.I.b.R.b(R.java:600)
+	at com.jetbrains.rd.platform.codeWithMe.C.I.b.R.invoke(R.java:596)
+	at com.jetbrains.rd.platform.codeWithMe.C.I.b.Q.b(Q.java:614)
+	at com.jetbrains.rd.platform.codeWithMe.C.I.b.Q.b(Q.java:70)
+	at com.jetbrains.rd.platform.codeWithMe.C.I.b.c.invokeSuspend(c.java)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith$$$capture(ContinuationImpl.kt:33)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:115)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:103)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+
+"DefaultDispatcher-worker-2 @ApplicationImpl@806532575 container#57726" prio=0 tid=0x0 nid=0x0 runnable
+     java.lang.Thread.State: RUNNABLE
+
+	at com.intellij.openapi.vfs.newvfs.persistent.VFSHealthChecker.verifyFileRecords(VFSHealthChecker.kt:216)
+	at com.intellij.openapi.vfs.newvfs.persistent.VFSHealthChecker.checkHealth(VFSHealthChecker.kt:178)
+	at com.intellij.openapi.vfs.newvfs.persistent.VFSHealthCheckServiceStarter.doCheckupAndReportResults(VFSHealthChecker.kt:125)
+	at com.intellij.openapi.vfs.newvfs.persistent.VFSHealthCheckServiceStarter.access$doCheckupAndReportResults(VFSHealthChecker.kt:72)
+	at com.intellij.openapi.vfs.newvfs.persistent.VFSHealthCheckServiceStarter$execute$2$1.invokeSuspend(VFSHealthChecker.kt:94)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith$$$capture(ContinuationImpl.kt:33)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:115)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:103)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+
+"DefaultDispatcher-worker-3 @com.intellij.diagnostic.PerformanceWatcherImpl#57724" prio=0 tid=0x0 nid=0x0 runnable
+     java.lang.Thread.State: RUNNABLE
+
+	at java.management@17.0.9/sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at java.management@17.0.9/sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:521)
+	at java.management@17.0.9/sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:509)
+	at com.intellij.diagnostic.ThreadDumper.getThreadInfos(ThreadDumper.java:75)
+	at com.intellij.diagnostic.SamplingTask.dumpThreads(SamplingTask.kt:45)
+	at com.intellij.diagnostic.SamplingTask.access$dumpThreads(SamplingTask.kt:14)
+	at com.intellij.diagnostic.SamplingTask$1.invokeSuspend(SamplingTask.kt:36)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith$$$capture(ContinuationImpl.kt:33)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+
+"Netty Builtin Server 1" prio=0 tid=0x0 nid=0x0 runnable
+     java.lang.Thread.State: RUNNABLE
+ (in native)
+	at java.base@17.0.9/sun.nio.ch.KQueue.poll(Native Method)
+	at java.base@17.0.9/sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:122)
+	at java.base@17.0.9/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+	at java.base@17.0.9/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:879)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base@17.0.9/java.lang.Thread.run(Thread.java:840)
+
+"Netty Builtin Server 2" prio=0 tid=0x0 nid=0x0 runnable
+     java.lang.Thread.State: RUNNABLE
+ (in native)
+	at java.base@17.0.9/sun.nio.ch.KQueue.poll(Native Method)
+	at java.base@17.0.9/sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:122)
+	at java.base@17.0.9/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+	at java.base@17.0.9/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:879)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base@17.0.9/java.lang.Thread.run(Thread.java:840)
+
+"External Command Listener" prio=0 tid=0x0 nid=0x0 runnable
+     java.lang.Thread.State: RUNNABLE
+ (in native)
+	at java.base@17.0.9/sun.nio.ch.UnixDomainSockets.accept0(Native Method)
+	at java.base@17.0.9/sun.nio.ch.UnixDomainSockets.accept(UnixDomainSockets.java:173)
+	at java.base@17.0.9/sun.nio.ch.ServerSocketChannelImpl.implAccept(ServerSocketChannelImpl.java:419)
+	at java.base@17.0.9/sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:391)
+	at com.intellij.platform.ide.bootstrap.DirectoryLock.acceptConnections(DirectoryLock.java:325)
+	at com.intellij.platform.ide.bootstrap.DirectoryLock$$Lambda$103/0x000000d000217d48.run(Unknown Source)
+	at java.base@17.0.9/java.lang.Thread.run(Thread.java:840)
+
+"HttpClient-4-SelectorManager" prio=0 tid=0x0 nid=0x0 runnable
+     java.lang.Thread.State: RUNNABLE
+ (in native)
+	at java.base@17.0.9/sun.nio.ch.KQueue.poll(Native Method)
+	at java.base@17.0.9/sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:122)
+	at java.base@17.0.9/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+	at java.base@17.0.9/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:141)
+	at platform/java.net.http@17.0.9/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:889)
+
+"process reaper (pid 50296)" prio=0 tid=0x0 nid=0x0 runnable
+     java.lang.Thread.State: RUNNABLE
+ (in native)
+	at java.base@17.0.9/java.lang.ProcessHandleImpl.waitForProcessExit0(Native Method)
+	at java.base@17.0.9/java.lang.ProcessHandleImpl$1.run(ProcessHandleImpl.java:150)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base@17.0.9/java.lang.Thread.run(Thread.java:840)
+
+"Reference Handler" prio=0 tid=0x0 nid=0x0 runnable
+     java.lang.Thread.State: RUNNABLE
+
+	at java.base@17.0.9/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+	at java.base@17.0.9/java.lang.ref.Reference.processPendingReferences(Reference.java:253)
+	at java.base@17.0.9/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:215)
+
+"AppKit Thread" prio=0 tid=0x0 nid=0x0 runnable
+     java.lang.Thread.State: RUNNABLE
+ (in native)
+
+"JDWP Command Reader" prio=0 tid=0x0 nid=0x0 runnable
+     java.lang.Thread.State: RUNNABLE
+ (in native)
+
+"JDWP Event Helper Thread" prio=0 tid=0x0 nid=0x0 runnable
+     java.lang.Thread.State: RUNNABLE
+
+
+"JDWP Transport Listener: dt_socket" prio=0 tid=0x0 nid=0x0 runnable
+     java.lang.Thread.State: RUNNABLE
+
+
+"Notification Thread" prio=0 tid=0x0 nid=0x0 runnable
+     java.lang.Thread.State: RUNNABLE
+
+
+"Signal Dispatcher" prio=0 tid=0x0 nid=0x0 runnable
+     java.lang.Thread.State: RUNNABLE
+
+
+"fsnotifier" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: WAITING
+ on java.lang.ProcessImpl@49647053
+	at java.base@17.0.9/java.lang.Object.wait(Native Method)
+	at java.base@17.0.9/java.lang.Object.wait(Object.java:338)
+	at java.base@17.0.9/java.lang.ProcessImpl.waitFor(ProcessImpl.java:434)
+	at com.intellij.execution.process.ProcessWaitFor.lambda$new$0(ProcessWaitFor.java:28)
+	at com.intellij.execution.process.ProcessWaitFor$$Lambda$512/0x000000d000592aa8.run(Unknown Source)
+	at com.intellij.util.ConcurrencyUtil.runUnderThreadName(ConcurrencyUtil.java:218)
+	at com.intellij.execution.process.ProcessWaitFor.lambda$new$1(ProcessWaitFor.java:23)
+	at com.intellij.execution.process.ProcessWaitFor$$Lambda$511/0x000000d000592860.run(Unknown Source)
+	at java.base@17.0.9/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base@17.0.9/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base@17.0.9/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base@17.0.9/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:702)
+	at java.base@17.0.9/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:699)
+	at java.base@17.0.9/java.security.AccessController.executePrivileged(AccessController.java:776)
+	at java.base@17.0.9/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base@17.0.9/java.util.concurrent.Executors$PrivilegedThreadFactory$1.run(Executors.java:699)
+	at java.base@17.0.9/java.lang.Thread.run(Thread.java:840)
+
+"AWTThreading pool-2-thread-1" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: WAITING
+ on java.util.concurrent.SynchronousQueue$TransferStack@4fc4a0b4
+	at java.base@17.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@17.0.9/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+	at java.base@17.0.9/java.util.concurrent.SynchronousQueue$TransferStack$SNode.block(SynchronousQueue.java:288)
+	at java.base@17.0.9/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+	at java.base@17.0.9/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+	at java.base@17.0.9/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:397)
+	at java.base@17.0.9/java.util.concurrent.SynchronousQueue.take(SynchronousQueue.java:886)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base@17.0.9/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:702)
+	at java.base@17.0.9/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:699)
+	at java.base@17.0.9/java.security.AccessController.executePrivileged(AccessController.java:776)
+	at java.base@17.0.9/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base@17.0.9/java.util.concurrent.Executors$PrivilegedThreadFactory$1.run(Executors.java:699)
+	at java.base@17.0.9/java.lang.Thread.run(Thread.java:840)
+
+"ApplicationImpl pooled thread 16" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: TIMED_WAITING
+ on java.util.concurrent.SynchronousQueue$TransferStack@578ff346
+	at java.base@17.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@17.0.9/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+	at java.base@17.0.9/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:401)
+	at java.base@17.0.9/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:903)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1061)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base@17.0.9/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:702)
+	at java.base@17.0.9/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:699)
+	at java.base@17.0.9/java.security.AccessController.executePrivileged(AccessController.java:776)
+	at java.base@17.0.9/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base@17.0.9/java.util.concurrent.Executors$PrivilegedThreadFactory$1.run(Executors.java:699)
+	at java.base@17.0.9/java.lang.Thread.run(Thread.java:840)
+
+"ApplicationImpl pooled thread 17" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: TIMED_WAITING
+ on java.util.concurrent.SynchronousQueue$TransferStack@578ff346
+	at java.base@17.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@17.0.9/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+	at java.base@17.0.9/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:401)
+	at java.base@17.0.9/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:903)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1061)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base@17.0.9/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:702)
+	at java.base@17.0.9/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:699)
+	at java.base@17.0.9/java.security.AccessController.executePrivileged(AccessController.java:776)
+	at java.base@17.0.9/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base@17.0.9/java.util.concurrent.Executors$PrivilegedThreadFactory$1.run(Executors.java:699)
+	at java.base@17.0.9/java.lang.Thread.run(Thread.java:840)
+
+"ApplicationImpl pooled thread 19" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: TIMED_WAITING
+ on java.util.concurrent.SynchronousQueue$TransferStack@578ff346
+	at java.base@17.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@17.0.9/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+	at java.base@17.0.9/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:401)
+	at java.base@17.0.9/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:903)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1061)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base@17.0.9/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:702)
+	at java.base@17.0.9/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:699)
+	at java.base@17.0.9/java.security.AccessController.executePrivileged(AccessController.java:776)
+	at java.base@17.0.9/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base@17.0.9/java.util.concurrent.Executors$PrivilegedThreadFactory$1.run(Executors.java:699)
+	at java.base@17.0.9/java.lang.Thread.run(Thread.java:840)
+
+"ApplicationImpl pooled thread 21" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: TIMED_WAITING
+ on java.util.concurrent.SynchronousQueue$TransferStack@578ff346
+	at java.base@17.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@17.0.9/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+	at java.base@17.0.9/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:401)
+	at java.base@17.0.9/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:903)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1061)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base@17.0.9/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:702)
+	at java.base@17.0.9/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:699)
+	at java.base@17.0.9/java.security.AccessController.executePrivileged(AccessController.java:776)
+	at java.base@17.0.9/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base@17.0.9/java.util.concurrent.Executors$PrivilegedThreadFactory$1.run(Executors.java:699)
+	at java.base@17.0.9/java.lang.Thread.run(Thread.java:840)
+
+"ApplicationImpl pooled thread 22" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: TIMED_WAITING
+ on java.util.concurrent.SynchronousQueue$TransferStack@578ff346
+	at java.base@17.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@17.0.9/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+	at java.base@17.0.9/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:401)
+	at java.base@17.0.9/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:903)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1061)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base@17.0.9/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:702)
+	at java.base@17.0.9/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:699)
+	at java.base@17.0.9/java.security.AccessController.executePrivileged(AccessController.java:776)
+	at java.base@17.0.9/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base@17.0.9/java.util.concurrent.Executors$PrivilegedThreadFactory$1.run(Executors.java:699)
+	at java.base@17.0.9/java.lang.Thread.run(Thread.java:840)
+
+"ApplicationImpl pooled thread 23" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: TIMED_WAITING
+ on java.util.concurrent.SynchronousQueue$TransferStack@578ff346
+	at java.base@17.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@17.0.9/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+	at java.base@17.0.9/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:401)
+	at java.base@17.0.9/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:903)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1061)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base@17.0.9/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:702)
+	at java.base@17.0.9/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:699)
+	at java.base@17.0.9/java.security.AccessController.executePrivileged(AccessController.java:776)
+	at java.base@17.0.9/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base@17.0.9/java.util.concurrent.Executors$PrivilegedThreadFactory$1.run(Executors.java:699)
+	at java.base@17.0.9/java.lang.Thread.run(Thread.java:840)
+
+"ApplicationImpl pooled thread 24" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: TIMED_WAITING
+ on java.util.concurrent.SynchronousQueue$TransferStack@578ff346
+	at java.base@17.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@17.0.9/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+	at java.base@17.0.9/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:401)
+	at java.base@17.0.9/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:903)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1061)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base@17.0.9/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:702)
+	at java.base@17.0.9/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:699)
+	at java.base@17.0.9/java.security.AccessController.executePrivileged(AccessController.java:776)
+	at java.base@17.0.9/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base@17.0.9/java.util.concurrent.Executors$PrivilegedThreadFactory$1.run(Executors.java:699)
+	at java.base@17.0.9/java.lang.Thread.run(Thread.java:840)
+
+"ApplicationImpl pooled thread 25" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: TIMED_WAITING
+ on java.util.concurrent.SynchronousQueue$TransferStack@578ff346
+	at java.base@17.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@17.0.9/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+	at java.base@17.0.9/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:401)
+	at java.base@17.0.9/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:903)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1061)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base@17.0.9/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:702)
+	at java.base@17.0.9/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:699)
+	at java.base@17.0.9/java.security.AccessController.executePrivileged(AccessController.java:776)
+	at java.base@17.0.9/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base@17.0.9/java.util.concurrent.Executors$PrivilegedThreadFactory$1.run(Executors.java:699)
+	at java.base@17.0.9/java.lang.Thread.run(Thread.java:840)
+
+"RMI Scheduler(0)" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: WAITING
+ on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@109bca5
+	at java.base@17.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@17.0.9/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+	at java.base@17.0.9/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+	at java.base@17.0.9/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3465)
+	at java.base@17.0.9/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3436)
+	at java.base@17.0.9/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+	at java.base@17.0.9/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1170)
+	at java.base@17.0.9/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base@17.0.9/java.lang.Thread.run(Thread.java:840)
+
+"main" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: TIMED_WAITING
+ on kotlinx.coroutines.BlockingCoroutine@766270d4
+	at java.base@17.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@17.0.9/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:88)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:59)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:38)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source)
+	at com.intellij.idea.Main.mainImpl(Main.kt:63)
+	at com.intellij.idea.Main.mainImpl$default(Main.kt:49)
+	at com.intellij.idea.Main.main(Main.kt:46)
+
+"PeriodicMetricReader" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: TIMED_WAITING
+ on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@2c3ac1cf
+	at java.base@17.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@17.0.9/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+	at java.base@17.0.9/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+	at java.base@17.0.9/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+	at java.base@17.0.9/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+	at java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base@17.0.9/java.lang.Thread.run(Thread.java:840)
+
+"Coroutines Debugger Cleaner" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: WAITING
+ on java.lang.ref.ReferenceQueue$Lock@55cba423
+	at java.base@17.0.9/java.lang.Object.wait(Native Method)
+	at java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+	at java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+	at kotlinx.coroutines.debug.internal.ConcurrentWeakMap.runWeakRefQueueCleaningLoopUntilInterrupted(ConcurrentWeakMap.kt:73)
+	at kotlinx.coroutines.debug.internal.DebugProbesImpl$startWeakRefCleanerThread$1.invoke(DebugProbesImpl.kt:96)
+	at kotlinx.coroutines.debug.internal.DebugProbesImpl$startWeakRefCleanerThread$1.invoke(DebugProbesImpl.kt:95)
+	at kotlin.concurrent.ThreadsKt$thread$thread$1.run(Thread.kt:30)
+
+"DefaultDispatcher-worker-1" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: TIMED_WAITING
+
+	at java.base@17.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@17.0.9/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:376)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park(CoroutineScheduler.kt:838)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark(CoroutineScheduler.kt:783)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:731)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+
+"DefaultDispatcher-worker-10" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: TIMED_WAITING
+
+	at java.base@17.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@17.0.9/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:376)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park(CoroutineScheduler.kt:838)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark(CoroutineScheduler.kt:783)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:731)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+
+"DefaultDispatcher-worker-14" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: TIMED_WAITING
+
+	at java.base@17.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@17.0.9/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:376)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park(CoroutineScheduler.kt:838)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark(CoroutineScheduler.kt:783)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:731)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+
+"DefaultDispatcher-worker-4" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: TIMED_WAITING
+
+	at java.base@17.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@17.0.9/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:376)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park(CoroutineScheduler.kt:838)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark(CoroutineScheduler.kt:783)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:731)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+
+"DefaultDispatcher-worker-5" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: TIMED_WAITING
+
+	at java.base@17.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@17.0.9/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:376)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park(CoroutineScheduler.kt:838)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark(CoroutineScheduler.kt:783)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:731)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+
+"DefaultDispatcher-worker-6" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: TIMED_WAITING
+
+	at java.base@17.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@17.0.9/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:376)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park(CoroutineScheduler.kt:838)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark(CoroutineScheduler.kt:783)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:731)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+
+"DefaultDispatcher-worker-9" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: TIMED_WAITING
+
+	at java.base@17.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@17.0.9/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:376)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park(CoroutineScheduler.kt:838)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark(CoroutineScheduler.kt:783)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:731)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+
+"TimerQueue" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: TIMED_WAITING
+ on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@3d03fa5d
+	at java.base@17.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@17.0.9/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+	at java.base@17.0.9/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+	at java.base@17.0.9/java.util.concurrent.DelayQueue.take(DelayQueue.java:229)
+	at java.desktop/javax.swing.TimerQueue.run(TimerQueue.java:172)
+	at java.base@17.0.9/java.lang.Thread.run(Thread.java:840)
+
+"Common-Cleaner" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: TIMED_WAITING
+ on java.lang.ref.ReferenceQueue$Lock@65b1b5d3
+	at java.base@17.0.9/java.lang.Object.wait(Native Method)
+	at java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+	at java.base@17.0.9/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:140)
+	at java.base@17.0.9/java.lang.Thread.run(Thread.java:840)
+	at java.base@17.0.9/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:162)
+
+"IntelliJ Suspend Helper" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: TIMED_WAITING
+
+	at java.base@17.0.9/java.lang.Thread.sleep(Native Method)
+	at com.intellij.rt.debugger.agent.SuspendHelper.suspendHelperLoopBody(SuspendHelper.java:29)
+	at com.intellij.rt.debugger.agent.SuspendHelper.access$000(SuspendHelper.java:5)
+	at com.intellij.rt.debugger.agent.SuspendHelper$1.run(SuspendHelper.java:15)
+	at java.base@17.0.9/java.lang.Thread.run(Thread.java:840)
+
+"Java2D Disposer" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: WAITING
+ on java.lang.ref.ReferenceQueue$Lock@5914b0cc
+	at java.base@17.0.9/java.lang.Object.wait(Native Method)
+	at java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+	at java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+	at java.desktop/sun.java2d.Disposer.run(Disposer.java:145)
+	at java.base@17.0.9/java.lang.Thread.run(Thread.java:840)
+
+"Periodic tasks thread" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: TIMED_WAITING
+ on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@64317b19
+	at java.base@17.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@17.0.9/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+	at java.base@17.0.9/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+	at java.base@17.0.9/java.util.concurrent.DelayQueue.take(DelayQueue.java:229)
+	at com.intellij.util.concurrency.AppDelayQueue$TransferThread.run(AppDelayQueue.java:81)
+
+"AWT-Shutdown" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: WAITING
+ on java.lang.Object@8a9586e
+	at java.base@17.0.9/java.lang.Object.wait(Native Method)
+	at java.base@17.0.9/java.lang.Object.wait(Object.java:338)
+	at java.desktop/sun.awt.AWTAutoShutdown.run(AWTAutoShutdown.java:291)
+	at java.base@17.0.9/java.lang.Thread.run(Thread.java:840)
+
+"FilePageCache housekeeper" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: TIMED_WAITING
+ on java.lang.Object@33aaeb50
+	at java.base@17.0.9/java.lang.Object.wait(Native Method)
+	at com.intellij.util.io.FilePageCacheLockFree.cacheMaintenanceLoop(FilePageCacheLockFree.java:331)
+	at com.intellij.util.io.FilePageCacheLockFree$$Lambda$145/0x000000d00029e700.run(Unknown Source)
+	at java.base@17.0.9/java.lang.Thread.run(Thread.java:840)
+
+"Finalizer" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: WAITING
+ on java.lang.ref.ReferenceQueue$Lock@1814949c
+	at java.base@17.0.9/java.lang.Object.wait(Native Method)
+	at java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+	at java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+	at java.base@17.0.9/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:172)
+
+"JNA Cleaner" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: WAITING
+ on java.lang.ref.ReferenceQueue$Lock@6e12860e
+	at java.base@17.0.9/java.lang.Object.wait(Native Method)
+	at java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+	at java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+	at com.sun.jna.internal.Cleaner$1.run(Cleaner.java:58)
+
+"RMI GC Daemon" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: TIMED_WAITING
+ on sun.rmi.transport.GC$LatencyLock@415deca0
+	at java.base@17.0.9/java.lang.Object.wait(Native Method)
+	at java.rmi@17.0.9/sun.rmi.transport.GC$Daemon.run(GC.java:127)
+	at java.base@17.0.9/java.lang.Thread.run(Thread.java:840)
+	at java.base@17.0.9/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:162)
+
+"RMI RenewClean-[127.0.0.1:56410]" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: TIMED_WAITING
+ on java.lang.ref.ReferenceQueue$Lock@63ae239a
+	at java.base@17.0.9/java.lang.Object.wait(Native Method)
+	at java.base@17.0.9/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+	at java.rmi@17.0.9/sun.rmi.transport.DGCClient$EndpointEntry$RenewCleanThread.run(DGCClient.java:559)
+	at java.base@17.0.9/java.lang.Thread.run(Thread.java:840)
+
+"Timer-0" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: WAITING
+ on java.util.TaskQueue@304a8a9e
+	at java.base@17.0.9/java.lang.Object.wait(Native Method)
+	at java.base@17.0.9/java.lang.Object.wait(Object.java:338)
+	at java.base@17.0.9/java.util.TimerThread.mainLoop(Timer.java:537)
+	at java.base@17.0.9/java.util.TimerThread.run(Timer.java:516)
+
+"kotlinx.coroutines.DefaultExecutor" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: TIMED_WAITING
+ on kotlinx.coroutines.DefaultExecutor@cc6587f
+	at java.base@17.0.9/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@17.0.9/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+	at kotlinx.coroutines.DefaultExecutor.run(DefaultExecutor.kt:122)
+	at java.base@17.0.9/java.lang.Thread.run(Thread.java:840)
+
+"Java2D Queue Flusher" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: TIMED_WAITING
+ on sun.java2d.metal.MTLRenderQueue$QueueFlusher@3612fca4
+	at java.base@17.0.9/java.lang.Object.wait(Native Method)
+	at java.desktop/sun.java2d.metal.MTLRenderQueue$QueueFlusher.run(MTLRenderQueue.java:210)
+	at java.base@17.0.9/java.lang.Thread.run(Thread.java:840)
+
+
+---------- Coroutine dump (stripped) ----------
+
+- "coroutine#1":BlockingCoroutine{Active}, state: SUSPENDED [CoroutineId(1), BlockingEventLoop@781c9860]
+	at com.intellij.idea.Main$mainImpl$1.invokeSuspend(Main.kt:73)
+	- "Application":supervisor:ChildScope{Active}
+		- "ApplicationImpl@806532575 container":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x org.jetbrains.plugins.textmate)":supervisor:ChildScope{Active}
+				- "org.jetbrains.plugins.textmate.TextMateServiceImpl":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x com.intellij.copyright)":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x com.intellij.platform.images)":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x org.editorconfig.editorconfigjetbrains)":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x org.jetbrains.plugins.yaml)":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x org.intellij.plugins.markdown)":supervisor:ChildScope{Active}
+			-[x2 of] "(ApplicationImpl@806532575 x org.jetbrains.plugins.terminal)":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x hg4idea)":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x com.intellij.properties)":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x com.intellij.gradle)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x com.intellij.gradle))":supervisor:ChildScope{Active}
+				- "org.jetbrains.plugins.gradle.service.project.GradleHeadlessLoggingProjectActivity":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x training)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x training))":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x intellij.platform.ijent.impl)":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x com.jetbrains.sh)":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x com.intellij.completion.ml.ranking)":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x com.intellij)":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x com.intellij.searcheverywhere.ml)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x com.intellij.searcheverywhere.ml))":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x com.intellij.settingsSync)":supervisor:ChildScope{Active}
+			-[x3 of] "(ApplicationImpl@806532575 x com.jetbrains.space)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x com.jetbrains.space))":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x tanvd.grazi)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x tanvd.grazi))":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x Git4Idea)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x Git4Idea))":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x org.jetbrains.plugins.github)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x org.jetbrains.plugins.github))":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x org.jetbrains.plugins.gitlab)":supervisor:ChildScope{Active}
+				- "org.jetbrains.plugins.gitlab.CachingGitLabServersManager":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x com.intellij.java)":supervisor:ChildScope{Active}
+				- "com.intellij.compiler.server.BuildManager":supervisor:ChildScope{Active}
+					-[x2 of] "com.intellij.compiler.server.BuildManager":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x com.intellij.java))":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x com.intellij.tracing.ide)":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x com.intellij.tasks)":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x org.jetbrains.plugins.javaFX)":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x org.intellij.intelliLang)":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x org.intellij.groovy)":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x org.jetbrains.kotlin)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x org.jetbrains.kotlin))":supervisor:ChildScope{Active}
+					- "org.jetbrains.kotlin.idea.macros.KotlinBundledUsageDetector$ModelChangeListener":supervisor:ChildScope{Active}
+			-[x8 of] "(ApplicationImpl@806532575 x org.jetbrains.kotlin)":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x org.jetbrains.kotlin)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x org.jetbrains.kotlin))":supervisor:ChildScope{Active}
+					- "run activity#4642":StandaloneCoroutine{Active}, state: SUSPENDED [run activity, CoroutineId(4642), Dispatchers.Default]
+						at org.jetbrains.kotlin.idea.gradle.statistics.KotlinGradleFUSLogger.execute(KotlinGradleFUSLogger.kt:22)
+						at com.intellij.ide.startup.impl.StartupManagerImplKt$launchActivity$1.invokeSuspend(StartupManagerImpl.kt:482)
+					- "run activity#4648":StandaloneCoroutine{Active}, state: SUSPENDED [run activity, CoroutineId(4648), Dispatchers.Default]
+						at org.jetbrains.kotlin.idea.gradle.diagnostic.KotlinGradleBuildErrorsChecker.execute(KotlinGradleBuildErrorsChecker.kt:65)
+						at com.intellij.ide.startup.impl.StartupManagerImplKt$launchActivity$1.invokeSuspend(StartupManagerImpl.kt:482)
+			- "(ApplicationImpl@806532575 x com.intellij.java-i18n)":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x com.intellij.uiDesigner)":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x org.jetbrains.idea.maven)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x org.jetbrains.idea.maven))":supervisor:ChildScope{Active}
+				- "org.jetbrains.idea.maven.indices.MavenSystemIndicesManager":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x org.jetbrains.plugins.gradle)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x org.jetbrains.plugins.gradle))":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x com.intellij.java.ide)":supervisor:ChildScope{Active}
+				- "com.intellij.ide.RecentProjectsManagerBase":supervisor:ChildScope{Active}
+					- "com.intellij.ide.RecentProjectsManagerBase#358":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(358), Dispatchers.Default]
+						at com.intellij.ide.RecentProjectsManagerBase$1.invokeSuspend(RecentProjectsManagerBase.kt:106)
+						- "com.intellij.ide.RecentProjectsManagerBase#360":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(360), Dispatchers.Default]
+							at kotlinx.coroutines.selects.SelectImplementation.doSelectSuspend(Select.kt:431)
+							at kotlinx.coroutines.flow.FlowKt__DelayKt$debounceInternal$1.invokeSuspend(Delay.kt:426)
+							at kotlinx.coroutines.flow.internal.FlowCoroutineKt$scopedFlow$1$1.invokeSuspend(FlowCoroutine.kt:51)
+							at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+							- "com.intellij.ide.RecentProjectsManagerBase#361":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(361), Dispatchers.Default]
+			- "(ApplicationImpl@806532575 x org.jetbrains.idea.gradle.dsl)":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x org.intellij.qodana)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x org.intellij.qodana))":supervisor:ChildScope{Active}
+				- "org.jetbrains.qodana.cloud.QodanaCloudStateService":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x com.intellij.configurationScript)":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x intellij.indexing.shared.core)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x intellij.indexing.shared.core))":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x com.jetbrains.codeWithMe)":supervisor:ChildScope{Active}
+				- "com.jetbrains.rdserver.unattendedHost.UnattendedHostManager":supervisor:ChildScope{Active}
+				- "com.jetbrains.rdserver.ui.actionPopupMenu.BackendActionManager":supervisor:ChildScope{Active}
+					- "com.jetbrains.rdserver.ui.actionPopupMenu.BackendActionManager":supervisor:ChildScope{Active}
+						- "com.jetbrains.rdserver.ui.actionPopupMenu.BackendActionManager#1516":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1516), Dispatchers.Default]
+							at com.intellij.openapi.actionSystem.impl.ActionManagerImpl$MyTimer$2.invokeSuspend(ActionManagerImpl.kt:1314)
+							- "com.jetbrains.rdserver.ui.actionPopupMenu.BackendActionManager#1517":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1517), Dispatchers.Default]
+								at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+								- "com.jetbrains.rdserver.ui.actionPopupMenu.BackendActionManager#53793":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(53793), Dispatchers.Default]
+									at com.intellij.openapi.actionSystem.impl.ActionManagerImpl$MyTimer$2$1.invokeSuspend(ActionManagerImpl.kt:1318)
+				- "com.intellij.remoteDev.tests.impl.DistributedTestHost":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x com.jetbrains.codeWithMe))":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x Subversion)":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x com.jetbrains.performancePlugin.async)":supervisor:ChildScope{Active}
+			- "ApplicationImpl@806532575 container":supervisor:ChildScope{Active}
+				- "ApplicationImpl@806532575 container#160":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(160), Dispatchers.Default]
+					at kotlinx.coroutines.selects.SelectImplementation.doSelectSuspend(Select.kt:431)
+					at com.intellij.platform.diagnostic.telemetry.BatchSpanProcessor$1.invokeSuspend(BatchSpanProcessor.kt:175)
+			- "com.intellij.ide.ui.laf.LafManagerImpl":supervisor:ChildScope{Active}
+			- "com.intellij.openapi.vfs.newvfs.persistent.ExecuteOnCoroutine":supervisor:ChildScope{Active}
+				- "PersistentFsLoader":supervisor:ChildScope{Active} [Dispatchers.IO]
+			- "ApplicationImpl@806532575 container#234":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(234), Dispatchers.Default]
+				at com.intellij.openapi.vfs.newvfs.persistent.VFSHealthCheckServiceStarter$execute$2.invokeSuspend(VFSHealthChecker.kt:101)
+				- "ApplicationImpl@806532575 container#57726":StandaloneCoroutine{Active}, state: RUNNING [CoroutineId(57726), Dispatchers.IO]
+					at com.intellij.openapi.vfs.newvfs.persistent.VFSHealthChecker.verifyFileRecords(VFSHealthChecker.kt:330)
+					at com.intellij.openapi.vfs.newvfs.persistent.VFSHealthChecker.checkHealth(VFSHealthChecker.kt:178)
+					at com.intellij.openapi.vfs.newvfs.persistent.VFSHealthCheckServiceStarter.doCheckupAndReportResults(VFSHealthChecker.kt:125)
+					at com.intellij.openapi.vfs.newvfs.persistent.VFSHealthCheckServiceStarter.access$doCheckupAndReportResults(VFSHealthChecker.kt:72)
+					at com.intellij.openapi.vfs.newvfs.persistent.VFSHealthCheckServiceStarter$execute$2$1.invokeSuspend(VFSHealthChecker.kt:94)
+			- "com.intellij.configurationStore.statistic.eventLog.FeatureUsageSettingsEvents":supervisor:ChildScope{Active}
+			- "auto-save icon cache#247":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(247), Dispatchers.Default]
+				at com.intellij.ide.ui.IconDbMaintainer$execute$2.invokeSuspend(IconDbMaintainer.kt:30)
+			- "ApplicationImpl@806532575 container#257":StandaloneCoroutine{Completing} [CoroutineId(257), Dispatchers.Default]
+				- "ApplicationImpl@806532575 container#263":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(263), Dispatchers.Default]
+					at com.intellij.internal.statistic.updater.StatisticsJobsSchedulerKt.runValidationRulesUpdate(StatisticsJobsScheduler.kt:67)
+					at com.intellij.internal.statistic.updater.StatisticsJobsScheduler$execute$2$4.invokeSuspend(StatisticsJobsScheduler.kt:45)
+			- "com.intellij.internal.statistic.service.fus.collectors.FUStateUsagesLogger":supervisor:ChildScope{Active}
+				- "com.intellij.internal.statistic.service.fus.collectors.FUStateUsagesLogger#267":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(267), Dispatchers.Default]
+					at com.intellij.internal.statistic.service.fus.collectors.FUStateUsagesLogger.logApplicationStateRegularly(FUStateUsagesLogger.kt:158)
+					at com.intellij.internal.statistic.service.fus.collectors.FUStateUsagesLogger$1.invokeSuspend(FUStateUsagesLogger.kt:53)
+			- "ApplicationImpl@806532575 container":ChildScope{Active}
+			- "com.intellij.diagnostic.PerformanceWatcherImpl":supervisor:ChildScope{Active}
+				- "com.intellij.diagnostic.PerformanceWatcherImpl#311":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(311), Dispatchers.Default]
+					at com.intellij.diagnostic.PerformanceWatcherImpl$1.invokeSuspend(PerformanceWatcherImpl.kt:90)
+					- "com.intellij.diagnostic.PerformanceWatcherImpl#332":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(332), Dispatchers.Default]
+						at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+				- "com.intellij.diagnostic.PerformanceWatcherImpl#1649":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1649), Dispatchers.Default]
+					at com.intellij.diagnostic.PerformanceWatcherImpl.samplePerformance(PerformanceWatcherImpl.kt:200)
+					at com.intellij.diagnostic.PerformanceWatcherImpl$startEdtSampling$1.invokeSuspend(PerformanceWatcherImpl.kt:124)
+				- "com.intellij.diagnostic.PerformanceWatcherImpl#57724":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(57724), Dispatchers.Default]
+					at com.intellij.diagnostic.SamplingTask$1.invokeSuspend(SamplingTask.kt:36)
+				- "com.intellij.diagnostic.PerformanceWatcherImpl#57731":StandaloneCoroutine{Active}, state: RUNNING [CoroutineId(57731), Dispatchers.Default]
+					at java.base/java.lang.Thread.getStackTrace(Thread.java:1619)
+					at kotlinx.coroutines.debug.internal.DebugProbesImpl.enhanceStackTraceWithThreadDumpImpl(DebugProbesImpl.kt:336)
+					at kotlinx.coroutines.debug.internal.DebugProbesImpl.enhanceStackTraceWithThreadDump(DebugProbesImpl.kt:321)
+					at com.intellij.diagnostic.CoroutineDumperKt.traceToDump(coroutineDumper.kt:305)
+					at com.intellij.diagnostic.CoroutineDumperKt.toRepresentation(coroutineDumper.kt:278)
+					at com.intellij.diagnostic.CoroutineDumperKt.toRepresentation(coroutineDumper.kt:280)
+					at com.intellij.diagnostic.CoroutineDumperKt.toRepresentation(coroutineDumper.kt:280)
+					at com.intellij.diagnostic.CoroutineDumperKt.toRepresentation(coroutineDumper.kt:280)
+					at com.intellij.diagnostic.CoroutineDumperKt.toRepresentation(coroutineDumper.kt:280)
+					at com.intellij.diagnostic.CoroutineDumperKt.toRepresentation(coroutineDumper.kt:280)
+					at com.intellij.diagnostic.CoroutineDumperKt.dumpCoroutines(coroutineDumper.kt:118)
+					at com.intellij.diagnostic.CoroutineDumperKt.dumpCoroutines(coroutineDumper.kt:53)
+					at com.intellij.diagnostic.CoroutineDumperKt.dumpCoroutines$default(coroutineDumper.kt:45)
+					at com.intellij.diagnostic.CoroutineDumperKt.dumpCoroutines(coroutineDumper.kt)
+					at com.intellij.diagnostic.ThreadDumper.getThreadDumpInfo(ThreadDumper.java:59)
+					at com.intellij.diagnostic.SamplingTask$dumpThreads$2.invokeSuspend(SamplingTask.kt:55)
+			- "com.intellij.history.integration.LocalHistoryImpl":supervisor:ChildScope{Active}
+				- "com.intellij.history.integration.LocalHistoryImpl#356":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(356), Dispatchers.Default]
+					at com.intellij.history.integration.LocalHistoryImpl$init$3.invokeSuspend(LocalHistoryImpl.kt:94)
+			- "com.intellij.ide.IdeTooltipManager":supervisor:ChildScope{Active}
+			- "com.intellij.openapi.fileTypes.impl.FileTypeManagerImpl":supervisor:ChildScope{Active}
+				- "com.intellij.openapi.fileTypes.impl.FileTypeManagerImpl":supervisor:ChildScope{Active}
+			- "com.intellij.ide.ui.customization.CustomActionsSchema":supervisor:ChildScope{Active}
+			- "com.intellij.ui.jcef.JBCefStartup":supervisor:ChildScope{Active}
+			- "com.intellij.ide.plugins.marketplace.MarketplaceRequests":supervisor:ChildScope{Active}
+			- "com.intellij.configurationStore.SaveAndSyncHandlerImpl":supervisor:ChildScope{Active}
+				- "refresh requests flow processing#347":StandaloneCoroutine{Active}, state: SUSPENDED [ModalityState.NON_MODAL, CoroutineId(347), Dispatchers.Default]
+					at kotlinx.coroutines.selects.SelectImplementation.doSelectSuspend(Select.kt:431)
+					at kotlinx.coroutines.flow.FlowKt__DelayKt$debounceInternal$1.invokeSuspend(Delay.kt:426)
+					at kotlinx.coroutines.flow.internal.FlowCoroutineKt$scopedFlow$1$1.invokeSuspend(FlowCoroutine.kt:51)
+					at com.intellij.configurationStore.SaveAndSyncHandlerImpl$1.invokeSuspend(SaveAndSyncHandlerImpl.kt:76)
+					- "refresh requests flow processing#371":ProducerCoroutine{Active}, state: SUSPENDED [ModalityState.NON_MODAL, CoroutineId(371), Dispatchers.Default]
+				- "save requests flow processing#348":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(348), Dispatchers.Default]
+					at com.intellij.configurationStore.SaveAndSyncHandlerImpl$2.invokeSuspend(SaveAndSyncHandlerImpl.kt:91)
+				- "com.intellij.configurationStore.SaveAndSyncHandlerImpl#349":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(349), Dispatchers.Default]
+					at com.intellij.configurationStore.SaveAndSyncHandlerImpl.listenIdleAndActivate(SaveAndSyncHandlerImpl.kt:218)
+					at com.intellij.configurationStore.SaveAndSyncHandlerImpl$3.invokeSuspend(SaveAndSyncHandlerImpl.kt:118)
+					- "com.intellij.configurationStore.SaveAndSyncHandlerImpl#6398":ProducerCoroutine{Completing} [CoroutineId(6398), Dispatchers.Default]
+						- "com.intellij.configurationStore.SaveAndSyncHandlerImpl#6399":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(6399), Dispatchers.Default]
+							at kotlinx.coroutines.flow.internal.ChannelLimitedFlowMerge$collectTo$2$1.invokeSuspend(Merge.kt:96)
+				- "com.intellij.configurationStore.SaveAndSyncHandlerImpl#350":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(350), Dispatchers.Default]
+					at com.intellij.util.CoroutinesKt$awaitCancellationAndInvoke$1.invokeSuspend(coroutines.kt:27)
+			- "com.intellij.openapi.progress.impl.PlatformTaskSupport":supervisor:ChildScope{Active}
+			- "org.jetbrains.ide.BuiltInServerManagerImpl":supervisor:ChildScope{Active}
+			- "com.intellij.util.indexing.FileBasedIndexImpl":supervisor:ChildScope{Active}
+			- "com.intellij.ide.IdleTracker":supervisor:ChildScope{Active}
+				- "com.intellij.ide.IdleTracker":supervisor:ChildScope{Active}
+					- "Idle listener: com.intellij.compiler.server.BuildManager$$Lambda$653/0x000000d000672000#379":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(379), Dispatchers.Default]
+						at kotlinx.coroutines.flow.FlowKt__DelayKt$debounceInternal$1$3$1.invokeSuspend(Delay.kt:232)
+						at kotlinx.coroutines.selects.SelectImplementation.processResultAndInvokeBlockRecoveringException(Select.kt:706)
+						at kotlinx.coroutines.selects.SelectImplementation.doSelectSuspend(Select.kt:434)
+						at kotlinx.coroutines.flow.FlowKt__DelayKt$debounceInternal$1.invokeSuspend(Delay.kt:426)
+						at kotlinx.coroutines.flow.internal.FlowCoroutineKt$scopedFlow$1$1.invokeSuspend(FlowCoroutine.kt:51)
+						at com.intellij.ide.IdleTracker$addIdleListener$1.invokeSuspend(IdleTracker.kt:64)
+						- "Idle listener: com.intellij.compiler.server.BuildManager$$Lambda$653/0x000000d000672000#380":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(380), Dispatchers.Default]
+			- "com.intellij.ide.ui.laf.LafDynamicPluginManager":supervisor:ChildScope{Active}
+			- "com.intellij.openapi.vfs.newvfs.RefreshQueueImpl":supervisor:ChildScope{Active}
+				-[x2 of] "com.intellij.openapi.vfs.newvfs.RefreshQueueImpl":supervisor:ChildScope{Active}
+			- "com.intellij.ide.ui.html.GlobalStyleSheetUpdateService":supervisor:ChildScope{Active}
+				- "com.intellij.ide.ui.html.GlobalStyleSheetUpdateService#444":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(444), Dispatchers.Default]
+					at com.intellij.ide.ui.html.GlobalStyleSheetUpdateService$init$2.invokeSuspend(GlobalStyleSheetHolder.kt:102)
+					- "com.intellij.ide.ui.html.GlobalStyleSheetUpdateService#445":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(445), Dispatchers.Default]
+						at kotlinx.coroutines.selects.SelectImplementation.doSelectSuspend(Select.kt:431)
+						at kotlinx.coroutines.flow.FlowKt__DelayKt$debounceInternal$1.invokeSuspend(Delay.kt:426)
+						at kotlinx.coroutines.flow.internal.FlowCoroutineKt$scopedFlow$1$1.invokeSuspend(FlowCoroutine.kt:51)
+						at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+						- "com.intellij.ide.ui.html.GlobalStyleSheetUpdateService#446":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(446), Dispatchers.Default]
+			- "ProjectImpl@197091806 container":supervisor:ChildScope{Active}
+				- "ProjectImpl@197091806 container":ChildScope{Active}
+				- "(ProjectImpl@197091806 x com.intellij.copyright)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x com.intellij.platform.images)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x org.editorconfig.editorconfigjetbrains)":supervisor:ChildScope{Active}
+					- "org.editorconfig.plugincomponents.EditorConfigPropertiesService":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x org.jetbrains.plugins.yaml)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x org.jetbrains.plugins.terminal)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x hg4idea)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x com.intellij.properties)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x com.intellij.gradle)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x com.jetbrains.sh)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x com.intellij.completion.ml.ranking)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x com.jetbrains.performancePlugin)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x Git4Idea)":supervisor:ChildScope{Active}
+					- "git4idea.ignore.GitIgnoreInStoreDirGenerator":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x org.jetbrains.plugins.github)":supervisor:ChildScope{Active}
+					- "org.jetbrains.plugins.github.pullrequest.ui.toolwindow.GHPRToolWindowController":supervisor:ChildScope{Active}
+						- "org.jetbrains.plugins.github.pullrequest.ui.toolwindow.GHPRToolWindowController":supervisor:ChildScope{Active} [Dispatchers.EDT]
+					- "org.jetbrains.plugins.github.pullrequest.ui.toolwindow.model.GHPRToolWindowViewModel":supervisor:ChildScope{Active}
+						- "org.jetbrains.plugins.github.pullrequest.ui.toolwindow.model.GHPRToolWindowViewModel":supervisor:ChildScope{Active} [Dispatchers.EDT]
+							- "org.jetbrains.plugins.github.pullrequest.ui.toolwindow.model.GHPRToolWindowViewModel#1474":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1474), Dispatchers.EDT]
+								at kotlinx.coroutines.flow.FlowKt__ShareKt$launchSharing$1.invokeSuspend(Share.kt:214)
+							- "org.jetbrains.plugins.github.pullrequest.ui.toolwindow.model.GHPRToolWindowViewModel#1486":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1486), Dispatchers.EDT]
+								at kotlinx.coroutines.channels.BufferedChannel.receiveCatchingOnNoWaiterSuspend-GKJJFZk(BufferedChannel.kt:3056)
+								at kotlinx.coroutines.channels.BufferedChannel.receiveCatching-JP2dKIU$suspendImpl(BufferedChannel.kt:739)
+								at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2.invokeSuspend(Combine.kt:54)
+								at kotlinx.coroutines.flow.FlowKt__ShareKt$launchSharing$1.invokeSuspend(Share.kt:214)
+								- "org.jetbrains.plugins.github.pullrequest.ui.toolwindow.model.GHPRToolWindowViewModel#1558":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1558), Dispatchers.EDT]
+									at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+								- "org.jetbrains.plugins.github.pullrequest.ui.toolwindow.model.GHPRToolWindowViewModel#1559":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1559), Dispatchers.EDT]
+									at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+					- "org.jetbrains.plugins.github.util.GHHostedRepositoriesManager":supervisor:ChildScope{Active}
+						- "org.jetbrains.plugins.github.util.GHHostedRepositoriesManager#1464":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1464), Dispatchers.Default]
+							at kotlinx.coroutines.channels.BufferedChannel.receiveCatchingOnNoWaiterSuspend-GKJJFZk(BufferedChannel.kt:3056)
+							at kotlinx.coroutines.channels.BufferedChannel.receiveCatching-JP2dKIU$suspendImpl(BufferedChannel.kt:739)
+							at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2.invokeSuspend(Combine.kt:54)
+							at kotlinx.coroutines.flow.FlowKt__ShareKt$launchSharing$1.invokeSuspend(Share.kt:219)
+							- "org.jetbrains.plugins.github.util.GHHostedRepositoriesManager#1562":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1562), Dispatchers.Default]
+								at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+								- "org.jetbrains.plugins.github.util.GHHostedRepositoriesManager#1571":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1571), Dispatchers.Default]
+									at git4idea.remote.hosting.GitAsyncExtensionsKt$gitRemotesFlow$1.invokeSuspend(gitAsyncExtensions.kt:39)
+							- "org.jetbrains.plugins.github.util.GHHostedRepositoriesManager#1564":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1564), Dispatchers.Default]
+								at kotlinx.coroutines.channels.BufferedChannel.receiveCatchingOnNoWaiterSuspend-GKJJFZk(BufferedChannel.kt:3056)
+								at kotlinx.coroutines.channels.BufferedChannel.receiveCatching-JP2dKIU$suspendImpl(BufferedChannel.kt:739)
+								at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2.invokeSuspend(Combine.kt:54)
+								at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+								- "org.jetbrains.plugins.github.util.GHHostedRepositoriesManager#1565":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1565), Dispatchers.Default]
+									at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+								- "org.jetbrains.plugins.github.util.GHHostedRepositoriesManager#1566":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1566), Dispatchers.Default]
+									at kotlinx.coroutines.flow.FlowKt__TransformKt$runningFold$$inlined$unsafeFlow$1.collect(Transform.kt:116)
+									at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+									- "org.jetbrains.plugins.github.util.GHHostedRepositoriesManager#1575":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1575), Dispatchers.Default]
+										at git4idea.remote.hosting.GitAsyncExtensionsKt$discoverServers$1.invokeSuspend(gitAsyncExtensions.kt:79)
+										- "org.jetbrains.plugins.github.util.GHHostedRepositoriesManager#1576":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1576), Dispatchers.Default]
+											at kotlinx.coroutines.channels.BufferedChannel.receiveCatchingOnNoWaiterSuspend-GKJJFZk(BufferedChannel.kt:3056)
+											at kotlinx.coroutines.channels.BufferedChannel.receiveCatching-JP2dKIU$suspendImpl(BufferedChannel.kt:739)
+											at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2.invokeSuspend(Combine.kt:54)
+											- "org.jetbrains.plugins.github.util.GHHostedRepositoriesManager#1577":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1577), Dispatchers.Default]
+												at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+												- "org.jetbrains.plugins.github.util.GHHostedRepositoriesManager#1579":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1579), Dispatchers.Default]
+													at git4idea.remote.hosting.GitAsyncExtensionsKt$gitRemotesFlow$1.invokeSuspend(gitAsyncExtensions.kt:39)
+											- "org.jetbrains.plugins.github.util.GHHostedRepositoriesManager#1578":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1578), Dispatchers.Default]
+												at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+					- "org.jetbrains.plugins.github.pullrequest.GHServerVersionsCollector":supervisor:ChildScope{Active}
+						- "org.jetbrains.plugins.github.pullrequest.GHServerVersionsCollector":supervisor:ChildScope{Active}
+							- "org.jetbrains.plugins.github.pullrequest.GHServerVersionsCollector#4666":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(4666), Dispatchers.Default]
+								at org.jetbrains.plugins.github.pullrequest.GHServerVersionsCollector$1.invokeSuspend(GHPRStatisticsCollector.kt:188)
+				- "(ProjectImpl@197091806 x org.jetbrains.plugins.gitlab)":supervisor:ChildScope{Active}
+					- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.GitLabMergeRequestsToolWindowController":supervisor:ChildScope{Active}
+						- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.GitLabMergeRequestsToolWindowController":supervisor:ChildScope{Active} [Dispatchers.EDT]
+					- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel":supervisor:ChildScope{Active}
+						- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel":supervisor:ChildScope{Active} [Dispatchers.Default]
+							- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel#1472":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1472), Dispatchers.Default]
+								at kotlinx.coroutines.flow.FlowKt__ShareKt$launchSharing$1.invokeSuspend(Share.kt:214)
+							- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel#1473":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1473), Dispatchers.Default]
+								at kotlinx.coroutines.flow.FlowKt__ShareKt$launchSharing$1.invokeSuspend(Share.kt:214)
+								- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel#1475":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1475), Dispatchers.Default]
+									at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+									- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel#1476":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1476), Dispatchers.Default]
+										at com.intellij.collaboration.async.CoroutineUtilKt$mapScoped$1$1.invokeSuspend(CoroutineUtil.kt:137)
+										at com.intellij.collaboration.async.CoroutineUtilKt$mapScoped$1.invokeSuspend(CoroutineUtil.kt:135)
+							- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel#1477":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1477), Dispatchers.Default]
+								at kotlinx.coroutines.flow.FlowKt__ShareKt$launchSharing$1.invokeSuspend(Share.kt:214)
+								- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel#1481":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1481), Dispatchers.Default]
+									at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+									- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel#1483":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1483), Dispatchers.Default]
+										at com.intellij.collaboration.async.CoroutineUtilKt$mapScoped$1$1.invokeSuspend(CoroutineUtil.kt:137)
+										at com.intellij.collaboration.async.CoroutineUtilKt$mapScoped$1.invokeSuspend(CoroutineUtil.kt:135)
+										- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel":supervisor:ChildScope{Active} [CoroutineId(1483), Dispatchers.EDT]
+											- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel#1498":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1498), Dispatchers.EDT]
+												at kotlinx.coroutines.channels.BufferedChannel.receiveCatchingOnNoWaiterSuspend-GKJJFZk(BufferedChannel.kt:3056)
+												at kotlinx.coroutines.channels.BufferedChannel.receiveCatching-JP2dKIU$suspendImpl(BufferedChannel.kt:739)
+												at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2.invokeSuspend(Combine.kt:54)
+												at kotlinx.coroutines.flow.FlowKt__ShareKt$launchSharing$1.invokeSuspend(Share.kt:214)
+												- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel#1560":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1560), Dispatchers.EDT]
+													at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+												- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel#1561":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1561), Dispatchers.EDT]
+													at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+											- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel#1499":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1499), Dispatchers.EDT]
+												at kotlinx.coroutines.flow.FlowKt__ShareKt$launchSharing$1.invokeSuspend(Share.kt:214)
+												- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel#1563":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1563), Dispatchers.EDT]
+													at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+											- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel#1500":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1500), Dispatchers.EDT]
+												at kotlinx.coroutines.channels.BufferedChannel.receiveCatchingOnNoWaiterSuspend-GKJJFZk(BufferedChannel.kt:3056)
+												at kotlinx.coroutines.channels.BufferedChannel.receiveCatching-JP2dKIU$suspendImpl(BufferedChannel.kt:739)
+												at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2.invokeSuspend(Combine.kt:54)
+												at kotlinx.coroutines.flow.FlowKt__ShareKt$launchSharing$1.invokeSuspend(Share.kt:214)
+												- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel#1567":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1567), Dispatchers.EDT]
+													at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+												- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel#1568":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1568), Dispatchers.EDT]
+													at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+											- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel#1501":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1501), Dispatchers.EDT]
+												at kotlinx.coroutines.channels.BufferedChannel.receiveCatchingOnNoWaiterSuspend-GKJJFZk(BufferedChannel.kt:3056)
+												at kotlinx.coroutines.channels.BufferedChannel.receiveCatching-JP2dKIU$suspendImpl(BufferedChannel.kt:739)
+												at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2.invokeSuspend(Combine.kt:54)
+												at kotlinx.coroutines.flow.FlowKt__ShareKt$launchSharing$1.invokeSuspend(Share.kt:214)
+												- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel#1569":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1569), Dispatchers.EDT]
+													at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+												- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel#1570":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1570), Dispatchers.EDT]
+													at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+											- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel#1502":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1502), Dispatchers.EDT]
+												at kotlinx.coroutines.channels.BufferedChannel.receiveCatchingOnNoWaiterSuspend-GKJJFZk(BufferedChannel.kt:3056)
+												at kotlinx.coroutines.channels.BufferedChannel.receiveCatching-JP2dKIU$suspendImpl(BufferedChannel.kt:739)
+												at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2.invokeSuspend(Combine.kt:54)
+												at kotlinx.coroutines.flow.FlowKt__ShareKt$launchSharing$1.invokeSuspend(Share.kt:214)
+												- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel#1572":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1572), Dispatchers.EDT]
+													at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+												- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel#1573":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1573), Dispatchers.EDT]
+													at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+												- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel#1574":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1574), Dispatchers.EDT]
+													at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+										- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel#1503":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1503), Dispatchers.Default]
+											at kotlinx.coroutines.channels.BufferedChannel.receiveCatchingOnNoWaiterSuspend-GKJJFZk(BufferedChannel.kt:3056)
+											at kotlinx.coroutines.channels.BufferedChannel.receiveCatching-JP2dKIU$suspendImpl(BufferedChannel.kt:739)
+											at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2.invokeSuspend(Combine.kt:54)
+											at kotlinx.coroutines.flow.FlowKt__ShareKt$launchSharing$1.invokeSuspend(Share.kt:214)
+											- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel#1505":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1505), Dispatchers.Default]
+												at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+											- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel#1507":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1507), Dispatchers.Default]
+												at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+										- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel#1504":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1504), Dispatchers.Default]
+											at kotlinx.coroutines.channels.BufferedChannel.receiveCatchingOnNoWaiterSuspend-GKJJFZk(BufferedChannel.kt:3056)
+											at kotlinx.coroutines.channels.BufferedChannel.receiveCatching-JP2dKIU$suspendImpl(BufferedChannel.kt:739)
+											at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2.invokeSuspend(Combine.kt:54)
+											at kotlinx.coroutines.flow.FlowKt__ShareKt$launchSharing$1.invokeSuspend(Share.kt:214)
+											- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel#1508":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1508), Dispatchers.Default]
+												at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+											- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel#1509":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1509), Dispatchers.Default]
+												at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+											- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel#1510":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1510), Dispatchers.Default]
+												at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+										- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel#1506":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1506), Dispatchers.Default]
+											at org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabRepositoryAndAccountSelectorViewModel$1.invokeSuspend(GitLabRepositoryAndAccountSelectorViewModel.kt:43)
+							- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel#1484":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1484), Dispatchers.Default]
+								at kotlinx.coroutines.channels.BufferedChannel.receiveCatchingOnNoWaiterSuspend-GKJJFZk(BufferedChannel.kt:3056)
+								at kotlinx.coroutines.channels.BufferedChannel.receiveCatching-JP2dKIU$suspendImpl(BufferedChannel.kt:739)
+								at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2.invokeSuspend(Combine.kt:54)
+								at kotlinx.coroutines.flow.FlowKt__ShareKt$launchSharing$1.invokeSuspend(Share.kt:214)
+								- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel#1487":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1487), Dispatchers.Default]
+									at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+								- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel#1488":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1488), Dispatchers.Default]
+									at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+							- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel#1485":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1485), Dispatchers.Default]
+								at kotlinx.coroutines.channels.BufferedChannel.receiveCatchingOnNoWaiterSuspend-GKJJFZk(BufferedChannel.kt:3056)
+								at kotlinx.coroutines.channels.BufferedChannel.receiveCatching-JP2dKIU$suspendImpl(BufferedChannel.kt:739)
+								at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2.invokeSuspend(Combine.kt:54)
+								at kotlinx.coroutines.flow.FlowKt__ShareKt$launchSharing$1.invokeSuspend(Share.kt:214)
+								- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel#1490":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1490), Dispatchers.Default]
+									at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+								- "org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.model.GitLabToolWindowViewModel#1491":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1491), Dispatchers.Default]
+									at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+					- "org.jetbrains.plugins.gitlab.api.GitLabProjectConnectionManager":supervisor:ChildScope{Active}
+						- "org.jetbrains.plugins.gitlab.api.GitLabProjectConnectionManager":supervisor:ChildScope{Active} [Dispatchers.Default]
+							- "org.jetbrains.plugins.gitlab.api.GitLabProjectConnectionManager#1450":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1450), Dispatchers.Default]
+								at git4idea.remote.hosting.SingleHostedGitRepositoryConnectionManagerImpl$1.invokeSuspend(SingleHostedGitRepositoryConnectionManager.kt:50)
+								- "org.jetbrains.plugins.gitlab.api.GitLabProjectConnectionManager#1454":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1454), Dispatchers.Default]
+									at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+					- "org.jetbrains.plugins.gitlab.GitLabProjectsManagerImpl":supervisor:ChildScope{Active}
+						- "org.jetbrains.plugins.gitlab.GitLabProjectsManagerImpl#1465":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1465), Dispatchers.Default]
+							at kotlinx.coroutines.channels.BufferedChannel.receiveCatchingOnNoWaiterSuspend-GKJJFZk(BufferedChannel.kt:3056)
+							at kotlinx.coroutines.channels.BufferedChannel.receiveCatching-JP2dKIU$suspendImpl(BufferedChannel.kt:739)
+							at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2.invokeSuspend(Combine.kt:54)
+							at kotlinx.coroutines.flow.FlowKt__ShareKt$launchSharing$1.invokeSuspend(Share.kt:214)
+							- "org.jetbrains.plugins.gitlab.GitLabProjectsManagerImpl#1466":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1466), Dispatchers.Default]
+								at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+								- "org.jetbrains.plugins.gitlab.GitLabProjectsManagerImpl#1470":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1470), Dispatchers.Default]
+									at git4idea.remote.hosting.GitAsyncExtensionsKt$gitRemotesFlow$1.invokeSuspend(gitAsyncExtensions.kt:39)
+							- "org.jetbrains.plugins.gitlab.GitLabProjectsManagerImpl#1467":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1467), Dispatchers.Default]
+								at kotlinx.coroutines.channels.BufferedChannel.receiveCatchingOnNoWaiterSuspend-GKJJFZk(BufferedChannel.kt:3056)
+								at kotlinx.coroutines.channels.BufferedChannel.receiveCatching-JP2dKIU$suspendImpl(BufferedChannel.kt:739)
+								at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2.invokeSuspend(Combine.kt:54)
+								at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+								- "org.jetbrains.plugins.gitlab.GitLabProjectsManagerImpl#1468":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1468), Dispatchers.Default]
+									at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+								- "org.jetbrains.plugins.gitlab.GitLabProjectsManagerImpl#1469":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1469), Dispatchers.Default]
+									at kotlinx.coroutines.flow.FlowKt__TransformKt$runningFold$$inlined$unsafeFlow$1.collect(Transform.kt:116)
+									at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+									- "org.jetbrains.plugins.gitlab.GitLabProjectsManagerImpl#1471":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1471), Dispatchers.Default]
+										at git4idea.remote.hosting.GitAsyncExtensionsKt$discoverServers$1.invokeSuspend(gitAsyncExtensions.kt:79)
+										- "org.jetbrains.plugins.gitlab.GitLabProjectsManagerImpl#1478":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1478), Dispatchers.Default]
+											at kotlinx.coroutines.channels.BufferedChannel.receiveCatchingOnNoWaiterSuspend-GKJJFZk(BufferedChannel.kt:3056)
+											at kotlinx.coroutines.channels.BufferedChannel.receiveCatching-JP2dKIU$suspendImpl(BufferedChannel.kt:739)
+											at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2.invokeSuspend(Combine.kt:54)
+											- "org.jetbrains.plugins.gitlab.GitLabProjectsManagerImpl#1479":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1479), Dispatchers.Default]
+												at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+												- "org.jetbrains.plugins.gitlab.GitLabProjectsManagerImpl#1482":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1482), Dispatchers.Default]
+													at git4idea.remote.hosting.GitAsyncExtensionsKt$gitRemotesFlow$1.invokeSuspend(gitAsyncExtensions.kt:39)
+											- "org.jetbrains.plugins.gitlab.GitLabProjectsManagerImpl#1480":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1480), Dispatchers.Default]
+												at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+				- "(ProjectImpl@197091806 x com.intellij.java)":supervisor:ChildScope{Active}
+					- "com.intellij.jarRepository.RepositoryLibraryUtils":supervisor:ChildScope{Active}
+					- "com.intellij.openapi.projectRoots.impl.SdkmanrcWatcherService":supervisor:ChildScope{Active}
+					- "com.intellij.jarRepository.LibrarySynchronizationQueue":supervisor:ChildScope{Active}
+						- "com.intellij.jarRepository.LibrarySynchronizationQueue#1880":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1880), Dispatchers.IO]
+							at com.intellij.jarRepository.LibrarySynchronizationQueue$1.invokeSuspend(LibrarySynchronizationQueue.kt:33)
+				- "(ProjectImpl@197091806 x com.intellij.tasks)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x org.intellij.intelliLang)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x org.intellij.groovy)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x org.jetbrains.kotlin)":supervisor:ChildScope{Active}
+					- "org.jetbrains.kotlin.idea.macros.KotlinBundledUsageDetector":supervisor:ChildScope{Active}
+					- "org.jetbrains.kotlin.idea.core.script.configuration.CompositeScriptConfigurationManager":supervisor:ChildScope{Active}
+				-[x6 of] "(ProjectImpl@197091806 x org.jetbrains.kotlin)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x com.intellij.uiDesigner)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x ByteCodeViewer)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x org.jetbrains.idea.maven)":supervisor:ChildScope{Active}
+					- "org.jetbrains.idea.maven.utils.MavenHighlightingUpdater":supervisor:ChildScope{Active}
+					- "org.jetbrains.idea.maven.utils.MavenCoroutineScopeProvider$ProjectService":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x Coverage)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x org.jetbrains.plugins.gradle)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x org.intellij.qodana)":supervisor:ChildScope{Active}
+					- "org.jetbrains.qodana.highlight.QodanaHighlightedReportService":supervisor:ChildScope{Active}
+						- "org.jetbrains.qodana.highlight.QodanaHighlightedReportService#37080":LazyStandaloneCoroutine{New}, state: CREATED [org.jetbrains.qodana.coroutines.QodanaDispatchersProviderImpl$special$$inlined$CoroutineExceptionHandler$1@16e0c418, CoroutineId(37080), Dispatchers.Default]
+						- "org.jetbrains.qodana.highlight.QodanaHighlightedReportService#37081":LazyStandaloneCoroutine{New}, state: CREATED [org.jetbrains.qodana.coroutines.QodanaDispatchersProviderImpl$special$$inlined$CoroutineExceptionHandler$1@16e0c418, CoroutineId(37081), Dispatchers.Default]
+						- "org.jetbrains.qodana.highlight.QodanaHighlightedReportService#37082":LazyStandaloneCoroutine{New}, state: CREATED [org.jetbrains.qodana.coroutines.QodanaDispatchersProviderImpl$special$$inlined$CoroutineExceptionHandler$1@16e0c418, CoroutineId(37082), Dispatchers.EDT]
+						- "org.jetbrains.qodana.highlight.QodanaHighlightedReportService#37083":LazyStandaloneCoroutine{New}, state: CREATED [org.jetbrains.qodana.coroutines.QodanaDispatchersProviderImpl$special$$inlined$CoroutineExceptionHandler$1@16e0c418, CoroutineId(37083), Dispatchers.Default]
+						- "org.jetbrains.qodana.highlight.QodanaHighlightedReportService#37084":LazyStandaloneCoroutine{New}, state: CREATED [org.jetbrains.qodana.coroutines.QodanaDispatchersProviderImpl$special$$inlined$CoroutineExceptionHandler$1@16e0c418, CoroutineId(37084), Dispatchers.Default]
+					- "org.jetbrains.qodana.cloud.project.QodanaCloudProjectLinkService":supervisor:ChildScope{Active}
+						- "org.jetbrains.qodana.cloud.project.QodanaCloudProjectLinkService#37090":LazyStandaloneCoroutine{New}, state: CREATED [org.jetbrains.qodana.coroutines.QodanaDispatchersProviderImpl$special$$inlined$CoroutineExceptionHandler$1@16e0c418, CoroutineId(37090), Dispatchers.Default]
+				- "(ProjectImpl@197091806 x com.intellij.configurationScript)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x intellij.indexing.shared.core)":supervisor:ChildScope{Active}
+					- "com.intellij.indexing.shared.download.ShadeIndexDumbModeTracker":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x PerforceDirectPlugin)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x com.jetbrains.codeWithMe)":supervisor:ChildScope{Active}
+					- "com.jetbrains.rdserver.toolWindow.BackendServerToolWindowManager":supervisor:ChildScope{Active}
+						- "com.jetbrains.rdserver.toolWindow.BackendServerToolWindowManager#1430":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1430), Dispatchers.Default]
+							at org.jetbrains.plugins.github.pullrequest.ui.toolwindow.GHPRToolWindowFactory.manage(GHPRToolWindowFactory.kt:31)
+							at com.intellij.openapi.wm.impl.ToolWindowManagerImpl$registerToolWindow$2.invokeSuspend(ToolWindowManagerImpl.kt:1133)
+							- "com.jetbrains.rdserver.toolWindow.BackendServerToolWindowManager#1494":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1494), Dispatchers.Default]
+								at org.jetbrains.plugins.github.pullrequest.ui.toolwindow.GHPRToolWindowController$manageAvailability$2$1.invokeSuspend(GHPRToolWindowFactory.kt:48)
+							- "com.jetbrains.rdserver.toolWindow.BackendServerToolWindowManager#1496":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1496), Dispatchers.Default]
+								at org.jetbrains.plugins.github.pullrequest.ui.toolwindow.GHPRToolWindowController$manageAvailability$2$2.invokeSuspend(GHPRToolWindowFactory.kt:56)
+						- "com.jetbrains.rdserver.toolWindow.BackendServerToolWindowManager#1431":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1431), Dispatchers.Default]
+							at org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.GitLabMergeRequestsToolWindowController.manageToolWindow(GitLabToolWindowFactory.kt:47)
+							at org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.GitLabToolWindowFactory.manage(GitLabToolWindowFactory.kt:28)
+							at com.intellij.openapi.wm.impl.ToolWindowManagerImpl$registerToolWindow$2.invokeSuspend(ToolWindowManagerImpl.kt:1133)
+							- "com.jetbrains.rdserver.toolWindow.BackendServerToolWindowManager#1489":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1489), Dispatchers.Default]
+								at org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.GitLabMergeRequestsToolWindowController$manageToolWindow$2$1.invokeSuspend(GitLabToolWindowFactory.kt:49)
+							- "com.jetbrains.rdserver.toolWindow.BackendServerToolWindowManager#1492":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1492), Dispatchers.Default]
+								at org.jetbrains.plugins.gitlab.mergerequest.ui.toolwindow.GitLabMergeRequestsToolWindowController$manageToolWindow$2$2.invokeSuspend(GitLabToolWindowFactory.kt:56)
+						- "com.jetbrains.rdserver.toolWindow.BackendServerToolWindowManager#1433":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1433), Dispatchers.Default]
+							at com.intellij.space.vcs.review.SpaceReviewToolWindowFactory.manage(SpaceReviewToolWindowFactory.kt:31)
+							at com.intellij.openapi.wm.impl.ToolWindowManagerImpl$registerToolWindow$2.invokeSuspend(ToolWindowManagerImpl.kt:1133)
+					- "com.jetbrains.rdserver.followMe.FollowMeManagerService":supervisor:ChildScope{Active}
+					- "com.jetbrains.rdserver.followMe.BackendUserManager":supervisor:ChildScope{Active}
+					- "com.jetbrains.rdserver.toolbar.CWMHostClosedToolbarNotification":supervisor:ChildScope{Active}
+					- "com.jetbrains.rd.platform.codeWithMe.toolbar.CodeWithMeToolbarUpdater":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x Subversion)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x com.jetbrains.performancePlugin.async)":supervisor:ChildScope{Active}
+				- "com.intellij.openapi.fileEditor.impl.PsiAwareFileEditorManagerImpl":supervisor:ChildScope{Active}
+					- "com.intellij.openapi.fileEditor.impl.PsiAwareFileEditorManagerImpl#504":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(504), Dispatchers.Default]
+						at kotlinx.coroutines.flow.FlowKt__ShareKt$launchSharing$1.invokeSuspend(Share.kt:214)
+						- "com.intellij.openapi.fileEditor.impl.PsiAwareFileEditorManagerImpl#505":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(505), Dispatchers.Default]
+							at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+							- "com.intellij.openapi.fileEditor.impl.PsiAwareFileEditorManagerImpl#506":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(506), Dispatchers.Default]
+								at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+								- "com.intellij.openapi.fileEditor.impl.PsiAwareFileEditorManagerImpl#838":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(838), Dispatchers.Default]
+									at com.intellij.openapi.fileEditor.impl.FileEditorManagerImpl$special$$inlined$flatMapLatest$1.invokeSuspend(FileEditorManagerImpl.kt:193)
+					- "com.intellij.openapi.fileEditor.impl.PsiAwareFileEditorManagerImpl#514":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(514), Dispatchers.Default]
+						at com.intellij.util.flow.FlowKt$zipWithNext$1.invokeSuspend(flow.kt:107)
+					- "com.intellij.openapi.fileEditor.impl.PsiAwareFileEditorManagerImpl#515":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(515), Dispatchers.Default]
+						at kotlinx.coroutines.flow.FlowKt__ShareKt$launchSharing$1.invokeSuspend(Share.kt:214)
+					- "com.intellij.openapi.fileEditor.impl.PsiAwareFileEditorManagerImpl":supervisor:ChildScope{Active}
+						- "com.intellij.openapi.fileEditor.impl.PsiAwareFileEditorManagerImpl#516":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(516), Dispatchers.Default]
+							at com.intellij.openapi.fileEditor.impl.FileEditorManagerImpl$3.invokeSuspend(FileEditorManagerImpl.kt:256)
+							- "com.intellij.openapi.fileEditor.impl.PsiAwareFileEditorManagerImpl#517":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(517), Dispatchers.Default]
+								at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+					- "EditorSplitters file icon update#834":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(834), Dispatchers.Default]
+						at com.intellij.openapi.fileEditor.impl.MergingUpdateChannel.start(MergingUpdateChannel.kt:28)
+						at com.intellij.openapi.fileEditor.impl.EditorsSplitters$3.invokeSuspend(EditorsSplitters.kt:195)
+					- "EditorSplitters frame title update#835":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(835), Dispatchers.Default]
+						at com.intellij.openapi.fileEditor.impl.EditorsSplitters$4.invokeSuspend(EditorsSplitters.kt:199)
+						- "EditorSplitters frame title update#837":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(837), Dispatchers.Default]
+							at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+					- "FileEditorManagerImpl file update#841":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(841), Dispatchers.Default]
+						at com.intellij.openapi.fileEditor.impl.MergingUpdateChannel.start(MergingUpdateChannel.kt:28)
+						at com.intellij.openapi.fileEditor.impl.FileEditorManagerImpl$processFileUpdateRequests$1.invokeSuspend(FileEditorManagerImpl.kt:392)
+					- "FileEditorManagerImpl file title update#842":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(842), Dispatchers.Default]
+						at com.intellij.openapi.fileEditor.impl.MergingUpdateChannel.start(MergingUpdateChannel.kt:28)
+						at com.intellij.openapi.fileEditor.impl.FileEditorManagerImpl$processFileUpdateRequests$2.invokeSuspend(FileEditorManagerImpl.kt:395)
+					-[x2 of] "com.intellij.openapi.fileEditor.impl.PsiAwareFileEditorManagerImpl":supervisor:ChildScope{Active}
+				- "com.intellij.openapi.project.ExternalStorageConfigurationManagerImpl":supervisor:ChildScope{Active}
+				- "com.intellij.configurationStore.statistic.eventLog.FeatureUsageSettingsEvents":supervisor:ChildScope{Active}
+				- "com.intellij.workspaceModel.ide.impl.WorkspaceModelImpl":supervisor:ChildScope{Active}
+				- "com.intellij.workspaceModel.ide.impl.WorkspaceModelCacheImpl":supervisor:ChildScope{Active}
+					- "com.intellij.workspaceModel.ide.impl.WorkspaceModelCacheImpl#547":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(547), Dispatchers.Default]
+						at kotlinx.coroutines.selects.SelectImplementation.doSelectSuspend(Select.kt:431)
+						at kotlinx.coroutines.flow.FlowKt__DelayKt$debounceInternal$1.invokeSuspend(Delay.kt:426)
+						at kotlinx.coroutines.flow.internal.FlowCoroutineKt$scopedFlow$1$1.invokeSuspend(FlowCoroutine.kt:51)
+						at com.intellij.workspaceModel.ide.impl.WorkspaceModelCacheImpl$2.invokeSuspend(WorkspaceModelCacheImpl.kt:69)
+						- "com.intellij.workspaceModel.ide.impl.WorkspaceModelCacheImpl#548":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(548), Dispatchers.Default]
+				- "com.intellij.platform.backend.observation.PlatformActivityTrackerService":supervisor:ChildScope{Active}
+				- "com.intellij.ide.startup.impl.StartupManagerImpl":supervisor:ChildScope{Active}
+				- "com.intellij.workspaceModel.ide.impl.legacyBridge.module.ModuleManagerComponentBridge":supervisor:ChildScope{Active}
+				- "com.intellij.workspaceModel.ide.impl.legacyBridge.project.ProjectRootManagerBridge":supervisor:ChildScope{Active}
+				- "com.intellij.workspaceModel.ide.impl.legacyBridge.facet.FacetEntityChangeListener":supervisor:ChildScope{Active}
+				- "ModuleBridgeImpl container":supervisor:ChildScope{Active}
+					- "(ModuleBridgeImpl x com.intellij.java)":supervisor:ChildScope{Active}
+					- "(ModuleBridgeImpl x org.jetbrains.idea.eclipse)":supervisor:ChildScope{Active}
+					- "(ModuleBridgeImpl x com.intellij.uiDesigner)":supervisor:ChildScope{Active}
+					- "(ModuleBridgeImpl x org.jetbrains.idea.maven)":supervisor:ChildScope{Active}
+					- "(ModuleBridgeImpl x org.jetbrains.kotlin)":supervisor:ChildScope{Active}
+					- "(ModuleBridgeImpl x org.jetbrains.security.package-checker)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x org.jetbrains.kotlin))":supervisor:ChildScope{Active}
+					- "org.jetbrains.kotlin.idea.macros.KotlinBundledUsageDetector$ModelChangeListener":supervisor:ChildScope{Active}
+				- "com.intellij.openapi.wm.impl.status.widget.StatusBarWidgetsManager":supervisor:ChildScope{Active}
+					- "com.intellij.openapi.wm.impl.status.widget.StatusBarWidgetsManager#1226":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1226), Dispatchers.Default]
+						at com.intellij.openapi.wm.impl.status.EditorBasedStatusBarPopup$1.invokeSuspend(EditorBasedStatusBarPopup.kt:103)
+						- "com.intellij.openapi.wm.impl.status.widget.StatusBarWidgetsManager#1232":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1232), Dispatchers.Default]
+							at kotlinx.coroutines.selects.SelectImplementation.doSelectSuspend(Select.kt:431)
+							at kotlinx.coroutines.flow.FlowKt__DelayKt$debounceInternal$1.invokeSuspend(Delay.kt:426)
+							at kotlinx.coroutines.flow.internal.FlowCoroutineKt$scopedFlow$1$1.invokeSuspend(FlowCoroutine.kt:51)
+							at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+							- "com.intellij.openapi.wm.impl.status.widget.StatusBarWidgetsManager#1233":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1233), Dispatchers.Default]
+					- "com.intellij.openapi.wm.impl.status.widget.StatusBarWidgetsManager#1231":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1231), Dispatchers.Default]
+						at com.intellij.openapi.wm.impl.status.EditorBasedStatusBarPopup$1.invokeSuspend(EditorBasedStatusBarPopup.kt:103)
+						- "com.intellij.openapi.wm.impl.status.widget.StatusBarWidgetsManager#1234":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1234), Dispatchers.Default]
+							at kotlinx.coroutines.selects.SelectImplementation.doSelectSuspend(Select.kt:431)
+							at kotlinx.coroutines.flow.FlowKt__DelayKt$debounceInternal$1.invokeSuspend(Delay.kt:426)
+							at kotlinx.coroutines.flow.internal.FlowCoroutineKt$scopedFlow$1$1.invokeSuspend(FlowCoroutine.kt:51)
+							at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+							- "com.intellij.openapi.wm.impl.status.widget.StatusBarWidgetsManager#1235":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1235), Dispatchers.Default]
+					- "com.intellij.openapi.wm.impl.status.widget.StatusBarWidgetsManager#1243":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1243), Dispatchers.Default]
+						at com.intellij.openapi.wm.impl.status.EditorBasedStatusBarPopup$1.invokeSuspend(EditorBasedStatusBarPopup.kt:103)
+						- "com.intellij.openapi.wm.impl.status.widget.StatusBarWidgetsManager#1252":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1252), Dispatchers.Default]
+							at kotlinx.coroutines.selects.SelectImplementation.doSelectSuspend(Select.kt:431)
+							at kotlinx.coroutines.flow.FlowKt__DelayKt$debounceInternal$1.invokeSuspend(Delay.kt:426)
+							at kotlinx.coroutines.flow.internal.FlowCoroutineKt$scopedFlow$1$1.invokeSuspend(FlowCoroutine.kt:51)
+							at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+							- "com.intellij.openapi.wm.impl.status.widget.StatusBarWidgetsManager#1253":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1253), Dispatchers.Default]
+					- "com.intellij.openapi.wm.impl.status.widget.StatusBarWidgetsManager":supervisor:ChildScope{Active}
+						- "com.intellij.openapi.wm.impl.status.widget.StatusBarWidgetsManager#1602":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1602), Dispatchers.Default]
+							at com.intellij.openapi.wm.impl.status.IdeStatusBarImplKt$createComponentByWidgetPresentation$1.invokeSuspend(IdeStatusBarImpl.kt:796)
+							- "com.intellij.openapi.wm.impl.status.widget.StatusBarWidgetsManager#1606":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1606), Dispatchers.Default]
+								at kotlinx.coroutines.channels.BufferedChannel.receiveCatchingOnNoWaiterSuspend-GKJJFZk(BufferedChannel.kt:3056)
+								at kotlinx.coroutines.channels.BufferedChannel.receiveCatching-JP2dKIU$suspendImpl(BufferedChannel.kt:739)
+								at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2.invokeSuspend(Combine.kt:54)
+								at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+								- "com.intellij.openapi.wm.impl.status.widget.StatusBarWidgetsManager#1607":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1607), Dispatchers.Default]
+									at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+									- "com.intellij.openapi.wm.impl.status.widget.StatusBarWidgetsManager#1611":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1611), Dispatchers.Default]
+										at kotlinx.coroutines.selects.SelectImplementation.doSelectSuspend(Select.kt:431)
+										at kotlinx.coroutines.flow.FlowKt__DelayKt$debounceInternal$1.invokeSuspend(Delay.kt:426)
+										at kotlinx.coroutines.flow.internal.FlowCoroutineKt$scopedFlow$1$1.invokeSuspend(FlowCoroutine.kt:51)
+										at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+										- "com.intellij.openapi.wm.impl.status.widget.StatusBarWidgetsManager#1612":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1612), Dispatchers.Default]
+											at kotlinx.coroutines.channels.BufferedChannel.receiveCatchingOnNoWaiterSuspend-GKJJFZk(BufferedChannel.kt:3056)
+											at kotlinx.coroutines.channels.BufferedChannel.receiveCatching-JP2dKIU$suspendImpl(BufferedChannel.kt:739)
+											at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2.invokeSuspend(Combine.kt:54)
+											- "com.intellij.openapi.wm.impl.status.widget.StatusBarWidgetsManager#1613":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1613), Dispatchers.Default]
+												at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+											- "com.intellij.openapi.wm.impl.status.widget.StatusBarWidgetsManager#1614":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1614), Dispatchers.Default]
+												at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+								- "com.intellij.openapi.wm.impl.status.widget.StatusBarWidgetsManager#1608":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1608), Dispatchers.Default]
+									at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+									- "com.intellij.openapi.wm.impl.status.widget.StatusBarWidgetsManager#1609":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1609), Dispatchers.Default]
+										at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+					- "com.intellij.openapi.wm.impl.status.widget.StatusBarWidgetsManager#1605":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1605), Dispatchers.Default]
+						at com.intellij.openapi.wm.impl.status.widget.StatusBarWidgetsManager$dataContext$1$currentFileEditor$2$1.invokeSuspend(StatusBarWidgetsManager.kt:62)
+					- "com.intellij.openapi.wm.impl.status.widget.StatusBarWidgetsManager":supervisor:ChildScope{Active}
+						- "com.intellij.openapi.wm.impl.status.widget.StatusBarWidgetsManager#3275":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(3275), Dispatchers.Default]
+							at com.intellij.openapi.wm.impl.status.IdeStatusBarImplKt$createComponentByWidgetPresentation$2.invokeSuspend(IdeStatusBarImpl.kt:813)
+							- "com.intellij.openapi.wm.impl.status.widget.StatusBarWidgetsManager#3277":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(3277), Dispatchers.Default]
+								at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+								- "com.intellij.openapi.wm.impl.status.widget.StatusBarWidgetsManager#3278":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(3278), Dispatchers.Default]
+									at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+									- "com.intellij.openapi.wm.impl.status.widget.StatusBarWidgetsManager#3279":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(3279), Dispatchers.Default]
+										at kotlinx.coroutines.selects.SelectImplementation.doSelectSuspend(Select.kt:431)
+										at kotlinx.coroutines.flow.FlowKt__DelayKt$debounceInternal$1.invokeSuspend(Delay.kt:426)
+										at kotlinx.coroutines.flow.internal.FlowCoroutineKt$scopedFlow$1$1.invokeSuspend(FlowCoroutine.kt:51)
+										at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+										- "com.intellij.openapi.wm.impl.status.widget.StatusBarWidgetsManager#3280":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(3280), Dispatchers.Default]
+											- "com.intellij.openapi.wm.impl.status.widget.StatusBarWidgetsManager#3281":ProducerCoroutine{Completing} [CoroutineId(3281), Dispatchers.Default]
+												- "com.intellij.openapi.wm.impl.status.widget.StatusBarWidgetsManager#3282":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(3282), Dispatchers.Default]
+													at kotlinx.coroutines.flow.internal.ChannelLimitedFlowMerge$collectTo$2$1.invokeSuspend(Merge.kt:96)
+													- "com.intellij.openapi.wm.impl.status.widget.StatusBarWidgetsManager#3284":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(3284), Dispatchers.Default]
+														at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+												- "com.intellij.openapi.wm.impl.status.widget.StatusBarWidgetsManager#3283":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(3283), Dispatchers.Default]
+													at kotlinx.coroutines.flow.StateFlowImpl.collect(StateFlow.kt:401)
+													at kotlinx.coroutines.flow.internal.ChannelLimitedFlowMerge$collectTo$2$1.invokeSuspend(Merge.kt:96)
+				- "com.intellij.ide.navbar.ide.NavBarService":supervisor:ChildScope{Active}
+					- "com.intellij.ide.navbar.ide.NavBarService":supervisor:ChildScope{Active} [LimitedDispatcher@337bda43]
+						- "com.intellij.ide.navbar.ide.NavBarService#1223":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1223), LimitedDispatcher@337bda43]
+							at com.intellij.ide.navbar.ui.StaticNavBarPanelKt$staticNavBarPanel$handleWindow$2.invokeSuspend(StaticNavBarPanel.kt:57)
+							at com.intellij.ide.navbar.ui.StaticNavBarPanelKt.staticNavBarPanel$handleWindow(StaticNavBarPanel.kt:48)
+							at com.intellij.ide.navbar.ui.StaticNavBarPanelKt$staticNavBarPanel$1$1$1$1.invokeSuspend(StaticNavBarPanel.kt:73)
+							- "com.intellij.ide.navbar.ide.NavBarService#1296":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1296), LimitedDispatcher@337bda43]
+								at com.intellij.ide.navbar.ide.NavBarVmImpl$1.invokeSuspend(NavBarVmImpl.kt:42)
+								- "com.intellij.ide.navbar.ide.NavBarService#1303":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1303), LimitedDispatcher@337bda43]
+									at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+									- "com.intellij.ide.navbar.ide.NavBarService#1308":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1308), LimitedDispatcher@337bda43]
+										at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+										- "com.intellij.ide.navbar.ide.NavBarService#57109":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(57109), LimitedDispatcher@337bda43]
+											at com.intellij.ide.navbar.ui.StaticNavBarPanelKt$staticNavBarPanel$contextItems$1.invokeSuspend(StaticNavBarPanel.kt:42)
+							- "com.intellij.ide.navbar.ide.NavBarService#1297":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1297), LimitedDispatcher@337bda43]
+								at com.intellij.ide.navbar.ide.NavBarVmImpl$2.invokeSuspend(NavBarVmImpl.kt:52)
+								- "com.intellij.ide.navbar.ide.NavBarService#1306":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1306), LimitedDispatcher@337bda43]
+									at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+									- "com.intellij.ide.navbar.ide.NavBarService#1309":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1309), LimitedDispatcher@337bda43]
+										at com.intellij.util.flow.FlowKt$zipWithNext$1.invokeSuspend(flow.kt:107)
+										at kotlinx.coroutines.flow.AbstractFlow.collect(Flow.kt:230)
+										at com.intellij.ide.navbar.ide.NavBarVmImpl$handleSelectionChange$2.invokeSuspend(NavBarVmImpl.kt:116)
+							- "com.intellij.ide.navbar.ide.NavBarService#1298":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1298), LimitedDispatcher@337bda43]
+								at com.intellij.ide.navbar.ide.NavBarVmImpl$3.invokeSuspend(NavBarVmImpl.kt:55)
+								- "com.intellij.ide.navbar.ide.NavBarService#1307":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1307), LimitedDispatcher@337bda43]
+									at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+							- "com.intellij.ide.navbar.ide.NavBarService#1302":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1302), LimitedDispatcher@337bda43]
+								at kotlinx.coroutines.flow.FlowKt__CollectKt$launchIn$1.invokeSuspend(Collect.kt:50)
+					- "com.intellij.ide.navbar.ide.NavBarService#1090":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1090), Dispatchers.Default]
+						at com.intellij.ide.navbar.ide.NavBarService$1.invokeSuspend(NavBarService.kt:53)
+						- "com.intellij.ide.navbar.ide.NavBarService#1093":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1093), Dispatchers.Default]
+							at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+							- "com.intellij.ide.navbar.ide.NavBarService#1094":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1094), Dispatchers.Default]
+								at com.intellij.ide.navbar.ide.NavBarService$1$1.invokeSuspend(NavBarService.kt:59)
+								- "com.intellij.ide.navbar.ide.NavBarService#1096":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1096), Dispatchers.Default]
+									at com.intellij.util.flow.FlowKt$throttle$1.invokeSuspend(flow.kt:46)
+									- "com.intellij.ide.navbar.ide.NavBarService#1097":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1097), Dispatchers.Default]
+										at com.intellij.util.flow.FlowKt$throttle$1$latchJob$1.invokeSuspend(flow.kt:41)
+									- "com.intellij.ide.navbar.ide.NavBarService#1098":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1098), Dispatchers.Default]
+										at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+										- "com.intellij.ide.navbar.ide.NavBarService#1101":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1101), Dispatchers.Default]
+											at com.intellij.ide.navbar.ide.NavBarIdeUtil$activityFlow$1.invokeSuspend(util.kt:83)
+				- "com.intellij.ui.EditorNotificationsImpl":supervisor:ChildScope{Active}
+					- "EditorNotificationsImpl":supervisor:ChildScope{Active}
+					- "com.intellij.ui.EditorNotificationsImpl#1135":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1135), Dispatchers.Default]
+						at com.intellij.ui.EditorNotificationsImpl$6.invokeSuspend(EditorNotificationsImpl.kt:112)
+						- "com.intellij.ui.EditorNotificationsImpl#1136":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1136), Dispatchers.Default]
+							at kotlinx.coroutines.selects.SelectImplementation.doSelectSuspend(Select.kt:431)
+							at kotlinx.coroutines.flow.FlowKt__DelayKt$debounceInternal$1.invokeSuspend(Delay.kt:426)
+							at kotlinx.coroutines.flow.internal.FlowCoroutineKt$scopedFlow$1$1.invokeSuspend(FlowCoroutine.kt:51)
+							at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+							- "com.intellij.ui.EditorNotificationsImpl#1137":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1137), Dispatchers.Default]
+				- "com.intellij.xdebugger.impl.XDebuggerManagerImpl":supervisor:ChildScope{Active}
+					- "XDebuggerExecutionPointManager":supervisor:ChildScope{Active} [Dispatchers.EDT]
+						- "XDebuggerExecutionPointManager#1189":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1189), Dispatchers.EDT]
+							at kotlinx.coroutines.flow.FlowKt__ShareKt$launchSharing$1.invokeSuspend(Share.kt:214)
+							- "XDebuggerExecutionPointManager#1242":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1242), Dispatchers.EDT]
+								at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+						- "XDebuggerExecutionPointManager/UI":supervisor:ChildScope{Active} [Dispatchers.EDT]
+							- "XDebuggerExecutionPointManager/UI#1195":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1195), Dispatchers.EDT]
+								at com.intellij.xdebugger.impl.ui.ExecutionPositionUiKt$showExecutionPositionUi$1.invokeSuspend(ExecutionPositionUi.kt:49)
+								- "XDebuggerExecutionPointManager/UI#1248":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1248), Dispatchers.EDT]
+									at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+									- "XDebuggerExecutionPointManager/UI#1513":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1513), Dispatchers.EDT]
+										at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+									- "XDebuggerExecutionPointManager/UI#2551":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(2551), Dispatchers.EDT]
+										at com.intellij.xdebugger.impl.ui.ExecutionPositionUiKt$showExecutionPositionUi$1$2.invokeSuspend(ExecutionPositionUi.kt:51)
+							- "XDebuggerExecutionPointManager/UI#1196":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1196), Dispatchers.EDT]
+								at com.intellij.xdebugger.impl.ui.ExecutionPositionUiKt$showExecutionPositionUi$1.invokeSuspend(ExecutionPositionUi.kt:49)
+								- "XDebuggerExecutionPointManager/UI#1249":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1249), Dispatchers.EDT]
+									at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+									- "XDebuggerExecutionPointManager/UI#1514":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1514), Dispatchers.EDT]
+										at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+									- "XDebuggerExecutionPointManager/UI#2552":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(2552), Dispatchers.EDT]
+										at com.intellij.xdebugger.impl.ui.ExecutionPositionUiKt$showExecutionPositionUi$1$2.invokeSuspend(ExecutionPositionUi.kt:51)
+							- "XDebuggerExecutionPointManager/UI#1197":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1197), Dispatchers.EDT]
+								at com.intellij.xdebugger.impl.XDebuggerExecutionPointManager$1.invokeSuspend(XDebuggerExecutionPointManager.kt:67)
+					- "com.intellij.xdebugger.impl.XDebuggerManagerImpl#1205":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1205), Dispatchers.Default]
+						at com.intellij.xdebugger.impl.XDebuggerLineChangeHandler$1.invokeSuspend(XDebuggerLineChangeHandler.kt:27)
+						- "com.intellij.xdebugger.impl.XDebuggerManagerImpl#1210":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1210), Dispatchers.Default]
+							at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+				- "com.intellij.ui.docking.impl.DockManagerImpl":supervisor:ChildScope{Active}
+				- "com.intellij.openapi.project.DumbServiceImpl":supervisor:ChildScope{Active}
+					- "com.intellij.openapi.project.DumbServiceImpl":supervisor:ChildScope{Active}
+				- "ProjectImpl@197091806 container#1240":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1240), Dispatchers.Default]
+					at com.intellij.openapi.wm.impl.status.EditorBasedStatusBarPopup$1.invokeSuspend(EditorBasedStatusBarPopup.kt:103)
+					- "ProjectImpl@197091806 container#1250":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1250), Dispatchers.Default]
+						at kotlinx.coroutines.selects.SelectImplementation.doSelectSuspend(Select.kt:431)
+						at kotlinx.coroutines.flow.FlowKt__DelayKt$debounceInternal$1.invokeSuspend(Delay.kt:426)
+						at kotlinx.coroutines.flow.internal.FlowCoroutineKt$scopedFlow$1$1.invokeSuspend(FlowCoroutine.kt:51)
+						at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+						- "ProjectImpl@197091806 container#1251":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1251), Dispatchers.Default]
+				- "com.intellij.execution.runToolbar.RunToolbarSlotManager":supervisor:ChildScope{Active}
+				- "com.intellij.ide.projectView.impl.SelectInProjectViewImpl":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x com.jetbrains.space)":supervisor:ChildScope{Active}
+				- "com.intellij.openapi.vcs.changes.ChangeListManagerImpl":supervisor:ChildScope{Active}
+				- "run activity#1658":StandaloneCoroutine{Active}, state: SUSPENDED [run activity, CoroutineId(1658), Dispatchers.Default]
+					at com.intellij.openapi.wm.impl.LibraryDependentToolWindowManager$execute$2.invokeSuspend(LibraryDependentToolWindowManager.kt:65)
+					at com.intellij.ide.startup.impl.StartupManagerImplKt$launchActivity$1.invokeSuspend(StartupManagerImpl.kt:482)
+					- "run activity#1673":ProducerCoroutine{Active}, state: SUSPENDED [run activity, CoroutineId(1673), Dispatchers.Default]
+						at kotlinx.coroutines.selects.SelectImplementation.doSelectSuspend(Select.kt:431)
+						at kotlinx.coroutines.flow.FlowKt__DelayKt$debounceInternal$1.invokeSuspend(Delay.kt:426)
+						at kotlinx.coroutines.flow.internal.FlowCoroutineKt$scopedFlow$1$1.invokeSuspend(FlowCoroutine.kt:51)
+						at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+						- "run activity#1675":ProducerCoroutine{Active}, state: SUSPENDED [run activity, CoroutineId(1675), Dispatchers.Default]
+				- "com.intellij.codeInsight.navigation.CtrlMouseHandler2":supervisor:ChildScope{Active}
+				- "com.intellij.openapi.project.SmartModeScheduler":supervisor:ChildScope{Active}
+					- "com.intellij.openapi.project.SmartModeScheduler#1693":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1693), Dispatchers.Default]
+						at com.intellij.openapi.project.SmartModeScheduler$2.invokeSuspend(SmartModeScheduler.kt:74)
+					- "com.intellij.openapi.project.SmartModeScheduler":supervisor:ChildScope{Active}
+					- "com.intellij.openapi.project.SmartModeScheduler#1695":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1695), Dispatchers.Default]
+						at com.intellij.openapi.project.SmartModeScheduler$3.invokeSuspend(SmartModeScheduler.kt:81)
+				- "run activity#1702":StandaloneCoroutine{Active}, state: SUSPENDED [run activity, CoroutineId(1702), Dispatchers.Default]
+					at kotlinx.coroutines.flow.FlowKt__ReduceKt.firstOrNull(Reduce.kt:183)
+					at com.intellij.platform.ide.diagnostic.startUpPerformanceReporter.StartupMetricCollector.execute(StartupMetricCollector.kt:30)
+					at com.intellij.ide.startup.impl.StartupManagerImplKt$launchActivity$1.invokeSuspend(StartupManagerImpl.kt:482)
+				- "run activity#1715":StandaloneCoroutine{Active}, state: SUSPENDED [run activity, CoroutineId(1715), Dispatchers.Default]
+					at com.intellij.dependencytoolwindow.DependenciesToolWindowTabProvider$Companion.awaitFirstAvailable$intellij_platform_dependenciesToolwindow(DependenciesToolWindowTabProvider.kt:20)
+					at com.intellij.dependencytoolwindow.DependencyToolWindowFactory.execute(DependencyToolWindowFactory.kt:33)
+					at com.intellij.ide.startup.impl.StartupManagerImplKt$launchActivity$1.invokeSuspend(StartupManagerImpl.kt:482)
+					- "run activity#2232":ProducerCoroutine{Active}, state: SUSPENDED [run activity, CoroutineId(2232), Dispatchers.Default]
+						at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+						- "run activity#2233":ProducerCoroutine{Active}, state: SUSPENDED [run activity, CoroutineId(2233), Dispatchers.Default]
+							at com.intellij.dependencytoolwindow.CoroutineUtilsKt$extensionsFlow$1.invokeSuspend(CoroutineUtils.kt:34)
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x com.intellij.gradle))":supervisor:ChildScope{Active}
+				- "com.intellij.vcs.log.impl.VcsProjectLog":supervisor:ChildScope{Active}
+					- "Close VCS log#1809":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1809), Dispatchers.Default]
+						at com.intellij.util.CoroutinesKt$awaitCancellationAndInvoke$1.invokeSuspend(coroutines.kt:27)
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x training))":supervisor:ChildScope{Active}
+				- "com.intellij.openapi.vcs.impl.VcsInitialization":supervisor:ChildScope{Active}
+				- "com.intellij.spellchecker.grazie.GrazieSpellCheckerEngine":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x com.intellij.searcheverywhere.ml))":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x com.intellij))":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x com.jetbrains.performancePlugin))":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x Git4Idea))":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x com.intellij.java))":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x org.jetbrains.plugins.javaFX)":supervisor:ChildScope{Active}
+				- "com.intellij.util.indexing.DumbModeWhileScanningTrigger":supervisor:ChildScope{Active}
+					- "com.intellij.util.indexing.DumbModeWhileScanningTrigger#1946":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1946), Dispatchers.Default]
+						at com.intellij.util.indexing.DumbModeWhileScanningTrigger$subscribe$1.invokeSuspend(DumbModeWhileScanningTrigger.kt:54)
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x org.jetbrains.idea.maven))":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x org.jetbrains.plugins.gradle))":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x org.jetbrains.plugins.gradle.maven))":supervisor:ChildScope{Active}
+				-[x3 of] "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x com.jetbrains.space))":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x intellij.indexing.shared.core))":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x com.jetbrains.codeWithMe))":supervisor:ChildScope{Active}
+				- "com.intellij.internal.statistic.service.fus.collectors.ProjectFUStateUsagesLogger":supervisor:ChildScope{Active}
+					- "com.intellij.internal.statistic.service.fus.collectors.ProjectFUStateUsagesLogger#2107":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(2107), Dispatchers.Default]
+						at com.intellij.internal.statistic.service.fus.collectors.ProjectFUStateUsagesLogger.logProjectStateRegularly(FUStateUsagesLogger.kt:219)
+						at com.intellij.internal.statistic.service.fus.collectors.ProjectFUStateUsagesLogger$1.invokeSuspend(FUStateUsagesLogger.kt:208)
+				- "(ProjectImpl@197091806 x com.intellij)":supervisor:ChildScope{Active}
+					- "com.intellij.platform.ml.embeddings.search.services.SemanticSearchCoroutineScope":supervisor:ChildScope{Active}
+				- "com.intellij.openapi.vcs.roots.VcsRootScanner":supervisor:ChildScope{Active}
+					- "com.intellij.openapi.vcs.roots.VcsRootScanner#2388":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(2388), Dispatchers.Default]
+						at com.intellij.openapi.vcs.roots.VcsRootScanner$4.invokeSuspend(VcsRootScanner.kt:60)
+						- "com.intellij.openapi.vcs.roots.VcsRootScanner#2389":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(2389), Dispatchers.Default]
+							at kotlinx.coroutines.selects.SelectImplementation.doSelectSuspend(Select.kt:431)
+							at kotlinx.coroutines.flow.FlowKt__DelayKt$debounceInternal$1.invokeSuspend(Delay.kt:426)
+							at kotlinx.coroutines.flow.internal.FlowCoroutineKt$scopedFlow$1$1.invokeSuspend(FlowCoroutine.kt:51)
+							at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+							- "com.intellij.openapi.vcs.roots.VcsRootScanner#2390":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(2390), Dispatchers.Default]
+				- "com.intellij.util.indexing.diagnostic.DumbModeFromScanningTrackerService":supervisor:ChildScope{Active}
+					- "com.intellij.util.indexing.diagnostic.DumbModeFromScanningTrackerService#2734":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(2734), Dispatchers.Default]
+						at com.intellij.util.indexing.diagnostic.DumbModeFromScanningTrackerService$1.invokeSuspend(DumbModeFromScanningTrackerService.kt:21)
+				- "(ProjectImpl@197091806 x org.intellij.plugins.markdown)":supervisor:ChildScope{Active}
+				- "ProjectImpl@197091806 container#3386":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(3386), Dispatchers.Default]
+					at com.intellij.util.CoroutinesKt$awaitCancellationAndInvoke$1.invokeSuspend(coroutines.kt:27)
+				- "com.intellij.dvcs.ignore.IgnoredToExcludedSynchronizer":supervisor:ChildScope{Active}
+					- "com.intellij.dvcs.ignore.IgnoredToExcludedSynchronizer#3432":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(3432), Dispatchers.Default]
+						at com.intellij.dvcs.ignore.IgnoredToExcludedSynchronizer$1.invokeSuspend(IgnoredToExcludedSynchronizer.kt:75)
+				- "(ProjectImpl@197091806 x org.jetbrains.idea.reposearch)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x tanvd.grazi))":supervisor:ChildScope{Active}
+				- "com.intellij.smartUpdate.SmartUpdate":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x org.jetbrains.plugins.github))":supervisor:ChildScope{Active}
+				- "com.intellij.ide.project.impl.BaseProjectDirectoriesImpl":supervisor:ChildScope{Active}
+					- "com.intellij.ide.project.impl.BaseProjectDirectoriesImpl#4643":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(4643), Dispatchers.Default]
+						at com.intellij.ide.project.impl.BaseProjectDirectoriesImpl$1.invokeSuspend(BaseProjectDirectoriesImpl.kt:30)
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x org.jetbrains.kotlin))":supervisor:ChildScope{Active}
+					- "run activity#4642":StandaloneCoroutine{Active}, state: SUSPENDED [run activity, CoroutineId(4642), Dispatchers.Default]
+						at org.jetbrains.kotlin.idea.gradle.statistics.KotlinGradleFUSLogger.execute(KotlinGradleFUSLogger.kt:22)
+						at com.intellij.ide.startup.impl.StartupManagerImplKt$launchActivity$1.invokeSuspend(StartupManagerImpl.kt:482)
+					- "run activity#4648":StandaloneCoroutine{Active}, state: SUSPENDED [run activity, CoroutineId(4648), Dispatchers.Default]
+						at org.jetbrains.kotlin.idea.gradle.diagnostic.KotlinGradleBuildErrorsChecker.execute(KotlinGradleBuildErrorsChecker.kt:65)
+						at com.intellij.ide.startup.impl.StartupManagerImplKt$launchActivity$1.invokeSuspend(StartupManagerImpl.kt:482)
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x org.jetbrains.kotlin))":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x org.intellij.qodana))":supervisor:ChildScope{Active}
+				- "com.intellij.openapi.externalSystem.autolink.UnlinkedProjectStartupActivity$CoroutineScopeService":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x com.jetbrains.space)":supervisor:ChildScope{Active}
+					- "com.intellij.space.kotlin.scriptdefinition.detect.SpaceKtsFileDetector":supervisor:ChildScope{Active}
+				- "com.intellij.openapi.updateSettings.impl.pluginsAdvertisement.PluginAdvertiserServiceImpl":supervisor:ChildScope{Active}
+				- "com.intellij.configurationStore.StoreReloadManagerImpl":supervisor:ChildScope{Active}
+					- "configuration store reload request flow processing#6501":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(6501), Dispatchers.Default]
+						at kotlinx.coroutines.selects.SelectImplementation.doSelectSuspend(Select.kt:431)
+						at kotlinx.coroutines.flow.FlowKt__DelayKt$debounceInternal$1.invokeSuspend(Delay.kt:426)
+						at kotlinx.coroutines.flow.internal.FlowCoroutineKt$scopedFlow$1$1.invokeSuspend(FlowCoroutine.kt:51)
+						at com.intellij.configurationStore.StoreReloadManagerImpl$1.invokeSuspend(StoreReloadManagerImpl.kt:55)
+						- "configuration store reload request flow processing#6502":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(6502), Dispatchers.Default]
+			- "com.intellij.platform.ide.CoreUiCoroutineScopeHolder":supervisor:ChildScope{Active}
+				- "com.intellij.platform.ide.CoreUiCoroutineScopeHolder":supervisor:ChildScope{Active}
+					- "com.intellij.platform.ide.CoreUiCoroutineScopeHolder#535":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(535), Dispatchers.Default]
+						at kotlinx.coroutines.selects.SelectImplementation.doSelectSuspend(Select.kt:431)
+						at kotlinx.coroutines.flow.FlowKt__DelayKt$debounceInternal$1.invokeSuspend(Delay.kt:426)
+						at kotlinx.coroutines.flow.internal.FlowCoroutineKt$scopedFlow$1$1.invokeSuspend(FlowCoroutine.kt:51)
+						at com.intellij.ui.BalloonLayoutImpl$1.invokeSuspend(BalloonLayoutImpl.kt:75)
+						- "com.intellij.platform.ide.CoreUiCoroutineScopeHolder#536":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(536), Dispatchers.Default]
+				- "com.intellij.platform.ide.CoreUiCoroutineScopeHolder#2274":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(2274), Dispatchers.Default]
+					at com.intellij.idea.SystemHealthMonitorKt$monitorDiskSpace$1.invokeSuspend(SystemHealthMonitor.kt:412)
+			- "com.intellij.ide.actionMacro.ActionMacroManager":supervisor:ChildScope{Active}
+			- "com.intellij.ide.ScreenReaderStateManager":supervisor:ChildScope{Active}
+				- "com.intellij.ide.ScreenReaderStateManager#623":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(623), Dispatchers.Default]
+					at com.intellij.ide.ScreenReaderStateManager$1.invokeSuspend(ScreenReaderStateManager.kt:18)
+			- "com.intellij.diagnostic.ThreadDumpService":supervisor:ChildScope{Active}
+			- "com.intellij.workspaceModel.ide.impl.GlobalWorkspaceModelCacheImpl":supervisor:ChildScope{Active}
+				- "com.intellij.workspaceModel.ide.impl.GlobalWorkspaceModelCacheImpl#945":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(945), Dispatchers.Default]
+					at kotlinx.coroutines.selects.SelectImplementation.doSelectSuspend(Select.kt:431)
+					at kotlinx.coroutines.flow.FlowKt__DelayKt$debounceInternal$1.invokeSuspend(Delay.kt:426)
+					at kotlinx.coroutines.flow.internal.FlowCoroutineKt$scopedFlow$1$1.invokeSuspend(FlowCoroutine.kt:51)
+					at com.intellij.workspaceModel.ide.impl.GlobalWorkspaceModelCacheImpl$1.invokeSuspend(GlobalWorkspaceModelCacheImpl.kt:42)
+					- "com.intellij.workspaceModel.ide.impl.GlobalWorkspaceModelCacheImpl#946":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(946), Dispatchers.Default]
+			- "com.intellij.workspaceModel.ide.impl.jps.serialization.JpsGlobalModelSynchronizerImpl":supervisor:ChildScope{Active}
+			- "com.intellij.platform.diagnostic.telemetry.impl.OtlpService":supervisor:ChildScope{Active}
+			- "com.intellij.ui.IconDeferrerImpl":supervisor:ChildScope{Active}
+			- "com.intellij.platform.ide.diagnostic.startUpPerformanceReporter.IdeStartUpPerformanceService":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x com.intellij)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x com.intellij))":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x com.jetbrains.performancePlugin)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x com.jetbrains.performancePlugin))":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x com.intellij)":supervisor:ChildScope{Active}
+				- "com.intellij.platform.ml.embeddings.search.services.ActionEmbeddingsStorage":supervisor:ChildScope{Active}
+			- "(ApplicationImpl@806532575 x org.jetbrains.plugins.gradle.maven)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x org.jetbrains.plugins.gradle.maven))":supervisor:ChildScope{Active}
+			- "com.intellij.openapi.rd.util.RdCoroutineHost$ScopeHolder":supervisor:ChildScope{Active}
+			- "com.intellij.ide.ui.PreloadService":supervisor:ChildScope{Active}
+			- "ApplicationImpl@806532575 container":supervisor:ChildScope{Active}
+			- "com.intellij.ui.IconCalculatingService":supervisor:ChildScope{Active}
+			- "com.intellij.diagnostic.IdeHeartbeatEventReporterService":supervisor:ChildScope{Active}
+				- "com.intellij.diagnostic.IdeHeartbeatEventReporterService#4586":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(4586), Dispatchers.Default]
+					at com.intellij.diagnostic.IdeHeartbeatEventReporterService.heartBeatRoutine(IdeHeartbeatEventReporter.kt:92)
+					at com.intellij.diagnostic.IdeHeartbeatEventReporterService$1.invokeSuspend(IdeHeartbeatEventReporter.kt:48)
+			- "(ApplicationImpl@806532575 x org.jetbrains.kotlin)":supervisor:ChildScope{Active}
+				- "(ProjectImpl@197091806 x (ApplicationImpl@806532575 x org.jetbrains.kotlin))":supervisor:ChildScope{Active}
+			- "com.intellij.ide.ui.laf.MnemonicListenerService":supervisor:ChildScope{Active}
+				- "LaF Mnemonic Support#6458":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(6458), Dispatchers.Default]
+					at com.intellij.ide.ui.laf.MnemonicListenerService$1.invokeSuspend(LaFMnemonicDispatcher.kt:56)
+					- "LaF Mnemonic Support#6459":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(6459), Dispatchers.Default]
+						at kotlinx.coroutines.selects.SelectImplementation.doSelectSuspend(Select.kt:431)
+						at kotlinx.coroutines.flow.FlowKt__DelayKt$debounceInternal$1.invokeSuspend(Delay.kt:426)
+						at kotlinx.coroutines.flow.internal.FlowCoroutineKt$scopedFlow$1$1.invokeSuspend(FlowCoroutine.kt:51)
+						at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+						- "LaF Mnemonic Support#6460":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(6460), Dispatchers.Default]
+			- "com.intellij.ide.actionsOnSave.impl.CurrentActionHolder":supervisor:ChildScope{Active}
+
+- "coroutine#127":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(127), Dispatchers.Default]
+	at com.intellij.openapi.keymap.impl.IdeKeyEventDispatcher$1.invokeSuspend(IdeKeyEventDispatcher.kt:120)
+	- "coroutine#129":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(129), Dispatchers.Default]
+		at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+
+- SupervisorJobImpl{Active}
+	- SupervisorJobImpl{Active}
+		- "coroutine#256":StandaloneCoroutine{Active}, state: SUSPENDED [com.jetbrains.rd.util.threading.coroutines.RdCoroutineScope$coroutineContext$2$invoke$$inlined$CoroutineExceptionHandler$1@30cb1972, ANY, CoroutineId(256), Dispatchers.IO]
+			at com.jetbrains.rd.platform.codeWithMe.C.I.b.Q.launchWireCheck(WireStorage.kt)
+			at com.jetbrains.rd.platform.codeWithMe.C.I.b.i.invokeSuspend(WireStorage.kt)
+
+- SupervisorJobImpl{Active}
+	- "IdeRootPane":supervisor:ChildScope{Active} [Dispatchers.Default]
+		- "IdeMenuBarHelper#460":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(460), Dispatchers.Default]
+			at com.intellij.platform.ide.menu.IdeMenuBarHelper$3.invokeSuspend(IdeMenuBarHelper.kt:111)
+		- "IdeMenuBarHelper#462":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(462), Dispatchers.Default]
+			at com.intellij.platform.ide.menu.IdeMenuBarHelper$4$1.invokeSuspend(IdeMenuBarHelper.kt:117)
+			at com.intellij.platform.ide.menu.IdeMenuBarHelper$4.invokeSuspend(IdeMenuBarHelper.kt:116)
+			- "IdeMenuBarHelper#754":ProducerCoroutine{Active}, state: SUSPENDED [ANY, CoroutineId(754), Dispatchers.EDT]
+				at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+				- "IdeMenuBarHelper#917":ProducerCoroutine{Active}, state: SUSPENDED [ANY, CoroutineId(917), Dispatchers.EDT]
+					at com.intellij.util.flow.FlowKt$throttle$1.invokeSuspend(flow.kt:46)
+					- "IdeMenuBarHelper#976":StandaloneCoroutine{Active}, state: SUSPENDED [ANY, CoroutineId(976), Dispatchers.EDT]
+						at com.intellij.util.flow.FlowKt$throttle$1$latchJob$1.invokeSuspend(flow.kt:41)
+					- "IdeMenuBarHelper#977":ProducerCoroutine{Active}, state: SUSPENDED [ANY, CoroutineId(977), Dispatchers.EDT]
+						at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+	- "IdeRootPane":supervisor:ChildScope{Active} [Dispatchers.Default]
+	- "IdeRootPane":supervisor:ChildScope{Active} [Dispatchers.Default]
+		- "IdeRootPane#529":StandaloneCoroutine{Completing} [CoroutineId(529), Dispatchers.Default]
+			- "IdeRootPane#530":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(530), Dispatchers.Default]
+				at com.intellij.util.CoroutinesKt$awaitCancellationAndInvoke$1.invokeSuspend(coroutines.kt:27)
+		- "IdeRootPane#531":StandaloneCoroutine{Completing} [CoroutineId(531), Dispatchers.Default]
+			- "IdeRootPane#532":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(532), Dispatchers.Default]
+				at com.intellij.util.CoroutinesKt$awaitCancellationAndInvoke$1.invokeSuspend(coroutines.kt:27)
+	- "IdeRootPane":supervisor:ChildScope{Active} [Dispatchers.Default]
+		- "IdeRootPane":supervisor:ChildScope{Active} [Dispatchers.Default]
+			- "IdeRootPane#931":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(931), Dispatchers.Default]
+				at com.intellij.openapi.wm.impl.status.InfoAndProgressPanel$3.invokeSuspend(InfoAndProgressPanel.kt:146)
+				- "IdeRootPane#933":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(933), Dispatchers.Default]
+					at kotlinx.coroutines.selects.SelectImplementation.doSelectSuspend(Select.kt:431)
+					at kotlinx.coroutines.flow.FlowKt__DelayKt$debounceInternal$1.invokeSuspend(Delay.kt:426)
+					at kotlinx.coroutines.flow.internal.FlowCoroutineKt$scopedFlow$1$1.invokeSuspend(FlowCoroutine.kt:51)
+					at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+					- "IdeRootPane#935":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(935), Dispatchers.Default]
+			- "IdeRootPane#932":StandaloneCoroutine{Active}, state: SUSPENDED [ANY, CoroutineId(932), Dispatchers.Default]
+				at com.intellij.openapi.wm.impl.status.InfoAndProgressPanel$4.invokeSuspend(InfoAndProgressPanel.kt:153)
+				- "IdeRootPane#934":ProducerCoroutine{Active}, state: SUSPENDED [ANY, CoroutineId(934), Dispatchers.Default]
+					at com.intellij.util.flow.FlowKt$throttle$1.invokeSuspend(flow.kt:46)
+					- "IdeRootPane#936":StandaloneCoroutine{Active}, state: SUSPENDED [ANY, CoroutineId(936), Dispatchers.Default]
+						at com.intellij.util.flow.FlowKt$throttle$1$latchJob$1.invokeSuspend(flow.kt:41)
+					- "IdeRootPane#938":ProducerCoroutine{Active}, state: SUSPENDED [ANY, CoroutineId(938), Dispatchers.Default]
+						at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+			- "IdeRootPane#937":StandaloneCoroutine{Active}, state: SUSPENDED [ANY, CoroutineId(937), Dispatchers.Default]
+				at com.intellij.openapi.fileEditor.impl.MergingUpdateChannel.start(MergingUpdateChannel.kt:28)
+				at com.intellij.openapi.wm.impl.status.InfoAndProgressPanel$5.invokeSuspend(InfoAndProgressPanel.kt:167)
+
+- "FileTypeIndex change notificator#617":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(617), Dispatchers.Default]
+	at com.intellij.psi.search.FileTypeIndexChangeNotifier$worker$1.invokeSuspend(FileTypeIndexChangeNotifier.kt:22)
+	- "FileTypeIndex change notificator#618":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(618), Dispatchers.Default]
+		at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+		- "FileTypeIndex change notificator#619":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(619), Dispatchers.Default]
+			at com.intellij.util.flow.FlowKt$throttle$1.invokeSuspend(flow.kt:46)
+			- "FileTypeIndex change notificator#620":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(620), Dispatchers.Default]
+				at com.intellij.util.flow.FlowKt$throttle$1$latchJob$1.invokeSuspend(flow.kt:41)
+			- "FileTypeIndex change notificator#621":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(621), Dispatchers.Default]
+				at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+
+- JobImpl{Active}
+	- "coroutine#919":StandaloneCoroutine{Active}, state: SUSPENDED [runtime.CoroutineExceptionLogger$create$$inlined$CoroutineExceptionHandler$1@7f6deee6, libraries.klogging.MDCContext@6f3d2517, circlet.platform.tracing.CoroutineTracingContextElement@2795371, libraries.coroutines.extra.LifetimeContextElement@6a91dac5, CoroutineId(919), Dispatchers.IO]
+		at com.intellij.space.components.SpaceConnectionApi$1.invokeSuspend(SpaceConnectionApi.kt:30)
+
+- JobImpl{Active}
+	- "coroutine#920":StandaloneCoroutine{Active}, state: SUSPENDED [runtime.CoroutineExceptionLogger$create$$inlined$CoroutineExceptionHandler$1@7f6deee6, libraries.klogging.MDCContext@7a9b03af, circlet.platform.tracing.CoroutineTracingContextElement@7c889476, libraries.coroutines.extra.LifetimeContextElement@34a2b24d, CoroutineId(920), Dispatchers.IO]
+		at kotlinx.coroutines.channels.BufferedChannel.receiveCatchingOnNoWaiterSuspend-GKJJFZk(BufferedChannel.kt:3056)
+		at kotlinx.coroutines.channels.BufferedChannel.receiveCatching-JP2dKIU$suspendImpl(BufferedChannel.kt:739)
+		at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2.invokeSuspend(Combine.kt:54)
+		at com.intellij.space.components.SpaceConnectionApi$2.invokeSuspend(SpaceConnectionApi.kt:85)
+		- "coroutine#921":StandaloneCoroutine{Active}, state: SUSPENDED [runtime.CoroutineExceptionLogger$create$$inlined$CoroutineExceptionHandler$1@7f6deee6, libraries.klogging.MDCContext@508101ee, circlet.platform.tracing.CoroutineTracingContextElement@7225f62a, libraries.coroutines.extra.LifetimeContextElement@34a2b24d, CoroutineId(921), Dispatchers.IO]
+			at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+		- "coroutine#922":StandaloneCoroutine{Active}, state: SUSPENDED [runtime.CoroutineExceptionLogger$create$$inlined$CoroutineExceptionHandler$1@7f6deee6, libraries.klogging.MDCContext@4ab6f73c, circlet.platform.tracing.CoroutineTracingContextElement@6ba704fd, libraries.coroutines.extra.LifetimeContextElement@34a2b24d, CoroutineId(922), Dispatchers.IO]
+			at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+
+- "coroutine#1105":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1105), Dispatchers.EDT]
+	at com.intellij.ide.navbar.ui.StaticNavBarPanel$1.invokeSuspend(StaticNavBarPanel.kt:95)
+	- "coroutine#1203":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1203), Dispatchers.EDT]
+		at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+		- "coroutine#1353":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1353), Dispatchers.EDT]
+			at com.intellij.ide.navbar.ui.StaticNavBarPanel$handleVm$2.invokeSuspend(StaticNavBarPanel.kt:107)
+			at com.intellij.ide.navbar.ui.StaticNavBarPanel.handleVm(StaticNavBarPanel.kt:103)
+			at com.intellij.ide.navbar.ui.StaticNavBarPanel$1$1.invokeSuspend(StaticNavBarPanel.kt:97)
+			- "coroutine#1354":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1354), Dispatchers.EDT]
+				at com.intellij.ide.navbar.ui.NewNavBarPanel$2.invokeSuspend(NewNavBarPanel.kt:86)
+				- "coroutine#1519":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1519), Dispatchers.EDT]
+					at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+					- "coroutine#1603":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1603), Dispatchers.EDT]
+						at com.intellij.ide.navbar.ui.NewNavBarPanel$handleItems$2$1.invokeSuspend(NewNavBarPanel.kt:97)
+						at com.intellij.ide.navbar.ui.NewNavBarPanel$handleItems$2.invokeSuspend(NewNavBarPanel.kt:93)
+						- "coroutine#1760":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1760), Dispatchers.EDT]
+							at com.intellij.ide.navbar.ui.NavBarItemComponent$1.invokeSuspend(NavBarItemComponent.kt:76)
+						- "coroutine#2553":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(2553), Dispatchers.EDT]
+							at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+
+- "coroutine#1106":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1106), Dispatchers.Default]
+	at com.intellij.ide.navbar.ui.StaticNavBarPanelKt$staticNavBarPanel$1.invokeSuspend(StaticNavBarPanel.kt:67)
+	- "coroutine#1108":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1108), Dispatchers.Default]
+		at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+		- "coroutine#1220":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1220), Dispatchers.Default]
+			at com.intellij.ide.navbar.ui.StaticNavBarPanelKt$staticNavBarPanel$1$1.invokeSuspend(StaticNavBarPanel.kt:69)
+			- "com.intellij.ide.navbar.ide.NavBarService#1223":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1223), LimitedDispatcher@337bda43]
+				at com.intellij.ide.navbar.ui.StaticNavBarPanelKt$staticNavBarPanel$handleWindow$2.invokeSuspend(StaticNavBarPanel.kt:57)
+				at com.intellij.ide.navbar.ui.StaticNavBarPanelKt.staticNavBarPanel$handleWindow(StaticNavBarPanel.kt:48)
+				at com.intellij.ide.navbar.ui.StaticNavBarPanelKt$staticNavBarPanel$1$1$1$1.invokeSuspend(StaticNavBarPanel.kt:73)
+				- "com.intellij.ide.navbar.ide.NavBarService#1296":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1296), LimitedDispatcher@337bda43]
+					at com.intellij.ide.navbar.ide.NavBarVmImpl$1.invokeSuspend(NavBarVmImpl.kt:42)
+					- "com.intellij.ide.navbar.ide.NavBarService#1303":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1303), LimitedDispatcher@337bda43]
+						at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+						- "com.intellij.ide.navbar.ide.NavBarService#1308":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1308), LimitedDispatcher@337bda43]
+							at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+							- "com.intellij.ide.navbar.ide.NavBarService#57109":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(57109), LimitedDispatcher@337bda43]
+								at com.intellij.ide.navbar.ui.StaticNavBarPanelKt$staticNavBarPanel$contextItems$1.invokeSuspend(StaticNavBarPanel.kt:42)
+				- "com.intellij.ide.navbar.ide.NavBarService#1297":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1297), LimitedDispatcher@337bda43]
+					at com.intellij.ide.navbar.ide.NavBarVmImpl$2.invokeSuspend(NavBarVmImpl.kt:52)
+					- "com.intellij.ide.navbar.ide.NavBarService#1306":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1306), LimitedDispatcher@337bda43]
+						at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+						- "com.intellij.ide.navbar.ide.NavBarService#1309":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1309), LimitedDispatcher@337bda43]
+							at com.intellij.util.flow.FlowKt$zipWithNext$1.invokeSuspend(flow.kt:107)
+							at kotlinx.coroutines.flow.AbstractFlow.collect(Flow.kt:230)
+							at com.intellij.ide.navbar.ide.NavBarVmImpl$handleSelectionChange$2.invokeSuspend(NavBarVmImpl.kt:116)
+				- "com.intellij.ide.navbar.ide.NavBarService#1298":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1298), LimitedDispatcher@337bda43]
+					at com.intellij.ide.navbar.ide.NavBarVmImpl$3.invokeSuspend(NavBarVmImpl.kt:55)
+					- "com.intellij.ide.navbar.ide.NavBarService#1307":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(1307), LimitedDispatcher@337bda43]
+						at kotlinx.coroutines.flow.internal.ChannelFlowTransformLatest$flowCollect$3.invokeSuspend(Merge.kt:27)
+				- "com.intellij.ide.navbar.ide.NavBarService#1302":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1302), LimitedDispatcher@337bda43]
+					at kotlinx.coroutines.flow.FlowKt__CollectKt$launchIn$1.invokeSuspend(Collect.kt:50)
+
+- SupervisorJobImpl{Active}
+	- "coroutine#1540":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(1540), Dispatchers.Default]
+		at kotlinx.coroutines.flow.FlowKt__ShareKt$launchSharing$1.invokeSuspend(Share.kt:214)
+
+- "Vcs Log Heavy Process and Power Save Mode Tracker#3044":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(3044), Dispatchers.Default]
+	at kotlinx.coroutines.channels.BufferedChannel.receiveCatchingOnNoWaiterSuspend-GKJJFZk(BufferedChannel.kt:3056)
+	at kotlinx.coroutines.channels.BufferedChannel.receiveCatching-JP2dKIU$suspendImpl(BufferedChannel.kt:739)
+	at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2.invokeSuspend(Combine.kt:54)
+	at com.intellij.vcs.log.impl.HeavyAwareListener$start$job$1.invokeSuspend(HeavyAwareListener.kt:37)
+	- "Vcs Log Heavy Process and Power Save Mode Tracker#3046":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(3046), Dispatchers.Default]
+		at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+		- "Vcs Log Heavy Process and Power Save Mode Tracker#3048":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(3048), Dispatchers.Default]
+			at com.intellij.vcs.log.impl.HeavyAwareListenerKt$powerSaveModeFlow$1.invokeSuspend(HeavyAwareListener.kt:58)
+	- "Vcs Log Heavy Process and Power Save Mode Tracker#3047":StandaloneCoroutine{Active}, state: SUSPENDED [CoroutineId(3047), Dispatchers.Default]
+		at kotlinx.coroutines.selects.SelectImplementation.doSelectSuspend(Select.kt:431)
+		at kotlinx.coroutines.flow.FlowKt__DelayKt$debounceInternal$1.invokeSuspend(Delay.kt:426)
+		at kotlinx.coroutines.flow.internal.FlowCoroutineKt$scopedFlow$1$1.invokeSuspend(FlowCoroutine.kt:51)
+		at kotlinx.coroutines.flow.internal.CombineKt$combineInternal$2$1.invokeSuspend(Combine.kt:31)
+		- "Vcs Log Heavy Process and Power Save Mode Tracker#3049":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(3049), Dispatchers.Default]
+			- "Vcs Log Heavy Process and Power Save Mode Tracker#3050":ProducerCoroutine{Active}, state: SUSPENDED [CoroutineId(3050), Dispatchers.Default]
+				at com.intellij.vcs.log.impl.HeavyAwareListenerKt$heavyProcessFlow$1.invokeSuspend(HeavyAwareListener.kt:79)
+
+---------- Event counts ----------
+Posted: 32379
+Posted (system): 23127
+Returned: 31978

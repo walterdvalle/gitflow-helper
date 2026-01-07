@@ -1,0 +1,33 @@
+
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij' version '1.17.3'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+group 'br.com.gitflowhelper'
+version '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+intellij {
+    version = '2023.3'
+    type = 'IC'
+    plugins = ['Git4Idea']
+}
+
+tasks {
+    patchPluginXml {
+        sinceBuild = '233'
+        untilBuild = '243.*'
+    }
+
+    // Set the JVM compatibility versions
+}

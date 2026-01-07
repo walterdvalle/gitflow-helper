@@ -1,0 +1,6 @@
+<application>
+  <component name="GeneralSettings">
+    <option name="showTipsOnStartup" value="true" />
+    <option name="confirmOpenNewProject2" value="-1" />
+  </component>
+</application>

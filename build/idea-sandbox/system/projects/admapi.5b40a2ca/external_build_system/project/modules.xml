@@ -1,0 +1,7 @@
+<project>
+  <component name="ExternalProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/admapi.iml" filepath="$PROJECT_DIR$/.idea/admapi.iml" />
+    </modules>
+  </component>
+</project>

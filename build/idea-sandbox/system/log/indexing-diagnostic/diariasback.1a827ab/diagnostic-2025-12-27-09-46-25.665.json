@@ -1,0 +1,3134 @@
+{
+  "appInfo" : {
+    "build" : "233.11799.241",
+    "buildDate" : "2023-12-02T05:05:00Z[UTC]",
+    "productCode" : "IC",
+    "generated" : "2025-12-27T12:46:25.665469Z",
+    "os" : "macOS 26.1",
+    "runtime" : "JetBrains s.r.o. 17.0.9 17.0.9+7-b1087.7"
+  },
+  "runtimeInfo" : {
+    "maxMemory" : 2147483648,
+    "numberOfProcessors" : 8,
+    "maxNumberOfIndexingThreads" : 7,
+    "maxSizeOfFileForIntelliSense" : 2560000,
+    "maxSizeOfFileForContentLoading" : 20971520
+  },
+  "type" : "DumbIndexing",
+  "projectIndexingActivityHistory" : {
+    "projectName" : "diariasBack",
+    "times" : {
+      "scanningIds" : [ 2 ],
+      "contentLoadingVisibleTime" : 997817709,
+      "retrievingChangedDuringIndexingFilesTime" : 40833,
+      "separateApplyingIndexesVisibleTime" : 2011067740,
+      "updatingStart" : "2025-12-27T12:46:18.657249Z",
+      "updatingEnd" : "2025-12-27T12:46:25.664934Z",
+      "totalWallTimeWithPauses" : 7007657417,
+      "wallTimeOnPause" : 0,
+      "wasInterrupted" : false,
+      "dumbWallTimeWithoutPauses" : 7007657417,
+      "dumbWallTimeWithPauses" : 7007657417,
+      "dumbModeStart" : "2025-12-27T12:46:18.657249Z",
+      "totalWallTimeWithoutPauses" : 7007657417
+    },
+    "fileCount" : {
+      "numberOfChangedDuringIndexingFiles" : 0,
+      "numberOfFilesIndexedByInfrastructureExtensionsDuringIndexingStage" : 0,
+      "numberOfFilesIndexedWithLoadingContent" : 85700,
+      "numberOfNothingToWriteFiles" : 44095
+    },
+    "totalStatsPerFileType" : [ {
+      "fileType" : "CLASS",
+      "partOfTotalProcessingTime" : {
+        "part" : 18676459910,
+        "total" : 26110793240
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 2667925220,
+        "total" : 3745168106
+      },
+      "totalNumberOfFiles" : 68605,
+      "totalFilesSize" : 287641658,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 287641658,
+        "totalCpuTime" : 18676459910
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Maven: org.hibernate.orm:hibernate-core:6.6.8.Final (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 6904,
+        "totalFilesSize" : 30515135,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 3195370660,
+          "total" : 18676459910
+        }
+      }, {
+        "providerName" : "Library Maven: net.bytebuddy:byte-buddy:1.15.11 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 5795,
+        "totalFilesSize" : 20260998,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 1975063303,
+          "total" : 18676459910
+        }
+      }, {
+        "providerName" : "JDK 21 /Users/walterdovalle/.sdkman/candidates/java/21.0.9-tem",
+        "numberOfFiles" : 28107,
+        "totalFilesSize" : 133763702,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 1213709323,
+          "total" : 18676459910
+        }
+      }, {
+        "providerName" : "Library Maven: org.apache.tomcat.embed:tomcat-embed-core:10.1.36 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1519,
+        "totalFilesSize" : 6343385,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 833724001,
+          "total" : 18676459910
+        }
+      }, {
+        "providerName" : "Library Maven: org.aspectj:aspectjweaver:1.9.22.1 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1002,
+        "totalFilesSize" : 4584165,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 576161100,
+          "total" : 18676459910
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework:spring-web:6.2.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1240,
+        "totalFilesSize" : 4609454,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 540560861,
+          "total" : 18676459910
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework.boot:spring-boot-autoconfigure:3.4.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1421,
+        "totalFilesSize" : 4360135,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 445043094,
+          "total" : 18676459910
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework:spring-core:6.2.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1185,
+        "totalFilesSize" : 4169686,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 407396930,
+          "total" : 18676459910
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework.security:spring-security-config:6.4.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 647,
+        "totalFilesSize" : 3490226,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 396536129,
+          "total" : 18676459910
+        }
+      }, {
+        "providerName" : "Library Maven: com.fasterxml.jackson.core:jackson-databind:2.18.2 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 790,
+        "totalFilesSize" : 4345453,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 385842581,
+          "total" : 18676459910
+        }
+      } ]
+    }, {
+      "fileType" : "XML",
+      "partOfTotalProcessingTime" : {
+        "part" : 2109587141,
+        "total" : 26110793240
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 78779577,
+        "total" : 3745168106
+      },
+      "totalNumberOfFiles" : 230,
+      "totalFilesSize" : 7480506,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 7480506,
+        "totalCpuTime" : 2109587141
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Maven: org.springframework.security:spring-security-config:6.4.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 28,
+        "totalFilesSize" : 3446408,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 963246132,
+          "total" : 2109587141
+        }
+      }, {
+        "providerName" : "Library Maven: org.apache.tomcat.embed:tomcat-embed-core:10.1.36 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 63,
+        "totalFilesSize" : 1677652,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 430180791,
+          "total" : 2109587141
+        }
+      }, {
+        "providerName" : "Library Maven: org.hibernate.orm:hibernate-core:6.6.8.Final (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 17,
+        "totalFilesSize" : 904749,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 275073337,
+          "total" : 2109587141
+        }
+      }, {
+        "providerName" : "Library Maven: jakarta.persistence:jakarta.persistence-api:3.1.0 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 6,
+        "totalFilesSize" : 291585,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 73793463,
+          "total" : 2109587141
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework.data:spring-data-commons:3.4.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 11,
+        "totalFilesSize" : 84155,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 31661670,
+          "total" : 2109587141
+        }
+      }, {
+        "providerName" : "Library Maven: org.hibernate.validator:hibernate-validator:8.0.2.Final (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 9,
+        "totalFilesSize" : 75026,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 26965705,
+          "total" : 2109587141
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework:spring-webmvc:6.2.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 3,
+        "totalFilesSize" : 153788,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 23314122,
+          "total" : 2109587141
+        }
+      }, {
+        "providerName" : "Library Maven: jakarta.xml.bind:jakarta.xml.bind-api:4.0.2 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 4,
+        "totalFilesSize" : 71514,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 19941167,
+          "total" : 2109587141
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework:spring-context:6.2.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 6,
+        "totalFilesSize" : 69820,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 18651917,
+          "total" : 2109587141
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework:spring-beans:6.2.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 3,
+        "totalFilesSize" : 57523,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 12644209,
+          "total" : 2109587141
+        }
+      } ]
+    }, {
+      "fileType" : "textmate",
+      "partOfTotalProcessingTime" : {
+        "part" : 1846237874,
+        "total" : 26110793240
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 44523875,
+        "total" : 3745168106
+      },
+      "totalNumberOfFiles" : 7,
+      "totalFilesSize" : 7181153,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 7181153,
+        "totalCpuTime" : 1846237874
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Maven: org.webjars:swagger-ui:5.18.2 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 6,
+        "totalFilesSize" : 7157234,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 1846188040,
+          "total" : 1846237874
+        }
+      }, {
+        "providerName" : "JDK 21 /Users/walterdovalle/.sdkman/candidates/java/21.0.9-tem",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 23919,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 49834,
+          "total" : 1846237874
+        }
+      } ]
+    }, {
+      "fileType" : "JAVA",
+      "partOfTotalProcessingTime" : {
+        "part" : 1326408495,
+        "total" : 26110793240
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 829331354,
+        "total" : 3745168106
+      },
+      "totalNumberOfFiles" : 15707,
+      "totalFilesSize" : 218052256,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 218052256,
+        "totalCpuTime" : 1326408495
+      },
+      "biggestContributors" : [ {
+        "providerName" : "JDK 21 /Users/walterdovalle/.sdkman/candidates/java/21.0.9-tem",
+        "numberOfFiles" : 15652,
+        "totalFilesSize" : 217965857,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 1314124579,
+          "total" : 1326408495
+        }
+      }, {
+        "providerName" : "Module 'diarias' (all roots)",
+        "numberOfFiles" : 55,
+        "totalFilesSize" : 86399,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 12283916,
+          "total" : 1326408495
+        }
+      } ]
+    }, {
+      "fileType" : "JavaScript",
+      "partOfTotalProcessingTime" : {
+        "part" : 613659752,
+        "total" : 26110793240
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 21657081,
+        "total" : 3745168106
+      },
+      "totalNumberOfFiles" : 15,
+      "totalFilesSize" : 4448308,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 4448308,
+        "totalCpuTime" : 613659752
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Maven: org.webjars:swagger-ui:5.18.2 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 6,
+        "totalFilesSize" : 3883839,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 607403502,
+          "total" : 613659752
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework.boot:spring-boot-devtools:3.4.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 33592,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 3790708,
+          "total" : 613659752
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework.security:spring-security-web:6.4.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 10036,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 1896416,
+          "total" : 613659752
+        }
+      }, {
+        "providerName" : "JDK 21 /Users/walterdovalle/.sdkman/candidates/java/21.0.9-tem",
+        "numberOfFiles" : 7,
+        "totalFilesSize" : 520841,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 569126,
+          "total" : 613659752
+        }
+      } ]
+    }, {
+      "fileType" : "Properties",
+      "partOfTotalProcessingTime" : {
+        "part" : 452928433,
+        "total" : 26110793240
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 30548682,
+        "total" : 3745168106
+      },
+      "totalNumberOfFiles" : 544,
+      "totalFilesSize" : 3383713,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 3383713,
+        "totalCpuTime" : 452928433
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Maven: org.apache.tomcat.embed:tomcat-embed-core:10.1.36 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 59,
+        "totalFilesSize" : 299678,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 102524838,
+          "total" : 452928433
+        }
+      }, {
+        "providerName" : "Library Maven: org.glassfish.jaxb:jaxb-runtime:4.0.5 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 101,
+        "totalFilesSize" : 199010,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 92354504,
+          "total" : 452928433
+        }
+      }, {
+        "providerName" : "Library Maven: org.hibernate.validator:hibernate-validator:8.0.2.Final (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 30,
+        "totalFilesSize" : 237538,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 44479874,
+          "total" : 452928433
+        }
+      }, {
+        "providerName" : "Library Maven: org.hibernate.orm:hibernate-core:6.6.8.Final (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 23,
+        "totalFilesSize" : 106807,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 36401459,
+          "total" : 452928433
+        }
+      }, {
+        "providerName" : "Library Maven: org.glassfish.jaxb:jaxb-core:4.0.5 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 21,
+        "totalFilesSize" : 37141,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 25985501,
+          "total" : 452928433
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework.security:spring-security-core:6.4.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 20,
+        "totalFilesSize" : 117293,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 25796546,
+          "total" : 452928433
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework.boot:spring-boot-autoconfigure:3.4.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 135465,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 15948501,
+          "total" : 452928433
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework.boot:spring-boot:3.4.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 3,
+        "totalFilesSize" : 31130,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 10846666,
+          "total" : 452928433
+        }
+      }, {
+        "providerName" : "JDK 21 /Users/walterdovalle/.sdkman/candidates/java/21.0.9-tem",
+        "numberOfFiles" : 202,
+        "totalFilesSize" : 2052577,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 10343927,
+          "total" : 452928433
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework.boot:spring-boot-actuator-autoconfigure:3.4.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 101564,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 8983875,
+          "total" : 452928433
+        }
+      } ]
+    }, {
+      "fileType" : "Markdown",
+      "partOfTotalProcessingTime" : {
+        "part" : 290510372,
+        "total" : 26110793240
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 3878792,
+        "total" : 3745168106
+      },
+      "totalNumberOfFiles" : 32,
+      "totalFilesSize" : 218803,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 218803,
+        "totalCpuTime" : 290510372
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Maven: org.junit.jupiter:junit-jupiter-params:5.11.4 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 3,
+        "totalFilesSize" : 23854,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 72489875,
+          "total" : 290510372
+        }
+      }, {
+        "providerName" : "Library Maven: org.junit.platform:junit-platform-commons:1.11.4 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 14551,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 30090793,
+          "total" : 290510372
+        }
+      }, {
+        "providerName" : "Library Maven: org.junit.jupiter:junit-jupiter-engine:5.11.4 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 14551,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 21819582,
+          "total" : 290510372
+        }
+      }, {
+        "providerName" : "Library Maven: org.glassfish.jaxb:jaxb-core:4.0.5 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 6159,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 19564416,
+          "total" : 290510372
+        }
+      }, {
+        "providerName" : "Library Maven: org.glassfish.jaxb:jaxb-runtime:4.0.5 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 6159,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 17885167,
+          "total" : 290510372
+        }
+      }, {
+        "providerName" : "Library Maven: jakarta.persistence:jakarta.persistence-api:3.1.0 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 17945,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 15511541,
+          "total" : 290510372
+        }
+      }, {
+        "providerName" : "Library Maven: jakarta.activation:jakarta.activation-api:2.1.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 4375,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 14336834,
+          "total" : 290510372
+        }
+      }, {
+        "providerName" : "Library Maven: jakarta.annotation:jakarta.annotation-api:2.1.1 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 36536,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 13994334,
+          "total" : 290510372
+        }
+      }, {
+        "providerName" : "Library Maven: jakarta.transaction:jakarta.transaction-api:2.0.1 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 37423,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 13718500,
+          "total" : 290510372
+        }
+      }, {
+        "providerName" : "Library Maven: jakarta.inject:jakarta.inject-api:2.0.1 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 1074,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 12375041,
+          "total" : 290510372
+        }
+      } ]
+    }, {
+      "fileType" : "PLAIN_TEXT",
+      "partOfTotalProcessingTime" : {
+        "part" : 260671061,
+        "total" : 26110793240
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 20595453,
+        "total" : 3745168106
+      },
+      "totalNumberOfFiles" : 303,
+      "totalFilesSize" : 1343927,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 1343927,
+        "totalCpuTime" : 260671061
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Maven: org.springframework.boot:spring-boot-autoconfigure:3.4.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 5,
+        "totalFilesSize" : 28571,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 26843289,
+          "total" : 260671061
+        }
+      }, {
+        "providerName" : "Library Maven: com.microsoft.sqlserver:mssql-jdbc:12.8.1.jre11 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 58620,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 23002584,
+          "total" : 260671061
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework.boot:spring-boot:3.4.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 5,
+        "totalFilesSize" : 19947,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 9180415,
+          "total" : 260671061
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework:spring-web:6.2.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 4,
+        "totalFilesSize" : 43650,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 8780544,
+          "total" : 260671061
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework.boot:spring-boot-test-autoconfigure:3.4.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 35,
+        "totalFilesSize" : 28313,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 8525174,
+          "total" : 260671061
+        }
+      }, {
+        "providerName" : "Library Maven: org.apache.tomcat.embed:tomcat-embed-core:10.1.36 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 46077,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 5516748,
+          "total" : 260671061
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework.data:spring-data-jpa:3.4.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 9,
+        "totalFilesSize" : 60645,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 5514581,
+          "total" : 260671061
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework:spring-beans:6.2.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 6,
+        "totalFilesSize" : 24526,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 5320336,
+          "total" : 260671061
+        }
+      }, {
+        "providerName" : "Library Maven: com.fasterxml.jackson.core:jackson-core:2.18.2 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 5,
+        "totalFilesSize" : 28989,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 5246626,
+          "total" : 260671061
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework.boot:spring-boot-actuator-autoconfigure:3.4.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 7,
+        "totalFilesSize" : 26092,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 5226584,
+          "total" : 260671061
+        }
+      } ]
+    }, {
+      "fileType" : "JSON",
+      "partOfTotalProcessingTime" : {
+        "part" : 174205329,
+        "total" : 26110793240
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 10281500,
+        "total" : 3745168106
+      },
+      "totalNumberOfFiles" : 23,
+      "totalFilesSize" : 1093828,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 1093828,
+        "totalCpuTime" : 174205329
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Maven: org.springframework.boot:spring-boot-autoconfigure:3.4.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 676990,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 125292375,
+          "total" : 174205329
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework.boot:spring-boot-actuator-autoconfigure:3.4.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 277935,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 27297419,
+          "total" : 174205329
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework.boot:spring-boot:3.4.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 52943,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 10619875,
+          "total" : 174205329
+        }
+      }, {
+        "providerName" : "Library Maven: org.springdoc:springdoc-openapi-starter-common:2.8.4 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 29299,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 2417959,
+          "total" : 174205329
+        }
+      }, {
+        "providerName" : "Library Maven: org.apache.tomcat.embed:tomcat-embed-core:10.1.36 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 3,
+        "totalFilesSize" : 10604,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 2316374,
+          "total" : 174205329
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework.boot:spring-boot-actuator:3.4.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 31207,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 2242875,
+          "total" : 174205329
+        }
+      }, {
+        "providerName" : "Library Maven: io.micrometer:micrometer-core:1.14.4 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 4021,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 1217623,
+          "total" : 174205329
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework.boot:spring-boot-devtools:3.4.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 7273,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 989750,
+          "total" : 174205329
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework.boot:spring-boot-test-autoconfigure:3.4.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 710,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 767833,
+          "total" : 174205329
+        }
+      }, {
+        "providerName" : "Library Maven: org.apache.tomcat.embed:tomcat-embed-websocket:10.1.36 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 1334,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 351624,
+          "total" : 174205329
+        }
+      } ]
+    }, {
+      "fileType" : "Manifest",
+      "partOfTotalProcessingTime" : {
+        "part" : 151872251,
+        "total" : 26110793240
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 9434951,
+        "total" : 3745168106
+      },
+      "totalNumberOfFiles" : 124,
+      "totalFilesSize" : 457316,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 457316,
+        "totalCpuTime" : 151872251
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Maven: com.microsoft.sqlserver:mssql-jdbc:12.8.1.jre11 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 61440,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 33128000,
+          "total" : 151872251
+        }
+      }, {
+        "providerName" : "Library Maven: org.xmlunit:xmlunit-core:2.10.0 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 1702,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 22440917,
+          "total" : 151872251
+        }
+      }, {
+        "providerName" : "Library Maven: org.hibernate.orm:hibernate-core:6.6.8.Final (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 157426,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 12649333,
+          "total" : 151872251
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework.boot:spring-boot-starter-security:3.4.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 248,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 3168958,
+          "total" : 151872251
+        }
+      }, {
+        "providerName" : "Library Maven: jakarta.inject:jakarta.inject-api:2.0.1 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 673,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 2380209,
+          "total" : 151872251
+        }
+      }, {
+        "providerName" : "Library Maven: ch.qos.logback:logback-classic:1.5.16 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 9445,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 2369083,
+          "total" : 151872251
+        }
+      }, {
+        "providerName" : "Library Maven: org.assertj:assertj-core:3.26.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 8764,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 2281667,
+          "total" : 151872251
+        }
+      }, {
+        "providerName" : "Library Maven: io.swagger.core.v3:swagger-core-jakarta:2.2.28 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 6343,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 2139624,
+          "total" : 151872251
+        }
+      }, {
+        "providerName" : "Library Maven: org.mockito:mockito-core:5.14.2 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 16179,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 2090500,
+          "total" : 151872251
+        }
+      }, {
+        "providerName" : "Library Maven: org.apache.tomcat.embed:tomcat-embed-core:10.1.36 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 18119,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 2007874,
+          "total" : 151872251
+        }
+      } ]
+    }, {
+      "fileType" : "RNG Compact",
+      "partOfTotalProcessingTime" : {
+        "part" : 106156792,
+        "total" : 26110793240
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 8501708,
+        "total" : 3745168106
+      },
+      "totalNumberOfFiles" : 19,
+      "totalFilesSize" : 1194527,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 1194527,
+        "totalCpuTime" : 106156792
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Maven: org.springframework.security:spring-security-config:6.4.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 19,
+        "totalFilesSize" : 1194527,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 106156792,
+          "total" : 106156792
+        }
+      } ]
+    }, {
+      "fileType" : "HTML",
+      "partOfTotalProcessingTime" : {
+        "part" : 25246332,
+        "total" : 26110793240
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 11862916,
+        "total" : 3745168106
+      },
+      "totalNumberOfFiles" : 3,
+      "totalFilesSize" : 4640,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 4640,
+        "totalCpuTime" : 25246332
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Maven: org.webjars:swagger-ui:5.18.2 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 3449,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 18018417,
+          "total" : 25246332
+        }
+      }, {
+        "providerName" : "Library Maven: jakarta.transaction:jakarta.transaction-api:2.0.1 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 1191,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 7227915,
+          "total" : 25246332
+        }
+      } ]
+    }, {
+      "fileType" : "CSS",
+      "partOfTotalProcessingTime" : {
+        "part" : 24162373,
+        "total" : 26110793240
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 1252293,
+        "total" : 3745168106
+      },
+      "totalNumberOfFiles" : 7,
+      "totalFilesSize" : 195171,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 195171,
+        "totalCpuTime" : 24162373
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Maven: org.webjars:swagger-ui:5.18.2 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 152274,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 22318415,
+          "total" : 24162373
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework.security:spring-security-web:6.4.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 3065,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 1559876,
+          "total" : 24162373
+        }
+      }, {
+        "providerName" : "JDK 21 /Users/walterdovalle/.sdkman/candidates/java/21.0.9-tem",
+        "numberOfFiles" : 4,
+        "totalFilesSize" : 39832,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 284082,
+          "total" : 24162373
+        }
+      } ]
+    }, {
+      "fileType" : "DTD",
+      "partOfTotalProcessingTime" : {
+        "part" : 23219253,
+        "total" : 26110793240
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 1246499,
+        "total" : 3745168106
+      },
+      "totalNumberOfFiles" : 12,
+      "totalFilesSize" : 178064,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 178064,
+        "totalCpuTime" : 23219253
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Maven: org.apache.tomcat.embed:tomcat-embed-core:10.1.36 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 7,
+        "totalFilesSize" : 99729,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 13094628,
+          "total" : 23219253
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework:spring-beans:6.2.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 22685,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 5347041,
+          "total" : 23219253
+        }
+      }, {
+        "providerName" : "Library Maven: org.hibernate.orm:hibernate-core:6.6.8.Final (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 48725,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 3809251,
+          "total" : 23219253
+        }
+      }, {
+        "providerName" : "Library Maven: org.aspectj:aspectjweaver:1.9.22.1 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 4033,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 928750,
+          "total" : 23219253
+        }
+      }, {
+        "providerName" : "JDK 21 /Users/walterdovalle/.sdkman/candidates/java/21.0.9-tem",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 2892,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 39583,
+          "total" : 23219253
+        }
+      } ]
+    }, {
+      "fileType" : "SQL",
+      "partOfTotalProcessingTime" : {
+        "part" : 11493581,
+        "total" : 26110793240
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 3263000,
+        "total" : 3745168106
+      },
+      "totalNumberOfFiles" : 10,
+      "totalFilesSize" : 16317,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 16317,
+        "totalCpuTime" : 11493581
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Maven: ch.qos.logback:logback-classic:1.5.16 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 9,
+        "totalFilesSize" : 16148,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 10589706,
+          "total" : 11493581
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework.security:spring-security-core:6.4.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 169,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 903875,
+          "total" : 11493581
+        }
+      } ]
+    }, {
+      "fileType" : "kotlin_module",
+      "partOfTotalProcessingTime" : {
+        "part" : 9245207,
+        "total" : 26110793240
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 419789,
+        "total" : 3745168106
+      },
+      "totalNumberOfFiles" : 16,
+      "totalFilesSize" : 2438,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 2438,
+        "totalCpuTime" : 9245207
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Maven: org.springframework.data:spring-data-commons:3.4.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 171,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 5816417,
+          "total" : 9245207
+        }
+      }, {
+        "providerName" : "Library Maven: io.micrometer:micrometer-core:1.14.4 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 84,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 408541,
+          "total" : 9245207
+        }
+      }, {
+        "providerName" : "Library Maven: org.junit.jupiter:junit-jupiter-params:5.11.4 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 84,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 401666,
+          "total" : 9245207
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework:spring-jdbc:6.2.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 164,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 281084,
+          "total" : 9245207
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework:spring-context:6.2.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 354,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 249750,
+          "total" : 9245207
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework:spring-core:6.2.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 279,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 242875,
+          "total" : 9245207
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework:spring-web:6.2.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 255,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 241624,
+          "total" : 9245207
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework:spring-test:6.2.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 241,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 228334,
+          "total" : 9245207
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework.security:spring-security-config:6.4.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 172,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 224959,
+          "total" : 9245207
+        }
+      }, {
+        "providerName" : "Library Maven: org.junit.jupiter:junit-jupiter-api:5.11.4 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 63,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 206417,
+          "total" : 9245207
+        }
+      } ]
+    }, {
+      "fileType" : "SPI",
+      "partOfTotalProcessingTime" : {
+        "part" : 8316999,
+        "total" : 26110793240
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 1622083,
+        "total" : 3745168106
+      },
+      "totalNumberOfFiles" : 34,
+      "totalFilesSize" : 8048,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 8048,
+        "totalCpuTime" : 8316999
+      },
+      "biggestContributors" : [ {
+        "providerName" : "Library Maven: org.apache.tomcat.embed:tomcat-embed-websocket:10.1.36 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 3,
+        "totalFilesSize" : 2501,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 1318584,
+          "total" : 8316999
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework:spring-web:6.2.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 751,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 1225875,
+          "total" : 8316999
+        }
+      }, {
+        "providerName" : "Library Maven: org.eclipse.angus:angus-activation:2.0.2 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 767,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 632249,
+          "total" : 8316999
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework:spring-core:6.2.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 683,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 490335,
+          "total" : 8316999
+        }
+      }, {
+        "providerName" : "Library Maven: org.junit.jupiter:junit-jupiter-engine:5.11.4 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 42,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 422167,
+          "total" : 8316999
+        }
+      }, {
+        "providerName" : "Library Maven: org.junit.platform:junit-platform-engine:1.11.4 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 916,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 400041,
+          "total" : 8316999
+        }
+      }, {
+        "providerName" : "Library Maven: org.hibernate.orm:hibernate-core:6.6.8.Final (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 338,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 392000,
+          "total" : 8316999
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework.boot:spring-boot:3.4.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 2,
+        "totalFilesSize" : 129,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 308542,
+          "total" : 8316999
+        }
+      }, {
+        "providerName" : "Library Maven: org.apache.logging.log4j:log4j-api:2.24.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 135,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 298625,
+          "total" : 8316999
+        }
+      }, {
+        "providerName" : "Library Maven: org.springframework:spring-jcl:6.2.3 (#1 class roots, #0 source roots)",
+        "numberOfFiles" : 1,
+        "totalFilesSize" : 44,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 296708,
+          "total" : 8316999
+        }
+      } ]
+    }, {
+      "fileType" : "Shell Script",
+      "partOfTotalProcessingTime" : {
+        "part" : 298376,
+        "total" : 26110793240
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 27417,
+        "total" : 3745168106
+      },
+      "totalNumberOfFiles" : 6,
+      "totalFilesSize" : 1361,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 1361,
+        "totalCpuTime" : 298376
+      },
+      "biggestContributors" : [ {
+        "providerName" : "JDK 21 /Users/walterdovalle/.sdkman/candidates/java/21.0.9-tem",
+        "numberOfFiles" : 6,
+        "totalFilesSize" : 1361,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 298376,
+          "total" : 298376
+        }
+      } ]
+    }, {
+      "fileType" : "SVG",
+      "partOfTotalProcessingTime" : {
+        "part" : 113709,
+        "total" : 26110793240
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 15916,
+        "total" : 3745168106
+      },
+      "totalNumberOfFiles" : 3,
+      "totalFilesSize" : 5481,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 5481,
+        "totalCpuTime" : 113709
+      },
+      "biggestContributors" : [ {
+        "providerName" : "JDK 21 /Users/walterdovalle/.sdkman/candidates/java/21.0.9-tem",
+        "numberOfFiles" : 3,
+        "totalFilesSize" : 5481,
+        "partOfTotalProcessingTimeOfThisFileType" : {
+          "part" : 113709,
+          "total" : 113709
+        }
+      } ]
+    } ],
+    "totalStatsPerBaseLanguage" : [ {
+      "language" : "XML",
+      "partOfTotalProcessingTime" : {
+        "part" : 2158166435,
+        "total" : 26110793240
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 3823947683,
+        "total" : 3745168106
+      },
+      "totalNumberOfFiles" : 248,
+      "totalFilesSize" : 7668691,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 7668691,
+        "totalCpuTime" : 2158166435
+      }
+    }, {
+      "language" : "textmate",
+      "partOfTotalProcessingTime" : {
+        "part" : 1846237874,
+        "total" : 26110793240
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 3789691981,
+        "total" : 3745168106
+      },
+      "totalNumberOfFiles" : 7,
+      "totalFilesSize" : 7181153,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 7181153,
+        "totalCpuTime" : 1846237874
+      }
+    }, {
+      "language" : "JAVA",
+      "partOfTotalProcessingTime" : {
+        "part" : 1326408495,
+        "total" : 26110793240
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 4574499460,
+        "total" : 3745168106
+      },
+      "totalNumberOfFiles" : 15707,
+      "totalFilesSize" : 218052256,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 218052256,
+        "totalCpuTime" : 1326408495
+      }
+    }, {
+      "language" : "Properties",
+      "partOfTotalProcessingTime" : {
+        "part" : 452928433,
+        "total" : 26110793240
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 3775716788,
+        "total" : 3745168106
+      },
+      "totalNumberOfFiles" : 544,
+      "totalFilesSize" : 3383713,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 3383713,
+        "totalCpuTime" : 452928433
+      }
+    }, {
+      "language" : "Markdown",
+      "partOfTotalProcessingTime" : {
+        "part" : 290510372,
+        "total" : 26110793240
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 3749046898,
+        "total" : 3745168106
+      },
+      "totalNumberOfFiles" : 32,
+      "totalFilesSize" : 218803,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 218803,
+        "totalCpuTime" : 290510372
+      }
+    }, {
+      "language" : "TEXT",
+      "partOfTotalProcessingTime" : {
+        "part" : 260671061,
+        "total" : 26110793240
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 3765763559,
+        "total" : 3745168106
+      },
+      "totalNumberOfFiles" : 303,
+      "totalFilesSize" : 1343927,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 1343927,
+        "totalCpuTime" : 260671061
+      }
+    }, {
+      "language" : "JSON",
+      "partOfTotalProcessingTime" : {
+        "part" : 174205329,
+        "total" : 26110793240
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 3755449606,
+        "total" : 3745168106
+      },
+      "totalNumberOfFiles" : 23,
+      "totalFilesSize" : 1093828,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 1093828,
+        "totalCpuTime" : 174205329
+      }
+    }, {
+      "language" : "Manifest",
+      "partOfTotalProcessingTime" : {
+        "part" : 151872251,
+        "total" : 26110793240
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 3754603057,
+        "total" : 3745168106
+      },
+      "totalNumberOfFiles" : 124,
+      "totalFilesSize" : 457316,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 457316,
+        "totalCpuTime" : 151872251
+      }
+    }, {
+      "language" : "RELAX-NG",
+      "partOfTotalProcessingTime" : {
+        "part" : 106156792,
+        "total" : 26110793240
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 3753669814,
+        "total" : 3745168106
+      },
+      "totalNumberOfFiles" : 19,
+      "totalFilesSize" : 1194527,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 1194527,
+        "totalCpuTime" : 106156792
+      }
+    }, {
+      "language" : "HTML",
+      "partOfTotalProcessingTime" : {
+        "part" : 25246332,
+        "total" : 26110793240
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 3757031022,
+        "total" : 3745168106
+      },
+      "totalNumberOfFiles" : 3,
+      "totalFilesSize" : 4640,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 4640,
+        "totalCpuTime" : 25246332
+      }
+    }, {
+      "language" : "DTD",
+      "partOfTotalProcessingTime" : {
+        "part" : 23219253,
+        "total" : 26110793240
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 3746414605,
+        "total" : 3745168106
+      },
+      "totalNumberOfFiles" : 12,
+      "totalFilesSize" : 178064,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 178064,
+        "totalCpuTime" : 23219253
+      }
+    }, {
+      "language" : "SPI",
+      "partOfTotalProcessingTime" : {
+        "part" : 8316999,
+        "total" : 26110793240
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 3746790189,
+        "total" : 3745168106
+      },
+      "totalNumberOfFiles" : 34,
+      "totalFilesSize" : 8048,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 8048,
+        "totalCpuTime" : 8316999
+      }
+    }, {
+      "language" : "Shell Script",
+      "partOfTotalProcessingTime" : {
+        "part" : 298376,
+        "total" : 26110793240
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 3745195523,
+        "total" : 3745168106
+      },
+      "totalNumberOfFiles" : 6,
+      "totalFilesSize" : 1361,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 1361,
+        "totalCpuTime" : 298376
+      }
+    }, {
+      "language" : "SVG",
+      "partOfTotalProcessingTime" : {
+        "part" : 113709,
+        "total" : 26110793240
+      },
+      "partOfTotalContentLoadingTime" : {
+        "part" : 3745184022,
+        "total" : 3745168106
+      },
+      "totalNumberOfFiles" : 3,
+      "totalFilesSize" : 5481,
+      "totalProcessingSpeed" : {
+        "totalBytes" : 5481,
+        "totalCpuTime" : 113709
+      }
+    } ],
+    "totalStatsPerIndexer" : [ {
+      "indexId" : "Stubs",
+      "partOfTotalIndexingTime" : {
+        "part" : 7182801868,
+        "total" : 11344875254
+      },
+      "totalNumberOfFiles" : 41103,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 162865364,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 162865364,
+        "totalCpuTime" : 7182801868
+      }
+    }, {
+      "indexId" : "IdIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 1165416831,
+        "total" : 11344875254
+      },
+      "totalNumberOfFiles" : 1091,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 24255529,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 24255529,
+        "totalCpuTime" : 1165416831
+      }
+    }, {
+      "indexId" : "XmlNamespaces",
+      "partOfTotalIndexingTime" : {
+        "part" : 1084152787,
+        "total" : 11344875254
+      },
+      "totalNumberOfFiles" : 132,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 6497456,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 6497456,
+        "totalCpuTime" : 1084152787
+      }
+    }, {
+      "indexId" : "org.jetbrains.kotlin.idea.vfilefinder.KotlinClassFileIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 514683001,
+        "total" : 11344875254
+      },
+      "totalNumberOfFiles" : 40498,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 153877956,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 153877956,
+        "totalCpuTime" : 514683001
+      }
+    }, {
+      "indexId" : "Trigram.Index",
+      "partOfTotalIndexingTime" : {
+        "part" : 470686156,
+        "total" : 11344875254
+      },
+      "totalNumberOfFiles" : 1091,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 24255529,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 24255529,
+        "totalCpuTime" : 470686156
+      }
+    }, {
+      "indexId" : "bytecodeAnalysis",
+      "partOfTotalIndexingTime" : {
+        "part" : 356137097,
+        "total" : 11344875254
+      },
+      "totalNumberOfFiles" : 40498,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 153877956,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 153877956,
+        "totalCpuTime" : 356137097
+      }
+    }, {
+      "indexId" : "org.jetbrains.kotlin.idea.versions.KotlinJvmMetadataVersionIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 179014873,
+        "total" : 11344875254
+      },
+      "totalNumberOfFiles" : 40498,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 153877956,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 153877956,
+        "totalCpuTime" : 179014873
+      }
+    }, {
+      "indexId" : "org.jetbrains.kotlin.idea.vfilefinder.KotlinPartialPackageNamesIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 121955619,
+        "total" : 11344875254
+      },
+      "totalNumberOfFiles" : 40498,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 153877956,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 153877956,
+        "totalCpuTime" : 121955619
+      }
+    }, {
+      "indexId" : "org.jetbrains.kotlin.idea.vfilefinder.KotlinShortClassNameFileIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 71420952,
+        "total" : 11344875254
+      },
+      "totalNumberOfFiles" : 40498,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 153877956,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 153877956,
+        "totalCpuTime" : 71420952
+      }
+    }, {
+      "indexId" : "DomFileIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 71283828,
+        "total" : 11344875254
+      },
+      "totalNumberOfFiles" : 228,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 7432829,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 7432829,
+        "totalCpuTime" : 71283828
+      }
+    }, {
+      "indexId" : "org.jetbrains.kotlin.idea.base.indices.names.KotlinTopLevelCallableByPackageShortNameIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 44448534,
+        "total" : 11344875254
+      },
+      "totalNumberOfFiles" : 40498,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 153877956,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 153877956,
+        "totalCpuTime" : 44448534
+      }
+    }, {
+      "indexId" : "json.file.root.values",
+      "partOfTotalIndexingTime" : {
+        "part" : 24361462,
+        "total" : 11344875254
+      },
+      "totalNumberOfFiles" : 23,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 1093828,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 1093828,
+        "totalCpuTime" : 24361462
+      }
+    }, {
+      "indexId" : "org.jetbrains.kotlin.idea.base.indices.names.KotlinTopLevelClassLikeDeclarationByPackageShortNameIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 19933483,
+        "total" : 11344875254
+      },
+      "totalNumberOfFiles" : 40498,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 153877956,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 153877956,
+        "totalCpuTime" : 19933483
+      }
+    }, {
+      "indexId" : "org.jetbrains.kotlin.idea.vfilefinder.KotlinStdlibIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 13616255,
+        "total" : 11344875254
+      },
+      "totalNumberOfFiles" : 124,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 457316,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 457316,
+        "totalCpuTime" : 13616255
+      }
+    }, {
+      "indexId" : "xmlProperties",
+      "partOfTotalIndexingTime" : {
+        "part" : 8809544,
+        "total" : 11344875254
+      },
+      "totalNumberOfFiles" : 92,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 793266,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 793266,
+        "totalCpuTime" : 8809544
+      }
+    }, {
+      "indexId" : "java.source.module.name",
+      "partOfTotalIndexingTime" : {
+        "part" : 6729546,
+        "total" : 11344875254
+      },
+      "totalNumberOfFiles" : 124,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 457316,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 457316,
+        "totalCpuTime" : 6729546
+      }
+    }, {
+      "indexId" : "org.jetbrains.kotlin.idea.vfilefinder.KotlinModuleMappingIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 5396252,
+        "total" : 11344875254
+      },
+      "totalNumberOfFiles" : 16,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 2438,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 2438,
+        "totalCpuTime" : 5396252
+      }
+    }, {
+      "indexId" : "org.jetbrains.kotlin.idea.versions.KotlinJsMetadataVersionIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 3225460,
+        "total" : 11344875254
+      },
+      "totalNumberOfFiles" : 8,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 3927467,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 3927467,
+        "totalCpuTime" : 3225460
+      }
+    }, {
+      "indexId" : "org.jetbrains.kotlin.idea.vfilefinder.KotlinJvmModuleAnnotationsIndex",
+      "partOfTotalIndexingTime" : {
+        "part" : 801706,
+        "total" : 11344875254
+      },
+      "totalNumberOfFiles" : 16,
+      "totalNumberOfFilesIndexedByExtensions" : 0,
+      "totalFilesSize" : 2438,
+      "indexValueChangerEvaluationSpeed" : {
+        "totalBytes" : 2438,
+        "totalCpuTime" : 801706
+      }
+    } ],
+    "statisticsOfChangedDuringIndexingFiles" : {
+      "numberOfFiles" : 0,
+      "retrievingTime" : 40833
+    },
+    "fileProviderStatistics" : [ {
+      "providerName" : "Library Maven: org.hibernate.orm:hibernate-core:6.6.8.Final (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 6949,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 938811405,
+      "contentLoadingVisibleTime" : 126203496,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 258446911
+    }, {
+      "providerName" : "JDK 21 /Users/walterdovalle/.sdkman/candidates/java/21.0.9-tem",
+      "totalNumberOfIndexedFiles" : 44040,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 44040,
+      "totalIndexingVisibleTime" : 677659968,
+      "contentLoadingVisibleTime" : 284639422,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 3890701
+    }, {
+      "providerName" : "Library Maven: org.webjars:swagger-ui:5.18.2 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 19,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 665132744,
+      "contentLoadingVisibleTime" : 21055329,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ {
+        "fileName" : "swagger-ui-es-bundle.js.map",
+        "processingTime" : 502184709,
+        "evaluationOfIndexValueChangerTime" : 131968459,
+        "contentLoadingTime" : 11819250
+      }, {
+        "fileName" : "swagger-ui-bundle.js.map",
+        "processingTime" : 762068042,
+        "evaluationOfIndexValueChangerTime" : 160223834,
+        "contentLoadingTime" : 9887458
+      } ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 398724349
+    }, {
+      "providerName" : "Library Maven: net.bytebuddy:byte-buddy:1.15.11 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 5801,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 528863634,
+      "contentLoadingVisibleTime" : 70893406,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 113722418
+    }, {
+      "providerName" : "Library Maven: org.springframework.security:spring-security-config:6.4.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 699,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 390898185,
+      "contentLoadingVisibleTime" : 22026200,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 60910071
+    }, {
+      "providerName" : "Library Maven: org.apache.tomcat.embed:tomcat-embed-core:10.1.36 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 1654,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 370165852,
+      "contentLoadingVisibleTime" : 38674798,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 109209148
+    }, {
+      "providerName" : "Library Maven: org.springframework.boot:spring-boot-autoconfigure:3.4.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 1430,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 163434173,
+      "contentLoadingVisibleTime" : 19173505,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 35882011
+    }, {
+      "providerName" : "Library Maven: org.aspectj:aspectjweaver:1.9.22.1 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 1008,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 156445879,
+      "contentLoadingVisibleTime" : 23337250,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 55441596
+    }, {
+      "providerName" : "Library Maven: org.springframework:spring-web:6.2.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 1253,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 148723811,
+      "contentLoadingVisibleTime" : 19409382,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 44071586
+    }, {
+      "providerName" : "Library Maven: org.junit.jupiter:junit-jupiter-params:5.11.4 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 359,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 114966408,
+      "contentLoadingVisibleTime" : 7392678,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 20883935
+    }, {
+      "providerName" : "Library Maven: org.springframework.data:spring-data-commons:3.4.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 956,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 112021950,
+      "contentLoadingVisibleTime" : 13632990,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 28170541
+    }, {
+      "providerName" : "Library Maven: org.springframework:spring-core:6.2.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 1192,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 109763191,
+      "contentLoadingVisibleTime" : 15778436,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 37935266
+    }, {
+      "providerName" : "Library Maven: com.fasterxml.jackson.core:jackson-databind:2.18.2 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 796,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 105793275,
+      "contentLoadingVisibleTime" : 13464266,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 33279785
+    }, {
+      "providerName" : "Library Maven: org.springframework.boot:spring-boot:3.4.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 1084,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 104449243,
+      "contentLoadingVisibleTime" : 13882179,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 36791755
+    }, {
+      "providerName" : "Library Maven: org.springframework.data:spring-data-jpa:3.4.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 864,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 104275234,
+      "contentLoadingVisibleTime" : 11534547,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 28796237
+    }, {
+      "providerName" : "Library Maven: org.springframework:spring-beans:6.2.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 462,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 101579910,
+      "contentLoadingVisibleTime" : 7769793,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 31382597
+    }, {
+      "providerName" : "Library Maven: org.hibernate.validator:hibernate-validator:8.0.2.Final (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 944,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 100453920,
+      "contentLoadingVisibleTime" : 11936932,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 32030368
+    }, {
+      "providerName" : "Library Maven: org.assertj:assertj-core:3.26.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 844,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 98437349,
+      "contentLoadingVisibleTime" : 12481161,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 33384516
+    }, {
+      "providerName" : "Library Maven: org.springframework:spring-context:6.2.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 875,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 91058450,
+      "contentLoadingVisibleTime" : 11995271,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 29252008
+    }, {
+      "providerName" : "Library Maven: org.glassfish.jaxb:jaxb-runtime:4.0.5 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 666,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 86199086,
+      "contentLoadingVisibleTime" : 9875780,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 33452536
+    }, {
+      "providerName" : "Library Maven: com.microsoft.sqlserver:mssql-jdbc:12.8.1.jre11 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 447,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 72865882,
+      "contentLoadingVisibleTime" : 8311320,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 34556118
+    }, {
+      "providerName" : "Library Maven: org.springframework:spring-test:6.2.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 620,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 67048413,
+      "contentLoadingVisibleTime" : 9459228,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 22715409
+    }, {
+      "providerName" : "Library Maven: org.antlr:antlr4-runtime:4.13.0 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 218,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 66131595,
+      "contentLoadingVisibleTime" : 4673926,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 27682100
+    }, {
+      "providerName" : "Library Maven: org.springframework:spring-webmvc:6.2.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 558,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 63956547,
+      "contentLoadingVisibleTime" : 8022737,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 22741474
+    }, {
+      "providerName" : "Library Maven: org.springframework.boot:spring-boot-actuator-autoconfigure:3.4.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 566,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 61114552,
+      "contentLoadingVisibleTime" : 8346320,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 16904804
+    }, {
+      "providerName" : "Library Maven: org.glassfish.jaxb:jaxb-core:4.0.5 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 132,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 58924899,
+      "contentLoadingVisibleTime" : 8296323,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 11355939
+    }, {
+      "providerName" : "Library Maven: io.micrometer:micrometer-core:1.14.4 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 550,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 55833433,
+      "contentLoadingVisibleTime" : 8150033,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 17834980
+    }, {
+      "providerName" : "Library Maven: org.apache.commons:commons-lang3:3.17.0 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 401,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 54961198,
+      "contentLoadingVisibleTime" : 8661610,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 19373926
+    }, {
+      "providerName" : "Library Maven: org.xmlunit:xmlunit-core:2.10.0 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 169,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 54232553,
+      "contentLoadingVisibleTime" : 7750212,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 8558620
+    }, {
+      "providerName" : "Library Maven: org.springframework.security:spring-security-web:6.4.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 665,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 52871814,
+      "contentLoadingVisibleTime" : 7788561,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 19201475
+    }, {
+      "providerName" : "Library Maven: ch.qos.logback:logback-core:1.5.16 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 474,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 47621273,
+      "contentLoadingVisibleTime" : 6672357,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 19577459
+    }, {
+      "providerName" : "Library Maven: com.nimbusds:nimbus-jose-jwt:9.37.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 537,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 46433933,
+      "contentLoadingVisibleTime" : 6815480,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 14202572
+    }, {
+      "providerName" : "Library Maven: ch.qos.logback:logback-classic:1.5.16 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 204,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 43406727,
+      "contentLoadingVisibleTime" : 8205540,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 12503779
+    }, {
+      "providerName" : "Library Maven: org.mockito:mockito-core:5.14.2 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 576,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 42319342,
+      "contentLoadingVisibleTime" : 6385726,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 14745662
+    }, {
+      "providerName" : "Library Maven: org.springframework.boot:spring-boot-actuator:3.4.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 516,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 42036981,
+      "contentLoadingVisibleTime" : 6725385,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 12546452
+    }, {
+      "providerName" : "Library Maven: org.springframework.security:spring-security-core:6.4.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 446,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 40783782,
+      "contentLoadingVisibleTime" : 5638050,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 14561536
+    }, {
+      "providerName" : "Library Maven: jakarta.persistence:jakarta.persistence-api:3.1.0 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 217,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 40748612,
+      "contentLoadingVisibleTime" : 3605371,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 9044897
+    }, {
+      "providerName" : "Library Maven: org.apache.logging.log4j:log4j-api:2.24.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 221,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 37598322,
+      "contentLoadingVisibleTime" : 6707523,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 12383886
+    }, {
+      "providerName" : "Library Maven: org.springframework:spring-jdbc:6.2.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 313,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 33532961,
+      "contentLoadingVisibleTime" : 4479719,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 11540460
+    }, {
+      "providerName" : "Library Maven: com.fasterxml.jackson.core:jackson-core:2.18.2 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 230,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 30727119,
+      "contentLoadingVisibleTime" : 5290137,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 9259880
+    }, {
+      "providerName" : "Library Maven: net.bytebuddy:byte-buddy-agent:1.15.11 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 150,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 30455931,
+      "contentLoadingVisibleTime" : 3531092,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 5571841
+    }, {
+      "providerName" : "Library Maven: org.hdrhistogram:HdrHistogram:2.2.2 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 101,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 30099727,
+      "contentLoadingVisibleTime" : 2946083,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 6192618
+    }, {
+      "providerName" : "Library Maven: org.springframework:spring-aop:6.2.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 298,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 29600104,
+      "contentLoadingVisibleTime" : 5265295,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 8938158
+    }, {
+      "providerName" : "Library Maven: org.springdoc:springdoc-openapi-starter-common:2.8.4 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 250,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 29087256,
+      "contentLoadingVisibleTime" : 3460824,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 9962929
+    }, {
+      "providerName" : "Library Maven: org.springframework.security:spring-security-oauth2-core:6.4.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 80,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 27645462,
+      "contentLoadingVisibleTime" : 5221257,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 6125536
+    }, {
+      "providerName" : "Library Maven: jakarta.activation:jakarta.activation-api:2.1.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 53,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 25167625,
+      "contentLoadingVisibleTime" : 1319442,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 9836300
+    }, {
+      "providerName" : "Library Maven: org.springframework:spring-expression:6.2.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 159,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 24580774,
+      "contentLoadingVisibleTime" : 3441260,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 9432743
+    }, {
+      "providerName" : "Library Maven: org.junit.jupiter:junit-jupiter-api:5.11.4 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 186,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 22262076,
+      "contentLoadingVisibleTime" : 2329845,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 6245609
+    }, {
+      "providerName" : "Library Maven: io.swagger.core.v3:swagger-core-jakarta:2.2.28 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 126,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 21034439,
+      "contentLoadingVisibleTime" : 2784328,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 5568524
+    }, {
+      "providerName" : "Library Maven: org.mapstruct:mapstruct:1.6.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 55,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 20496619,
+      "contentLoadingVisibleTime" : 3816482,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 7292002
+    }, {
+      "providerName" : "Library Maven: io.smallrye:jandex:3.2.0 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 196,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 19743107,
+      "contentLoadingVisibleTime" : 2789810,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 7378380
+    }, {
+      "providerName" : "Library Maven: org.yaml:snakeyaml:2.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 241,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 19537486,
+      "contentLoadingVisibleTime" : 2787882,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 6817457
+    }, {
+      "providerName" : "Library Maven: org.junit.jupiter:junit-jupiter-engine:5.11.4 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 139,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 19138925,
+      "contentLoadingVisibleTime" : 1950975,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 5128140
+    }, {
+      "providerName" : "Library Maven: org.junit.platform:junit-platform-engine:1.11.4 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 162,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 18596697,
+      "contentLoadingVisibleTime" : 2292646,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 5469968
+    }, {
+      "providerName" : "Library Maven: org.springframework:spring-tx:6.2.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 218,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 18374929,
+      "contentLoadingVisibleTime" : 2157080,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 7794217
+    }, {
+      "providerName" : "Library Maven: org.apache.tomcat.embed:tomcat-embed-el:10.1.36 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 164,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 18306159,
+      "contentLoadingVisibleTime" : 2120069,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 9906725
+    }, {
+      "providerName" : "Library Maven: jakarta.xml.bind:jakarta.xml.bind-api:4.0.2 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 126,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 18297190,
+      "contentLoadingVisibleTime" : 1571550,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 5920851
+    }, {
+      "providerName" : "Library Maven: org.apache.tomcat.embed:tomcat-embed-websocket:10.1.36 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 189,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 18067484,
+      "contentLoadingVisibleTime" : 2406088,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 7066149
+    }, {
+      "providerName" : "Library Maven: org.springframework.boot:spring-boot-test-autoconfigure:3.4.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 224,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 17326397,
+      "contentLoadingVisibleTime" : 2536783,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 7230626
+    }, {
+      "providerName" : "Library Maven: com.jayway.jsonpath:json-path:2.9.0 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 204,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 17228461,
+      "contentLoadingVisibleTime" : 2773471,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 5269804
+    }, {
+      "providerName" : "Library Maven: org.junit.platform:junit-platform-commons:1.11.4 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 71,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 16891153,
+      "contentLoadingVisibleTime" : 1788321,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 3207407
+    }, {
+      "providerName" : "Library Maven: org.springframework.boot:spring-boot-test:3.4.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 149,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 15951634,
+      "contentLoadingVisibleTime" : 2261172,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 4785990
+    }, {
+      "providerName" : "Library Maven: org.springframework.boot:spring-boot-devtools:3.4.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 132,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 14702876,
+      "contentLoadingVisibleTime" : 1712521,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 4495773
+    }, {
+      "providerName" : "Library Maven: com.zaxxer:HikariCP:5.1.0 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 79,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 14513931,
+      "contentLoadingVisibleTime" : 1239966,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 5354768
+    }, {
+      "providerName" : "Library Maven: org.springframework:spring-orm:6.2.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 110,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 13914349,
+      "contentLoadingVisibleTime" : 1662977,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 4528323
+    }, {
+      "providerName" : "Library Maven: net.minidev:json-smart:2.5.2 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 96,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 11924554,
+      "contentLoadingVisibleTime" : 1302177,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 3603851
+    }, {
+      "providerName" : "Library Maven: io.swagger.core.v3:swagger-models-jakarta:2.2.28 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 73,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 11251722,
+      "contentLoadingVisibleTime" : 1180053,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 3971442
+    }, {
+      "providerName" : "Library Maven: jakarta.validation:jakarta.validation-api:3.0.2 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 147,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 10382980,
+      "contentLoadingVisibleTime" : 1540652,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 3196228
+    }, {
+      "providerName" : "Library Maven: org.glassfish.jaxb:txw2:4.0.5 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 62,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 9717628,
+      "contentLoadingVisibleTime" : 798695,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 3508934
+    }, {
+      "providerName" : "Library Maven: org.hamcrest:hamcrest:2.2 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 109,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 9391255,
+      "contentLoadingVisibleTime" : 1469607,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 3498455
+    }, {
+      "providerName" : "Library Maven: com.fasterxml.jackson.core:jackson-annotations:2.18.2 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 79,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 8993599,
+      "contentLoadingVisibleTime" : 1243842,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 3205916
+    }, {
+      "providerName" : "Library Maven: jakarta.transaction:jakarta.transaction-api:2.0.1 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 26,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 8474264,
+      "contentLoadingVisibleTime" : 517347,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 1922955
+    }, {
+      "providerName" : "Library Maven: io.micrometer:micrometer-observation:1.14.4 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 64,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 8042705,
+      "contentLoadingVisibleTime" : 740480,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 2823214
+    }, {
+      "providerName" : "Library Maven: org.slf4j:slf4j-api:2.0.16 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 60,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 7947749,
+      "contentLoadingVisibleTime" : 931467,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 2976079
+    }, {
+      "providerName" : "Library Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.18.2 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 69,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 7326351,
+      "contentLoadingVisibleTime" : 908064,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 3418284
+    }, {
+      "providerName" : "Library Maven: org.ow2.asm:asm:9.7.1 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 40,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 7269899,
+      "contentLoadingVisibleTime" : 790059,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 3157371
+    }, {
+      "providerName" : "Library Maven: jakarta.inject:jakarta.inject-api:2.0.1 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 12,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 7110830,
+      "contentLoadingVisibleTime" : 308745,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 1071661
+    }, {
+      "providerName" : "Library Maven: org.awaitility:awaitility:4.2.2 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 80,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 7008866,
+      "contentLoadingVisibleTime" : 1116434,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 3114920
+    }, {
+      "providerName" : "Library Maven: com.fasterxml:classmate:1.7.0 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 49,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 6654875,
+      "contentLoadingVisibleTime" : 684243,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 2952224
+    }, {
+      "providerName" : "Library Maven: org.jboss.logging:jboss-logging:3.6.1.Final (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 39,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 6613100,
+      "contentLoadingVisibleTime" : 719855,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 2049043
+    }, {
+      "providerName" : "Library Maven: org.hibernate.common:hibernate-commons-annotations:7.0.3.Final (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 60,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 6499922,
+      "contentLoadingVisibleTime" : 1053933,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 1965739
+    }, {
+      "providerName" : "Library Maven: jakarta.annotation:jakarta.annotation-api:2.1.1 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 23,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 6406928,
+      "contentLoadingVisibleTime" : 681534,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 1371960
+    }, {
+      "providerName" : "Library Maven: org.springframework.security:spring-security-oauth2-jose:6.4.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 58,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 5990543,
+      "contentLoadingVisibleTime" : 850991,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 1843602
+    }, {
+      "providerName" : "Library Maven: io.swagger.core.v3:swagger-annotations-jakarta:2.2.28 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 64,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 5804899,
+      "contentLoadingVisibleTime" : 705512,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 2702145
+    }, {
+      "providerName" : "Library Maven: org.springframework.security:spring-security-oauth2-resource-server:6.4.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 59,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 5631511,
+      "contentLoadingVisibleTime" : 1062070,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 2057579
+    }, {
+      "providerName" : "Library Maven: org.skyscreamer:jsonassert:1.5.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 23,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 5057937,
+      "contentLoadingVisibleTime" : 901781,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 1207208
+    }, {
+      "providerName" : "Library Maven: org.springframework.security:spring-security-crypto:6.4.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 53,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 4921990,
+      "contentLoadingVisibleTime" : 1156952,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 1459947
+    }, {
+      "providerName" : "Library Maven: org.springframework:spring-aspects:6.2.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 37,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 4848100,
+      "contentLoadingVisibleTime" : 947140,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 1571668
+    }, {
+      "providerName" : "Library Maven: io.micrometer:micrometer-commons:1.14.4 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 40,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 4760711,
+      "contentLoadingVisibleTime" : 660342,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 1635765
+    }, {
+      "providerName" : "Library Maven: org.objenesis:objenesis:3.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 47,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 4688013,
+      "contentLoadingVisibleTime" : 813438,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 1820958
+    }, {
+      "providerName" : "Library Maven: org.eclipse.angus:angus-activation:2.0.2 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 20,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 4678374,
+      "contentLoadingVisibleTime" : 426217,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 1336191
+    }, {
+      "providerName" : "Library Maven: com.sun.istack:istack-commons-runtime:4.1.2 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 26,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 4632628,
+      "contentLoadingVisibleTime" : 662173,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 1024560
+    }, {
+      "providerName" : "Library Maven: io.micrometer:micrometer-jakarta9:1.14.4 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 28,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 4376335,
+      "contentLoadingVisibleTime" : 461597,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 1427699
+    }, {
+      "providerName" : "Library Maven: org.slf4j:jul-to-slf4j:2.0.16 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 6,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 4364279,
+      "contentLoadingVisibleTime" : 181426,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 3688973
+    }, {
+      "providerName" : "Library Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.18.2 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 28,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 4115590,
+      "contentLoadingVisibleTime" : 443091,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 1798566
+    }, {
+      "providerName" : "Library Maven: org.latencyutils:LatencyUtils:2.0.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 25,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 4036961,
+      "contentLoadingVisibleTime" : 470678,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 1621669
+    }, {
+      "providerName" : "Library Maven: org.springdoc:springdoc-openapi-starter-webmvc-api:2.8.4 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 23,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 3675884,
+      "contentLoadingVisibleTime" : 734874,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 1397614
+    }, {
+      "providerName" : "Library Maven: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.18.2 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 29,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 3444292,
+      "contentLoadingVisibleTime" : 621398,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 1201268
+    }, {
+      "providerName" : "Library Maven: net.minidev:accessors-smart:2.5.2 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 16,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 3382326,
+      "contentLoadingVisibleTime" : 542025,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 990146
+    }, {
+      "providerName" : "Module 'diarias' (all roots)",
+      "totalNumberOfIndexedFiles" : 55,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 55,
+      "totalIndexingVisibleTime" : 3272779,
+      "contentLoadingVisibleTime" : 2514647,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 2719
+    }, {
+      "providerName" : "Library Maven: org.springframework:spring-jcl:6.2.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 19,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 2777156,
+      "contentLoadingVisibleTime" : 623662,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 603126
+    }, {
+      "providerName" : "Library Maven: org.junit.jupiter:junit-jupiter:5.11.4 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 4,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 2760205,
+      "contentLoadingVisibleTime" : 243337,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 617291
+    }, {
+      "providerName" : "Library Maven: org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.4 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 17,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 2654555,
+      "contentLoadingVisibleTime" : 460209,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 926126
+    }, {
+      "providerName" : "Library Maven: org.apache.logging.log4j:log4j-to-slf4j:2.24.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 17,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 2201307,
+      "contentLoadingVisibleTime" : 392548,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 826960
+    }, {
+      "providerName" : "Library Maven: org.springframework.boot:spring-boot-starter-security:3.4.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 3,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 2102028,
+      "contentLoadingVisibleTime" : 137687,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 1674455
+    }, {
+      "providerName" : "Library Maven: com.vaadin.external.google:android-json:0.0.20131108.vaadin1 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 9,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 1678196,
+      "contentLoadingVisibleTime" : 315339,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 768234
+    }, {
+      "providerName" : "Library Maven: com.fasterxml.jackson.module:jackson-module-parameter-names:2.18.2 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 11,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 1574322,
+      "contentLoadingVisibleTime" : 321911,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 413551
+    }, {
+      "providerName" : "Library Maven: com.github.stephenc.jcip:jcip-annotations:1.0-1 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 7,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 1489954,
+      "contentLoadingVisibleTime" : 260955,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 398831
+    }, {
+      "providerName" : "Library Maven: org.opentest4j:opentest4j:1.3.0 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 12,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 1370673,
+      "contentLoadingVisibleTime" : 154650,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 778026
+    }, {
+      "providerName" : "Library Maven: org.springframework.boot:spring-boot-starter-actuator:3.4.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 3,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 1116444,
+      "contentLoadingVisibleTime" : 368236,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 592558
+    }, {
+      "providerName" : "Library Maven: org.apiguardian:apiguardian-api:1.1.2 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 5,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 934074,
+      "contentLoadingVisibleTime" : 212331,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 338829
+    }, {
+      "providerName" : "Library Maven: org.webjars:webjars-locator-lite:1.0.1 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 7,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 896207,
+      "contentLoadingVisibleTime" : 138264,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 226152
+    }, {
+      "providerName" : "Library Maven: org.springframework.boot:spring-boot-starter-logging:3.4.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 3,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 855300,
+      "contentLoadingVisibleTime" : 191406,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 521244
+    }, {
+      "providerName" : "Library Maven: org.springframework.boot:spring-boot-starter-oauth2-resource-server:3.4.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 3,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 850516,
+      "contentLoadingVisibleTime" : 298931,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 351773
+    }, {
+      "providerName" : "Library Maven: org.springframework.boot:spring-boot-starter-jdbc:3.4.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 3,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 838282,
+      "contentLoadingVisibleTime" : 193959,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 365628
+    }, {
+      "providerName" : "Library Maven: org.springframework.boot:spring-boot-starter:3.4.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 3,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 804579,
+      "contentLoadingVisibleTime" : 317215,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 283734
+    }, {
+      "providerName" : "Library Maven: org.springframework.boot:spring-boot-starter-tomcat:3.4.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 3,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 774284,
+      "contentLoadingVisibleTime" : 242638,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 284423
+    }, {
+      "providerName" : "Library Maven: org.mockito:mockito-junit-jupiter:5.14.2 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 7,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 761895,
+      "contentLoadingVisibleTime" : 191772,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 259589
+    }, {
+      "providerName" : "Library Maven: org.springframework.boot:spring-boot-starter-json:3.4.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 3,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 759198,
+      "contentLoadingVisibleTime" : 175764,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 402417
+    }, {
+      "providerName" : "Library Maven: org.springframework.boot:spring-boot-starter-validation:3.4.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 3,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 750783,
+      "contentLoadingVisibleTime" : 314740,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 214319
+    }, {
+      "providerName" : "Library Maven: org.jspecify:jspecify:1.0.0 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 7,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 724218,
+      "contentLoadingVisibleTime" : 316582,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 155993
+    }, {
+      "providerName" : "Library Maven: org.springframework.boot:spring-boot-starter-web:3.4.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 3,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 661096,
+      "contentLoadingVisibleTime" : 194159,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 300508
+    }, {
+      "providerName" : "Library Maven: org.springframework.boot:spring-boot-starter-test:3.4.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 3,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 659719,
+      "contentLoadingVisibleTime" : 177996,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 320212
+    }, {
+      "providerName" : "Library Maven: org.springframework.boot:spring-boot-starter-data-jpa:3.4.3 (#1 class roots, #0 source roots)",
+      "totalNumberOfIndexedFiles" : 3,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 647464,
+      "contentLoadingVisibleTime" : 120281,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 376607
+    }, {
+      "providerName" : "Refreshed files",
+      "totalNumberOfIndexedFiles" : 0,
+      "totalNumberOfFilesFullyIndexedByExtensions" : 0,
+      "totalNumberOfNothingToWriteFiles" : 0,
+      "totalIndexingVisibleTime" : 0,
+      "contentLoadingVisibleTime" : 0,
+      "numberOfTooLargeForIndexingFiles" : 0,
+      "slowIndexedFiles" : [ ],
+      "filesFullyIndexedByExtensions" : [ ],
+      "separateApplyingIndexesVisibleTime" : 0
+    } ],
+    "visibleTimeToAllThreadTimeRatio" : 0.0
+  }
+}

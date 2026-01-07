@@ -1,0 +1,41 @@
+<application>
+  <component name="RecentProjectsManager">
+    <option name="additionalInfo">
+      <map>
+        <entry key="$USER_HOME$/Desenvolvimento/projetos/diariasBack">
+          <value>
+            <RecentProjectMetaInfo frameTitle="diariasBack – SwaggerConfig.java" projectWorkspaceId="2tVEd2jM2PU2zIEdOJ0OLbjMyUj">
+              <option name="activationTimestamp" value="1767619865694" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-233.11799.241" />
+              <option name="buildTimestamp" value="1701493500000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="8" />
+              </option>
+              <frame x="7" y="60" width="1440" height="842" extendedState="6" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1767547309963" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Desenvolvimento/projetos/admjfsc/admapi">
+          <value>
+            <RecentProjectMetaInfo frameTitle="admapi – SwaggerConfig.java" opened="true" projectWorkspaceId="346WXQCpmDoQkUxFOVFOoQOff7j">
+              <option name="activationTimestamp" value="1767752154780" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-233.11799.241" />
+              <option name="buildTimestamp" value="1701493500000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="2" />
+              </option>
+              <frame x="20" y="50" width="1400" height="802" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1767662236211" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="lastOpenedProject" value="$USER_HOME$/Desenvolvimento/projetos/admjfsc/admapi" />
+  </component>
+</application>

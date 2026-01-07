@@ -1,0 +1,65 @@
+{
+  "appInfo" : {
+    "build" : "233.11799.241",
+    "buildDate" : "2023-12-02T05:05:00Z[UTC]",
+    "productCode" : "IC",
+    "generated" : "2025-12-27T12:46:06.904744Z",
+    "os" : "macOS 26.1",
+    "runtime" : "JetBrains s.r.o. 17.0.9 17.0.9+7-b1087.7"
+  },
+  "runtimeInfo" : {
+    "maxMemory" : 2147483648,
+    "numberOfProcessors" : 8,
+    "maxNumberOfIndexingThreads" : 7,
+    "maxSizeOfFileForIntelliSense" : 2560000,
+    "maxSizeOfFileForContentLoading" : 20971520
+  },
+  "type" : "Scanning",
+  "projectIndexingActivityHistory" : {
+    "projectName" : "diariasBack",
+    "times" : {
+      "scanningReason" : "changes in: \"JDK 21 /Users/walterdovalle/.sdkman/candidates/java/21.0.9-tem\"",
+      "scanningType" : "PARTIAL",
+      "scanningId" : 1,
+      "creatingIteratorsTime" : 2373000,
+      "concurrentHandlingWallTimeWithoutPauses" : 4810498000,
+      "concurrentHandlingWallTimeWithPauses" : 4810498000,
+      "concurrentHandlingSumOfThreadTimesWithPauses" : 4806601125,
+      "concurrentIterationAndScannersApplicationSumOfThreadTimesWithPauses" : 2878092084,
+      "concurrentFileCheckSumOfThreadTimesWithPauses" : 1928291125,
+      "delayedPushPropertiesStageTime" : 4708000,
+      "indexExtensionsTime" : 257863476,
+      "dumbModeStart" : "2025-12-27T12:46:02.078722Z",
+      "dumbWallTimeWithPauses" : 4824820000,
+      "dumbWallTimeWithoutPauses" : 4824820000,
+      "updatingStart" : "2025-12-27T12:46:02.072676Z",
+      "updatingEnd" : "2025-12-27T12:46:06.903542Z",
+      "totalWallTimeWithPauses" : 4830835375,
+      "wallTimeOnPause" : 0,
+      "wasInterrupted" : false,
+      "totalWallTimeWithoutPauses" : 4830835375
+    },
+    "fileCount" : {
+      "numberOfFileProviders" : 1,
+      "numberOfScannedFiles" : 44455,
+      "numberOfFilesIndexedByInfrastructureExtensionsDuringScan" : 0,
+      "numberOfFilesScheduledForIndexingAfterScan" : 44125
+    },
+    "scanningStatistics" : [ {
+      "providerName" : "JDK 21 /Users/walterdovalle/.sdkman/candidates/java/21.0.9-tem",
+      "numberOfScannedFiles" : 44455,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 44125,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 1693107661,
+      "totalOneThreadTimeWithPauses" : 4806601125,
+      "iterationAndScannersApplicationTime" : 2878092084,
+      "filesCheckTime" : 1928291125,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 399902843,
+      "timeIndexingWithoutContentViaInfrastructureExtension" : 257863476,
+      "roots" : [ ]
+    } ]
+  }
+}

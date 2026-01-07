@@ -1,0 +1,188 @@
+<project version="4">
+  <component name="BookmarksManager">
+    <option name="groups">
+      <GroupState>
+        <option name="name" value="admapi" />
+      </GroupState>
+    </option>
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:develop" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="-1">
+      <file>
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/jus/jfsc/adm/config/SwaggerConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="43">
+              <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTypeUsageLocalSummary">
+    <fileType name="JAVA">
+      <summary usageCount="11" lastUsed="1767751768894" />
+    </fileType>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Nome</find>
+    </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src/main/java/br/jus/jfsc/adm/config</dir>
+    </dirStrings>
+  </component>
+  <component name="FindInProjectScope">
+    <option name="isProjectScope" value="true" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/src/main/java/br/jus/jfsc/adm/config/SwaggerConfig.java" />
+    </changedPaths>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="LanguageUsageStatistics">
+    <language id="JAVA">
+      <summary usageCount="11" lastUsage="1767751768895" />
+    </language>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" />
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="admapi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///Users/walterdovalle/Desenvolvimento/projetos/admjfsc/admapi}" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="admapi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///Users/walterdovalle/Desenvolvimento/projetos/admjfsc/admapi}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///Users/walterdovalle/Desenvolvimento/projetos/admjfsc/admapi/src}" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="admapi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///Users/walterdovalle/Desenvolvimento/projetos/admjfsc/admapi}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///Users/walterdovalle/Desenvolvimento/projetos/admjfsc/admapi/src}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///Users/walterdovalle/Desenvolvimento/projetos/admjfsc/admapi/src/main}" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="admapi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///Users/walterdovalle/Desenvolvimento/projetos/admjfsc/admapi}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///Users/walterdovalle/Desenvolvimento/projetos/admjfsc/admapi/src}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///Users/walterdovalle/Desenvolvimento/projetos/admjfsc/admapi/src/main}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///Users/walterdovalle/Desenvolvimento/projetos/admjfsc/admapi/src/main/java}" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="admapi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///Users/walterdovalle/Desenvolvimento/projetos/admjfsc/admapi}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///Users/walterdovalle/Desenvolvimento/projetos/admjfsc/admapi/src}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///Users/walterdovalle/Desenvolvimento/projetos/admjfsc/admapi/src/main}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///Users/walterdovalle/Desenvolvimento/projetos/admjfsc/admapi/src/main/java}" type="462c0819:PsiDirectoryNode" />
+              <item name="dir{file:///Users/walterdovalle/Desenvolvimento/projetos/admjfsc/admapi/src/main/java/br/jus/jfsc/adm/config}" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="ToolWindowManager">
+    <layout>
+      <window_info active="true" id="Commit" visible="true" weight="0.41893116" />
+      <window_info id="Bookmarks" order="0" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="1" weight="0.3225" />
+      <window_info id="Learn" order="2" />
+      <window_info id="Structure" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="0" weight="0.3298005" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="4" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Problems View" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Services" order="8" />
+      <window_info anchor="bottom" id="Build" order="9" />
+      <window_info active="true" anchor="bottom" id="GitFlowOutput" order="10" visible="true" weight="0.5354251" />
+      <window_info active="true" anchor="bottom" id="GitFlow" order="11" visible="true" weight="0.3298005" />
+      <window_info active="true" anchor="bottom" id="Git Flow Output" order="12" visible="true" weight="0.3298005" />
+      <window_info anchor="right" id="Maven" order="0" />
+      <window_info anchor="right" id="Coverage" order="1" side_tool="true" weight="0.33035713" />
+      <window_info anchor="right" id="Notifications" order="2" weight="0.25035715" />
+      <unified_weights bottom="0.5354251" left="0.41893116" right="0.25035715" />
+    </layout>
+    <recentWindows>
+      <value>Commit</value>
+      <value>GitFlowOutput</value>
+      <value>GitFlow</value>
+      <value>Git Flow Output</value>
+      <value>Version Control</value>
+      <value>Project</value>
+      <value>Notifications</value>
+      <value>Coverage</value>
+    </recentWindows>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="308" y="194" key="IDE.errors.dialog" timestamp="1767664931878">
+      <screen x="0" y="30" width="1440" height="842" />
+    </state>
+    <state x="308" y="194" key="IDE.errors.dialog/0.30.1440.842@0.30.1440.842" timestamp="1767664931878" />
+    <state x="320" y="174" key="Vcs.Push.Dialog.v2" timestamp="1767752190568">
+      <screen x="0" y="30" width="1440" height="842" />
+    </state>
+    <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.30.1440.842@0.30.1440.842" timestamp="1767752190568" />
+    <state x="500" y="155" width="587" height="717" key="find.popup" timestamp="1767630200565">
+      <screen x="0" y="30" width="1440" height="842" />
+    </state>
+    <state x="500" y="155" width="587" height="717" key="find.popup/0.30.1440.842@0.30.1440.842" timestamp="1767630200565" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/jus/jfsc/adm/config/SwaggerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
