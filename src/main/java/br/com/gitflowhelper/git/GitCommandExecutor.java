@@ -35,7 +35,7 @@ public class GitCommandExecutor {
 
             process.waitFor();
 
-//            VirtualFileManager.getInstance().asyncRefresh(null);
+            VirtualFileManager.getInstance().asyncRefresh(null);
 
         } catch (Exception e) {
             MyPluginUtils.logError(project, "Erro: " + e.getMessage());

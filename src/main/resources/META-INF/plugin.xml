@@ -16,5 +16,8 @@
                 anchor="bottom"
                 icon="com.intellij.icons.ExpUiIcons.General.Vcs"
                 factoryClass="br.com.gitflowhelper.toolwindow.GitFlowToolWindowFactory"/>
+
+        <notificationGroup id="GitFlowNotificationGroup"
+                           displayType="BALLOON" />
     </extensions>
 </idea-plugin>

@@ -2,12 +2,12 @@ package br.com.gitflowhelper.dialog;
 
 import br.com.gitflowhelper.git.GitCommandExecutor;
 import br.com.gitflowhelper.settings.GitFlowSettingsService;
+import br.com.gitflowhelper.util.NotificationUtil;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.DialogWrapper;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.Arrays;
 import java.util.List;
 
 public class InitDialog extends DialogWrapper {
@@ -68,6 +68,7 @@ public class InitDialog extends DialogWrapper {
         GitCommandExecutor.run(this.project, List.of(cmd3.split(" ")));
         GitCommandExecutor.run(this.project, List.of(cmd4.split(" ")));
         super.doOKAction();
+        NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Git Flow Initialization Successful");
     }
 
     // Padrão: 2 colunas (label + campo)

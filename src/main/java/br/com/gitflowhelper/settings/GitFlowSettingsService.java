@@ -1,16 +1,18 @@
 package br.com.gitflowhelper.settings;
 
 import com.intellij.openapi.components.PersistentStateComponent;
+import com.intellij.openapi.components.Service;
 import com.intellij.openapi.components.State;
 import com.intellij.openapi.components.Storage;
 import com.intellij.openapi.project.Project;
 import org.jetbrains.annotations.NotNull;
 
+@Service(Service.Level.PROJECT)
 @State(
-        name = "GitFlowSettings",
+        name = "GitFlowSettingsState",
         storages = @Storage("gitflow-helper.xml")
 )
-public class GitFlowSettingsService
+public final class GitFlowSettingsService
         implements PersistentStateComponent<GitFlowSettingsState> {
 
     private GitFlowSettingsState state = new GitFlowSettingsState();
