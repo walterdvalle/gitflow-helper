@@ -1,7 +1,0 @@
-<project>
-  <component name="ExternalCompilerConfiguration">
-    <bytecodeTargetLevel>
-      <module name="diarias" target="21" />
-    </bytecodeTargetLevel>
-  </component>
-</project>

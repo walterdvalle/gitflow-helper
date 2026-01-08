@@ -1,7 +1,0 @@
-<project>
-  <component name="ExternalCompilerConfiguration">
-    <bytecodeTargetLevel>
-      <module name="admapi" target="21" />
-    </bytecodeTargetLevel>
-  </component>
-</project>
