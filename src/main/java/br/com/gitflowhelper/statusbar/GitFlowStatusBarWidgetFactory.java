@@ -1,14 +1,9 @@
-
 package br.com.gitflowhelper.statusbar;
 
 import com.intellij.openapi.project.Project;
-import com.intellij.openapi.wm.*;
-import com.intellij.util.Consumer;
-import com.intellij.icons.AllIcons;
+import com.intellij.openapi.wm.StatusBarWidget;
+import com.intellij.openapi.wm.StatusBarWidgetFactory;
 import org.jetbrains.annotations.NotNull;
-
-import javax.swing.*;
-import java.awt.event.MouseEvent;
 
 public class GitFlowStatusBarWidgetFactory
         implements StatusBarWidgetFactory {
@@ -36,4 +31,3 @@ public class GitFlowStatusBarWidgetFactory
     @Override
     public void disposeWidget(@NotNull StatusBarWidget widget) {}
 }
-

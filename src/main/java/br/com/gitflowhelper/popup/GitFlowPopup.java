@@ -12,10 +12,12 @@ import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.DefaultActionGroup;
 import com.intellij.openapi.actionSystem.Presentation;
+import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.popup.JBPopupFactory;
-import com.intellij.openapi.ui.popup.JBPopup;
-import com.intellij.ui.awt.RelativePoint;
+import com.intellij.openapi.ui.popup.ListPopup;
+import com.intellij.openapi.wm.StatusBar;
+import com.intellij.openapi.wm.WindowManager;
 import org.jetbrains.annotations.NotNull;
 
 import java.awt.*;
@@ -23,69 +25,91 @@ import java.util.Arrays;
 import java.util.Locale;
 
 public final class GitFlowPopup {
+    private final ListPopup listPopup;
+    private final Project project;
+    private String branchName;
 
-    private GitFlowPopup() {}
-
-    public static void show(Project project, Component component, int x, int y) {
-        DefaultActionGroup group = new DefaultActionGroup();
-        group.add(init(project));
-        group.addSeparator();
-        group.add(flowGroup(project, "Feature"));
-        group.add(flowGroup(project, "Release"));
-        group.add(flowGroup(project, "Hotfix"));
-
-        JBPopup popup = JBPopupFactory.getInstance().createActionGroupPopup(
-            "Git Flow",
-            group,
-            DataManager.getInstance().getDataContextFromFocus().getResult(),
-            JBPopupFactory.ActionSelectionAid.SPEEDSEARCH,
-            true
+    public GitFlowPopup(Project project) {
+        this.branchName = "";
+        this.project = project;
+        this.listPopup = JBPopupFactory.getInstance().createActionGroupPopup(
+                "Git Flow",
+                createGroup(),
+                DataManager.getInstance().getDataContextFromFocus().getResult(),
+                JBPopupFactory.ActionSelectionAid.SPEEDSEARCH,
+                true
         );
-        popup.show(new RelativePoint(component, new Point(x-100, y-140)));
+        ApplicationManager.getApplication().executeOnPooledThread(() -> {
+            //slow job
+            this.branchName = GitBranchUtils.getCurrentBranchName(project);
+            ApplicationManager.getApplication().invokeLater(this::updateUI);
+        });
+
     }
 
-    private static DefaultActionGroup flowGroup(Project project, String type) {
-        DefaultActionGroup group = new DefaultActionGroup(type, true);
-        group.add(flowAction(project, type, "start"));
-        group.add(flowAction(project, type, "publish"));
-        group.add(flowAction(project, type, "finish"));
+    private void updateUI() {
+        StatusBar statusBar = WindowManager.getInstance().getStatusBar(project);
+        if (statusBar != null) {
+            statusBar.updateWidget("GitFlowHelper");
+        }
+    }
+
+    private DefaultActionGroup createGroup() {
+        DefaultActionGroup group = new DefaultActionGroup();
+        group.add(init());
+        group.addSeparator();
+        group.add(flowGroup("Feature"));
+        group.add(flowGroup("Release"));
+        group.add(flowGroup("Hotfix" ));
         return group;
     }
 
-    private static AnAction flowAction(Project project, String type, String action) {
+    public ListPopup getPopup() {
+        return this.listPopup;
+    }
+
+    private DefaultActionGroup flowGroup(String type) {
+        DefaultActionGroup group = new DefaultActionGroup(type, true);
+        group.add(flowAction(type, "start"));
+        group.add(flowAction(type, "publish"));
+        group.add(flowAction(type, "finish"));
+        return group;
+    }
+
+    private AnAction flowAction(String type, String action) {
         String actionTitle = action.substring(0, 1).toUpperCase(Locale.ROOT) + action.substring(1);
         if ("Feature".equals(type)) {
             switch (action) {
                 case "start":
-                    return featureStart(project, type, actionTitle);
+                    return featureStart(type, actionTitle);
                 case "publish":
-                    return featurePublish(project, type, action, actionTitle);
+                    return featurePublish(type, action, actionTitle);
                 case "finish":
-                    return featureFinish(project, type, action, actionTitle);
+                    return featureFinish(type, action, actionTitle);
             }
         } else if ("Release".equals(type)) {
             switch (action) {
                 case "start":
-                    return releaseStart(project, type, actionTitle);
+                    return releaseStart(type, actionTitle);
                 case "publish":
-                    return releasePublish(project, type, action, actionTitle);
+                    return releasePublish(type, action, actionTitle);
                 case "finish":
-                    return releaseFinish(project, type, action, actionTitle);
+                    return releaseFinish(type, action, actionTitle);
             }
         } else if ("Hotfix".equals(type)) {
             switch (action) {
                 case "start":
-                    return hotfixStart(project, type, actionTitle);
+                    return hotfixStart(type, actionTitle);
                 case "publish":
-                    return hotfixPublish(project, type, action, actionTitle);
+                    return hotfixPublish(type, action, actionTitle);
                 case "finish":
-                    return hotfixFinish(project, type, action, actionTitle);
+                    return hotfixFinish(type, action, actionTitle);
             }
         }
         return null;
     }
 
-    private static @NotNull AnAction init(Project project) {
+    private @NotNull AnAction init() {
         return new AnAction("Init") {
             @Override
             public void actionPerformed(AnActionEvent e) {
@@ -101,9 +125,9 @@ public final class GitFlowPopup {
                 }
             }
         };
-    }
+     }
 
-    private static @NotNull AnAction featureStart(Project project, String type, String actionTitle) {
+    private @NotNull AnAction featureStart(String type, String actionTitle) {
         return new AnAction(actionTitle) {
             @Override
             public void actionPerformed(AnActionEvent e) {
@@ -118,7 +142,7 @@ public final class GitFlowPopup {
             @Override
             public void update(AnActionEvent e) {
                 Presentation presentation = e.getPresentation();
-                if (GitBranchUtils.getCurrentBranchName(project).equals(GitFlowSettingsService.getInstance(project).getDevelopBranch())) {
+                if (branchName.equals(GitFlowSettingsService.getInstance(project).getDevelopBranch())) {
                     presentation.setEnabled(true);
                 } else {
                     presentation.setEnabled(false);
@@ -127,7 +151,7 @@ public final class GitFlowPopup {
         };
     }
 
-    private static @NotNull AnAction featurePublish(Project project, String type, String action, String actionTitle) {
+    private @NotNull AnAction featurePublish(String type, String action, String actionTitle) {
         return new AnAction(actionTitle) {
             @Override
             public void actionPerformed(AnActionEvent e) {
@@ -140,7 +164,7 @@ public final class GitFlowPopup {
             @Override
             public void update(AnActionEvent e) {
                 Presentation presentation = e.getPresentation();
-                if (GitBranchUtils.getCurrentBranchName(project).startsWith(GitFlowSettingsService.getInstance(project).getFeaturePrefix())) {
+                if (branchName.startsWith(GitFlowSettingsService.getInstance(project).getFeaturePrefix())) {
                     presentation.setEnabled(true);
                 } else {
                     presentation.setEnabled(false);
@@ -149,7 +173,7 @@ public final class GitFlowPopup {
         };
     }
 
-    private static @NotNull AnAction featureFinish(Project project, String type, String action, String actionTitle) {
+    private @NotNull AnAction featureFinish(String type, String action, String actionTitle) {
         return new AnAction(actionTitle) {
             @Override
             public void actionPerformed(AnActionEvent e) {
@@ -176,7 +200,7 @@ public final class GitFlowPopup {
             @Override
             public void update(AnActionEvent e) {
                 Presentation presentation = e.getPresentation();
-                if (GitBranchUtils.getCurrentBranchName(project).startsWith(GitFlowSettingsService.getInstance(project).getFeaturePrefix())) {
+                if (branchName.startsWith(GitFlowSettingsService.getInstance(project).getFeaturePrefix())) {
                     presentation.setEnabled(true);
                 } else {
                     presentation.setEnabled(false);
@@ -185,7 +209,7 @@ public final class GitFlowPopup {
         };
     }
 
-    private static @NotNull AnAction releaseStart(Project project, String type, String actionTitle) {
+    private @NotNull AnAction releaseStart(String type, String actionTitle) {
         return new AnAction(actionTitle) {
             @Override
             public void actionPerformed(AnActionEvent e) {
@@ -200,7 +224,7 @@ public final class GitFlowPopup {
             @Override
             public void update(AnActionEvent e) {
                 Presentation presentation = e.getPresentation();
-                if (GitBranchUtils.getCurrentBranchName(project).equals(GitFlowSettingsService.getInstance(project).getMainBranch())) {
+                if (branchName.equals(GitFlowSettingsService.getInstance(project).getMainBranch())) {
                     presentation.setEnabled(true);
                 } else {
                     presentation.setEnabled(false);
@@ -209,7 +233,7 @@ public final class GitFlowPopup {
         };
     }
 
-    private static @NotNull AnAction releasePublish(Project project, String type, String action, String actionTitle) {
+    private @NotNull AnAction releasePublish(String type, String action, String actionTitle) {
         return new AnAction(actionTitle) {
             @Override
             public void actionPerformed(AnActionEvent e) {
@@ -222,7 +246,7 @@ public final class GitFlowPopup {
             @Override
             public void update(AnActionEvent e) {
                 Presentation presentation = e.getPresentation();
-                if (GitBranchUtils.getCurrentBranchName(project).startsWith(GitFlowSettingsService.getInstance(project).getReleasePrefix())) {
+                if (branchName.startsWith(GitFlowSettingsService.getInstance(project).getReleasePrefix())) {
                     presentation.setEnabled(true);
                 } else {
                     presentation.setEnabled(false);
@@ -231,7 +255,7 @@ public final class GitFlowPopup {
         };
     }
 
-    private static @NotNull AnAction releaseFinish(Project project, String type, String action, String actionTitle) {
+    private @NotNull AnAction releaseFinish(String type, String action, String actionTitle) {
         return new AnAction(actionTitle) {
             @Override
             public void actionPerformed(AnActionEvent e) {
@@ -251,7 +275,7 @@ public final class GitFlowPopup {
             @Override
             public void update(AnActionEvent e) {
                 Presentation presentation = e.getPresentation();
-                if (GitBranchUtils.getCurrentBranchName(project).startsWith(GitFlowSettingsService.getInstance(project).getReleasePrefix())) {
+                if (branchName.startsWith(GitFlowSettingsService.getInstance(project).getReleasePrefix())) {
                     presentation.setEnabled(true);
                 } else {
                     presentation.setEnabled(false);
@@ -260,7 +284,7 @@ public final class GitFlowPopup {
         };
     }
 
-    private static @NotNull AnAction hotfixStart(Project project, String type, String actionTitle) {
+    private @NotNull AnAction hotfixStart(String type, String actionTitle) {
         return new AnAction(actionTitle) {
             @Override
             public void actionPerformed(AnActionEvent e) {
@@ -275,7 +299,7 @@ public final class GitFlowPopup {
             @Override
             public void update(AnActionEvent e) {
                 Presentation presentation = e.getPresentation();
-                if (GitBranchUtils.getCurrentBranchName(project).equals(GitFlowSettingsService.getInstance(project).getMainBranch())) {
+                if (branchName.equals(GitFlowSettingsService.getInstance(project).getMainBranch())) {
                     presentation.setEnabled(true);
                 } else {
                     presentation.setEnabled(false);
@@ -284,7 +308,7 @@ public final class GitFlowPopup {
         };
     }
 
-    private static @NotNull AnAction hotfixPublish(Project project, String type, String action, String actionTitle) {
+    private @NotNull AnAction hotfixPublish(String type, String action, String actionTitle) {
         return new AnAction(actionTitle) {
             @Override
             public void actionPerformed(AnActionEvent e) {
@@ -297,7 +321,7 @@ public final class GitFlowPopup {
             @Override
             public void update(AnActionEvent e) {
                 Presentation presentation = e.getPresentation();
-                if (GitBranchUtils.getCurrentBranchName(project).startsWith(GitFlowSettingsService.getInstance(project).getHotfixPrefix())) {
+                if (branchName.startsWith(GitFlowSettingsService.getInstance(project).getHotfixPrefix())) {
                     presentation.setEnabled(true);
                 } else {
                     presentation.setEnabled(false);
@@ -306,7 +330,7 @@ public final class GitFlowPopup {
         };
     }
 
-    private static @NotNull AnAction hotfixFinish(Project project, String type, String action, String actionTitle) {
+    private @NotNull AnAction hotfixFinish(String type, String action, String actionTitle) {
         return new AnAction(actionTitle) {
             @Override
             public void actionPerformed(AnActionEvent e) {
@@ -326,7 +350,7 @@ public final class GitFlowPopup {
             @Override
             public void update(AnActionEvent e) {
                 Presentation presentation = e.getPresentation();
-                if (GitBranchUtils.getCurrentBranchName(project).startsWith(GitFlowSettingsService.getInstance(project).getHotfixPrefix())) {
+                if (branchName.startsWith(GitFlowSettingsService.getInstance(project).getHotfixPrefix())) {
                     presentation.setEnabled(true);
                 } else {
                     presentation.setEnabled(false);
