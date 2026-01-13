@@ -1,6 +1,6 @@
 package br.com.gitflowhelper.git;
 
-import br.com.gitflowhelper.toolwindow.MyPluginUtils;
+import br.com.gitflowhelper.util.PluginUtils;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vfs.VirtualFileManager;
 
@@ -18,7 +18,7 @@ public class GitCommandExecutor {
         //GitFlowOutputPanel output = GitFlowOutputPanel.getInstance();
 
         try {
-            MyPluginUtils.logCommand(project, String.join(" ", command));
+            PluginUtils.logCommand(project, String.join(" ", command));
             Process process = new ProcessBuilder(command)
                     .directory(new File(basePath))
                     .redirectErrorStream(true)
@@ -29,7 +29,7 @@ public class GitCommandExecutor {
                                  new InputStreamReader(process.getInputStream()))) {
                 String line;
                 while ((line = reader.readLine()) != null) {
-                    MyPluginUtils.logOutput(project, line);
+                    PluginUtils.logOutput(project, line);
                 }
             }
 
@@ -38,7 +38,7 @@ public class GitCommandExecutor {
             VirtualFileManager.getInstance().asyncRefresh(null);
 
         } catch (Exception e) {
-            MyPluginUtils.logError(project, "Erro: " + e.getMessage());
+            PluginUtils.logError(project, "Erro: " + e.getMessage());
         }
     }
 }

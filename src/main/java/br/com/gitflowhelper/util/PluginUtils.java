@@ -1,12 +1,13 @@
-package br.com.gitflowhelper.toolwindow;
+package br.com.gitflowhelper.util;
 
+import br.com.gitflowhelper.toolwindow.ToolWindowPanel;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.openapi.wm.ToolWindowManager;
 import com.intellij.ui.content.Content;
 import javax.swing.SwingUtilities;
 
-public class MyPluginUtils {
+public class PluginUtils {
 
     public static void logError(Project project, String message) {
         logToMyWindow(project, "<pre style=\"margin:0; padding:0;\" style=\"color: red;\">"+message+"</pre>");
@@ -29,8 +30,8 @@ public class MyPluginUtils {
                 Content content = toolWindow.getContentManager().getContent(0);
 
                 // O cast continua o mesmo, pois o nome da classe do painel não mudou
-                if (content != null && content.getComponent() instanceof MyToolWindowPanel) {
-                    MyToolWindowPanel panel = (MyToolWindowPanel) content.getComponent();
+                if (content != null && content.getComponent() instanceof ToolWindowPanel) {
+                    ToolWindowPanel panel = (ToolWindowPanel) content.getComponent();
                     panel.append(message);
                 }
             }

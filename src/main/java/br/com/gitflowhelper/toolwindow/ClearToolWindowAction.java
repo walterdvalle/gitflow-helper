@@ -1,22 +1,43 @@
 package br.com.gitflowhelper.toolwindow;
 
+import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
-import com.intellij.openapi.project.Project;
+import com.intellij.openapi.ui.Messages;
 import org.jetbrains.annotations.NotNull;
+
+import javax.swing.*;
 
 public class ClearToolWindowAction extends AnAction {
 
-    public ClearToolWindowAction() {
-        super("Minha ação", "Executar minha ação", null);
+    private JTextPane textPane;
+
+    public ClearToolWindowAction(JTextPane textPane) {
+        super(
+            "Clear",
+            "Clear the text area",
+            AllIcons.Actions.GC
+        );
+        this.textPane = textPane;
     }
 
     @Override
     public void actionPerformed(@NotNull AnActionEvent e) {
-        Project project = e.getProject();
-        if (project == null) return;
+        int result = Messages.showYesNoDialog(
+            e.getProject(),
+            "Clear all git flow log?",
+            "Confirmation",
+            Messages.getQuestionIcon()
+        );
+        if (result == Messages.YES) {
+            this.textPane.setText("<html><body></body></html>");
+        }
+    }
 
-        // lógica do botão
-        System.out.println("Botão da ToolWindow clicado");
+    @Override
+    public void update(@NotNull AnActionEvent e) {
+        // Exemplo: habilitar/desabilitar dinamicamente
+        boolean hasData = true; // substitua por lógica real
+        e.getPresentation().setEnabled(hasData);
     }
 }
