@@ -14,7 +14,7 @@
         <toolWindow
                 id="GitFlowOutput"
                 anchor="bottom"
-                icon="com.intellij.icons.ExpUiIcons.General.Vcs"
+                icon="/icons/gitflow.svg"
                 factoryClass="br.com.gitflowhelper.toolwindow.GitFlowToolWindowFactory"/>
 
         <notificationGroup id="GitFlowNotificationGroup"

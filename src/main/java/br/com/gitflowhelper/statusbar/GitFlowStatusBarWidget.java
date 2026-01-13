@@ -1,6 +1,7 @@
 package br.com.gitflowhelper.statusbar;
 
 import br.com.gitflowhelper.popup.GitFlowPopup;
+import icons.PluginIcons;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.StatusBar;
 import com.intellij.openapi.wm.StatusBarWidget;
@@ -51,7 +52,7 @@ public class GitFlowStatusBarWidget implements StatusBarWidget {
 
         @Override
         public Icon getIcon() {
-            return com.intellij.icons.ExpUiIcons.General.Vcs;
+            return PluginIcons.GitFlow;
         }
 
         @Override
