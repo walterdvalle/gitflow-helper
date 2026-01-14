@@ -25,26 +25,31 @@ import java.util.Arrays;
 import java.util.Locale;
 
 public final class GitFlowPopup {
-    private final ListPopup listPopup;
+    private ListPopup listPopup;
     private final Project project;
     private String branchName;
 
     public GitFlowPopup(Project project) {
         this.branchName = "";
         this.project = project;
-        this.listPopup = JBPopupFactory.getInstance().createActionGroupPopup(
-                "Git Flow",
-                createGroup(),
-                DataManager.getInstance().getDataContextFromFocus().getResult(),
-                JBPopupFactory.ActionSelectionAid.SPEEDSEARCH,
-                true
-        );
-        ApplicationManager.getApplication().executeOnPooledThread(() -> {
-            //slow job
-            this.branchName = GitBranchUtils.getCurrentBranchName(project);
-            ApplicationManager.getApplication().invokeLater(this::updateUI);
-        });
 
+        DataManager.getInstance()
+            .getDataContextFromFocusAsync()
+            .onSuccess(dataContext -> {
+
+                this.listPopup = JBPopupFactory.getInstance().createActionGroupPopup(
+                        "Git Flow",
+                        createGroup(),
+                        dataContext,
+                        JBPopupFactory.ActionSelectionAid.SPEEDSEARCH,
+                        true
+                );
+                ApplicationManager.getApplication().executeOnPooledThread(() -> {
+                    //slow job
+                    this.branchName = GitBranchUtils.getCurrentBranchName(project);
+                    ApplicationManager.getApplication().invokeLater(this::updateUI);
+                });
+        });
     }
 
     private void updateUI() {
@@ -132,12 +137,19 @@ public final class GitFlowPopup {
             @Override
             public void actionPerformed(AnActionEvent e) {
                 new NameDialog(project, type + " start", "Feature description", name ->
+                {
+                    try {
                         GitCommandExecutor.run(
                                 project,
                                 Arrays.asList(String.format("git flow %s start %s", type.toLowerCase(Locale.ROOT), name.replaceAll(" ", "-")).split(" "))
-                        )
+                        );
+                    } catch (Exception ex) {
+                        NotificationUtil.showGitFlowSErrorNotification(project, "Error", GitCommandExecutor.getLastErrorMessage());
+                        return;
+                    }
+                    NotificationUtil.showGitFlowSuccessNotification(project, "Success", "New feature created successfully");
+                }
                 ).show();
-                NotificationUtil.showGitFlowSuccessNotification(project, "Success", "New feature created successfully");
             }
             @Override
             public void update(AnActionEvent e) {
@@ -155,10 +167,15 @@ public final class GitFlowPopup {
         return new AnAction(actionTitle) {
             @Override
             public void actionPerformed(AnActionEvent e) {
-                GitCommandExecutor.run(
-                        project,
-                        Arrays.asList(String.format("git flow %s %s", type.toLowerCase(Locale.ROOT), action).split(" "))
-                );
+                try {
+                    GitCommandExecutor.run(
+                            project,
+                            Arrays.asList(String.format("git flow %s %s", type.toLowerCase(Locale.ROOT), action).split(" "))
+                    );
+                } catch (Exception ex) {
+                    NotificationUtil.showGitFlowSErrorNotification(project, "Error", GitCommandExecutor.getLastErrorMessage());
+                    return;
+                }
                 NotificationUtil.showGitFlowSuccessNotification(project, "Success", "New feature published successfully");
             }
             @Override
@@ -178,22 +195,27 @@ public final class GitFlowPopup {
             @Override
             public void actionPerformed(AnActionEvent e) {
                 ActionChoiceDialog dialog = new ActionChoiceDialog(project);
+                String acaoPos = "";
                 if (dialog.showAndGet()) {
                     String keep = dialog.getKeepBranch() ? " --keep" : "";
-                    GitCommandExecutor.run(
-                            project,
-                            Arrays.asList(("git rebase").split(" "))
-                    );
-
-                    GitCommandExecutor.run(
-                            project,
-                            Arrays.asList(String.format("git flow %s %s %s", type.toLowerCase(Locale.ROOT), action, keep).split(" "))
-                    );
-                    String escolha = dialog.getSelectedAction();
-                    String complemento = escolha.equalsIgnoreCase("Create merge request") ? " -o merge_request.create" : "";
-                    String acaoPos = escolha.equalsIgnoreCase("Create merge request") ? "and merge request created" : "and pushed to " + GitFlowSettingsService.getInstance(project).getDevelopBranch();
-                    String cmd = "git push" + complemento;
-                    GitCommandExecutor.run(project, Arrays.asList(cmd.split(" ")));
+                    try {
+                        GitCommandExecutor.run(
+                                project,
+                                Arrays.asList(("git rebase").split(" "))
+                        );
+                        GitCommandExecutor.run(
+                                project,
+                                Arrays.asList(String.format("git flow %s %s %s", type.toLowerCase(Locale.ROOT), action, keep).split(" "))
+                        );
+                        String escolha = dialog.getSelectedAction();
+                        String complemento = escolha.equalsIgnoreCase("Create merge request") ? " -o merge_request.create" : "";
+                        acaoPos = escolha.equalsIgnoreCase("Create merge request") ? "and merge request created" : "and pushed to " + GitFlowSettingsService.getInstance(project).getDevelopBranch();
+                        String cmd = "git push" + complemento;
+                        GitCommandExecutor.run(project, Arrays.asList(cmd.split(" ")));
+                    } catch (Exception ex) {
+                        NotificationUtil.showGitFlowSErrorNotification(project, "Error", GitCommandExecutor.getLastErrorMessage());
+                        return;
+                    }
                     NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Feature finished " + acaoPos + " successfully");
                 }
             }
@@ -214,12 +236,19 @@ public final class GitFlowPopup {
             @Override
             public void actionPerformed(AnActionEvent e) {
                 new NameDialog(project, type + " start", "Version description", name ->
+                {
+                    try {
                         GitCommandExecutor.run(
                                 project,
                                 Arrays.asList(String.format("git flow %s start %s", type.toLowerCase(Locale.ROOT), name.replaceAll(" ", "-")).split(" "))
-                        )
+                        );
+                    } catch (Exception ex) {
+                        NotificationUtil.showGitFlowSErrorNotification(project, "Error", GitCommandExecutor.getLastErrorMessage());
+                        return;
+                    }
+                    NotificationUtil.showGitFlowSuccessNotification(project, "Success", "New release created successfully");
+                }
                 ).show();
-                NotificationUtil.showGitFlowSuccessNotification(project, "Success", "New release created successfully");
             }
             @Override
             public void update(AnActionEvent e) {
@@ -237,10 +266,15 @@ public final class GitFlowPopup {
         return new AnAction(actionTitle) {
             @Override
             public void actionPerformed(AnActionEvent e) {
-                GitCommandExecutor.run(
-                        project,
-                        Arrays.asList(String.format("git flow %s %s", type.toLowerCase(Locale.ROOT), action).split(" "))
-                );
+                try {
+                    GitCommandExecutor.run(
+                            project,
+                            Arrays.asList(String.format("git flow %s %s", type.toLowerCase(Locale.ROOT), action).split(" "))
+                    );
+                } catch (Exception ex) {
+                    NotificationUtil.showGitFlowSErrorNotification(project, "Error", GitCommandExecutor.getLastErrorMessage());
+                    return;
+                }
                 NotificationUtil.showGitFlowSuccessNotification(project, "Success", "New release published successfully");
             }
             @Override
@@ -259,17 +293,22 @@ public final class GitFlowPopup {
         return new AnAction(actionTitle) {
             @Override
             public void actionPerformed(AnActionEvent e) {
-                GitCommandExecutor.run(
-                        project,
-                        Arrays.asList(String.format("git rebase origin/%s", GitFlowSettingsService.getInstance(project).getDevelopBranch()).split(" "))
-                );
+                try {
+                    GitCommandExecutor.run(
+                            project,
+                            Arrays.asList(String.format("git rebase origin/%s", GitFlowSettingsService.getInstance(project).getDevelopBranch()).split(" "))
+                    );
+                    GitCommandExecutor.run(
+                            project,
+                            Arrays.asList(String.format("git flow %s %s", type.toLowerCase(Locale.ROOT), action).split(" "))
+                    );
+                    GitCommandExecutor.run(project, Arrays.asList("git push".split(" ")));
+                    GitCommandExecutor.run(project, Arrays.asList("git push --tags".split(" ")));
+                } catch (Exception ex) {
+                    NotificationUtil.showGitFlowSErrorNotification(project, "Error", GitCommandExecutor.getLastErrorMessage());
+                    return;
+                }
 
-                GitCommandExecutor.run(
-                        project,
-                        Arrays.asList(String.format("git flow %s %s", type.toLowerCase(Locale.ROOT), action).split(" "))
-                );
-                GitCommandExecutor.run(project, Arrays.asList("git push".split(" ")));
-                GitCommandExecutor.run(project, Arrays.asList("git push --tags".split(" ")));
                 NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Released finished and tag pushed successfully");
             }
             @Override
@@ -289,12 +328,19 @@ public final class GitFlowPopup {
             @Override
             public void actionPerformed(AnActionEvent e) {
                 new NameDialog(project, type + " start", "Hotfix description", name ->
+                {
+                    try {
                         GitCommandExecutor.run(
                                 project,
                                 Arrays.asList(String.format("git flow %s start %s", type.toLowerCase(Locale.ROOT), name.replaceAll(" ", "_")).split(" "))
-                        )
+                        );
+                    } catch (Exception ex) {
+                        NotificationUtil.showGitFlowSErrorNotification(project, "Error", GitCommandExecutor.getLastErrorMessage());
+                        return;
+                    }
+                    NotificationUtil.showGitFlowSuccessNotification(project, "Success", "New hotfix created successfully");
+                }
                 ).show();
-                NotificationUtil.showGitFlowSuccessNotification(project, "Success", "New hotfix created successfully");
             }
             @Override
             public void update(AnActionEvent e) {
@@ -312,10 +358,15 @@ public final class GitFlowPopup {
         return new AnAction(actionTitle) {
             @Override
             public void actionPerformed(AnActionEvent e) {
-                GitCommandExecutor.run(
-                        project,
-                        Arrays.asList(String.format("git flow %s %s", type.toLowerCase(Locale.ROOT), action).split(" "))
-                );
+                try {
+                    GitCommandExecutor.run(
+                            project,
+                            Arrays.asList(String.format("git flow %s %s", type.toLowerCase(Locale.ROOT), action).split(" "))
+                    );
+                } catch (Exception ex) {
+                    NotificationUtil.showGitFlowSErrorNotification(project, "Error", GitCommandExecutor.getLastErrorMessage());
+                    return;
+                }
                 NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Hotfix published successfully");
             }
             @Override
@@ -334,17 +385,21 @@ public final class GitFlowPopup {
         return new AnAction(actionTitle) {
             @Override
             public void actionPerformed(AnActionEvent e) {
-                GitCommandExecutor.run(
-                        project,
-                        Arrays.asList(String.format("git rebase origin/%s", GitFlowSettingsService.getInstance(project).getDevelopBranch()).split(" "))
-                );
+                try {
+                    GitCommandExecutor.run(
+                            project,
+                            Arrays.asList(String.format("git rebase origin/%s", GitFlowSettingsService.getInstance(project).getDevelopBranch()).split(" "))
+                    );
+                    GitCommandExecutor.run(
+                            project,
+                            Arrays.asList(String.format("git flow %s %s", type.toLowerCase(Locale.ROOT), action).split(" "))
+                    );
+                    GitCommandExecutor.run(project, Arrays.asList("git push".split(" ")));
+                } catch (Exception ex) {
+                    NotificationUtil.showGitFlowSErrorNotification(project, "Error", GitCommandExecutor.getLastErrorMessage());
+                    return;
+                }
 
-                GitCommandExecutor.run(
-                        project,
-                        Arrays.asList(String.format("git flow %s %s", type.toLowerCase(Locale.ROOT), action).split(" "))
-                );
-
-                GitCommandExecutor.run(project, Arrays.asList("git push".split(" ")));
                 NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Hotfix finished and tag pushed successfully");
             }
             @Override

@@ -51,6 +51,6 @@ public class ActionChoiceDialog extends DialogWrapper {
         return (String) actionComboBox.getSelectedItem();
     }
     public Boolean getKeepBranch() {
-        return keepBranch.isEnabled();
+        return keepBranch.isSelected();
     }
 }

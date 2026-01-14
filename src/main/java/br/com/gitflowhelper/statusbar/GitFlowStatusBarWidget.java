@@ -68,12 +68,12 @@ public class GitFlowStatusBarWidget implements StatusBarWidget {
         }
 
         @Override
-        public @Nullable ListPopup getPopupStep() {
+        public @Nullable ListPopup getPopup() {
             return new GitFlowPopup(project).getPopup();
         }
 
         public void showPopup(@NotNull MouseEvent event) {
-            ListPopup popup = getPopupStep();
+            ListPopup popup = getPopup();
             if (popup != null) {
                 popup.show(new RelativePoint(event));
             }

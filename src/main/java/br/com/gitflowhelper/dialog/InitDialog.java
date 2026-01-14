@@ -63,10 +63,15 @@ public class InitDialog extends DialogWrapper {
         String cmd2 = "git config gitflow.prefix.feature " + featureField.getText();
         String cmd3 = "git config gitflow.prefix.release " + releaseField.getText();
         String cmd4 = "git config gitflow.prefix.hotfix " + hotfixField.getText();
-        GitCommandExecutor.run(this.project, List.of(cmd1.split(" ")));
-        GitCommandExecutor.run(this.project, List.of(cmd2.split(" ")));
-        GitCommandExecutor.run(this.project, List.of(cmd3.split(" ")));
-        GitCommandExecutor.run(this.project, List.of(cmd4.split(" ")));
+        try {
+            GitCommandExecutor.run(this.project, List.of(cmd1.split(" ")));
+            GitCommandExecutor.run(this.project, List.of(cmd2.split(" ")));
+            GitCommandExecutor.run(this.project, List.of(cmd3.split(" ")));
+            GitCommandExecutor.run(this.project, List.of(cmd4.split(" ")));
+        } catch (Exception e) {
+            NotificationUtil.showGitFlowSErrorNotification(project, "Error", GitCommandExecutor.getLastErrorMessage());
+            return;
+        }
         super.doOKAction();
         NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Git Flow Initialization Successful");
     }

@@ -11,9 +11,14 @@ import java.util.List;
 
 public class GitCommandExecutor {
 
-    public static void run(Project project, List<String> command) {
+    private static int lastExitCode = 0;
+    private static String lastErrorMessage = "";
+    private static GitCommandExecutor gitCommandExecutor = new GitCommandExecutor();
+
+    public static void run(Project project, List<String> command) throws Exception {
         String basePath = project.getBasePath();
         if (basePath == null) return;
+        StringBuilder exit = new StringBuilder();
 
         //GitFlowOutputPanel output = GitFlowOutputPanel.getInstance();
 
@@ -30,15 +35,30 @@ public class GitCommandExecutor {
                 String line;
                 while ((line = reader.readLine()) != null) {
                     PluginUtils.logOutput(project, line);
+                    exit.append(line);
                 }
             }
 
-            process.waitFor();
+            lastExitCode = process.waitFor();
+            if (isError()) {
+                lastErrorMessage = exit.toString();
+            }
 
             VirtualFileManager.getInstance().asyncRefresh(null);
 
         } catch (Exception e) {
             PluginUtils.logError(project, "Erro: " + e.getMessage());
         }
+        if (isError()) {
+            throw new Exception(lastErrorMessage);
+        }
+    }
+
+    public static boolean isError() {
+        return lastExitCode != 0;
+    }
+
+    public static String getLastErrorMessage() {
+        return lastErrorMessage;
     }
 }
