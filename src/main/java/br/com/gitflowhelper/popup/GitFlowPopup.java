@@ -130,17 +130,13 @@ public final class GitFlowPopup {
     private @NotNull AnAction init() {
         return new AnAction("Init") {
             @Override
-            public void actionPerformed(AnActionEvent e) {
+            public void actionPerformed(@NotNull AnActionEvent e) {
                 new InitDialog(project).show();
             }
             @Override
-            public void update(AnActionEvent e) {
+            public void update(@NotNull AnActionEvent e) {
                 Presentation presentation = e.getPresentation();
-                if (GitFlowSettingsService.getInstance(project).getMainBranch() == null) {
-                    presentation.setEnabled(true);
-                } else {
-                    presentation.setEnabled(false);
-                }
+                presentation.setEnabled(GitFlowSettingsService.getInstance(project).getMainBranch() == null);
             }
         };
      }
@@ -148,7 +144,7 @@ public final class GitFlowPopup {
     private @NotNull AnAction featureStart(String type, String actionTitle) {
         return new AnAction(actionTitle) {
             @Override
-            public void actionPerformed(AnActionEvent e) {
+            public void actionPerformed(@NotNull AnActionEvent e) {
                 new NameDialog(project, type + " start", "Feature description", name ->
                 {
                     try {
@@ -165,13 +161,9 @@ public final class GitFlowPopup {
                 ).show();
             }
             @Override
-            public void update(AnActionEvent e) {
+            public void update(@NotNull AnActionEvent e) {
                 Presentation presentation = e.getPresentation();
-                if (branchName.equals(GitFlowSettingsService.getInstance(project).getDevelopBranch())) {
-                    presentation.setEnabled(true);
-                } else {
-                    presentation.setEnabled(false);
-                }
+                presentation.setEnabled(branchName.equals(GitFlowSettingsService.getInstance(project).getDevelopBranch()));
             }
         };
     }
@@ -179,7 +171,7 @@ public final class GitFlowPopup {
     private @NotNull AnAction featurePublish(String type, String action, String actionTitle) {
         return new AnAction(actionTitle) {
             @Override
-            public void actionPerformed(AnActionEvent e) {
+            public void actionPerformed(@NotNull AnActionEvent e) {
                 try {
                     GitCommandExecutor.run(
                             project,
@@ -192,13 +184,9 @@ public final class GitFlowPopup {
                 NotificationUtil.showGitFlowSuccessNotification(project, "Success", "New feature published successfully");
             }
             @Override
-            public void update(AnActionEvent e) {
+            public void update(@NotNull AnActionEvent e) {
                 Presentation presentation = e.getPresentation();
-                if (branchName.startsWith(GitFlowSettingsService.getInstance(project).getFeaturePrefix())) {
-                    presentation.setEnabled(true);
-                } else {
-                    presentation.setEnabled(false);
-                }
+                presentation.setEnabled(branchName.startsWith(GitFlowSettingsService.getInstance(project).getFeaturePrefix()));
             }
         };
     }
@@ -206,9 +194,9 @@ public final class GitFlowPopup {
     private @NotNull AnAction featureFinish(String type, String action, String actionTitle) {
         return new AnAction(actionTitle) {
             @Override
-            public void actionPerformed(AnActionEvent e) {
+            public void actionPerformed(@NotNull AnActionEvent e) {
                 ActionChoiceDialog dialog = new ActionChoiceDialog(project);
-                String acaoPos = "";
+                String acaoPos;
                 if (dialog.showAndGet()) {
                     String keep = dialog.getKeepBranch() ? " --keep" : "";
                     try {
@@ -233,13 +221,9 @@ public final class GitFlowPopup {
                 }
             }
             @Override
-            public void update(AnActionEvent e) {
+            public void update(@NotNull AnActionEvent e) {
                 Presentation presentation = e.getPresentation();
-                if (branchName.startsWith(GitFlowSettingsService.getInstance(project).getFeaturePrefix())) {
-                    presentation.setEnabled(true);
-                } else {
-                    presentation.setEnabled(false);
-                }
+                presentation.setEnabled(branchName.startsWith(GitFlowSettingsService.getInstance(project).getFeaturePrefix()));
             }
         };
     }
@@ -247,7 +231,7 @@ public final class GitFlowPopup {
     private @NotNull AnAction releaseStart(String type, String actionTitle) {
         return new AnAction(actionTitle) {
             @Override
-            public void actionPerformed(AnActionEvent e) {
+            public void actionPerformed(@NotNull AnActionEvent e) {
                 new NameDialog(project, type + " start", "Version description", name ->
                 {
                     try {
@@ -264,13 +248,9 @@ public final class GitFlowPopup {
                 ).show();
             }
             @Override
-            public void update(AnActionEvent e) {
+            public void update(@NotNull AnActionEvent e) {
                 Presentation presentation = e.getPresentation();
-                if (branchName.equals(GitFlowSettingsService.getInstance(project).getMainBranch())) {
-                    presentation.setEnabled(true);
-                } else {
-                    presentation.setEnabled(false);
-                }
+                presentation.setEnabled(branchName.equals(GitFlowSettingsService.getInstance(project).getMainBranch()));
             }
         };
     }
@@ -278,7 +258,7 @@ public final class GitFlowPopup {
     private @NotNull AnAction releasePublish(String type, String action, String actionTitle) {
         return new AnAction(actionTitle) {
             @Override
-            public void actionPerformed(AnActionEvent e) {
+            public void actionPerformed(@NotNull AnActionEvent e) {
                 try {
                     GitCommandExecutor.run(
                             project,
@@ -291,13 +271,9 @@ public final class GitFlowPopup {
                 NotificationUtil.showGitFlowSuccessNotification(project, "Success", "New release published successfully");
             }
             @Override
-            public void update(AnActionEvent e) {
+            public void update(@NotNull AnActionEvent e) {
                 Presentation presentation = e.getPresentation();
-                if (branchName.startsWith(GitFlowSettingsService.getInstance(project).getReleasePrefix())) {
-                    presentation.setEnabled(true);
-                } else {
-                    presentation.setEnabled(false);
-                }
+                presentation.setEnabled(branchName.startsWith(GitFlowSettingsService.getInstance(project).getReleasePrefix()));
             }
         };
     }
@@ -305,7 +281,7 @@ public final class GitFlowPopup {
     private @NotNull AnAction releaseFinish(String type, String action, String actionTitle) {
         return new AnAction(actionTitle) {
             @Override
-            public void actionPerformed(AnActionEvent e) {
+            public void actionPerformed(@NotNull AnActionEvent e) {
                 try {
                     GitCommandExecutor.run(
                             project,
@@ -325,13 +301,9 @@ public final class GitFlowPopup {
                 NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Released finished and tag pushed successfully");
             }
             @Override
-            public void update(AnActionEvent e) {
+            public void update(@NotNull AnActionEvent e) {
                 Presentation presentation = e.getPresentation();
-                if (branchName.startsWith(GitFlowSettingsService.getInstance(project).getReleasePrefix())) {
-                    presentation.setEnabled(true);
-                } else {
-                    presentation.setEnabled(false);
-                }
+                presentation.setEnabled(branchName.startsWith(GitFlowSettingsService.getInstance(project).getReleasePrefix()));
             }
         };
     }
@@ -339,7 +311,7 @@ public final class GitFlowPopup {
     private @NotNull AnAction hotfixStart(String type, String actionTitle) {
         return new AnAction(actionTitle) {
             @Override
-            public void actionPerformed(AnActionEvent e) {
+            public void actionPerformed(@NotNull AnActionEvent e) {
                 new NameDialog(project, type + " start", "Hotfix description", name ->
                 {
                     try {
@@ -356,13 +328,9 @@ public final class GitFlowPopup {
                 ).show();
             }
             @Override
-            public void update(AnActionEvent e) {
+            public void update(@NotNull AnActionEvent e) {
                 Presentation presentation = e.getPresentation();
-                if (branchName.equals(GitFlowSettingsService.getInstance(project).getMainBranch())) {
-                    presentation.setEnabled(true);
-                } else {
-                    presentation.setEnabled(false);
-                }
+                presentation.setEnabled(branchName.equals(GitFlowSettingsService.getInstance(project).getMainBranch()));
             }
         };
     }
@@ -370,7 +338,7 @@ public final class GitFlowPopup {
     private @NotNull AnAction hotfixPublish(String type, String action, String actionTitle) {
         return new AnAction(actionTitle) {
             @Override
-            public void actionPerformed(AnActionEvent e) {
+            public void actionPerformed(@NotNull AnActionEvent e) {
                 try {
                     GitCommandExecutor.run(
                             project,
@@ -383,13 +351,9 @@ public final class GitFlowPopup {
                 NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Hotfix published successfully");
             }
             @Override
-            public void update(AnActionEvent e) {
+            public void update(@NotNull AnActionEvent e) {
                 Presentation presentation = e.getPresentation();
-                if (branchName.startsWith(GitFlowSettingsService.getInstance(project).getHotfixPrefix())) {
-                    presentation.setEnabled(true);
-                } else {
-                    presentation.setEnabled(false);
-                }
+                presentation.setEnabled(branchName.startsWith(GitFlowSettingsService.getInstance(project).getHotfixPrefix()));
             }
         };
     }
@@ -397,7 +361,7 @@ public final class GitFlowPopup {
     private @NotNull AnAction hotfixFinish(String type, String action, String actionTitle) {
         return new AnAction(actionTitle) {
             @Override
-            public void actionPerformed(AnActionEvent e) {
+            public void actionPerformed(@NotNull AnActionEvent e) {
                 try {
                     GitCommandExecutor.run(
                             project,
@@ -416,13 +380,9 @@ public final class GitFlowPopup {
                 NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Hotfix finished and tag pushed successfully");
             }
             @Override
-            public void update(AnActionEvent e) {
+            public void update(@NotNull AnActionEvent e) {
                 Presentation presentation = e.getPresentation();
-                if (branchName.startsWith(GitFlowSettingsService.getInstance(project).getHotfixPrefix())) {
-                    presentation.setEnabled(true);
-                } else {
-                    presentation.setEnabled(false);
-                }
+                presentation.setEnabled(branchName.startsWith(GitFlowSettingsService.getInstance(project).getHotfixPrefix()));
             }
         };
     }
