@@ -13,7 +13,6 @@ public class GitCommandExecutor {
 
     private static int lastExitCode = 0;
     private static String lastErrorMessage = "";
-    private static GitCommandExecutor gitCommandExecutor = new GitCommandExecutor();
 
     public static void run(Project project, List<String> command) throws Exception {
         String basePath = project.getBasePath();

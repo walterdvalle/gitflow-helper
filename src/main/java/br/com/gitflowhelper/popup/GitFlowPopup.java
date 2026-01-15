@@ -15,6 +15,8 @@ import com.intellij.openapi.actionSystem.Presentation;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.popup.JBPopupFactory;
+import com.intellij.openapi.ui.popup.JBPopupListener;
+import com.intellij.openapi.ui.popup.LightweightWindowEvent;
 import com.intellij.openapi.ui.popup.ListPopup;
 import com.intellij.openapi.wm.StatusBar;
 import com.intellij.openapi.wm.WindowManager;
@@ -49,7 +51,18 @@ public final class GitFlowPopup {
                     this.branchName = GitBranchUtils.getCurrentBranchName(project);
                     ApplicationManager.getApplication().invokeLater(this::updateUI);
                 });
-        });
+
+                this.listPopup.addListener(new JBPopupListener() {
+                       @Override
+                       public void beforeShown(@NotNull LightweightWindowEvent event) {
+                           var oldPlace = listPopup.getLocationOnScreen();
+                           var newPlace = new Point((int) oldPlace.getX(), (int) oldPlace.getY()+40);
+                           listPopup.setLocation(newPlace);
+                           JBPopupListener.super.beforeShown(event);
+                       }
+                   }
+                );
+            });
     }
 
     private void updateUI() {

@@ -5,13 +5,11 @@ import icons.PluginIcons;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.StatusBar;
 import com.intellij.openapi.wm.StatusBarWidget;
-import com.intellij.ui.awt.RelativePoint;
 import com.intellij.openapi.ui.popup.ListPopup;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
-import java.awt.event.MouseEvent;
 
 public class GitFlowStatusBarWidget implements StatusBarWidget {
 
@@ -60,23 +58,9 @@ public class GitFlowStatusBarWidget implements StatusBarWidget {
             return "Click to show Git Flow options";
         }
 
-        public void onValueSelected(String value) {
-            currentValue = value;
-            if (statusBar != null) {
-                statusBar.updateWidget(ID());
-            }
-        }
-
         @Override
         public @Nullable ListPopup getPopup() {
             return new GitFlowPopup(project).getPopup();
-        }
-
-        public void showPopup(@NotNull MouseEvent event) {
-            ListPopup popup = getPopup();
-            if (popup != null) {
-                popup.show(new RelativePoint(event));
-            }
         }
     }
 }
