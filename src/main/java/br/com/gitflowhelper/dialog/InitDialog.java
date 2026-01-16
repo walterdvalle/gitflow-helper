@@ -1,5 +1,6 @@
 package br.com.gitflowhelper.dialog;
 
+import br.com.gitflowhelper.actions.InitAction;
 import br.com.gitflowhelper.git.GitCommandExecutor;
 import br.com.gitflowhelper.settings.GitFlowSettingsService;
 import br.com.gitflowhelper.util.NotificationUtil;
@@ -15,19 +16,21 @@ public class InitDialog extends DialogWrapper {
     private final GridBagConstraints gbc = new GridBagConstraints();
     private int row = 0;
 
-    private final JTextField mainField = new JTextField("main");
+    private final JTextField mainField    = new JTextField("main");
     private final JTextField developField = new JTextField("develop");
     private final JTextField featureField = new JTextField("feature/");
     private final JTextField releaseField = new JTextField("release/");
-    private final JTextField hotfixField = new JTextField("hotfix/");
+    private final JTextField hotfixField  = new JTextField("hotfix/");
 
     private JPanel panel = new JPanel(new GridBagLayout());
 
     private Project project;
+    private InitAction initAction;
 
-    public InitDialog(Project project) {
+    public InitDialog(Project project, InitAction initAction) {
         super(project);
         this.project = project;
+        this.initAction = initAction;
         setTitle("Git Flow Init");
         init();
     }
@@ -59,21 +62,9 @@ public class InitDialog extends DialogWrapper {
         settings.setReleasePrefix(releaseField.getText());
         settings.setHotfixPrefix(hotfixField.getText());
 
-        String cmd1 = "git flow init -d ";
-        String cmd2 = "git config gitflow.prefix.feature " + featureField.getText();
-        String cmd3 = "git config gitflow.prefix.release " + releaseField.getText();
-        String cmd4 = "git config gitflow.prefix.hotfix " + hotfixField.getText();
-        try {
-            GitCommandExecutor.run(this.project, List.of(cmd1.split(" ")));
-            GitCommandExecutor.run(this.project, List.of(cmd2.split(" ")));
-            GitCommandExecutor.run(this.project, List.of(cmd3.split(" ")));
-            GitCommandExecutor.run(this.project, List.of(cmd4.split(" ")));
-        } catch (Exception e) {
-            NotificationUtil.showGitFlowSErrorNotification(project, "Error", GitCommandExecutor.getLastErrorMessage());
-            return;
-        }
+        this.initAction.doOKAction(mainField.getText(),  developField.getText(), featureField.getText(), releaseField.getText(), hotfixField.getText());
+
         super.doOKAction();
-        NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Git Flow Initialization Successful");
     }
 
     // Padrão: 2 colunas (label + campo)
