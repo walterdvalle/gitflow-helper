@@ -1,5 +1,6 @@
 package br.com.gitflowhelper.actions;
 
+import br.com.gitflowhelper.settings.GitFlowSettingsService;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.project.Project;
 
@@ -23,5 +24,12 @@ public abstract class BaseAction extends AnAction implements PropertyChangeListe
     @Override
     public void propertyChange(PropertyChangeEvent evt) {
         this.branchName = (String) evt.getNewValue();
+    }
+
+    public String getMainBranch() {
+        return GitFlowSettingsService.getInstance(project).getMainBranch();
+    }
+    public String getDevelopBranch() {
+        return GitFlowSettingsService.getInstance(project).getDevelopBranch();
     }
 }

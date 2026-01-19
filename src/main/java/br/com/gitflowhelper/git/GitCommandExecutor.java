@@ -12,9 +12,10 @@ import java.util.List;
 public class GitCommandExecutor {
 
     private static int lastExitCode = 0;
+    private static String lastMessage = "";
     private static String lastErrorMessage = "";
 
-    public static void run(Project project, List<String> command) throws Exception {
+    public static void run(Project project, List<String> command) throws GitException {
         String basePath = project.getBasePath();
         if (basePath == null) return;
         StringBuilder exit = new StringBuilder();
@@ -34,13 +35,15 @@ public class GitCommandExecutor {
                 String line;
                 while ((line = reader.readLine()) != null) {
                     PluginUtils.logOutput(project, line);
-                    exit.append(line);
+                    exit.append(line+"\n");
                 }
             }
 
             lastExitCode = process.waitFor();
             if (isError()) {
                 lastErrorMessage = exit.toString();
+            } else {
+                lastMessage = exit.toString();
             }
 
             VirtualFileManager.getInstance().asyncRefresh(null);
@@ -49,7 +52,7 @@ public class GitCommandExecutor {
             PluginUtils.logError(project, "Erro: " + e.getMessage());
         }
         if (isError()) {
-            throw new Exception(lastErrorMessage);
+            throw new GitException(lastMessage);
         }
     }
 
@@ -59,5 +62,8 @@ public class GitCommandExecutor {
 
     public static String getLastErrorMessage() {
         return lastErrorMessage;
+    }
+    public static String getLastMessage() {
+        return lastMessage;
     }
 }

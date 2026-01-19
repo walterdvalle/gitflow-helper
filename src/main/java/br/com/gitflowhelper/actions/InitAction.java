@@ -2,7 +2,7 @@ package br.com.gitflowhelper.actions;
 
 import br.com.gitflowhelper.dialog.InitDialog;
 import br.com.gitflowhelper.git.GitCommandExecutor;
-import br.com.gitflowhelper.settings.GitFlowSettingsService;
+import br.com.gitflowhelper.git.GitException;
 import br.com.gitflowhelper.util.NotificationUtil;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.Presentation;
@@ -27,7 +27,7 @@ public class InitAction extends BaseAction {
     @Override
     public void update(@NotNull AnActionEvent e) {
         Presentation presentation = e.getPresentation();
-        presentation.setEnabled(StringUtil.isEmpty(GitFlowSettingsService.getInstance(project).getMainBranch()));
+        presentation.setEnabled(StringUtil.isEmpty(getMainBranch()));
     }
 
     //invoked by InitDialog
@@ -46,8 +46,8 @@ public class InitAction extends BaseAction {
             GitCommandExecutor.run(this.project, List.of(cmd4.split(" ")));
             GitCommandExecutor.run(this.project, List.of(cmd5.split(" ")));
             GitCommandExecutor.run(this.project, List.of(cmd6.split(" ")));
-        } catch (Exception e) {
-            NotificationUtil.showGitFlowSErrorNotification(project, "Error", GitCommandExecutor.getLastErrorMessage());
+        } catch (GitException e) {
+            NotificationUtil.showGitFlowErrorNotification(project, "Error", GitCommandExecutor.getLastErrorMessage());
             return;
         }
         NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Git Flow Initialization Successful");

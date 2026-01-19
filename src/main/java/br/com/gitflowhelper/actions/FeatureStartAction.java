@@ -2,7 +2,7 @@ package br.com.gitflowhelper.actions;
 
 import br.com.gitflowhelper.dialog.NameDialog;
 import br.com.gitflowhelper.git.GitCommandExecutor;
-import br.com.gitflowhelper.settings.GitFlowSettingsService;
+import br.com.gitflowhelper.git.GitException;
 import br.com.gitflowhelper.util.NotificationUtil;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.Presentation;
@@ -28,8 +28,8 @@ public class FeatureStartAction extends BaseAction {
                         project,
                         Arrays.asList(String.format("git flow %s start %s", type.toLowerCase(Locale.ROOT), name.replaceAll(" ", "-")).split(" "))
                 );
-            } catch (Exception ex) {
-                NotificationUtil.showGitFlowSErrorNotification(project, "Error", GitCommandExecutor.getLastErrorMessage());
+            } catch (GitException ex) {
+                NotificationUtil.showGitFlowErrorNotification(project, "Error", GitCommandExecutor.getLastErrorMessage());
                 return;
             }
             NotificationUtil.showGitFlowSuccessNotification(project, "Success", "New feature created successfully");
@@ -41,8 +41,8 @@ public class FeatureStartAction extends BaseAction {
     public void update(@NotNull AnActionEvent e) {
         Presentation presentation = e.getPresentation();
         presentation.setEnabled(
-                StringUtil.isNotEmpty(GitFlowSettingsService.getInstance(project).getMainBranch()) &&
-                branchName.equals(GitFlowSettingsService.getInstance(project).getDevelopBranch())
+                StringUtil.isNotEmpty(getMainBranch()) &&
+                branchName.equals(getDevelopBranch())
         );
     }
 }

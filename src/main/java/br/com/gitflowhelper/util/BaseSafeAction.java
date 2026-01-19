@@ -22,6 +22,6 @@ public abstract class BaseSafeAction extends AnAction {
     }
 
     private void handleGlobalException(Throwable ex, @NotNull AnActionEvent e) {
-        NotificationUtil.showGitFlowSErrorNotification(e.getProject(), "Error", ex.getMessage());
+        NotificationUtil.showGitFlowErrorNotification(e.getProject(), "Error", ex.getMessage());
     }
 }

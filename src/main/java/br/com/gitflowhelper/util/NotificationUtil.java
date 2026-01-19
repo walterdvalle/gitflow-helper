@@ -16,7 +16,7 @@ public class NotificationUtil {
                 .notify(project);
     }
 
-    public static void showGitFlowSErrorNotification(Project project, String title, String message) {
+    public static void showGitFlowErrorNotification(Project project, String title, String message) {
         NotificationGroupManager.getInstance()
                 .getNotificationGroup("GitFlowNotificationGroup") // O ID do plugin.xml
                 .createNotification(
