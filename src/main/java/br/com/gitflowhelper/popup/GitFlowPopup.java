@@ -65,8 +65,8 @@ public final class GitFlowPopup extends PropertyObserver {
         group.add(new InitAction(project, "Init..."));
         group.addSeparator();
         group.add(flowGroup("Feature", AllIcons.Vcs.Branch));
-        group.add(flowGroup("Release", AllIcons.RunConfigurations.Web_app));
-        group.add(flowGroup("Hotfix", AllIcons.Vcs.Patch));
+        group.add(flowGroup("Release", AllIcons.Ide.Gift));
+        group.add(flowGroup("Hotfix", AllIcons.General.ExternalTools));
         return group;
     }
 
