@@ -4,6 +4,7 @@ import br.com.gitflowhelper.git.GitCommandExecutor;
 import br.com.gitflowhelper.git.GitException;
 import br.com.gitflowhelper.settings.GitFlowSettingsService;
 import br.com.gitflowhelper.util.NotificationUtil;
+import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.Presentation;
 import com.intellij.openapi.project.Project;
@@ -17,7 +18,7 @@ import java.util.Locale;
 public class ReleasePublishAction extends BaseAction {
 
     public ReleasePublishAction(Project project, String actionTitle, String type, String action, String branchName) {
-        super(project, actionTitle, type, action, branchName);
+        super(project, actionTitle, type, action, branchName, AllIcons.CodeWithMe.CwmShared);
     }
 
     @Override

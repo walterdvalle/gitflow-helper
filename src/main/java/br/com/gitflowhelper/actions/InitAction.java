@@ -4,6 +4,7 @@ import br.com.gitflowhelper.dialog.InitDialog;
 import br.com.gitflowhelper.git.GitCommandExecutor;
 import br.com.gitflowhelper.git.GitException;
 import br.com.gitflowhelper.util.NotificationUtil;
+import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.Presentation;
 import com.intellij.openapi.project.Project;
@@ -16,7 +17,7 @@ import java.util.List;
 public class InitAction extends BaseAction {
 
     public InitAction(Project project, String actionTitle) {
-        super(project, actionTitle, null, null, null);
+        super(project, actionTitle, null, null, null, AllIcons.Actions.Lightning);
     }
 
     @Override

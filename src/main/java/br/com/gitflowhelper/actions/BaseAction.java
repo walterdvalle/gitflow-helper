@@ -1,9 +1,11 @@
 package br.com.gitflowhelper.actions;
 
 import br.com.gitflowhelper.settings.GitFlowSettingsService;
+import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.project.Project;
 
+import javax.swing.*;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
@@ -13,8 +15,8 @@ public abstract class BaseAction extends AnAction implements PropertyChangeListe
     protected String action;
     protected String branchName;
 
-    public BaseAction(Project project, String actionTitle, String type, String action, String branchName) {
-        super(actionTitle);
+    public BaseAction(Project project, String actionTitle, String type, String action, String branchName, Icon icon) {
+        super(actionTitle, null, icon);
         this.project = project;
         this.type = type;
         this.action = action;

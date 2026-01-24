@@ -1,20 +1,14 @@
 package br.com.gitflowhelper.popup;
 
+import br.com.gitflowhelper.actions.ActionBuilder;
 import br.com.gitflowhelper.actions.BaseAction;
 import br.com.gitflowhelper.actions.InitAction;
-import br.com.gitflowhelper.dialog.NameDialog;
 import br.com.gitflowhelper.util.GitBranchUtils;
-import br.com.gitflowhelper.util.NotificationUtil;
-import br.com.gitflowhelper.git.GitCommandExecutor;
-import br.com.gitflowhelper.dialog.InitDialog;
-import br.com.gitflowhelper.settings.GitFlowSettingsService;
-import br.com.gitflowhelper.dialog.ActionChoiceDialog;
 import br.com.gitflowhelper.util.PropertyObserver;
+import com.intellij.icons.AllIcons;
 import com.intellij.ide.DataManager;
 import com.intellij.openapi.actionSystem.AnAction;
-import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.DefaultActionGroup;
-import com.intellij.openapi.actionSystem.Presentation;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.popup.JBPopupFactory;
@@ -23,10 +17,8 @@ import com.intellij.openapi.ui.popup.LightweightWindowEvent;
 import com.intellij.openapi.ui.popup.ListPopup;
 import org.jetbrains.annotations.NotNull;
 
+import javax.swing.*;
 import java.awt.*;
-import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
-import java.util.Arrays;
 import java.util.Locale;
 
 public final class GitFlowPopup extends PropertyObserver {
@@ -59,7 +51,7 @@ public final class GitFlowPopup extends PropertyObserver {
                        @Override
                        public void beforeShown(@NotNull LightweightWindowEvent event) {
                            var oldPlace = listPopup.getLocationOnScreen();
-                           var newPlace = new Point((int) oldPlace.getX(), (int) oldPlace.getY()+40);
+                           var newPlace = new Point((int) oldPlace.getX(), (int) oldPlace.getY()+20);
                            listPopup.setLocation(newPlace);
                            JBPopupListener.super.beforeShown(event);
                        }
@@ -70,11 +62,11 @@ public final class GitFlowPopup extends PropertyObserver {
 
     private DefaultActionGroup createGroup() {
         DefaultActionGroup group = new DefaultActionGroup();
-        group.add(new InitAction(project, "Init"));
+        group.add(new InitAction(project, "Init..."));
         group.addSeparator();
-        group.add(flowGroup("Feature"));
-        group.add(flowGroup("Release"));
-        group.add(flowGroup("Hotfix" ));
+        group.add(flowGroup("Feature", AllIcons.Vcs.Branch));
+        group.add(flowGroup("Release", AllIcons.RunConfigurations.Web_app));
+        group.add(flowGroup("Hotfix", AllIcons.Vcs.Patch));
         return group;
     }
 
@@ -82,8 +74,9 @@ public final class GitFlowPopup extends PropertyObserver {
         return this.listPopup;
     }
 
-    private DefaultActionGroup flowGroup(String type) {
-        DefaultActionGroup group = new DefaultActionGroup(type, true);
+    private DefaultActionGroup flowGroup(String type, Icon icon) {
+        DefaultActionGroup group = new DefaultActionGroup(type, type, icon);
+        group.setPopup(true);
         group.add(flowAction(type, "start"));
         group.add(flowAction(type, "publish"));
         group.add(flowAction(type, "finish"));
@@ -92,31 +85,10 @@ public final class GitFlowPopup extends PropertyObserver {
 
     private AnAction flowAction(String type, String action) {
         String actionTitle = action.substring(0, 1).toUpperCase(Locale.ROOT) + action.substring(1);
-        BaseAction act = createActionInstance(type+actionTitle+"Action", type, action, actionTitle);
+        BaseAction act = ActionBuilder.createActionInstance(
+                type+actionTitle+"Action", type, action, actionTitle, project, branchName);
         addPropertyChangeListener(act);
         return act;
     }
 
-    private BaseAction createActionInstance(String actionClassName, String type, String action, String actionTitle)  {
-        BaseAction actionObj;
-        try {
-            Class<?> clazz = Class.forName("br.com.gitflowhelper.actions."+actionClassName);
-
-            Constructor<?> ctor = clazz.getConstructor(
-                    Project.class,
-                    String.class,
-                    String.class,
-                    String.class,
-                    String.class
-            );
-
-            Object instance = ctor.newInstance(
-                    project, actionTitle, type, action, branchName
-            );
-            actionObj = (BaseAction) instance;
-        } catch (ClassNotFoundException | NoSuchMethodException | InstantiationException | IllegalAccessException | InvocationTargetException e) {
-            return null;
-        }
-        return actionObj;
-    }
 }

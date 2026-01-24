@@ -5,6 +5,7 @@ import br.com.gitflowhelper.git.GitCommandExecutor;
 import br.com.gitflowhelper.git.GitException;
 import br.com.gitflowhelper.settings.GitFlowSettingsService;
 import br.com.gitflowhelper.util.NotificationUtil;
+import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.Presentation;
 import com.intellij.openapi.project.Project;
@@ -19,12 +20,12 @@ import java.util.List;
 public class FeatureFinishAction extends BaseAction {
 
     public FeatureFinishAction(Project project, String actionTitle, String type, String action, String branchName) {
-        super(project, actionTitle, type, action, branchName);
+        super(project, actionTitle, type, action, branchName, AllIcons.Vcs.Patch_applied);
     }
 
     @Override
     public void actionPerformed(@NotNull AnActionEvent e) {
-        String postAction;
+        String postAction = "";
         ActionChoiceDialog dialog = new ActionChoiceDialog(project, branchName, getDevelopBranch());
 
         try {
@@ -47,32 +48,27 @@ public class FeatureFinishAction extends BaseAction {
                 gitCommit.add(line);
             }
             try {
-//                GitCommandExecutor.run(project, Arrays.asList(("git rebase").split(" ")));
-//                GitCommandExecutor.run(project,Arrays.asList(String.format("git flow %s %s %s", type.toLowerCase(Locale.ROOT), action, keep).split(" ")));
+                GitCommandExecutor.run(project, Arrays.asList(("git fetch origin").split(" ")));
+                GitCommandExecutor.run(project, Arrays.asList(("git rebase origin/"+getDevelopBranch()).split(" ")));
+
                 if (choice.equalsIgnoreCase(ActionChoiceDialog.INTEGRATE)) {
-                    GitCommandExecutor.run(project, Arrays.asList(("git fetch origin").split(" ")));
-                    GitCommandExecutor.run(project, Arrays.asList(("git rebase origin/"+getDevelopBranch()).split(" ")));
                     GitCommandExecutor.run(project, Arrays.asList(("git checkout "+getDevelopBranch()).split(" ")));
                     GitCommandExecutor.run(project, Arrays.asList(("git merge --squash "+branchName).split(" ")));
                     GitCommandExecutor.run(project, gitCommit);
                     GitCommandExecutor.run(project, Arrays.asList(("git push origin "+getDevelopBranch()).split(" ")));
                     postAction = "Feature finished and pushed to " + getDevelopBranch() + " successfully.";
-                } else {
-                    //SELF_CREATE or AUTO_CREATE
-                    GitCommandExecutor.run(project, Arrays.asList(("git fetch origin").split(" ")));
-                    GitCommandExecutor.run(project, Arrays.asList(("git rebase origin/"+getDevelopBranch()).split(" ")));
-                    if (choice.equalsIgnoreCase(ActionChoiceDialog.SELF_CREATE)) {
-                        GitCommandExecutor.run(project, Arrays.asList(("git push origin "+branchName+" --force-with-lease").split(" ")));
-                        postAction = "Feature pushed to " + branchName + " successfully. Create yourself a merge/pull request.";
-                    } else {
-                        //AUTO_CREATE
-                        GitCommandExecutor.run(project, Arrays.asList("git", "commit", "--allow-empty", "-m", "trigger MR"));
-                        List<String> pushCreateCommand = formatCommand(dialog.getCommitMessage());
-                        GitCommandExecutor.run(project, pushCreateCommand);
-                        postAction = "Feature pushed to " + branchName + " and merge request created successfully.";
-                    }
-                    GitCommandExecutor.run(project, Arrays.asList(("git checkout "+getDevelopBranch()).split(" ")));
+                } else if (choice.equalsIgnoreCase(ActionChoiceDialog.SELF_CREATE)) {
+                    GitCommandExecutor.run(project, Arrays.asList(("git push origin "+branchName+" --force-with-lease").split(" ")));
+                    postAction = "Feature pushed to " + branchName + " successfully. Create yourself a merge/pull request.";
+                } else if (choice.equalsIgnoreCase(ActionChoiceDialog.AUTO_CREATE)) {
+                    GitCommandExecutor.run(project, Arrays.asList("git", "commit", "--allow-empty", "-m", "trigger MR"));
+                    List<String> pushCreateCommand = formatCommand(dialog.getCommitMessage());
+                    GitCommandExecutor.run(project, pushCreateCommand);
+                    postAction = "Feature pushed to " + branchName + " and merge request created successfully.";
                 }
+
+                GitCommandExecutor.run(project, Arrays.asList(("git checkout "+getDevelopBranch()).split(" ")));
+                GitCommandExecutor.run(project, Arrays.asList(("git pull ".split(" "))));
 
                 if (!dialog.getKeepLocalBranch()) {
                     GitCommandExecutor.run(project, Arrays.asList(("git branch -D " + branchName).split(" ")));
