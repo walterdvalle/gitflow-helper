@@ -4,6 +4,12 @@ import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.DialogWrapper;
 
 import javax.swing.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
+import javax.swing.text.AbstractDocument;
+import javax.swing.text.AttributeSet;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.DocumentFilter;
 import java.awt.*;
 import java.util.function.Consumer;
 
@@ -18,6 +24,25 @@ public class NameDialog extends DialogWrapper {
         this.onOk = onOk;
         setTitle(titleText);
         this.label = label;
+        ((AbstractDocument) nameField.getDocument()).setDocumentFilter( new DocumentFilter() {
+            @Override
+            public void insertString(FilterBypass fb, int offset, String text, AttributeSet attr)
+                    throws BadLocationException {
+                if (text != null) {
+                    text = text.replace(" ", "_");
+                }
+                super.insertString(fb, offset, text, attr);
+            }
+
+            @Override
+            public void replace(FilterBypass fb, int offset, int length, String text, AttributeSet attrs)
+                    throws BadLocationException {
+                if (text != null) {
+                    text = text.replace(" ", "_");
+                }
+                super.replace(fb, offset, length, text, attrs);
+            }
+        });
         init();
     }
 

@@ -1,8 +1,20 @@
 package br.com.gitflowhelper.git;
 
-public class GitException extends Exception {
+public class GitException extends RuntimeException {
 
-    public GitException(String cause) {
-        super(cause);
+    private final GitResult gitResult;
+
+    public GitException(String message, GitResult gitResult) {
+        super(message);
+        this.gitResult = gitResult;
+    }
+
+    public GitException(String message) {
+        super(message);
+        gitResult = null;
+    }
+
+    public GitResult getGitResult() {
+        return gitResult;
     }
 }

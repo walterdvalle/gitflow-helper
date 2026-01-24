@@ -3,11 +3,13 @@ package br.com.gitflowhelper.actions;
 import br.com.gitflowhelper.dialog.ActionChoiceDialog;
 import br.com.gitflowhelper.git.GitCommandExecutor;
 import br.com.gitflowhelper.git.GitException;
+import br.com.gitflowhelper.git.GitFlow;
 import br.com.gitflowhelper.settings.GitFlowSettingsService;
 import br.com.gitflowhelper.util.NotificationUtil;
 import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.Presentation;
+import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.util.text.StringUtil;
 import org.jetbrains.annotations.NotNull;
@@ -38,7 +40,7 @@ public class FeatureFinishAction extends BaseAction {
         dialog.setLog(GitCommandExecutor.getLastMessage());
 
         if (dialog.showAndGet()) {
-            String choice = dialog.getSelectedAction();
+            /*String choice = dialog.getSelectedAction();
 
             List<String> gitCommit = new ArrayList<>();
             gitCommit.add("git");
@@ -84,6 +86,30 @@ public class FeatureFinishAction extends BaseAction {
                 return;
             }
             NotificationUtil.showGitFlowSuccessNotification(project, "Success",  postAction);
+
+             */
+
+            try {
+//                GitCommandExecutor.run(
+//                        project,
+//                        Arrays.asList(String.format("git flow %s start %s", type.toLowerCase(Locale.ROOT), name.replaceAll(" ", "-")).split(" "))
+//                );
+                ApplicationManager.getApplication().executeOnPooledThread(() -> {
+                    GitFlow.featureFinish(
+                            project,
+                            branchName,
+                            dialog.getSquashCommit(),
+                            dialog.getCommitMessage(),
+                            !dialog.getKeepLocalBranch(),
+                            !dialog.getKeepRemoteBranch(),
+                            dialog.getSelectedAction(),
+                            true);
+                    NotificationUtil.showGitFlowSuccessNotification(project, "Success", "New feature created successfully");
+                });
+            } catch (GitException ex) {
+                NotificationUtil.showGitFlowErrorNotification(project, "Error", ex.getGitResult().getProcessMessage());
+//                return;
+            }
         }
     }
 
