@@ -1,5 +1,6 @@
 package br.com.gitflowhelper.git;
 
+import br.com.gitflowhelper.util.NotificationUtil;
 import br.com.gitflowhelper.util.PluginUtils;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vfs.VirtualFile;
@@ -38,11 +39,9 @@ public class GitExecutor {
             PluginUtils.logOutput(project, message);
         } else {
             PluginUtils.logError(project, message);
-        }
-
-        if (!result.success()) {
             throw new GitException(gitResult.getProcessMessage(), gitResult);
         }
+
         return gitResult;
     }
 }

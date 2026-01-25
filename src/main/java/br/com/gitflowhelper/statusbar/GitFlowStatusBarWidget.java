@@ -1,6 +1,7 @@
 package br.com.gitflowhelper.statusbar;
 
 import br.com.gitflowhelper.popup.GitFlowPopup;
+import com.intellij.ui.AnimatedIcon;
 import icons.PluginIcons;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.StatusBar;
@@ -15,6 +16,7 @@ public class GitFlowStatusBarWidget implements StatusBarWidget {
 
     private final Project project;
     private StatusBar statusBar;
+    private boolean loading;
 
     private String currentValue = "GitFlowHelper";
 
@@ -36,6 +38,10 @@ public class GitFlowStatusBarWidget implements StatusBarWidget {
     public void dispose() {
     }
 
+    public void setLoadding(boolean loadding) {
+        this.loading = loadding;
+    }
+
     @Override
     public @Nullable WidgetPresentation getPresentation() {
         return new Presentation();
@@ -50,7 +56,7 @@ public class GitFlowStatusBarWidget implements StatusBarWidget {
 
         @Override
         public Icon getIcon() {
-            return PluginIcons.GitFlow;
+            return loading ? AnimatedIcon.Default.INSTANCE : PluginIcons.GitFlow;
         }
 
         @Override

@@ -35,7 +35,6 @@ public class ActionChoiceDialog extends DialogWrapper {
         super(project); // true = modal
         this.branchName = branchName;
         this.targetBranch = targetBranch;
-        this.log = log;
         setTitle("Finish feature");
         setOKButtonText("Yes");
         setCancelButtonText("No");
