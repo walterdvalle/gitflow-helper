@@ -49,7 +49,6 @@ public class FeaturePublishAction extends BaseAction {
 
     private List<GitResult> featurePublish(Project project) {
         GitRepositoryManager repoManager = GitRepositoryManager.getInstance(project);
-
         GitExecutor executor = new GitExecutor(project);
         List<GitResult> results = new ArrayList<>();
 

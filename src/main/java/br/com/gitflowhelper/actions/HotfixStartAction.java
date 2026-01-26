@@ -23,12 +23,12 @@ public class HotfixStartAction extends BaseAction {
 
     @Override
     public void actionPerformed(@NotNull AnActionEvent e) {
-        new NameDialog(project, type + " start", "Hotfix description", name ->
+        new NameDialog(project, type + " start", "Hotfix description", false, name ->
         {
             try {
                 GitCommandExecutor.run(
                         project,
-                        Arrays.asList(String.format("git flow %s start %s", type.toLowerCase(Locale.ROOT), name.replaceAll(" ", "_")).split(" "))
+                        Arrays.asList(String.format("git flow %s start %s", type.toLowerCase(Locale.ROOT), name.getName().replaceAll(" ", "_")).split(" "))
                 );
             } catch (GitException ex) {
                 NotificationUtil.showGitFlowErrorNotification(project, "Error", GitCommandExecutor.getLastErrorMessage());

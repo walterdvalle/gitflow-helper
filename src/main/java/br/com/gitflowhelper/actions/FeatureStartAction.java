@@ -27,12 +27,12 @@ public class FeatureStartAction extends BaseAction {
     }
 
     public void actionPerformed(@NotNull AnActionEvent e) {
-        new NameDialog(project, type + " start", "Feature description", name ->
+        new NameDialog(project, type + " start", "Feature description", false, name ->
         {
             ApplicationManager.getApplication().executeOnPooledThread(() -> {
                 setLoading(true);
                 try {
-                    featureStart(project, name);
+                    featureStart(project, name.getName());
                     NotificationUtil.showGitFlowSuccessNotification(project, "Success", "New feature created successfully");
                 } catch (GitException ex) {
                     NotificationUtil.showGitFlowErrorNotification(project, "Error", ex.getGitResult().getProcessMessage());
