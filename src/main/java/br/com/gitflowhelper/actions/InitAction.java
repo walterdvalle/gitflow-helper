@@ -17,7 +17,7 @@ import java.util.List;
 public class InitAction extends BaseAction {
 
     public InitAction(Project project, String actionTitle) {
-        super(project, actionTitle, null, null, null, AllIcons.Actions.Lightning);
+        super(project, actionTitle, null, null, null, AllIcons.General.Gear);
     }
 
     @Override

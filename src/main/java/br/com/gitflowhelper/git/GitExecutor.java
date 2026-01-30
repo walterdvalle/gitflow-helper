@@ -1,6 +1,5 @@
 package br.com.gitflowhelper.git;
 
-import br.com.gitflowhelper.util.NotificationUtil;
 import br.com.gitflowhelper.util.PluginUtils;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vfs.VirtualFile;

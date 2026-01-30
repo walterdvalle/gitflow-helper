@@ -1,8 +1,7 @@
 package br.com.gitflowhelper.popup;
 
-import br.com.gitflowhelper.actions.ActionBuilder;
-import br.com.gitflowhelper.actions.BaseAction;
-import br.com.gitflowhelper.actions.InitAction;
+import br.com.gitflowhelper.actions.*;
+import br.com.gitflowhelper.actions.branches.RepositoryBranchGroup;
 import br.com.gitflowhelper.util.GitBranchUtils;
 import br.com.gitflowhelper.util.PropertyObserver;
 import com.intellij.icons.AllIcons;
@@ -15,6 +14,9 @@ import com.intellij.openapi.ui.popup.JBPopupFactory;
 import com.intellij.openapi.ui.popup.JBPopupListener;
 import com.intellij.openapi.ui.popup.LightweightWindowEvent;
 import com.intellij.openapi.ui.popup.ListPopup;
+import git4idea.repo.GitRepository;
+import git4idea.repo.GitRepositoryManager;
+import icons.PluginIcons;
 import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
@@ -41,7 +43,14 @@ public final class GitFlowPopup extends PropertyObserver {
                         JBPopupFactory.ActionSelectionAid.SPEEDSEARCH,
                         true
                 );
-                //slow job
+//                this.listPopup.getContent().setBorder(
+//                        BorderFactory.createCompoundBorder(
+//                                new RoundedBorder(30),
+//                                JBUI.Borders.empty(6)
+//                        )
+//                );
+                this.listPopup.setCaptionIcon(PluginIcons.GitFlow);
+
                 ApplicationManager.getApplication().executeOnPooledThread(() -> {
                     this.branchName = GitBranchUtils.getCurrentBranchName(project);
                     firePropertyChange("branchName", "", this.branchName);
@@ -63,9 +72,17 @@ public final class GitFlowPopup extends PropertyObserver {
     private DefaultActionGroup createGroup() {
         DefaultActionGroup group = new DefaultActionGroup();
         group.add(new InitAction(project, "Init..."));
+        //group.add(new OpenTreePopupAction("Tree"));
         group.addSeparator();
-        group.add(flowGroup("Feature", AllIcons.Vcs.Branch));
-        group.add(flowGroup("Release", AllIcons.Ide.Gift));
+
+        GitRepositoryManager repoManager = GitRepositoryManager.getInstance(project);
+        for (GitRepository repository : repoManager.getRepositories()) {
+            group.add(new RepositoryBranchGroup(project, repository));
+        }
+
+        group.addSeparator();
+        group.add(flowGroup("Feature", AllIcons.Actions.AddFile));
+        group.add(flowGroup("Release", AllIcons.Nodes.UpFolder));
         group.add(flowGroup("Hotfix", AllIcons.General.ExternalTools));
         return group;
     }

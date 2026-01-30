@@ -2,7 +2,6 @@ package br.com.gitflowhelper.actions;
 
 import br.com.gitflowhelper.settings.GitFlowSettingsService;
 import br.com.gitflowhelper.statusbar.GitFlowStatusBarWidget;
-import br.com.gitflowhelper.util.NotificationUtil;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.StatusBar;
