@@ -23,30 +23,14 @@ import java.util.List;
 @SuppressWarnings("unused")
 public class ReleaseFinishAction extends BaseAction {
 
+    private static final String ACTION_DESCRIPTION = "XXX";
+
     public ReleaseFinishAction(Project project, String actionTitle, String type, String action, String branchName) {
-        super(project, actionTitle, type, action, branchName, AllIcons.Vcs.Patch_applied);
+        super(project, actionTitle, type, action, branchName, AllIcons.Vcs.Patch_applied, ACTION_DESCRIPTION);
     }
 
     @Override
     public void actionPerformed(@NotNull AnActionEvent e) {
-//        try {
-//            GitCommandExecutor.run(
-//                    project,
-//                    Arrays.asList(String.format("git rebase origin/%s", getDevelopBranch()).split(" "))
-//            );
-//            GitCommandExecutor.run(
-//                    project,
-//                    Arrays.asList(String.format("git flow %s %s", type.toLowerCase(Locale.ROOT), action).split(" "))
-//            );
-//            GitCommandExecutor.run(project, Arrays.asList("git push".split(" ")));
-//            GitCommandExecutor.run(project, Arrays.asList("git push --tags".split(" ")));
-//        } catch (GitException ex) {
-//            NotificationUtil.showGitFlowErrorNotification(project, "Error", GitCommandExecutor.getLastErrorMessage());
-//            return;
-//        }
-//
-//        NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Released finished and tag pushed successfully");
-
         ApplicationManager.getApplication().executeOnPooledThread(() -> {
             setLoading(true);
             try {

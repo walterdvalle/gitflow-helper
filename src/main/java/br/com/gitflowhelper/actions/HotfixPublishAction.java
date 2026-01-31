@@ -17,8 +17,10 @@ import java.util.Locale;
 @SuppressWarnings("unused")
 public class HotfixPublishAction extends BaseAction {
 
+    private static final String ACTION_DESCRIPTION = "Pushes the current hotfix branch to VCS (git flow hotfix publish).";;
+
     public HotfixPublishAction(Project project, String actionTitle, String type, String action, String branchName) {
-        super(project, actionTitle, type, action, branchName, AllIcons.CodeWithMe.CwmShared);
+        super(project, actionTitle, type, action, branchName, AllIcons.CodeWithMe.CwmShared, ACTION_DESCRIPTION);
     }
 
     @Override

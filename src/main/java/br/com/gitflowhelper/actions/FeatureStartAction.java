@@ -22,8 +22,10 @@ import java.util.List;
 @SuppressWarnings("unused")
 public class FeatureStartAction extends BaseAction {
 
+    private static final String ACTION_DESCRIPTION = "Creates a new local feature branch (git flow feature start).";
+
     public FeatureStartAction(Project project, String actionTitle, String type, String action, String branchName) {
-        super(project, actionTitle, type, action, branchName, AllIcons.Actions.Execute);
+        super(project, actionTitle, type, action, branchName, AllIcons.Actions.Execute, ACTION_DESCRIPTION);
     }
 
     public void actionPerformed(@NotNull AnActionEvent e) {

@@ -28,7 +28,7 @@ public class CheckoutRemoteBranchAction extends BaseAction {
     ) {
 
         super(project, remoteBranch, null, null,
-                remoteBranch, (isCurrent ? AllIcons.Gutter.Bookmark : AllIcons.Vcs.BranchNode));
+                remoteBranch, (isCurrent ? AllIcons.Gutter.Bookmark : AllIcons.Vcs.BranchNode), "Checkout remote branch "+remoteBranch);
         this.project = project;
         this.repository = repository;
         this.remoteBranch = remoteBranch;

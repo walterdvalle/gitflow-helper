@@ -8,7 +8,6 @@ import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.project.Project;
-import com.intellij.openapi.vfs.VirtualFileManager;
 import git4idea.commands.GitCommand;
 import git4idea.repo.GitRepository;
 import org.jetbrains.annotations.NotNull;
@@ -27,7 +26,7 @@ public class CheckoutLocalBranchAction extends BaseAction {
             boolean isCurrent
     ) {
         super(project, branchName, null, null,
-                branchName, (isCurrent ? AllIcons.Gutter.Bookmark : AllIcons.Vcs.BranchNode));
+                branchName, (isCurrent ? AllIcons.Gutter.Bookmark : AllIcons.Vcs.BranchNode), "Checkout local branch "+branchName);
         this.project = project;
         this.repository = repository;
         this.branchName = branchName;

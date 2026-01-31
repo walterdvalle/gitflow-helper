@@ -28,9 +28,10 @@ public class FeatureFinishAction extends BaseAction {
 
     private String postAction;
     private String featureCommits = "";
+    private static final String ACTION_DESCRIPTION = "Merges current branch into develop chain and deletes current branch or creates a merge request (git flow feature finish).";
 
     public FeatureFinishAction(Project project, String actionTitle, String type, String action, String branchName) {
-        super(project, actionTitle, type, action, branchName, AllIcons.Vcs.Patch_applied);
+        super(project, actionTitle, type, action, branchName, AllIcons.Vcs.Patch_applied, ACTION_DESCRIPTION);
     }
 
     @Override

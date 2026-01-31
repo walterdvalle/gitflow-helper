@@ -16,8 +16,10 @@ import java.util.List;
 @SuppressWarnings("unused")
 public class InitAction extends BaseAction {
 
+    private static final String ACTION_DESCRIPTION = "Initializes current repo to use Git Flow (git flow init).";
+
     public InitAction(Project project, String actionTitle) {
-        super(project, actionTitle, null, null, null, AllIcons.Scope.Production);
+        super(project, actionTitle, null, null, null, AllIcons.Scope.Production, ACTION_DESCRIPTION);
     }
 
     @Override

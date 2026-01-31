@@ -17,8 +17,10 @@ import java.util.function.Function;
 
 public class RepositoryBranchGroup extends DefaultActionGroup {
 
+    private static final String ACTION_DESCRIPTION = "Checkout local or remote branches.";
+
     public RepositoryBranchGroup(Project project, GitRepository repository) {
-        super(repository.getProject().getName(), repository.getProject().getName(), AllIcons.Actions.CheckOut);
+        super(repository.getProject().getName(), ACTION_DESCRIPTION, AllIcons.Actions.CheckOut);
         setPopup(true);
 
         String currentBranch = repository.getCurrentBranchName();

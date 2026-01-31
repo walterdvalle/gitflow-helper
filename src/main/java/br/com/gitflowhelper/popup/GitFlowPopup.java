@@ -81,9 +81,9 @@ public final class GitFlowPopup extends PropertyObserver {
         }
 
         group.addSeparator();
-        group.add(flowGroup("Feature", AllIcons.Actions.AddFile));
-        group.add(flowGroup("Release", AllIcons.Nodes.UpFolder));
-        group.add(flowGroup("Hotfix", AllIcons.General.ExternalTools));
+        group.add(flowGroup("Feature", AllIcons.Actions.AddFile, "Feature related commands."));
+        group.add(flowGroup("Release", AllIcons.Nodes.UpFolder, "Release related commands."));
+        group.add(flowGroup("Hotfix", AllIcons.General.ExternalTools, "Bugs and hotfix related commands."));
         return group;
     }
 
@@ -91,8 +91,8 @@ public final class GitFlowPopup extends PropertyObserver {
         return this.listPopup;
     }
 
-    private DefaultActionGroup flowGroup(String type, Icon icon) {
-        DefaultActionGroup group = new DefaultActionGroup(type, type, icon);
+    private DefaultActionGroup flowGroup(String type, Icon icon, String description) {
+        DefaultActionGroup group = new DefaultActionGroup(type, description, icon);
         group.setPopup(true);
         group.add(flowAction(type, "start"));
         group.add(flowAction(type, "publish"));

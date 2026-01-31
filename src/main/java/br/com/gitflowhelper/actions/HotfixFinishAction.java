@@ -17,8 +17,10 @@ import java.util.Locale;
 @SuppressWarnings("unused")
 public class HotfixFinishAction extends BaseAction {
 
+    private static final String ACTION_DESCRIPTION = "Merges current hotfix branch into master and develop chains and deletes current branch (git flow hotfix finish).";;
+
     public HotfixFinishAction(Project project, String actionTitle, String type, String action, String branchName) {
-        super(project, actionTitle, type, action, branchName, AllIcons.Vcs.Patch_applied);
+        super(project, actionTitle, type, action, branchName, AllIcons.Vcs.Patch_applied, ACTION_DESCRIPTION);
     }
 
     @Override

@@ -23,8 +23,10 @@ import java.util.List;
 @SuppressWarnings("unused")
 public class ReleasePublishAction extends BaseAction {
 
+    private static final String ACTION_DESCRIPTION = "XXX";
+
     public ReleasePublishAction(Project project, String actionTitle, String type, String action, String branchName) {
-        super(project, actionTitle, type, action, branchName, AllIcons.CodeWithMe.CwmShared);
+        super(project, actionTitle, type, action, branchName, AllIcons.CodeWithMe.CwmShared, ACTION_DESCRIPTION);
     }
 
     @Override

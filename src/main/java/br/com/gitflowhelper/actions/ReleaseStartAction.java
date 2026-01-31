@@ -24,8 +24,10 @@ import java.util.List;
 @SuppressWarnings("unused")
 public class ReleaseStartAction extends BaseAction {
 
+    private static final String ACTION_DESCRIPTION = "XXX";
+
     public ReleaseStartAction(Project project, String actionTitle, String type, String action, String branchName) {
-        super(project, actionTitle, type, action, branchName, AllIcons.Actions.Execute);
+        super(project, actionTitle, type, action, branchName, AllIcons.Actions.Execute, ACTION_DESCRIPTION);
     }
 
     @Override

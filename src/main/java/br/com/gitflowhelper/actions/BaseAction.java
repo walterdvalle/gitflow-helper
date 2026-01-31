@@ -18,13 +18,15 @@ public abstract class BaseAction extends AnAction implements PropertyChangeListe
     protected String type;
     protected String action;
     protected String branchName;
+    protected String actionDescription;
 
-    public BaseAction(Project project, String actionTitle, String type, String action, String branchName, Icon icon) {
-        super(actionTitle, null, icon);
+    public BaseAction(Project project, String actionTitle, String type, String action, String branchName, Icon icon, String description) {
+        super(actionTitle, description, icon);
         this.project = project;
         this.type = type;
         this.action = action;
         this.branchName = branchName;
+        this.actionDescription = description;
     }
 
     @Override
