@@ -3,6 +3,7 @@ package br.com.gitflowhelper.actions.branches;
 import br.com.gitflowhelper.actions.BaseAction;
 import br.com.gitflowhelper.git.GitException;
 import br.com.gitflowhelper.git.GitExecutor;
+import br.com.gitflowhelper.settings.GitFlowSettingsService;
 import br.com.gitflowhelper.util.NotificationUtil;
 import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -28,7 +29,11 @@ public class CheckoutRemoteBranchAction extends BaseAction {
     ) {
 
         super(project, remoteBranch, null, null,
-                remoteBranch, (isCurrent ? AllIcons.Gutter.Bookmark : AllIcons.Vcs.BranchNode), "Checkout remote branch "+remoteBranch);
+                remoteBranch, (isCurrent ?
+                        AllIcons.Gutter.Bookmark :
+                        remoteBranch.equals(BaseAction.REMOTE+"/"+GitFlowSettingsService.getInstance(project).getMainBranch()) ?
+                                AllIcons.Nodes.Favorite :
+                                AllIcons.Vcs.BranchNode), "Checkout remote branch "+remoteBranch);
         this.project = project;
         this.repository = repository;
         this.remoteBranch = remoteBranch;

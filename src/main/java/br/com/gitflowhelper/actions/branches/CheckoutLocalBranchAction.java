@@ -3,6 +3,7 @@ package br.com.gitflowhelper.actions.branches;
 import br.com.gitflowhelper.actions.BaseAction;
 import br.com.gitflowhelper.git.GitException;
 import br.com.gitflowhelper.git.GitExecutor;
+import br.com.gitflowhelper.settings.GitFlowSettingsService;
 import br.com.gitflowhelper.util.NotificationUtil;
 import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -11,6 +12,8 @@ import com.intellij.openapi.project.Project;
 import git4idea.commands.GitCommand;
 import git4idea.repo.GitRepository;
 import org.jetbrains.annotations.NotNull;
+
+import javax.swing.*;
 
 public class CheckoutLocalBranchAction extends BaseAction {
 
@@ -26,7 +29,11 @@ public class CheckoutLocalBranchAction extends BaseAction {
             boolean isCurrent
     ) {
         super(project, branchName, null, null,
-                branchName, (isCurrent ? AllIcons.Gutter.Bookmark : AllIcons.Vcs.BranchNode), "Checkout local branch "+branchName);
+                branchName, (isCurrent ?
+                                AllIcons.Gutter.Bookmark :
+                                branchName.equals(GitFlowSettingsService.getInstance(project).getMainBranch()) ?
+                                        AllIcons.Nodes.Favorite :
+                                        AllIcons.Vcs.BranchNode), "Checkout local branch "+branchName);
         this.project = project;
         this.repository = repository;
         this.branchName = branchName;

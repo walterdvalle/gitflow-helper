@@ -1,6 +1,7 @@
 package br.com.gitflowhelper.actions.branches;
 
 import br.com.gitflowhelper.actions.BaseAction;
+import br.com.gitflowhelper.settings.GitFlowSettingsService;
 import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -42,7 +43,8 @@ public class RepositoryBranchGroup extends DefaultActionGroup {
         List<GitLocalBranch> orderedLocalBranches = sortBranches(
                 repository.getBranches().getLocalBranches(),
                 currentBranch,
-                GitLocalBranch::getName
+                GitLocalBranch::getName,
+                project
         );
 
         orderedLocalBranches.forEach(branch -> {
@@ -74,7 +76,8 @@ public class RepositoryBranchGroup extends DefaultActionGroup {
         List<GitRemoteBranch> orderedRemoteBranches = sortBranches(
                 repository.getBranches().getRemoteBranches(),
                 BaseAction.REMOTE+"/"+currentBranch,
-                GitRemoteBranch::getName
+                GitRemoteBranch::getName,
+                project
         );
         orderedRemoteBranches.forEach(branch -> {
             boolean isCurrent = branch.getName().equals(BaseAction.REMOTE+"/"+currentBranch);
@@ -91,8 +94,9 @@ public class RepositoryBranchGroup extends DefaultActionGroup {
     private <T> List<T> sortBranches(
             Collection<T> branches,
             String currentBranchName,
-            Function<T, String> branchNameExtractor
-    ) {
+            Function<T, String> branchNameExtractor,
+            Project project) {
+        GitFlowSettingsService service = GitFlowSettingsService.getInstance(project);
         Map<String, T> byName = new HashMap<>();
         for (T branch : branches) {
             byName.put(branchNameExtractor.apply(branch), branch);
@@ -105,15 +109,22 @@ public class RepositoryBranchGroup extends DefaultActionGroup {
             result.add(byName.remove(currentBranchName));
         }
 
-        // 2) develop
-        if (byName.containsKey("develop")) {
-            result.add(byName.remove("develop"));
+        // 2) main
+        if (byName.containsKey(service.getMainBranch())) {
+            result.add(byName.remove(service.getMainBranch()));
+        }
+        if (byName.containsKey(BaseAction.REMOTE + "/" + service.getMainBranch())) {
+            result.add(byName.remove(BaseAction.REMOTE + "/" + service.getMainBranch()));
         }
 
-        // 3) main
-        if (byName.containsKey("main")) {
-            result.add(byName.remove("main"));
+        // 3) develop
+        if (byName.containsKey(service.getDevelopBranch())) {
+            result.add(byName.remove(service.getDevelopBranch()));
         }
+        if (byName.containsKey(BaseAction.REMOTE + "/" + service.getDevelopBranch())) {
+            result.add(byName.remove(BaseAction.REMOTE + "/" + service.getDevelopBranch()));
+        }
+
 
         // 4) everything else
         byName.values().stream()
