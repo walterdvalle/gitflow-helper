@@ -34,16 +34,6 @@ public class ReleaseStartAction extends BaseAction {
     public void actionPerformed(@NotNull AnActionEvent e) {
         new NameDialog(project, type + " start", "Version description", true, (name) ->
         {
-//            try {
-//                GitCommandExecutor.run(
-//                        project,
-//                        Arrays.asList(String.format("git flow %s start %s", type.toLowerCase(Locale.ROOT), name.replaceAll(" ", "-")).split(" "))
-//                );
-//            } catch (GitException ex) {
-//                NotificationUtil.showGitFlowErrorNotification(project, "Error", GitCommandExecutor.getLastErrorMessage());
-//                return;
-//            }
-//            NotificationUtil.showGitFlowSuccessNotification(project, "Success", "New release created successfully");
             ApplicationManager.getApplication().executeOnPooledThread(() -> {
                 setLoading(true);
                 try {

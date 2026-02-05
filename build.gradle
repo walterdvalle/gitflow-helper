@@ -26,7 +26,7 @@ intellij {
 tasks {
     patchPluginXml {
         sinceBuild = '233'
-        untilBuild = '243.*'
+        untilBuild = '252.*'
     }
 
     // Set the JVM compatibility versions
