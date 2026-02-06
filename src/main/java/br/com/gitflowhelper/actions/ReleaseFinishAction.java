@@ -155,8 +155,18 @@ public class ReleaseFinishAction extends BaseAction {
                 );
             }
 
+            GitResult checkResult = executor.execute(
+                    root,
+                    GitCommand.LS_REMOTE,
+                    "--heads",
+                    REMOTE,
+                    releaseBranch
+            );
+            boolean branchExists = checkResult.getExitCode() == 0 &&
+                    checkResult.getProcessMessage().contains("refs/heads/" + releaseBranch);
+
             // 10 delete remote release branch
-            if (deleteRemoteBranch) {
+            if (branchExists && deleteRemoteBranch) {
                 results.add(
                         executor.execute(
                                 root,

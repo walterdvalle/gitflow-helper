@@ -11,11 +11,11 @@ import javax.swing.*;
 public class PluginUtils {
 
     public static void logError(Project project, String message) {
-        logToMyWindow(project, "<pre style=\"margin:0; padding:0;\" style=\"color: red;\">"+message+"</pre>");
+        logToMyWindow(project, "<pre style=\"margin:0; padding:0;\" style=\"color: orange;\">"+message+"</pre>");
     }
 
     public static void logCommand(Project project, String message) {
-        logToMyWindow(project, "<pre style=\"margin:0; padding:0;\" style=\"color: blue;\">$ "+message+"</pre>");
+        logToMyWindow(project, "<pre style=\"margin:0; padding:0;\" style=\"color: #4a8dff;\">$ "+message+"</pre>");
     }
 
     public static void logOutput(Project project, String message) {
@@ -30,7 +30,6 @@ public class PluginUtils {
             if (toolWindow != null && toolWindow.getContentManager().getContentCount() > 0) {
                 Content content = toolWindow.getContentManager().getContent(0);
 
-                // O cast continua o mesmo, pois o nome da classe do painel não mudou
                 if (content != null && content.getComponent() instanceof ToolWindowPanel) {
                     ToolWindowPanel panel = (ToolWindowPanel) content.getComponent();
                     panel.append(message);

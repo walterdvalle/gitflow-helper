@@ -14,6 +14,7 @@ import com.intellij.openapi.util.text.StringUtil;
 import com.intellij.openapi.vfs.VirtualFile;
 import git4idea.GitLocalBranch;
 import git4idea.commands.GitCommand;
+import git4idea.commands.GitCommandResult;
 import git4idea.repo.GitRepository;
 import git4idea.repo.GitRepositoryManager;
 import org.jetbrains.annotations.NotNull;
@@ -138,8 +139,18 @@ public class HotfixFinishAction extends BaseAction {
                 );
             }
 
+            GitResult checkResult = executor.execute(
+                    root,
+                    GitCommand.LS_REMOTE,
+                    "--heads",
+                    REMOTE,
+                    hotfixName
+            );
+            boolean branchExists = checkResult.getExitCode() == 0 &&
+                    checkResult.getProcessMessage().contains("refs/heads/" + hotfixName);
+
             // 7️⃣ delete hotfix remote
-            if (deleteRemoteBranch) {
+            if (branchExists && deleteRemoteBranch) {
                 results.add(
                         executor.execute(
                                 root,

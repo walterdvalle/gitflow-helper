@@ -45,12 +45,6 @@ public final class GitFlowPopup extends PropertyObserver {
                         JBPopupFactory.ActionSelectionAid.SPEEDSEARCH,
                         true
                 );
-//                this.listPopup.getContent().setBorder(
-//                        BorderFactory.createCompoundBorder(
-//                                new RoundedBorder(30),
-//                                JBUI.Borders.empty(6)
-//                        )
-//                );
                 this.listPopup.setCaptionIcon(PluginIcons.GitFlow);
 
                 ApplicationManager.getApplication().executeOnPooledThread(() -> {
