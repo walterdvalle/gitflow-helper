@@ -1,7 +1,9 @@
 package br.com.gitflowhelper.actions;
 
 import br.com.gitflowhelper.dialog.NameDialog;
-import br.com.gitflowhelper.git.*;
+import br.com.gitflowhelper.git.GitException;
+import br.com.gitflowhelper.git.GitExecutor;
+import br.com.gitflowhelper.git.GitResult;
 import br.com.gitflowhelper.settings.GitFlowSettingsService;
 import br.com.gitflowhelper.util.NotificationUtil;
 import com.intellij.icons.AllIcons;

@@ -1,6 +1,8 @@
 package br.com.gitflowhelper.popup;
 
-import br.com.gitflowhelper.actions.*;
+import br.com.gitflowhelper.actions.ActionBuilder;
+import br.com.gitflowhelper.actions.BaseAction;
+import br.com.gitflowhelper.actions.InitAction;
 import br.com.gitflowhelper.actions.branches.RepositoryBranchGroup;
 import br.com.gitflowhelper.util.GitBranchUtils;
 import br.com.gitflowhelper.util.PropertyObserver;
@@ -60,7 +62,7 @@ public final class GitFlowPopup extends PropertyObserver {
                        @Override
                        public void beforeShown(@NotNull LightweightWindowEvent event) {
                            var oldPlace = listPopup.getLocationOnScreen();
-                           var newPlace = new Point((int) oldPlace.getX(), (int) oldPlace.getY()+20);
+                           var newPlace = new Point((int) oldPlace.getX(), (int) oldPlace.getY()+45);
                            listPopup.setLocation(newPlace);
                            JBPopupListener.super.beforeShown(event);
                        }

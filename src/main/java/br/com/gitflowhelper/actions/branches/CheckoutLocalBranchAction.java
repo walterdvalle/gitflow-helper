@@ -13,8 +13,6 @@ import git4idea.commands.GitCommand;
 import git4idea.repo.GitRepository;
 import org.jetbrains.annotations.NotNull;
 
-import javax.swing.*;
-
 public class CheckoutLocalBranchAction extends BaseAction {
 
     private final Project project;

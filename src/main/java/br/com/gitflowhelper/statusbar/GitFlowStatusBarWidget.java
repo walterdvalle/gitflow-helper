@@ -1,12 +1,12 @@
 package br.com.gitflowhelper.statusbar;
 
 import br.com.gitflowhelper.popup.GitFlowPopup;
-import com.intellij.ui.AnimatedIcon;
-import icons.PluginIcons;
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.ui.popup.ListPopup;
 import com.intellij.openapi.wm.StatusBar;
 import com.intellij.openapi.wm.StatusBarWidget;
-import com.intellij.openapi.ui.popup.ListPopup;
+import com.intellij.ui.AnimatedIcon;
+import icons.PluginIcons;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 

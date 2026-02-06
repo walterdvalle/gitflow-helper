@@ -1,7 +1,6 @@
 package br.com.gitflowhelper.actions;
 
 import br.com.gitflowhelper.dialog.InitDialog;
-import br.com.gitflowhelper.git.GitCommandExecutor;
 import br.com.gitflowhelper.git.GitException;
 import br.com.gitflowhelper.git.GitExecutor;
 import br.com.gitflowhelper.git.GitResult;

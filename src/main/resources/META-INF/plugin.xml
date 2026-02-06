@@ -3,7 +3,196 @@
     <id>br.com.gitflowhelper</id>
     <name>Git Flow Helper</name>
     <vendor>Git Flow Helper</vendor>
+    <description>
+        <![CDATA[
+        <h1>GitFlow Helper</h1>
+        <p>
+            <strong>GitFlow Helper</strong> is an IntelliJ plugin that provides a complete and intuitive
+            implementation of the <strong>Git Flow</strong> workflow, fully integrated into the IDE menus,
+            status bar, and tool windows.
+        </p>
 
+        <p>
+            The plugin allows developers to work with Git Flow without relying on external tools or memorizing
+            Git commands, offering a clean, menu-driven and IDE-native experience.
+        </p>
+
+        <hr>
+
+        <h2>✨ Features</h2>
+
+        <h3>🌱 Git Flow Initialization</h3>
+
+        <ul>
+            <li>Initialize Git Flow directly from IntelliJ.</li>
+            <li>Configure all initial parameters, including:</li>
+            <ul>
+                <li><code>main</code> branch name</li>
+                <li><code>develop</code> branch name</li>
+                <li>Prefixes for:</li>
+                <ul>
+                    <li>feature branches</li>
+                    <li>release branches</li>
+                    <li>hotfix branches</li>
+                    <li>tags</li>
+                </ul>
+            </ul>
+            <li>Configuration is stored and reused across all Git Flow operations.</li>
+        </ul>
+
+        <hr>
+
+        <h3>🌳 Git Flow Branching Model</h3>
+
+        <p>The plugin follows the standard Git Flow strategy:</p>
+
+        <ul>
+            <li>
+                <strong>Main branch</strong>
+                <ul>
+                    <li>Represents production-ready code.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Develop branch</strong>
+                <ul>
+                    <li>Integration branch for ongoing development.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Feature branches</strong>
+                <ul>
+                    <li>One branch per feature.</li>
+                    <li>Created from <code>develop</code>.</li>
+                    <li>Finished features are merged back into <code>develop</code>.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Release branches</strong>
+                <ul>
+                    <li>Used to prepare new production releases.</li>
+                    <li>Allow stabilization and final adjustments.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Hotfix branches</strong>
+                <ul>
+                    <li>Created from <code>main</code> for urgent production fixes.</li>
+                    <li>Merged back into both <code>main</code> and <code>develop</code>.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <hr>
+
+        <h3>🏷️ Tag Generation</h3>
+
+        <ul>
+            <li>Automatically creates Git tags when:</li>
+            <ul>
+                <li>Finishing a release</li>
+                <li>Finishing a hotfix</li>
+            </ul>
+            <li>Tag naming follows Git Flow conventions.</li>
+            <li>Ensures consistent and traceable versioning.</li>
+        </ul>
+
+        <hr>
+
+        <h3>🔀 Branch Navigation</h3>
+
+        <ul>
+            <li>Freely switch between branches directly from the plugin menus.</li>
+            <li>Supports:</li>
+            <ul>
+                <li>Local branches</li>
+                <li>Remote branches</li>
+            </ul>
+            <li>Smart checkout behavior:</li>
+            <ul>
+                <li>Switches to an existing local branch when available</li>
+                <li>Automatically tracks and checks out remote branches when needed</li>
+            </ul>
+        </ul>
+
+        <hr>
+
+        <h3>📋 Menu-Based Workflow</h3>
+
+        <ul>
+            <li>All Git Flow operations are available via IntelliJ menus.</li>
+            <li>Each action corresponds to a specific Git Flow command.</li>
+            <li>Menu items are context-aware and dynamically enabled or disabled to prevent invalid operations.</li>
+        </ul>
+
+        <hr>
+
+        <h3>📍 Status Bar Integration</h3>
+
+        <ul>
+            <li>The plugin is available directly from the <strong>IntelliJ Status Bar</strong>.</li>
+            <li>Provides quick access to Git Flow actions without leaving the editor.</li>
+            <li>Ideal for fast branch switching and common Git Flow operations.</li>
+        </ul>
+
+        <hr>
+
+        <h3>🪟 Command Execution Tool Window</h3>
+
+        <ul>
+            <li>Includes a dedicated <strong>Tool Window</strong> to monitor Git Flow execution.</li>
+            <li>Displays:</li>
+            <ul>
+                <li>Each Git command executed by the plugin</li>
+                <li>Command output (stdout)</li>
+                <li>Errors and failures (stderr)</li>
+            </ul>
+            <li>Allows developers to:</li>
+            <ul>
+                <li>Track what is happening under the hood</li>
+                <li>Debug Git issues more easily</li>
+                <li>Maintain full transparency of operations</li>
+            </ul>
+        </ul>
+
+        <hr>
+
+        <h3>🛈 Built-in Help Descriptions</h3>
+
+        <ul>
+            <li>Every menu item shows a <strong>contextual help description</strong> in the IntelliJ status bar footer.</li>
+            <li>Descriptions explain:</li>
+            <ul>
+                <li>What the action does</li>
+                <li>When it should be used</li>
+                <li>How it affects branches and tags</li>
+            </ul>
+            <li>This makes Git Flow easier to understand, even for beginners.</li>
+        </ul>
+
+        <hr>
+
+        <h2>🛠️ Implementation Details</h2>
+
+        <ul>
+            <li>Built using IntelliJ Platform APIs.</li>
+            <li>Executes Git commands programmatically.</li>
+            <li>Does not rely on external Git Flow CLI tools.</li>
+            <li>Designed to be transparent, safe, and IDE-native.</li>
+        </ul>
+
+        <hr>
+
+        <h2>📦 Repository</h2>
+
+        <p>
+            Source code available at:<br>
+            👉 <a href="https://github.com/walterdvalle/gitflow-helper" target="_blank">
+                https://github.com/walterdvalle/gitflow-helper
+            </a>
+        </p>
+        ]]>
+    </description>
     <depends>com.intellij.modules.platform</depends>
     <depends>Git4Idea</depends>
 
@@ -14,7 +203,7 @@
         <toolWindow
                 id="GitFlowOutput"
                 anchor="bottom"
-                icon="/icons/gitflow.svg"
+                icon="/icons/gitflow_gray.svg"
                 factoryClass="br.com.gitflowhelper.toolwindow.GitFlowToolWindowFactory"/>
 
         <notificationGroup id="GitFlowNotificationGroup"

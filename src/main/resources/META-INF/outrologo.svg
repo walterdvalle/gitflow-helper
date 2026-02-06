@@ -1,0 +1,18 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="tech_grad" x1="4" y1="36" x2="36" y2="4" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#0057FF" /> <stop offset="1" stop-color="#00DDFF" /> </linearGradient>
+    </defs>
+
+    <g stroke="url(#tech_grad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 34L20 6"/>
+
+        <path d="M13 26C24 26 32 18 20 12"/>
+    </g>
+
+    <g fill="url(#tech_grad)">
+        <circle cx="10" cy="34" r="2.5"/>
+        <circle cx="20" cy="6" r="2.5"/>
+        <circle cx="28" cy="19" r="2"/>
+    </g>
+</svg>

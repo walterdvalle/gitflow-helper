@@ -1,6 +1,5 @@
 package br.com.gitflowhelper.actions;
 
-import br.com.gitflowhelper.git.GitCommandExecutor;
 import br.com.gitflowhelper.git.GitException;
 import br.com.gitflowhelper.git.GitExecutor;
 import br.com.gitflowhelper.git.GitResult;
@@ -20,9 +19,7 @@ import git4idea.repo.GitRepositoryManager;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Locale;
 
 @SuppressWarnings("unused")
 public class HotfixFinishAction extends BaseAction {
