@@ -14,24 +14,39 @@ import java.beans.PropertyChangeListener;
 public abstract class BaseAction extends AnAction implements PropertyChangeListener {
     public static final String REMOTE = "origin";
 
-    protected Project project;
-    protected String type;
-    protected String action;
-    protected String branchName;
-    protected String actionDescription;
+    /*
+    No fields allowed
+    Classes based on AnAction must not have class fields of any kind.
+    This is because an instance of AnAction class exists for the entire
+    lifetime of the application. If the AnAction class uses a field to store
+    data that has a shorter lifetime and doesn't clear this data promptly,
+    the data leaks. For example, any AnAction data that exists only within
+    the context of a Project causes the Project to be kept in memory after
+    the user has closed it.
 
-    public BaseAction(Project project, String actionTitle, String type, String action, String branchName, Icon icon, String description) {
+    https://plugins.jetbrains.com/docs/intellij/action-system.html
+     */
+    protected Project project;
+    protected String branchName;
+
+    public BaseAction(String actionTitle, String description, Icon icon) {
+        super(actionTitle, description, icon);
+    }
+
+    public BaseAction(
+            String actionTitle,
+            String description,
+            Icon icon,
+            Project project,
+            String branchName) {
         super(actionTitle, description, icon);
         this.project = project;
-        this.type = type;
-        this.action = action;
         this.branchName = branchName;
-        this.actionDescription = description;
     }
 
     @Override
-    public void propertyChange(PropertyChangeEvent evt) {
-        this.branchName = (String) evt.getNewValue();
+    public void propertyChange(PropertyChangeEvent e) {
+        this.branchName = (String) e.getNewValue();
     }
 
     public String getMainBranch() {
@@ -39,6 +54,18 @@ public abstract class BaseAction extends AnAction implements PropertyChangeListe
     }
     public String getDevelopBranch() {
         return GitFlowSettingsService.getInstance(project).getDevelopBranch();
+    }
+    public String getFeaturePrefix() {
+        return GitFlowSettingsService.getInstance(project).getFeaturePrefix();
+    }
+    public String getReleasePrefix() {
+        return GitFlowSettingsService.getInstance(project).getReleasePrefix();
+    }
+    public String getHotfixPrefix() {
+        return GitFlowSettingsService.getInstance(project).getHotfixPrefix();
+    }
+    public Project getProject() {
+        return null;
     }
 
     public void setLoading(boolean loading) {

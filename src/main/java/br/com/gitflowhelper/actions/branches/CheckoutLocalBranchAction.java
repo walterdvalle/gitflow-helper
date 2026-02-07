@@ -15,27 +15,23 @@ import org.jetbrains.annotations.NotNull;
 
 public class CheckoutLocalBranchAction extends BaseAction {
 
-    private final Project project;
     private final GitRepository repository;
-    private final String branchName;
-    private final boolean isCurrent;
 
     public CheckoutLocalBranchAction(
             Project project,
             GitRepository repository,
-            String branchName,
+            String localBranchName,
             boolean isCurrent
     ) {
-        super(project, branchName, null, null,
-                branchName, (isCurrent ?
-                                AllIcons.Gutter.Bookmark :
-                                branchName.equals(GitFlowSettingsService.getInstance(project).getMainBranch()) ?
-                                        AllIcons.Nodes.Favorite :
-                                        AllIcons.Vcs.BranchNode), "Checkout local branch "+branchName);
-        this.project = project;
+        super(localBranchName,
+                "Checkout local branch "+localBranchName,
+                (isCurrent ?
+                    AllIcons.Gutter.Bookmark :
+                    localBranchName.equals(GitFlowSettingsService.getInstance(project).getMainBranch()) ?
+                            AllIcons.Nodes.Favorite :
+                            AllIcons.Vcs.BranchNode),
+                project, localBranchName);
         this.repository = repository;
-        this.branchName = branchName;
-        this.isCurrent = isCurrent;
     }
 
     @Override
@@ -45,6 +41,9 @@ public class CheckoutLocalBranchAction extends BaseAction {
 
     @Override
     public void actionPerformed(@NotNull AnActionEvent e) {
+        String currentBranchName = repository.getCurrentBranchName();
+        String checkoutBranchName = getTemplatePresentation().getText();
+        boolean isCurrent = currentBranchName.equals(checkoutBranchName);
 
         if (isCurrent) return;
 
@@ -56,7 +55,7 @@ public class CheckoutLocalBranchAction extends BaseAction {
                 executor.execute(
                         repository.getRoot(),
                         GitCommand.CHECKOUT,
-                        branchName
+                        checkoutBranchName
                 );
                 repository.update();
                 NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Local branch "+branchName+" checked out successfully");

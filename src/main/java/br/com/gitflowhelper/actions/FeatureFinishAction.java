@@ -4,7 +4,7 @@ import br.com.gitflowhelper.dialog.ActionChoiceDialog;
 import br.com.gitflowhelper.git.GitException;
 import br.com.gitflowhelper.git.GitExecutor;
 import br.com.gitflowhelper.git.GitResult;
-import br.com.gitflowhelper.settings.GitFlowSettingsService;
+import br.com.gitflowhelper.util.GitFlowDescriptions;
 import br.com.gitflowhelper.util.NotificationUtil;
 import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -28,16 +28,14 @@ import java.util.stream.Collectors;
 @SuppressWarnings("unused")
 public class FeatureFinishAction extends BaseAction {
 
-    private String postAction;
-    private String featureCommits = "";
-    private static final String ACTION_DESCRIPTION = "Merges current branch into develop chain and deletes current branch or creates a merge request (git flow feature finish).";
-
-    public FeatureFinishAction(Project project, String actionTitle, String type, String action, String branchName) {
-        super(project, actionTitle, type, action, branchName, AllIcons.Vcs.Patch_applied, ACTION_DESCRIPTION);
+    public FeatureFinishAction(Project project, String actionTitle, String branchName) {
+        super(actionTitle, GitFlowDescriptions.FEATURE_FINISH.getValue(), AllIcons.Vcs.Patch_applied, project, branchName);
     }
 
     @Override
     public void actionPerformed(@NotNull AnActionEvent e) {
+        String featureCommits = "";
+        String[] postAction = new String[1];
         ActionChoiceDialog dialog = new ActionChoiceDialog(project, branchName, getDevelopBranch());
 
         GitRepositoryManager repoManager = GitRepositoryManager.getInstance(project);
@@ -67,8 +65,9 @@ public class FeatureFinishAction extends BaseAction {
                             !dialog.getKeepLocalBranch(),
                             !dialog.getKeepRemoteBranch(),
                             dialog.getSelectedAction(),
-                            true);
-                        NotificationUtil.showGitFlowSuccessNotification(project, "Success",  postAction);
+                            true,
+                            postAction);
+                        NotificationUtil.showGitFlowSuccessNotification(project, "Success",  postAction[0]);
                     } catch (GitException ex) {
                         NotificationUtil.showGitFlowErrorNotification(project, "Error", "Error message: "+ex.getGitResult().getProcessMessage());
                     }
@@ -82,7 +81,7 @@ public class FeatureFinishAction extends BaseAction {
         Presentation presentation = e.getPresentation();
         presentation.setEnabled(
                 StringUtil.isNotEmpty(getMainBranch()) &&
-                branchName.startsWith(GitFlowSettingsService.getInstance(project).getFeaturePrefix())
+                        branchName.startsWith(getFeaturePrefix())
         );
     }
 
@@ -108,9 +107,9 @@ public class FeatureFinishAction extends BaseAction {
             boolean deleteLocalBranch,
             boolean deleteRemoteBranch,
             String mode,
-            boolean rebaseBeforeIntegrate) {
-        String baseBranch = GitFlowSettingsService.getInstance(project).getDevelopBranch();
-
+            boolean rebaseBeforeIntegrate,
+            String[] postAction) {
+        String baseBranch = getDevelopBranch();
         GitRepositoryManager repoManager = GitRepositoryManager.getInstance(project);
         GitExecutor executor = new GitExecutor(project);
         List<GitResult> results = new ArrayList<>();
@@ -185,7 +184,7 @@ public class FeatureFinishAction extends BaseAction {
                             )
                     );
 
-                    postAction = "Feature finished and pushed to " + getDevelopBranch() + " successfully.";
+                    postAction[0] = "Feature finished and pushed to " + getDevelopBranch() + " successfully.";
 
                 }
 
@@ -224,7 +223,7 @@ public class FeatureFinishAction extends BaseAction {
                             )
                     );
 
-                    postAction = "Feature pushed to " + branchName + " successfully. Create yourself a merge/pull request.";
+                    postAction[0] = "Feature pushed to " + branchName + " successfully. Create yourself a merge/pull request.";
                 }
 
                 // =========================
@@ -271,7 +270,7 @@ public class FeatureFinishAction extends BaseAction {
                             )
                     );
 
-                    postAction = "Feature pushed to " + branchName + " and merge request created successfully.";
+                    postAction[0] = "Feature pushed to " + branchName + " and merge request created successfully.";
                 }
             }
             // delete local branch
@@ -298,7 +297,6 @@ public class FeatureFinishAction extends BaseAction {
                         )
                 );
             }
-
 
             repository.update();
         }

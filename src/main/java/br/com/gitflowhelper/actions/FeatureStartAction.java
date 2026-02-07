@@ -5,6 +5,9 @@ import br.com.gitflowhelper.git.GitException;
 import br.com.gitflowhelper.git.GitExecutor;
 import br.com.gitflowhelper.git.GitResult;
 import br.com.gitflowhelper.settings.GitFlowSettingsService;
+import br.com.gitflowhelper.util.GitBranchUtils;
+import br.com.gitflowhelper.util.GitFlowBranchType;
+import br.com.gitflowhelper.util.GitFlowDescriptions;
 import br.com.gitflowhelper.util.NotificationUtil;
 import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -24,14 +27,12 @@ import java.util.List;
 @SuppressWarnings("unused")
 public class FeatureStartAction extends BaseAction {
 
-    private static final String ACTION_DESCRIPTION = "Creates a new local feature branch (git flow feature start).";
-
-    public FeatureStartAction(Project project, String actionTitle, String type, String action, String branchName) {
-        super(project, actionTitle, type, action, branchName, AllIcons.Actions.Execute, ACTION_DESCRIPTION);
+    public FeatureStartAction(Project project, String actionTitle, String branchName) {
+        super(actionTitle, GitFlowDescriptions.FEATURE_START.getValue(), AllIcons.Actions.Execute, project, branchName);
     }
 
     public void actionPerformed(@NotNull AnActionEvent e) {
-        new NameDialog(project, type + " start", "Feature description", false, name ->
+        new NameDialog(project, GitFlowBranchType.FEATURE.getValue() + " start", "Feature description", false, name ->
         {
             ApplicationManager.getApplication().executeOnPooledThread(() -> {
                 setLoading(true);
@@ -52,12 +53,12 @@ public class FeatureStartAction extends BaseAction {
         Presentation presentation = e.getPresentation();
         presentation.setEnabled(
                 StringUtil.isNotEmpty(getMainBranch()) &&
-                branchName.equals(getDevelopBranch())
+                        branchName.equals(getDevelopBranch())
         );
     }
 
     private List<GitResult> featureStart(Project project, String featureName) {
-        String featureBranch = GitFlowSettingsService.getInstance(project).getFeaturePrefix() + featureName;
+        String featureBranch = getFeaturePrefix() + featureName;
         GitRepositoryManager repoManager = GitRepositoryManager.getInstance(project);
         GitExecutor executor = new GitExecutor(project);
         List<GitResult> results = new ArrayList<>();
@@ -67,7 +68,7 @@ public class FeatureStartAction extends BaseAction {
 
             // 1. checkout develop
             results.add(
-                    executor.execute(root, GitCommand.CHECKOUT, GitFlowSettingsService.getInstance(project).getDevelopBranch())
+                    executor.execute(root, GitCommand.CHECKOUT, getDevelopBranch())
             );
 
             // 2. pull develop
@@ -82,7 +83,7 @@ public class FeatureStartAction extends BaseAction {
                             GitCommand.CHECKOUT,
                             "-b",
                             featureBranch,
-                            GitFlowSettingsService.getInstance(project).getDevelopBranch()
+                            getDevelopBranch()
                     )
             );
 

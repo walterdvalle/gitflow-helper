@@ -16,28 +16,26 @@ import org.jetbrains.annotations.NotNull;
 
 public class CheckoutRemoteBranchAction extends BaseAction {
 
-    private final Project project;
     private final GitRepository repository;
-    private final String remoteBranch;
-    private final boolean isCurrent;
 
     public CheckoutRemoteBranchAction(
             Project project,
             GitRepository repository,
-            String remoteBranch,
+            String remoteBranchName,
             boolean isCurrent
     ) {
-
-        super(project, remoteBranch, null, null,
-                remoteBranch, (isCurrent ?
+        super(remoteBranchName,
+                "Checkout remote branch "+remoteBranchName,
+                (isCurrent ?
                         AllIcons.Gutter.Bookmark :
-                        remoteBranch.equals(BaseAction.REMOTE+"/"+GitFlowSettingsService.getInstance(project).getMainBranch()) ?
+                        remoteBranchName.equals(BaseAction.REMOTE+"/"+GitFlowSettingsService.getInstance(project).getMainBranch()) ?
                                 AllIcons.Nodes.Favorite :
-                                AllIcons.Vcs.BranchNode), "Checkout remote branch "+remoteBranch);
+                                AllIcons.Vcs.BranchNode
+                ),
+                project,
+                remoteBranchName);
         this.project = project;
         this.repository = repository;
-        this.remoteBranch = remoteBranch;
-        this.isCurrent = isCurrent;
     }
 
     @Override
@@ -47,13 +45,16 @@ public class CheckoutRemoteBranchAction extends BaseAction {
 
     @Override
     public void actionPerformed(@NotNull AnActionEvent e) {
+        String currentBranchName = repository.getCurrentBranchName();
+        String checkoutBranchName = getTemplatePresentation().getText();
+        boolean isCurrent = currentBranchName.equals(checkoutBranchName);
 
         if (isCurrent) return;
 
         GitExecutor executor = new GitExecutor(project);
 
         String localBranch =
-                remoteBranch.substring(remoteBranch.indexOf('/') + 1);
+                checkoutBranchName.substring(checkoutBranchName.indexOf('/') + 1);
 
         GitBranch branch = this.repository.getBranches().findLocalBranch(localBranch);
         if (branch != null) {
@@ -72,10 +73,10 @@ public class CheckoutRemoteBranchAction extends BaseAction {
                         "-b",
                         localBranch,
                         "--track",
-                        remoteBranch
+                        checkoutBranchName
                 );
                 repository.update();
-                NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Remote branch "+branchName+" checked out successfully");
+                NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Remote branch "+checkoutBranchName+" checked out successfully");
             } catch (GitException ex) {
                 NotificationUtil.showGitFlowErrorNotification(project, "Error", ex.getGitResult().getProcessMessage());
             }

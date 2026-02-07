@@ -2,6 +2,7 @@ package br.com.gitflowhelper.actions.branches;
 
 import br.com.gitflowhelper.actions.BaseAction;
 import br.com.gitflowhelper.settings.GitFlowSettingsService;
+import br.com.gitflowhelper.util.GitFlowDescriptions;
 import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -16,12 +17,11 @@ import org.jetbrains.annotations.NotNull;
 import java.util.*;
 import java.util.function.Function;
 
+@Deprecated
 public class RepositoryBranchGroup extends DefaultActionGroup {
 
-    private static final String ACTION_DESCRIPTION = "Checkout local or remote branches.";
-
     public RepositoryBranchGroup(Project project, GitRepository repository) {
-        super(repository.getProject().getName(), ACTION_DESCRIPTION, AllIcons.Actions.CheckOut);
+        super(repository.getProject().getName(), GitFlowDescriptions.REPO_GROUP.getValue(), AllIcons.Actions.CheckOut);
         setPopup(true);
 
         String currentBranch = repository.getCurrentBranchName();

@@ -3,19 +3,27 @@ package br.com.gitflowhelper.popup;
 import br.com.gitflowhelper.actions.ActionBuilder;
 import br.com.gitflowhelper.actions.BaseAction;
 import br.com.gitflowhelper.actions.InitAction;
+import br.com.gitflowhelper.actions.branches.CheckoutLocalBranchAction;
+import br.com.gitflowhelper.actions.branches.CheckoutRemoteBranchAction;
 import br.com.gitflowhelper.actions.branches.RepositoryBranchGroup;
+import br.com.gitflowhelper.settings.GitFlowSettingsService;
 import br.com.gitflowhelper.util.GitBranchUtils;
+import br.com.gitflowhelper.util.GitFlowDescriptions;
 import br.com.gitflowhelper.util.PropertyObserver;
 import com.intellij.icons.AllIcons;
 import com.intellij.ide.DataManager;
 import com.intellij.openapi.actionSystem.AnAction;
+import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.DefaultActionGroup;
+import com.intellij.openapi.actionSystem.Presentation;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.popup.JBPopupFactory;
 import com.intellij.openapi.ui.popup.JBPopupListener;
 import com.intellij.openapi.ui.popup.LightweightWindowEvent;
 import com.intellij.openapi.ui.popup.ListPopup;
+import git4idea.GitLocalBranch;
+import git4idea.GitRemoteBranch;
 import git4idea.repo.GitRepository;
 import git4idea.repo.GitRepositoryManager;
 import icons.PluginIcons;
@@ -23,7 +31,9 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.Locale;
+import java.util.*;
+import java.util.List;
+import java.util.function.Function;
 
 public final class GitFlowPopup extends PropertyObserver {
     private ListPopup listPopup;
@@ -73,13 +83,13 @@ public final class GitFlowPopup extends PropertyObserver {
 
         GitRepositoryManager repoManager = GitRepositoryManager.getInstance(project);
         for (GitRepository repository : repoManager.getRepositories()) {
-            group.add(new RepositoryBranchGroup(project, repository));
+            group.add(repositoryBranchGroup(repository));
         }
 
         group.addSeparator();
-        group.add(flowGroup("Feature", AllIcons.Actions.AddFile, "Feature related commands."));
-        group.add(flowGroup("Release", AllIcons.Nodes.UpFolder, "Release related commands."));
-        group.add(flowGroup("Hotfix", AllIcons.General.ExternalTools, "Bugs and hotfix related commands."));
+        group.add(flowGroup("Feature", AllIcons.Actions.AddFile, GitFlowDescriptions.FEATURE_GROUP.getValue()));
+        group.add(flowGroup("Release", AllIcons.Nodes.UpFolder, GitFlowDescriptions.RELEASE_GROUP.getValue()));
+        group.add(flowGroup("Hotfix", AllIcons.General.ExternalTools, GitFlowDescriptions.HOTFIX_GROUP.getValue()));
         return group;
     }
 
@@ -99,9 +109,130 @@ public final class GitFlowPopup extends PropertyObserver {
     private AnAction flowAction(String type, String action) {
         String actionTitle = action.substring(0, 1).toUpperCase(Locale.ROOT) + action.substring(1);
         BaseAction act = ActionBuilder.createActionInstance(
-                type+actionTitle+"Action", type, action, actionTitle, project, branchName);
+                type+actionTitle+"Action",
+                project,
+                actionTitle,
+                branchName);
         addPropertyChangeListener(act);
         return act;
+    }
+
+    private DefaultActionGroup repositoryBranchGroup(GitRepository repository) {
+        DefaultActionGroup group = new DefaultActionGroup(
+                repository.getProject().getName(),
+                GitFlowDescriptions.REPO_GROUP.getValue(),
+                AllIcons.Actions.CheckOut);
+        group.setPopup(true);
+
+        String currentBranch = repository.getCurrentBranchName();
+
+        group.add(new AnAction("Local Branches", "", AllIcons.Actions.MenuOpen) {
+            @Override
+            public void actionPerformed(@NotNull AnActionEvent e) {
+
+            }
+            @Override
+            public void update(@NotNull AnActionEvent e) {
+                Presentation presentation = e.getPresentation();
+                presentation.setEnabled(false);
+                presentation.setWeight(Presentation.HIGHER_WEIGHT);
+            }
+        });
+        group.addSeparator();
+
+        java.util.List<GitLocalBranch> orderedLocalBranches = sortBranches(
+                repository.getBranches().getLocalBranches(),
+                currentBranch,
+                GitLocalBranch::getName,
+                project
+        );
+
+        orderedLocalBranches.forEach(branch -> {
+            boolean isCurrent = branch.getName().equals(currentBranch);
+
+            group.add(new CheckoutLocalBranchAction(
+                    project,
+                    repository,
+                    branch.getName(),
+                    isCurrent
+            ));
+        });
+
+        group.addSeparator();
+        group.add(new AnAction("Remote Branches", "", AllIcons.Actions.MenuOpen) {
+            @Override
+            public void actionPerformed(@NotNull AnActionEvent e) {
+
+            }
+            @Override
+            public void update(@NotNull AnActionEvent e) {
+                Presentation presentation = e.getPresentation();
+                presentation.setEnabled(false);
+                presentation.setWeight(Presentation.EVEN_HIGHER_WEIGHT);
+            }
+        });
+        group.addSeparator();
+
+        java.util.List<GitRemoteBranch> orderedRemoteBranches = sortBranches(
+                repository.getBranches().getRemoteBranches(),
+                BaseAction.REMOTE+"/"+currentBranch,
+                GitRemoteBranch::getName,
+                project
+        );
+        orderedRemoteBranches.forEach(branch -> {
+            boolean isCurrent = branch.getName().equals(BaseAction.REMOTE+"/"+currentBranch);
+            group.add(new CheckoutRemoteBranchAction(
+                    project,
+                    repository,
+                    branch.getName(),
+                    isCurrent
+            ));
+        });
+
+        return group;
+    }
+
+    private <T> java.util.List<T> sortBranches(
+            Collection<T> branches,
+            String currentBranchName,
+            Function<T, String> branchNameExtractor,
+            Project project) {
+        GitFlowSettingsService service = GitFlowSettingsService.getInstance(project);
+        Map<String, T> byName = new HashMap<>();
+        for (T branch : branches) {
+            byName.put(branchNameExtractor.apply(branch), branch);
+        }
+
+        List<T> result = new ArrayList<>();
+
+        // 1) current branch
+        if (currentBranchName != null && byName.containsKey(currentBranchName)) {
+            result.add(byName.remove(currentBranchName));
+        }
+
+        // 2) main
+        if (byName.containsKey(service.getMainBranch())) {
+            result.add(byName.remove(service.getMainBranch()));
+        }
+        if (byName.containsKey(BaseAction.REMOTE + "/" + service.getMainBranch())) {
+            result.add(byName.remove(BaseAction.REMOTE + "/" + service.getMainBranch()));
+        }
+
+        // 3) develop
+        if (byName.containsKey(service.getDevelopBranch())) {
+            result.add(byName.remove(service.getDevelopBranch()));
+        }
+        if (byName.containsKey(BaseAction.REMOTE + "/" + service.getDevelopBranch())) {
+            result.add(byName.remove(BaseAction.REMOTE + "/" + service.getDevelopBranch()));
+        }
+
+
+        // 4) everything else
+        byName.values().stream()
+                .sorted(Comparator.comparing(branchNameExtractor, String.CASE_INSENSITIVE_ORDER))
+                .forEach(result::add);
+
+        return result;
     }
 
 }

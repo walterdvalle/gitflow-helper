@@ -4,6 +4,8 @@ import br.com.gitflowhelper.git.GitException;
 import br.com.gitflowhelper.git.GitExecutor;
 import br.com.gitflowhelper.git.GitResult;
 import br.com.gitflowhelper.settings.GitFlowSettingsService;
+import br.com.gitflowhelper.util.GitBranchUtils;
+import br.com.gitflowhelper.util.GitFlowDescriptions;
 import br.com.gitflowhelper.util.NotificationUtil;
 import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -25,10 +27,8 @@ import java.util.List;
 @SuppressWarnings("unused")
 public class HotfixFinishAction extends BaseAction {
 
-    private static final String ACTION_DESCRIPTION = "Merges current hotfix branch into master and develop chains and deletes current branch (git flow hotfix finish).";;
-
-    public HotfixFinishAction(Project project, String actionTitle, String type, String action, String branchName) {
-        super(project, actionTitle, type, action, branchName, AllIcons.Vcs.Patch_applied, ACTION_DESCRIPTION);
+    public HotfixFinishAction(Project project, String actionTitle, String branchName) {
+        super(actionTitle, GitFlowDescriptions.HOTFIX_FINISH.getValue(), AllIcons.Vcs.Patch_applied, project, branchName);
     }
 
     @Override
@@ -50,7 +50,7 @@ public class HotfixFinishAction extends BaseAction {
         Presentation presentation = e.getPresentation();
         presentation.setEnabled(
                 StringUtil.isNotEmpty(getMainBranch()) &&
-                branchName.startsWith(GitFlowSettingsService.getInstance(project).getHotfixPrefix())
+                        branchName.startsWith(getHotfixPrefix())
         );
     }
 
@@ -63,11 +63,8 @@ public class HotfixFinishAction extends BaseAction {
         GitRepositoryManager repoManager = GitRepositoryManager.getInstance(project);
         GitExecutor executor = new GitExecutor(project);
 
-        GitFlowSettingsService settings =
-                GitFlowSettingsService.getInstance(project);
-
-        String mainBranch = settings.getMainBranch();
-        String developBranch = settings.getDevelopBranch();
+        String mainBranch = getMainBranch();
+        String developBranch = getDevelopBranch();
 
         for (GitRepository repository : repoManager.getRepositories()) {
 

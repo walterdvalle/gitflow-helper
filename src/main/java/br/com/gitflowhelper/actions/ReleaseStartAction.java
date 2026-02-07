@@ -5,6 +5,9 @@ import br.com.gitflowhelper.git.GitException;
 import br.com.gitflowhelper.git.GitExecutor;
 import br.com.gitflowhelper.git.GitResult;
 import br.com.gitflowhelper.settings.GitFlowSettingsService;
+import br.com.gitflowhelper.util.GitBranchUtils;
+import br.com.gitflowhelper.util.GitFlowBranchType;
+import br.com.gitflowhelper.util.GitFlowDescriptions;
 import br.com.gitflowhelper.util.NotificationUtil;
 import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -24,15 +27,13 @@ import java.util.List;
 @SuppressWarnings("unused")
 public class ReleaseStartAction extends BaseAction {
 
-    private static final String ACTION_DESCRIPTION = "XXX";
-
-    public ReleaseStartAction(Project project, String actionTitle, String type, String action, String branchName) {
-        super(project, actionTitle, type, action, branchName, AllIcons.Actions.Execute, ACTION_DESCRIPTION);
+    public ReleaseStartAction(Project project, String actionTitle, String branchName) {
+        super(actionTitle, GitFlowDescriptions.RELEASE_START.getValue(), AllIcons.Actions.Execute, project, branchName);
     }
 
     @Override
     public void actionPerformed(@NotNull AnActionEvent e) {
-        new NameDialog(project, type + " start", "Version description", true, (name) ->
+        new NameDialog(project, GitFlowBranchType.RELEASE.getValue() + " start", "Version description", true, (name) ->
         {
             ApplicationManager.getApplication().executeOnPooledThread(() -> {
                 setLoading(true);
@@ -53,12 +54,12 @@ public class ReleaseStartAction extends BaseAction {
         Presentation presentation = e.getPresentation();
         presentation.setEnabled(
                 StringUtil.isNotEmpty(getMainBranch()) &&
-                branchName.equals(getDevelopBranch())
+                        branchName.equals(getDevelopBranch())
         );
     }
 
     public List<GitResult> releaseStart(String releaseName, boolean push) {
-        String releaseBranch = GitFlowSettingsService.getInstance(project).getReleasePrefix() + releaseName;
+        String releaseBranch = getReleasePrefix() + releaseName;
         List<GitResult> results = new ArrayList<>();
         GitRepositoryManager repoManager = GitRepositoryManager.getInstance(project);
         GitExecutor executor = new GitExecutor(project);
@@ -72,7 +73,7 @@ public class ReleaseStartAction extends BaseAction {
                     executor.execute(
                             root,
                             GitCommand.CHECKOUT,
-                            GitFlowSettingsService.getInstance(project).getDevelopBranch()
+                            getDevelopBranch()
                     )
             );
 
@@ -82,7 +83,7 @@ public class ReleaseStartAction extends BaseAction {
                             root,
                             GitCommand.PULL,
                             REMOTE,
-                            GitFlowSettingsService.getInstance(project).getDevelopBranch()
+                            getDevelopBranch()
                     )
             );
 

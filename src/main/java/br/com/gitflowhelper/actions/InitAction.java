@@ -5,6 +5,7 @@ import br.com.gitflowhelper.git.GitException;
 import br.com.gitflowhelper.git.GitExecutor;
 import br.com.gitflowhelper.git.GitResult;
 import br.com.gitflowhelper.settings.GitFlowSettingsService;
+import br.com.gitflowhelper.util.GitFlowDescriptions;
 import br.com.gitflowhelper.util.NotificationUtil;
 import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -28,10 +29,8 @@ import java.util.stream.Collectors;
 @SuppressWarnings("unused")
 public class InitAction extends BaseAction {
 
-    private static final String ACTION_DESCRIPTION = "Initializes current repo to use Git Flow (git flow init).";
-
     public InitAction(Project project, String actionTitle) {
-        super(project, actionTitle, null, null, null, AllIcons.Scope.Production, ACTION_DESCRIPTION);
+        super(actionTitle, GitFlowDescriptions.INIT.getValue(), AllIcons.Scope.Production, project, null);
     }
 
     @Override
@@ -58,25 +57,6 @@ public class InitAction extends BaseAction {
             }
             setLoading(false);
         });
-
-//        String cmd1 = "git config gitflow.branch.master " + mainField;
-//        String cmd2 = "git config gitflow.branch.develop "+ developField;
-//        String cmd3 = "git flow init -d ";
-//        String cmd4 = "git config gitflow.prefix.feature " + featureField;
-//        String cmd5 = "git config gitflow.prefix.release " + releaseField;
-//        String cmd6 = "git config gitflow.prefix.hotfix " + hotfixField;
-//        try {
-//            GitCommandExecutor.run(this.project, List.of(cmd1.split(" ")));
-//            GitCommandExecutor.run(this.project, List.of(cmd2.split(" ")));
-//            GitCommandExecutor.run(this.project, List.of(cmd3.split(" ")));
-//            GitCommandExecutor.run(this.project, List.of(cmd4.split(" ")));
-//            GitCommandExecutor.run(this.project, List.of(cmd5.split(" ")));
-//            GitCommandExecutor.run(this.project, List.of(cmd6.split(" ")));
-//        } catch (GitException e) {
-//            NotificationUtil.showGitFlowErrorNotification(project, "Error", GitCommandExecutor.getLastErrorMessage());
-//            return;
-//        }
-//        NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Git Flow Initialization Successful");
     }
 
     public List<GitResult> init(boolean pushOnFinish) {
@@ -85,18 +65,17 @@ public class InitAction extends BaseAction {
         GitExecutor executor = new GitExecutor(project);
         GitRepositoryManager repoManager = GitRepositoryManager.getInstance(project);
 
-        GitFlowSettingsService settings = GitFlowSettingsService.getInstance(project);
-        String mainBranch = settings.getMainBranch();
-        String developBranch = settings.getDevelopBranch();
-        String featurePrefix = normalizePrefix(settings.getFeaturePrefix());
-        String releasePrefix = normalizePrefix(settings.getReleasePrefix());
-        String hotfixPrefix  = normalizePrefix(settings.getHotfixPrefix());
+        String mainBranch = getMainBranch();
+        String developBranch = getDevelopBranch();
+        String featurePrefix = normalizePrefix(getFeaturePrefix());
+        String releasePrefix = normalizePrefix(getReleasePrefix());
+        String hotfixPrefix  = normalizePrefix(getHotfixPrefix());
 
         for (GitRepository repository : repoManager.getRepositories()) {
 
             VirtualFile root = repository.getRoot();
 
-            // 🔎 does local branches exist
+            // does local branches exist
             Map<String, GitLocalBranch> localBranches =
                     repository.getBranches()
                             .getLocalBranches()

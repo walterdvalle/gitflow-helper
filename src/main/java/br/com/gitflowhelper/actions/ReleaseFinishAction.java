@@ -4,6 +4,8 @@ import br.com.gitflowhelper.git.GitException;
 import br.com.gitflowhelper.git.GitExecutor;
 import br.com.gitflowhelper.git.GitResult;
 import br.com.gitflowhelper.settings.GitFlowSettingsService;
+import br.com.gitflowhelper.util.GitBranchUtils;
+import br.com.gitflowhelper.util.GitFlowDescriptions;
 import br.com.gitflowhelper.util.NotificationUtil;
 import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -23,10 +25,8 @@ import java.util.List;
 @SuppressWarnings("unused")
 public class ReleaseFinishAction extends BaseAction {
 
-    private static final String ACTION_DESCRIPTION = "XXX";
-
-    public ReleaseFinishAction(Project project, String actionTitle, String type, String action, String branchName) {
-        super(project, actionTitle, type, action, branchName, AllIcons.Vcs.Patch_applied, ACTION_DESCRIPTION);
+    public ReleaseFinishAction(Project project, String actionTitle, String branchName) {
+        super(actionTitle, GitFlowDescriptions.RELEASE_FINISH.getValue(), AllIcons.Vcs.Patch_applied, project, branchName);
     }
 
     @Override
@@ -48,7 +48,7 @@ public class ReleaseFinishAction extends BaseAction {
         Presentation presentation = e.getPresentation();
         presentation.setEnabled(
                 StringUtil.isNotEmpty(getMainBranch()) &&
-                branchName.startsWith(GitFlowSettingsService.getInstance(project).getReleasePrefix())
+                        branchName.startsWith(getReleasePrefix())
         );
     }
 
@@ -66,18 +66,18 @@ public class ReleaseFinishAction extends BaseAction {
                     repository.getCurrentBranchName().indexOf("/")+1
             );
             String releaseBranch = repository.getCurrentBranchName();
-            String tagMessage = String.format("Merge branch '%s' into %s", releaseBranch, GitFlowSettingsService.getInstance(project).getMainBranch());
+            String tagMessage = String.format("Merge branch '%s' into %s", releaseBranch, getMainBranch());
 
             VirtualFile root = repository.getRoot();
 
             // 1 checkout main
             results.add(
-                    executor.execute(root, GitCommand.CHECKOUT, GitFlowSettingsService.getInstance(project).getMainBranch())
+                    executor.execute(root, GitCommand.CHECKOUT, getMainBranch())
             );
 
             // 2 pull main
             results.add(
-                    executor.execute(root, GitCommand.PULL, REMOTE, GitFlowSettingsService.getInstance(project).getMainBranch())
+                    executor.execute(root, GitCommand.PULL, REMOTE, getMainBranch())
             );
 
             // 3 merge release -> main
@@ -108,12 +108,12 @@ public class ReleaseFinishAction extends BaseAction {
 
             // 5 checkout develop
             results.add(
-                    executor.execute(root, GitCommand.CHECKOUT, GitFlowSettingsService.getInstance(project).getDevelopBranch())
+                    executor.execute(root, GitCommand.CHECKOUT, getDevelopBranch())
             );
 
             // 6 pull develop
             results.add(
-                    executor.execute(root, GitCommand.PULL, REMOTE, GitFlowSettingsService.getInstance(project).getDevelopBranch())
+                    executor.execute(root, GitCommand.PULL, REMOTE, getDevelopBranch())
             );
 
             // 7 merge release -> develop
@@ -131,11 +131,11 @@ public class ReleaseFinishAction extends BaseAction {
             // 8 push branches + tag
             if (tagAndPush) {
                 results.add(
-                        executor.execute(root, GitCommand.PUSH, REMOTE, GitFlowSettingsService.getInstance(project).getMainBranch())
+                        executor.execute(root, GitCommand.PUSH, REMOTE, getMainBranch())
                 );
 
                 results.add(
-                        executor.execute(root, GitCommand.PUSH, REMOTE, GitFlowSettingsService.getInstance(project).getDevelopBranch())
+                        executor.execute(root, GitCommand.PUSH, REMOTE, getDevelopBranch())
                 );
 
                 results.add(

@@ -5,6 +5,9 @@ import br.com.gitflowhelper.git.GitException;
 import br.com.gitflowhelper.git.GitExecutor;
 import br.com.gitflowhelper.git.GitResult;
 import br.com.gitflowhelper.settings.GitFlowSettingsService;
+import br.com.gitflowhelper.util.GitBranchUtils;
+import br.com.gitflowhelper.util.GitFlowBranchType;
+import br.com.gitflowhelper.util.GitFlowDescriptions;
 import br.com.gitflowhelper.util.NotificationUtil;
 import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -24,15 +27,13 @@ import java.util.List;
 @SuppressWarnings("unused")
 public class HotfixStartAction extends BaseAction {
 
-    private static final String ACTION_DESCRIPTION = "Creates a new local hotfix branch (git flow hotfix start).";;
-
-    public HotfixStartAction(Project project, String actionTitle, String type, String action, String branchName) {
-        super(project, actionTitle, type, action, branchName, AllIcons.Actions.Execute, ACTION_DESCRIPTION);
+    public HotfixStartAction(Project project, String actionTitle, String branchName) {
+        super(actionTitle, GitFlowDescriptions.HOTFIX_START.getValue(), AllIcons.Actions.Execute, project, branchName);
     }
 
     @Override
     public void actionPerformed(@NotNull AnActionEvent e) {
-        new NameDialog(project, type + " start", "Hotfix description", true, name ->
+        new NameDialog(project, GitFlowBranchType.HOTFIX.getValue() + " start", "Hotfix description", true, name ->
         {
             ApplicationManager.getApplication().executeOnPooledThread(() -> {
                 setLoading(true);
@@ -53,7 +54,7 @@ public class HotfixStartAction extends BaseAction {
         Presentation presentation = e.getPresentation();
         presentation.setEnabled(
                 StringUtil.isNotEmpty(getMainBranch()) &&
-                branchName.equals(getMainBranch())
+                        branchName.equals(getMainBranch())
         );
     }
 
@@ -62,8 +63,8 @@ public class HotfixStartAction extends BaseAction {
         GitRepositoryManager repoManager = GitRepositoryManager.getInstance(project);
         GitExecutor executor = new GitExecutor(project);
 
-        String mainBranch = GitFlowSettingsService.getInstance(project).getMainBranch();
-        String hotfixBranch = GitFlowSettingsService.getInstance(project).getHotfixPrefix() + hotfixName;
+        String mainBranch = getMainBranch();
+        String hotfixBranch = getHotfixPrefix() + hotfixName;
 
         for (GitRepository repository : repoManager.getRepositories()) {
 

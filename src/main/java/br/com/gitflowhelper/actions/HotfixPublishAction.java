@@ -4,6 +4,8 @@ import br.com.gitflowhelper.git.GitException;
 import br.com.gitflowhelper.git.GitExecutor;
 import br.com.gitflowhelper.git.GitResult;
 import br.com.gitflowhelper.settings.GitFlowSettingsService;
+import br.com.gitflowhelper.util.GitBranchUtils;
+import br.com.gitflowhelper.util.GitFlowDescriptions;
 import br.com.gitflowhelper.util.NotificationUtil;
 import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -24,10 +26,8 @@ import java.util.List;
 @SuppressWarnings("unused")
 public class HotfixPublishAction extends BaseAction {
 
-    private static final String ACTION_DESCRIPTION = "Pushes the current hotfix branch to VCS (git flow hotfix publish).";;
-
-    public HotfixPublishAction(Project project, String actionTitle, String type, String action, String branchName) {
-        super(project, actionTitle, type, action, branchName, AllIcons.CodeWithMe.CwmShared, ACTION_DESCRIPTION);
+    public HotfixPublishAction(Project project, String actionTitle, String branchName) {
+        super(actionTitle, GitFlowDescriptions.HOTFIX_PUBLISH.getValue(), AllIcons.CodeWithMe.CwmShared, project, branchName);
     }
 
     @Override
@@ -49,7 +49,7 @@ public class HotfixPublishAction extends BaseAction {
         Presentation presentation = e.getPresentation();
         presentation.setEnabled(
                 StringUtil.isNotEmpty(getMainBranch()) &&
-                branchName.startsWith(GitFlowSettingsService.getInstance(project).getHotfixPrefix())
+                        branchName.startsWith(getHotfixPrefix())
         );
     }
 
@@ -87,7 +87,6 @@ public class HotfixPublishAction extends BaseAction {
                     )
             );
 
-            // 🔄 Atualiza estado do repositório no IntelliJ
             repository.update();
         }
 
