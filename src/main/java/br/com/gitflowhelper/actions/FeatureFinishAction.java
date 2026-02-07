@@ -28,14 +28,15 @@ import java.util.stream.Collectors;
 @SuppressWarnings("unused")
 public class FeatureFinishAction extends BaseAction {
 
-    public FeatureFinishAction(Project project, String actionTitle, String branchName) {
-        super(actionTitle, GitFlowDescriptions.FEATURE_FINISH.getValue(), AllIcons.Vcs.Patch_applied, project, branchName);
+    public FeatureFinishAction(String actionTitle, String branchName) {
+        super(actionTitle, GitFlowDescriptions.FEATURE_FINISH.getValue(), AllIcons.Vcs.Patch_applied, branchName);
     }
 
     @Override
     public void actionPerformed(@NotNull AnActionEvent e) {
         String featureCommits = "";
         String[] postAction = new String[1];
+        Project project = getProject();
         ActionChoiceDialog dialog = new ActionChoiceDialog(project, branchName, getDevelopBranch());
 
         GitRepositoryManager repoManager = GitRepositoryManager.getInstance(project);

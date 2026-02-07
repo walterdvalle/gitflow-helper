@@ -1,5 +1,6 @@
 package br.com.gitflowhelper.actions.branches;
 
+import br.com.gitflowhelper.actions.ActionParamsService;
 import br.com.gitflowhelper.actions.BaseAction;
 import br.com.gitflowhelper.git.GitException;
 import br.com.gitflowhelper.git.GitExecutor;
@@ -18,7 +19,6 @@ public class CheckoutLocalBranchAction extends BaseAction {
     private final GitRepository repository;
 
     public CheckoutLocalBranchAction(
-            Project project,
             GitRepository repository,
             String localBranchName,
             boolean isCurrent
@@ -27,10 +27,10 @@ public class CheckoutLocalBranchAction extends BaseAction {
                 "Checkout local branch "+localBranchName,
                 (isCurrent ?
                     AllIcons.Gutter.Bookmark :
-                    localBranchName.equals(GitFlowSettingsService.getInstance(project).getMainBranch()) ?
+                    localBranchName.equals(GitFlowSettingsService.getInstance(ActionParamsService.getProject()).getMainBranch()) ?
                             AllIcons.Nodes.Favorite :
                             AllIcons.Vcs.BranchNode),
-                project, localBranchName);
+                localBranchName);
         this.repository = repository;
     }
 
@@ -41,6 +41,7 @@ public class CheckoutLocalBranchAction extends BaseAction {
 
     @Override
     public void actionPerformed(@NotNull AnActionEvent e) {
+        Project project = getProject();
         String currentBranchName = repository.getCurrentBranchName();
         String checkoutBranchName = getTemplatePresentation().getText();
         boolean isCurrent = currentBranchName.equals(checkoutBranchName);

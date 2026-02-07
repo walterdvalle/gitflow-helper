@@ -25,12 +25,13 @@ import java.util.List;
 @SuppressWarnings("unused")
 public class ReleasePublishAction extends BaseAction {
 
-    public ReleasePublishAction(Project project, String actionTitle, String branchName) {
-        super(actionTitle, GitFlowDescriptions.RELEASE_PUBLISH.getValue(), AllIcons.CodeWithMe.CwmShared, project, branchName);
+    public ReleasePublishAction(String actionTitle, String branchName) {
+        super(actionTitle, GitFlowDescriptions.RELEASE_PUBLISH.getValue(), AllIcons.CodeWithMe.CwmShared, branchName);
     }
 
     @Override
     public void actionPerformed(@NotNull AnActionEvent e) {
+        Project project = getProject();
         ApplicationManager.getApplication().executeOnPooledThread(() -> {
             setLoading(true);
             try {

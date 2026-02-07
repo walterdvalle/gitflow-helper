@@ -3,8 +3,6 @@ package br.com.gitflowhelper.actions;
 import br.com.gitflowhelper.git.GitException;
 import br.com.gitflowhelper.git.GitExecutor;
 import br.com.gitflowhelper.git.GitResult;
-import br.com.gitflowhelper.settings.GitFlowSettingsService;
-import br.com.gitflowhelper.util.GitBranchUtils;
 import br.com.gitflowhelper.util.GitFlowDescriptions;
 import br.com.gitflowhelper.util.NotificationUtil;
 import com.intellij.icons.AllIcons;
@@ -26,16 +24,17 @@ import java.util.List;
 @SuppressWarnings("unused")
 public class HotfixPublishAction extends BaseAction {
 
-    public HotfixPublishAction(Project project, String actionTitle, String branchName) {
-        super(actionTitle, GitFlowDescriptions.HOTFIX_PUBLISH.getValue(), AllIcons.CodeWithMe.CwmShared, project, branchName);
+    public HotfixPublishAction(String actionTitle, String branchName) {
+        super(actionTitle, GitFlowDescriptions.HOTFIX_PUBLISH.getValue(), AllIcons.CodeWithMe.CwmShared, branchName);
     }
 
     @Override
     public void actionPerformed(@NotNull AnActionEvent e) {
+        Project project = getProject();
         ApplicationManager.getApplication().executeOnPooledThread(() -> {
             setLoading(true);
             try {
-                hotfixPublish();
+                hotfixPublish(project);
                 NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Hotfix published successfully");
             } catch (GitException ex) {
                 NotificationUtil.showGitFlowErrorNotification(project, "Error", ex.getGitResult().getProcessMessage());
@@ -53,7 +52,7 @@ public class HotfixPublishAction extends BaseAction {
         );
     }
 
-    private List<GitResult> hotfixPublish() {
+    private List<GitResult> hotfixPublish(Project project) {
         List<GitResult> results = new ArrayList<>();
         GitRepositoryManager repoManager = GitRepositoryManager.getInstance(project);
         GitExecutor executor = new GitExecutor(project);

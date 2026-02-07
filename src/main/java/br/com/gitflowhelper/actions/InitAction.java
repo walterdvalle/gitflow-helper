@@ -4,7 +4,6 @@ import br.com.gitflowhelper.dialog.InitDialog;
 import br.com.gitflowhelper.git.GitException;
 import br.com.gitflowhelper.git.GitExecutor;
 import br.com.gitflowhelper.git.GitResult;
-import br.com.gitflowhelper.settings.GitFlowSettingsService;
 import br.com.gitflowhelper.util.GitFlowDescriptions;
 import br.com.gitflowhelper.util.NotificationUtil;
 import com.intellij.icons.AllIcons;
@@ -29,13 +28,13 @@ import java.util.stream.Collectors;
 @SuppressWarnings("unused")
 public class InitAction extends BaseAction {
 
-    public InitAction(Project project, String actionTitle) {
-        super(actionTitle, GitFlowDescriptions.INIT.getValue(), AllIcons.Scope.Production, project, null);
+    public InitAction(String actionTitle) {
+        super(actionTitle, GitFlowDescriptions.INIT.getValue(), AllIcons.Scope.Production, null);
     }
 
     @Override
     public void actionPerformed(@NotNull AnActionEvent e) {
-        new InitDialog(project, this).show();
+        new InitDialog(this).show();
     }
 
     @Override
@@ -47,10 +46,11 @@ public class InitAction extends BaseAction {
     //invoked by InitDialog
     public void doOKAction(String mainField, String developField, String featureField,
                            String releaseField, String hotfixField) {
+        Project project = getProject();
         ApplicationManager.getApplication().executeOnPooledThread(() -> {
             setLoading(true);
             try {
-                init(true);
+                init(true, project);
                 NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Git Flow Initialization Successful");
             } catch (GitException ex) {
                 NotificationUtil.showGitFlowErrorNotification(project, "Error", ex.getGitResult().getProcessMessage());
@@ -59,7 +59,7 @@ public class InitAction extends BaseAction {
         });
     }
 
-    public List<GitResult> init(boolean pushOnFinish) {
+    public List<GitResult> init(boolean pushOnFinish, Project project) {
 
         List<GitResult> results = new ArrayList<>();
         GitExecutor executor = new GitExecutor(project);

@@ -51,7 +51,6 @@ public class RepositoryBranchGroup extends DefaultActionGroup {
             boolean isCurrent = branch.getName().equals(currentBranch);
 
             add(new CheckoutLocalBranchAction(
-                    project,
                     repository,
                     branch.getName(),
                     isCurrent
@@ -82,7 +81,6 @@ public class RepositoryBranchGroup extends DefaultActionGroup {
         orderedRemoteBranches.forEach(branch -> {
             boolean isCurrent = branch.getName().equals(BaseAction.REMOTE+"/"+currentBranch);
             add(new CheckoutRemoteBranchAction(
-                    project,
                     repository,
                     branch.getName(),
                     isCurrent

@@ -27,11 +27,12 @@ import java.util.List;
 @SuppressWarnings("unused")
 public class FeatureStartAction extends BaseAction {
 
-    public FeatureStartAction(Project project, String actionTitle, String branchName) {
-        super(actionTitle, GitFlowDescriptions.FEATURE_START.getValue(), AllIcons.Actions.Execute, project, branchName);
+    public FeatureStartAction(String actionTitle, String branchName) {
+        super(actionTitle, GitFlowDescriptions.FEATURE_START.getValue(), AllIcons.Actions.Execute, branchName);
     }
 
     public void actionPerformed(@NotNull AnActionEvent e) {
+        Project project = getProject();
         new NameDialog(project, GitFlowBranchType.FEATURE.getValue() + " start", "Feature description", false, name ->
         {
             ApplicationManager.getApplication().executeOnPooledThread(() -> {

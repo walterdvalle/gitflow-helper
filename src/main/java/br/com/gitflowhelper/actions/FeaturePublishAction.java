@@ -22,12 +22,13 @@ import java.util.List;
 @SuppressWarnings("unused")
 public class FeaturePublishAction extends BaseAction {
 
-    public FeaturePublishAction(Project project, String actionTitle, String branchName) {
-        super(actionTitle, GitFlowDescriptions.FEATURE_PUBLISH.getValue(), AllIcons.CodeWithMe.CwmShared, project, branchName);
+    public FeaturePublishAction(String actionTitle, String branchName) {
+        super(actionTitle, GitFlowDescriptions.FEATURE_PUBLISH.getValue(), AllIcons.CodeWithMe.CwmShared, branchName);
     }
 
     @Override
     public void actionPerformed(@NotNull AnActionEvent e) {
+        Project project = getProject();
         ApplicationManager.getApplication().executeOnPooledThread(() -> {
             setLoading(true);
             try {

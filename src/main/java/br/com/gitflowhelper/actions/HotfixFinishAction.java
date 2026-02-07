@@ -3,8 +3,6 @@ package br.com.gitflowhelper.actions;
 import br.com.gitflowhelper.git.GitException;
 import br.com.gitflowhelper.git.GitExecutor;
 import br.com.gitflowhelper.git.GitResult;
-import br.com.gitflowhelper.settings.GitFlowSettingsService;
-import br.com.gitflowhelper.util.GitBranchUtils;
 import br.com.gitflowhelper.util.GitFlowDescriptions;
 import br.com.gitflowhelper.util.NotificationUtil;
 import com.intellij.icons.AllIcons;
@@ -16,7 +14,6 @@ import com.intellij.openapi.util.text.StringUtil;
 import com.intellij.openapi.vfs.VirtualFile;
 import git4idea.GitLocalBranch;
 import git4idea.commands.GitCommand;
-import git4idea.commands.GitCommandResult;
 import git4idea.repo.GitRepository;
 import git4idea.repo.GitRepositoryManager;
 import org.jetbrains.annotations.NotNull;
@@ -27,16 +24,17 @@ import java.util.List;
 @SuppressWarnings("unused")
 public class HotfixFinishAction extends BaseAction {
 
-    public HotfixFinishAction(Project project, String actionTitle, String branchName) {
-        super(actionTitle, GitFlowDescriptions.HOTFIX_FINISH.getValue(), AllIcons.Vcs.Patch_applied, project, branchName);
+    public HotfixFinishAction(String actionTitle, String branchName) {
+        super(actionTitle, GitFlowDescriptions.HOTFIX_FINISH.getValue(), AllIcons.Vcs.Patch_applied, branchName);
     }
 
     @Override
     public void actionPerformed(@NotNull AnActionEvent e) {
+        Project project = getProject();
         ApplicationManager.getApplication().executeOnPooledThread(() -> {
             setLoading(true);
             try {
-                hotfixFinish(true, true, true);
+                hotfixFinish(project,true, true, true);
                 NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Hotfix finished and tag pushed successfully");
             } catch (GitException ex) {
                 NotificationUtil.showGitFlowErrorNotification(project, "Error", ex.getGitResult().getProcessMessage());
@@ -55,7 +53,7 @@ public class HotfixFinishAction extends BaseAction {
     }
 
     public List<GitResult> hotfixFinish(
-            boolean deleteLocalBranch,
+            Project project, boolean deleteLocalBranch,
             boolean deleteRemoteBranch,
             boolean tagAndPush
     ) {

@@ -4,8 +4,6 @@ import br.com.gitflowhelper.dialog.NameDialog;
 import br.com.gitflowhelper.git.GitException;
 import br.com.gitflowhelper.git.GitExecutor;
 import br.com.gitflowhelper.git.GitResult;
-import br.com.gitflowhelper.settings.GitFlowSettingsService;
-import br.com.gitflowhelper.util.GitBranchUtils;
 import br.com.gitflowhelper.util.GitFlowBranchType;
 import br.com.gitflowhelper.util.GitFlowDescriptions;
 import br.com.gitflowhelper.util.NotificationUtil;
@@ -27,18 +25,19 @@ import java.util.List;
 @SuppressWarnings("unused")
 public class ReleaseStartAction extends BaseAction {
 
-    public ReleaseStartAction(Project project, String actionTitle, String branchName) {
-        super(actionTitle, GitFlowDescriptions.RELEASE_START.getValue(), AllIcons.Actions.Execute, project, branchName);
+    public ReleaseStartAction(String actionTitle, String branchName) {
+        super(actionTitle, GitFlowDescriptions.RELEASE_START.getValue(), AllIcons.Actions.Execute, branchName);
     }
 
     @Override
     public void actionPerformed(@NotNull AnActionEvent e) {
+        Project project = getProject();
         new NameDialog(project, GitFlowBranchType.RELEASE.getValue() + " start", "Version description", true, (name) ->
         {
             ApplicationManager.getApplication().executeOnPooledThread(() -> {
                 setLoading(true);
                 try {
-                    releaseStart(name.getName(), name.getPushOnFinish());
+                    releaseStart(project, name.getName(), name.getPushOnFinish());
                     NotificationUtil.showGitFlowSuccessNotification(project, "Success", "New release created successfully");
                 } catch (GitException ex) {
                     NotificationUtil.showGitFlowErrorNotification(project, "Error", ex.getGitResult().getProcessMessage());
@@ -58,7 +57,7 @@ public class ReleaseStartAction extends BaseAction {
         );
     }
 
-    public List<GitResult> releaseStart(String releaseName, boolean push) {
+    public List<GitResult> releaseStart(Project project, String releaseName, boolean push) {
         String releaseBranch = getReleasePrefix() + releaseName;
         List<GitResult> results = new ArrayList<>();
         GitRepositoryManager repoManager = GitRepositoryManager.getInstance(project);

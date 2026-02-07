@@ -26,7 +26,6 @@ public abstract class BaseAction extends AnAction implements PropertyChangeListe
 
     https://plugins.jetbrains.com/docs/intellij/action-system.html
      */
-    protected Project project;
     protected String branchName;
 
     public BaseAction(String actionTitle, String description, Icon icon) {
@@ -37,10 +36,8 @@ public abstract class BaseAction extends AnAction implements PropertyChangeListe
             String actionTitle,
             String description,
             Icon icon,
-            Project project,
             String branchName) {
         super(actionTitle, description, icon);
-        this.project = project;
         this.branchName = branchName;
     }
 
@@ -50,26 +47,26 @@ public abstract class BaseAction extends AnAction implements PropertyChangeListe
     }
 
     public String getMainBranch() {
-        return GitFlowSettingsService.getInstance(project).getMainBranch();
+        return GitFlowSettingsService.getInstance(getProject()).getMainBranch();
     }
     public String getDevelopBranch() {
-        return GitFlowSettingsService.getInstance(project).getDevelopBranch();
+        return GitFlowSettingsService.getInstance(getProject()).getDevelopBranch();
     }
     public String getFeaturePrefix() {
-        return GitFlowSettingsService.getInstance(project).getFeaturePrefix();
+        return GitFlowSettingsService.getInstance(getProject()).getFeaturePrefix();
     }
     public String getReleasePrefix() {
-        return GitFlowSettingsService.getInstance(project).getReleasePrefix();
+        return GitFlowSettingsService.getInstance(getProject()).getReleasePrefix();
     }
     public String getHotfixPrefix() {
-        return GitFlowSettingsService.getInstance(project).getHotfixPrefix();
+        return GitFlowSettingsService.getInstance(getProject()).getHotfixPrefix();
     }
     public Project getProject() {
-        return null;
+        return ActionParamsService.getProject();
     }
 
     public void setLoading(boolean loading) {
-        StatusBar statusBar = WindowManager.getInstance().getStatusBar(project);
+        StatusBar statusBar = WindowManager.getInstance().getStatusBar(getProject());
         GitFlowStatusBarWidget sbw = (GitFlowStatusBarWidget) statusBar.getWidget("GitFlowWidget");
         sbw.setLoadding(loading);
         statusBar.updateWidget("GitFlowWidget");

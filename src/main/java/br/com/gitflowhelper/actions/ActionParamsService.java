@@ -1,13 +1,12 @@
 package br.com.gitflowhelper.actions;
 
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
+import com.intellij.openapi.project.Project;
 
 public final class ActionParamsService {
 
     private static final ActionParamsService INSTANCE = new ActionParamsService();
-
-    private final Map<String, ActionParams> storage = new ConcurrentHashMap<>();
+    private static Project project;
+    private static String branchName;
 
     private ActionParamsService() { }
 
@@ -15,21 +14,18 @@ public final class ActionParamsService {
         return INSTANCE;
     }
 
-    public void put(String key, ActionParams value) {
-        if (key == null || value == null) {
-            throw new IllegalArgumentException("Key e value não podem ser null");
-        }
-        storage.put(key, value);
+    public static void setProject(Project project) {
+        ActionParamsService.project = project;
+    }
+    public static void setBranchName(String branchName) {
+        ActionParamsService.branchName = branchName;
+    }
+    public static Project getProject() {
+        return project;
+    }
+    public static String getBranchName() {
+        return branchName;
     }
 
-    public ActionParams get(String key) {
-        if (key == null) {
-            return null;
-        }
-        return storage.get(key);
-    }
 
-    public void clear() {
-        storage.clear();
-    }
 }

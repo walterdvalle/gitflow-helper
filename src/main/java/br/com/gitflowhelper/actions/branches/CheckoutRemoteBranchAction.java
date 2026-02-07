@@ -1,5 +1,6 @@
 package br.com.gitflowhelper.actions.branches;
 
+import br.com.gitflowhelper.actions.ActionParamsService;
 import br.com.gitflowhelper.actions.BaseAction;
 import br.com.gitflowhelper.git.GitException;
 import br.com.gitflowhelper.git.GitExecutor;
@@ -19,7 +20,6 @@ public class CheckoutRemoteBranchAction extends BaseAction {
     private final GitRepository repository;
 
     public CheckoutRemoteBranchAction(
-            Project project,
             GitRepository repository,
             String remoteBranchName,
             boolean isCurrent
@@ -28,13 +28,11 @@ public class CheckoutRemoteBranchAction extends BaseAction {
                 "Checkout remote branch "+remoteBranchName,
                 (isCurrent ?
                         AllIcons.Gutter.Bookmark :
-                        remoteBranchName.equals(BaseAction.REMOTE+"/"+GitFlowSettingsService.getInstance(project).getMainBranch()) ?
+                        remoteBranchName.equals(BaseAction.REMOTE+"/"+GitFlowSettingsService.getInstance(ActionParamsService.getProject()).getMainBranch()) ?
                                 AllIcons.Nodes.Favorite :
                                 AllIcons.Vcs.BranchNode
                 ),
-                project,
                 remoteBranchName);
-        this.project = project;
         this.repository = repository;
     }
 
@@ -45,6 +43,7 @@ public class CheckoutRemoteBranchAction extends BaseAction {
 
     @Override
     public void actionPerformed(@NotNull AnActionEvent e) {
+        Project project = getProject();
         String currentBranchName = repository.getCurrentBranchName();
         String checkoutBranchName = getTemplatePresentation().getText();
         boolean isCurrent = currentBranchName.equals(checkoutBranchName);
@@ -59,7 +58,7 @@ public class CheckoutRemoteBranchAction extends BaseAction {
         GitBranch branch = this.repository.getBranches().findLocalBranch(localBranch);
         if (branch != null) {
             new CheckoutLocalBranchAction(
-                    this.project, this.repository, localBranch, false
+                    this.repository, localBranch, false
             ).actionPerformed(e);
             return;
         }

@@ -1,5 +1,6 @@
 package br.com.gitflowhelper.dialog;
 
+import br.com.gitflowhelper.actions.ActionParamsService;
 import br.com.gitflowhelper.actions.InitAction;
 import br.com.gitflowhelper.settings.GitFlowSettingsService;
 import com.intellij.openapi.project.Project;
@@ -21,12 +22,10 @@ public class InitDialog extends DialogWrapper {
 
     private JPanel panel = new JPanel(new GridBagLayout());
 
-    private Project project;
     private InitAction initAction;
 
-    public InitDialog(Project project, InitAction initAction) {
-        super(project);
-        this.project = project;
+    public InitDialog(InitAction initAction) {
+        super(ActionParamsService.getProject());
         this.initAction = initAction;
         setTitle("Git Flow Init");
         init();
@@ -52,7 +51,7 @@ public class InitDialog extends DialogWrapper {
 
     @Override
     public void doOKAction() {
-        GitFlowSettingsService settings = GitFlowSettingsService.getInstance(project);
+        GitFlowSettingsService settings = GitFlowSettingsService.getInstance(ActionParamsService.getProject());
         settings.setMainBranch(mainField.getText());
         settings.setDevelopBranch(developField.getText());
         settings.setFeaturePrefix(featureField.getText());

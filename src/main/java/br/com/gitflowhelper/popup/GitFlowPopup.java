@@ -1,11 +1,11 @@
 package br.com.gitflowhelper.popup;
 
 import br.com.gitflowhelper.actions.ActionBuilder;
+import br.com.gitflowhelper.actions.ActionParamsService;
 import br.com.gitflowhelper.actions.BaseAction;
 import br.com.gitflowhelper.actions.InitAction;
 import br.com.gitflowhelper.actions.branches.CheckoutLocalBranchAction;
 import br.com.gitflowhelper.actions.branches.CheckoutRemoteBranchAction;
-import br.com.gitflowhelper.actions.branches.RepositoryBranchGroup;
 import br.com.gitflowhelper.settings.GitFlowSettingsService;
 import br.com.gitflowhelper.util.GitBranchUtils;
 import br.com.gitflowhelper.util.GitFlowDescriptions;
@@ -37,12 +37,11 @@ import java.util.function.Function;
 
 public final class GitFlowPopup extends PropertyObserver {
     private ListPopup listPopup;
-    private final Project project;
     private String branchName;
 
-    public GitFlowPopup(Project project) {
+    public GitFlowPopup() {
         this.branchName = "";
-        this.project = project;
+        Project project = ActionParamsService.getProject();
 
         DataManager.getInstance()
             .getDataContextFromFocusAsync()
@@ -50,7 +49,7 @@ public final class GitFlowPopup extends PropertyObserver {
 
                 this.listPopup = JBPopupFactory.getInstance().createActionGroupPopup(
                         "Git Flow",
-                        createGroup(),
+                        createGroup(project),
                         dataContext,
                         JBPopupFactory.ActionSelectionAid.SPEEDSEARCH,
                         true
@@ -75,15 +74,15 @@ public final class GitFlowPopup extends PropertyObserver {
             });
     }
 
-    private DefaultActionGroup createGroup() {
+    private DefaultActionGroup createGroup(Project project) {
         DefaultActionGroup group = new DefaultActionGroup();
-        group.add(new InitAction(project, "Init..."));
+        group.add(new InitAction("Init..."));
         //group.add(new OpenTreePopupAction("Tree"));
         group.addSeparator();
 
         GitRepositoryManager repoManager = GitRepositoryManager.getInstance(project);
         for (GitRepository repository : repoManager.getRepositories()) {
-            group.add(repositoryBranchGroup(repository));
+            group.add(repositoryBranchGroup(repository, project));
         }
 
         group.addSeparator();
@@ -110,14 +109,13 @@ public final class GitFlowPopup extends PropertyObserver {
         String actionTitle = action.substring(0, 1).toUpperCase(Locale.ROOT) + action.substring(1);
         BaseAction act = ActionBuilder.createActionInstance(
                 type+actionTitle+"Action",
-                project,
                 actionTitle,
                 branchName);
         addPropertyChangeListener(act);
         return act;
     }
 
-    private DefaultActionGroup repositoryBranchGroup(GitRepository repository) {
+    private DefaultActionGroup repositoryBranchGroup(GitRepository repository, Project project) {
         DefaultActionGroup group = new DefaultActionGroup(
                 repository.getProject().getName(),
                 GitFlowDescriptions.REPO_GROUP.getValue(),
@@ -151,7 +149,6 @@ public final class GitFlowPopup extends PropertyObserver {
             boolean isCurrent = branch.getName().equals(currentBranch);
 
             group.add(new CheckoutLocalBranchAction(
-                    project,
                     repository,
                     branch.getName(),
                     isCurrent
@@ -182,7 +179,6 @@ public final class GitFlowPopup extends PropertyObserver {
         orderedRemoteBranches.forEach(branch -> {
             boolean isCurrent = branch.getName().equals(BaseAction.REMOTE+"/"+currentBranch);
             group.add(new CheckoutRemoteBranchAction(
-                    project,
                     repository,
                     branch.getName(),
                     isCurrent

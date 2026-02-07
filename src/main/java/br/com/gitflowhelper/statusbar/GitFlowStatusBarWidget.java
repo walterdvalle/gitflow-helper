@@ -1,5 +1,6 @@
 package br.com.gitflowhelper.statusbar;
 
+import br.com.gitflowhelper.actions.ActionParamsService;
 import br.com.gitflowhelper.popup.GitFlowPopup;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.popup.ListPopup;
@@ -36,6 +37,8 @@ public class GitFlowStatusBarWidget implements StatusBarWidget {
 
     @Override
     public void dispose() {
+        ActionParamsService.setBranchName(null);
+        ActionParamsService.setProject(null);
     }
 
     public void setLoadding(boolean loadding) {
@@ -66,7 +69,8 @@ public class GitFlowStatusBarWidget implements StatusBarWidget {
 
         @Override
         public @Nullable ListPopup getPopup() {
-            return new GitFlowPopup(project).getPopup();
+            ActionParamsService.setProject(project);
+            return new GitFlowPopup().getPopup();
         }
     }
 }

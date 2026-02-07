@@ -3,8 +3,6 @@ package br.com.gitflowhelper.actions;
 import br.com.gitflowhelper.git.GitException;
 import br.com.gitflowhelper.git.GitExecutor;
 import br.com.gitflowhelper.git.GitResult;
-import br.com.gitflowhelper.settings.GitFlowSettingsService;
-import br.com.gitflowhelper.util.GitBranchUtils;
 import br.com.gitflowhelper.util.GitFlowDescriptions;
 import br.com.gitflowhelper.util.NotificationUtil;
 import com.intellij.icons.AllIcons;
@@ -25,16 +23,17 @@ import java.util.List;
 @SuppressWarnings("unused")
 public class ReleaseFinishAction extends BaseAction {
 
-    public ReleaseFinishAction(Project project, String actionTitle, String branchName) {
-        super(actionTitle, GitFlowDescriptions.RELEASE_FINISH.getValue(), AllIcons.Vcs.Patch_applied, project, branchName);
+    public ReleaseFinishAction(String actionTitle, String branchName) {
+        super(actionTitle, GitFlowDescriptions.RELEASE_FINISH.getValue(), AllIcons.Vcs.Patch_applied, branchName);
     }
 
     @Override
     public void actionPerformed(@NotNull AnActionEvent e) {
+        Project project = getProject();
         ApplicationManager.getApplication().executeOnPooledThread(() -> {
             setLoading(true);
             try {
-                releaseFinish(true, true, true);
+                releaseFinish(project, true, true, true);
                 NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Released finished and tag pushed successfully");
             } catch (GitException ex) {
                 NotificationUtil.showGitFlowErrorNotification(project, "Error", ex.getGitResult().getProcessMessage());
@@ -53,6 +52,7 @@ public class ReleaseFinishAction extends BaseAction {
     }
 
     public List<GitResult> releaseFinish(
+            Project project,
             boolean deleteLocalBranch,
             boolean deleteRemoteBranch,
             boolean tagAndPush
