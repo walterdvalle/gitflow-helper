@@ -66,6 +66,7 @@ The plugin follows the standard Git Flow strategy:
     - Switches to an existing local branch when available
     - Automatically tracks and checks out remote branches when needed
 
+![Start Screen](src/main/resources/screens/04-checkout.png)
 ---
 
 ### 📋 Menu-Based Workflow
@@ -74,6 +75,9 @@ The plugin follows the standard Git Flow strategy:
 - Each action corresponds to a specific Git Flow command.
 - Menu items are context-aware and dynamically enabled or disabled to prevent invalid operations.
 
+![Start Screen](src/main/resources/screens/05-new-feature.png)
+![Start Screen](src/main/resources/screens/06-new-feature-2.png)
+![Start Screen](src/main/resources/screens/07-feature-finish.png)
 ---
 
 ### 📍 Status Bar Integration
@@ -96,6 +100,7 @@ The plugin follows the standard Git Flow strategy:
     - Debug Git issues more easily
     - Maintain full transparency of operations
 
+![Start Screen](src/main/resources/screens/03-toolwindow.png)
 ---
 
 ### 🛈 Built-in Help Descriptions
@@ -115,6 +120,8 @@ The plugin follows the standard Git Flow strategy:
 - Executes Git commands programmatically.
 - Does not rely on external Git Flow CLI tools.
 - Designed to be transparent, safe, and IDE-native.
+
+![Start Screen](src/main/resources/screens/068-checkou-branch.png)
 
 ---
 
