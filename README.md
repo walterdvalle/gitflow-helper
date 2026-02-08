@@ -21,7 +21,7 @@ The plugin allows developers to work with Git Flow without relying on external t
         - tags
 - Configuration is stored and reused across all Git Flow operations.
 
-![Start Screen](resources/screens/01-start.png)
+![Start Screen](src/main/resources/screens/01-start.png)
 ---
 
 ### 🌳 Git Flow Branching Model
