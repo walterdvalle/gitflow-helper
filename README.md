@@ -121,7 +121,7 @@ The plugin follows the standard Git Flow strategy:
 - Does not rely on external Git Flow CLI tools.
 - Designed to be transparent, safe, and IDE-native.
 
-![Start Screen](src/main/resources/screens/068-checkou-branch.png)
+![Start Screen](src/main/resources/screens/08-checkout-branch.png)
 
 ---
 
