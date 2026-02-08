@@ -23,7 +23,8 @@ public class CheckoutLocalBranchAction extends BaseAction {
             String localBranchName,
             boolean isCurrent
     ) {
-        super(localBranchName,
+        //cheating intellij
+        super(localBranchName.replaceAll("_", "__"),
                 "Checkout local branch "+localBranchName,
                 (isCurrent ?
                     AllIcons.Gutter.Bookmark :
@@ -41,9 +42,8 @@ public class CheckoutLocalBranchAction extends BaseAction {
     @Override
     public void actionPerformed(@NotNull AnActionEvent e) {
         Project project = getProject();
-        String branchName = getBranchName();
         String currentBranchName = repository.getCurrentBranchName();
-        String checkoutBranchName = getTemplatePresentation().getText();
+        String checkoutBranchName = getTemplatePresentation().getText().replaceAll("__", "_");
         boolean isCurrent = currentBranchName.equals(checkoutBranchName);
 
         if (isCurrent) return;
@@ -59,7 +59,7 @@ public class CheckoutLocalBranchAction extends BaseAction {
                         checkoutBranchName
                 );
                 repository.update();
-                NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Local branch "+branchName+" checked out successfully");
+                NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Local branch "+checkoutBranchName+" checked out successfully");
             } catch (GitException ex) {
                 NotificationUtil.showGitFlowErrorNotification(project, "Error", ex.getGitResult().getProcessMessage());
             }
