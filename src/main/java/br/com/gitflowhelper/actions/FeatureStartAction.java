@@ -54,7 +54,7 @@ public class FeatureStartAction extends BaseAction {
         Presentation presentation = e.getPresentation();
         presentation.setEnabled(
                 StringUtil.isNotEmpty(getMainBranch()) &&
-                        getBranchName().equals(getDevelopBranch())
+                        getBranchName() != null && getBranchName().equals(getDevelopBranch())
         );
     }
 

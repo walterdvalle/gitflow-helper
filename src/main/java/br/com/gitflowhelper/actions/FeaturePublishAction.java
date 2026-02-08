@@ -46,7 +46,7 @@ public class FeaturePublishAction extends BaseAction {
         Presentation presentation = e.getPresentation();
         presentation.setEnabled(
                 StringUtil.isNotEmpty(getMainBranch()) &&
-                        getBranchName().startsWith(getFeaturePrefix())
+                        getBranchName() != null && getBranchName().startsWith(getFeaturePrefix())
         );
     }
 

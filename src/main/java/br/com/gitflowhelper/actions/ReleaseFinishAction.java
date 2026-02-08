@@ -47,7 +47,7 @@ public class ReleaseFinishAction extends BaseAction {
         Presentation presentation = e.getPresentation();
         presentation.setEnabled(
                 StringUtil.isNotEmpty(getMainBranch()) &&
-                        getBranchName().startsWith(getReleasePrefix())
+                        getBranchName() != null && getBranchName().startsWith(getReleasePrefix())
         );
     }
 

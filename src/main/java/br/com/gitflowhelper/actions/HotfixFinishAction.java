@@ -48,7 +48,7 @@ public class HotfixFinishAction extends BaseAction {
         Presentation presentation = e.getPresentation();
         presentation.setEnabled(
                 StringUtil.isNotEmpty(getMainBranch()) &&
-                        getBranchName().startsWith(getHotfixPrefix())
+                        getBranchName() != null && getBranchName().startsWith(getHotfixPrefix())
         );
     }
 

@@ -53,7 +53,7 @@ public class HotfixStartAction extends BaseAction {
         Presentation presentation = e.getPresentation();
         presentation.setEnabled(
                 StringUtil.isNotEmpty(getMainBranch()) &&
-                        getBranchName().equals(getMainBranch())
+                        getBranchName() != null && getBranchName().equals(getMainBranch())
         );
     }
 
