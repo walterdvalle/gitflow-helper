@@ -1,6 +1,6 @@
 package br.com.gitflowhelper.statusbar;
 
-import br.com.gitflowhelper.actions.ActionParamsService;
+import br.com.gitflowhelper.util.ActionParamsService;
 import br.com.gitflowhelper.popup.GitFlowPopup;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.popup.ListPopup;

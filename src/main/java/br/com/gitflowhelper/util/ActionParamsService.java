@@ -1,8 +1,12 @@
-package br.com.gitflowhelper.actions;
+package br.com.gitflowhelper.util;
 
+import com.intellij.ide.ActivityTracker;
 import com.intellij.openapi.project.Project;
 
-public final class ActionParamsService {
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+
+public final class ActionParamsService implements PropertyChangeListener {
 
     private static final ActionParamsService INSTANCE = new ActionParamsService();
     private static Project project;
@@ -27,5 +31,9 @@ public final class ActionParamsService {
         return branchName;
     }
 
-
+    @Override
+    public void propertyChange(PropertyChangeEvent e) {
+        ActionParamsService.setBranchName((String) e.getNewValue());
+        ActivityTracker.getInstance().inc();
+    }
 }

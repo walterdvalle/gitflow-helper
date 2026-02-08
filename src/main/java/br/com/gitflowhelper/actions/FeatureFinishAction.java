@@ -28,8 +28,8 @@ import java.util.stream.Collectors;
 @SuppressWarnings("unused")
 public class FeatureFinishAction extends BaseAction {
 
-    public FeatureFinishAction(String actionTitle, String branchName) {
-        super(actionTitle, GitFlowDescriptions.FEATURE_FINISH.getValue(), AllIcons.Vcs.Patch_applied, branchName);
+    public FeatureFinishAction(String actionTitle) {
+        super(actionTitle, GitFlowDescriptions.FEATURE_FINISH.getValue(), AllIcons.Vcs.Patch_applied);
     }
 
     @Override
@@ -37,6 +37,7 @@ public class FeatureFinishAction extends BaseAction {
         String featureCommits = "";
         String[] postAction = new String[1];
         Project project = getProject();
+        String branchName = getBranchName();
         ActionChoiceDialog dialog = new ActionChoiceDialog(project, branchName, getDevelopBranch());
 
         GitRepositoryManager repoManager = GitRepositoryManager.getInstance(project);
@@ -67,7 +68,8 @@ public class FeatureFinishAction extends BaseAction {
                             !dialog.getKeepRemoteBranch(),
                             dialog.getSelectedAction(),
                             true,
-                            postAction);
+                            postAction,
+                            branchName);
                         NotificationUtil.showGitFlowSuccessNotification(project, "Success",  postAction[0]);
                     } catch (GitException ex) {
                         NotificationUtil.showGitFlowErrorNotification(project, "Error", "Error message: "+ex.getGitResult().getProcessMessage());
@@ -82,7 +84,7 @@ public class FeatureFinishAction extends BaseAction {
         Presentation presentation = e.getPresentation();
         presentation.setEnabled(
                 StringUtil.isNotEmpty(getMainBranch()) &&
-                        branchName.startsWith(getFeaturePrefix())
+                        getBranchName().startsWith(getFeaturePrefix())
         );
     }
 
@@ -109,7 +111,7 @@ public class FeatureFinishAction extends BaseAction {
             boolean deleteRemoteBranch,
             String mode,
             boolean rebaseBeforeIntegrate,
-            String[] postAction) {
+            String[] postAction, String branchName) {
         String baseBranch = getDevelopBranch();
         GitRepositoryManager repoManager = GitRepositoryManager.getInstance(project);
         GitExecutor executor = new GitExecutor(project);

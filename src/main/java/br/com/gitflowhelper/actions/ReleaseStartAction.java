@@ -25,8 +25,8 @@ import java.util.List;
 @SuppressWarnings("unused")
 public class ReleaseStartAction extends BaseAction {
 
-    public ReleaseStartAction(String actionTitle, String branchName) {
-        super(actionTitle, GitFlowDescriptions.RELEASE_START.getValue(), AllIcons.Actions.Execute, branchName);
+    public ReleaseStartAction(String actionTitle) {
+        super(actionTitle, GitFlowDescriptions.RELEASE_START.getValue(), AllIcons.Actions.Execute);
     }
 
     @Override
@@ -53,7 +53,7 @@ public class ReleaseStartAction extends BaseAction {
         Presentation presentation = e.getPresentation();
         presentation.setEnabled(
                 StringUtil.isNotEmpty(getMainBranch()) &&
-                        branchName.equals(getDevelopBranch())
+                        getBranchName().equals(getDevelopBranch())
         );
     }
 

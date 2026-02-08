@@ -29,7 +29,7 @@ import java.util.stream.Collectors;
 public class InitAction extends BaseAction {
 
     public InitAction(String actionTitle) {
-        super(actionTitle, GitFlowDescriptions.INIT.getValue(), AllIcons.Scope.Production, null);
+        super(actionTitle, GitFlowDescriptions.INIT.getValue(), AllIcons.Scope.Production);
     }
 
     @Override

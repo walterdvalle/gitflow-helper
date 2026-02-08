@@ -25,8 +25,8 @@ import java.util.List;
 @SuppressWarnings("unused")
 public class ReleasePublishAction extends BaseAction {
 
-    public ReleasePublishAction(String actionTitle, String branchName) {
-        super(actionTitle, GitFlowDescriptions.RELEASE_PUBLISH.getValue(), AllIcons.CodeWithMe.CwmShared, branchName);
+    public ReleasePublishAction(String actionTitle) {
+        super(actionTitle, GitFlowDescriptions.RELEASE_PUBLISH.getValue(), AllIcons.CodeWithMe.CwmShared);
     }
 
     @Override
@@ -49,7 +49,7 @@ public class ReleasePublishAction extends BaseAction {
         Presentation presentation = e.getPresentation();
         presentation.setEnabled(
                 StringUtil.isNotEmpty(getMainBranch()) &&
-                        branchName.startsWith(getReleasePrefix())
+                        getBranchName().startsWith(getReleasePrefix())
         );
     }
 

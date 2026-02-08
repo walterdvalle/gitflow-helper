@@ -1,6 +1,6 @@
 package br.com.gitflowhelper.actions.branches;
 
-import br.com.gitflowhelper.actions.ActionParamsService;
+import br.com.gitflowhelper.util.ActionParamsService;
 import br.com.gitflowhelper.actions.BaseAction;
 import br.com.gitflowhelper.git.GitException;
 import br.com.gitflowhelper.git.GitExecutor;
@@ -31,8 +31,7 @@ public class CheckoutRemoteBranchAction extends BaseAction {
                         remoteBranchName.equals(BaseAction.REMOTE+"/"+GitFlowSettingsService.getInstance(ActionParamsService.getProject()).getMainBranch()) ?
                                 AllIcons.Nodes.Favorite :
                                 AllIcons.Vcs.BranchNode
-                ),
-                remoteBranchName);
+                ));
         this.repository = repository;
     }
 

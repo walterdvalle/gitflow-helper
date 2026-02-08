@@ -2,16 +2,15 @@ package br.com.gitflowhelper.actions;
 
 import br.com.gitflowhelper.settings.GitFlowSettingsService;
 import br.com.gitflowhelper.statusbar.GitFlowStatusBarWidget;
+import br.com.gitflowhelper.util.ActionParamsService;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.StatusBar;
 import com.intellij.openapi.wm.WindowManager;
 
 import javax.swing.*;
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
 
-public abstract class BaseAction extends AnAction implements PropertyChangeListener {
+public abstract class BaseAction extends AnAction /*implements PropertyChangeListener*/ {
     public static final String REMOTE = "origin";
 
     /*
@@ -26,24 +25,12 @@ public abstract class BaseAction extends AnAction implements PropertyChangeListe
 
     https://plugins.jetbrains.com/docs/intellij/action-system.html
      */
-    protected String branchName;
-
-    public BaseAction(String actionTitle, String description, Icon icon) {
-        super(actionTitle, description, icon);
-    }
 
     public BaseAction(
             String actionTitle,
             String description,
-            Icon icon,
-            String branchName) {
+            Icon icon) {
         super(actionTitle, description, icon);
-        this.branchName = branchName;
-    }
-
-    @Override
-    public void propertyChange(PropertyChangeEvent e) {
-        this.branchName = (String) e.getNewValue();
     }
 
     public String getMainBranch() {
@@ -63,6 +50,9 @@ public abstract class BaseAction extends AnAction implements PropertyChangeListe
     }
     public Project getProject() {
         return ActionParamsService.getProject();
+    }
+    public String getBranchName() {
+        return ActionParamsService.getBranchName();
     }
 
     public void setLoading(boolean loading) {

@@ -24,8 +24,8 @@ import java.util.List;
 @SuppressWarnings("unused")
 public class HotfixFinishAction extends BaseAction {
 
-    public HotfixFinishAction(String actionTitle, String branchName) {
-        super(actionTitle, GitFlowDescriptions.HOTFIX_FINISH.getValue(), AllIcons.Vcs.Patch_applied, branchName);
+    public HotfixFinishAction(String actionTitle) {
+        super(actionTitle, GitFlowDescriptions.HOTFIX_FINISH.getValue(), AllIcons.Vcs.Patch_applied);
     }
 
     @Override
@@ -48,7 +48,7 @@ public class HotfixFinishAction extends BaseAction {
         Presentation presentation = e.getPresentation();
         presentation.setEnabled(
                 StringUtil.isNotEmpty(getMainBranch()) &&
-                        branchName.startsWith(getHotfixPrefix())
+                        getBranchName().startsWith(getHotfixPrefix())
         );
     }
 

@@ -22,8 +22,8 @@ import java.util.List;
 @SuppressWarnings("unused")
 public class FeaturePublishAction extends BaseAction {
 
-    public FeaturePublishAction(String actionTitle, String branchName) {
-        super(actionTitle, GitFlowDescriptions.FEATURE_PUBLISH.getValue(), AllIcons.CodeWithMe.CwmShared, branchName);
+    public FeaturePublishAction(String actionTitle) {
+        super(actionTitle, GitFlowDescriptions.FEATURE_PUBLISH.getValue(), AllIcons.CodeWithMe.CwmShared);
     }
 
     @Override
@@ -46,7 +46,7 @@ public class FeaturePublishAction extends BaseAction {
         Presentation presentation = e.getPresentation();
         presentation.setEnabled(
                 StringUtil.isNotEmpty(getMainBranch()) &&
-                        branchName.startsWith(getFeaturePrefix())
+                        getBranchName().startsWith(getFeaturePrefix())
         );
     }
 

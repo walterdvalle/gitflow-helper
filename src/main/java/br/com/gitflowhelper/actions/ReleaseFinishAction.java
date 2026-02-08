@@ -23,8 +23,8 @@ import java.util.List;
 @SuppressWarnings("unused")
 public class ReleaseFinishAction extends BaseAction {
 
-    public ReleaseFinishAction(String actionTitle, String branchName) {
-        super(actionTitle, GitFlowDescriptions.RELEASE_FINISH.getValue(), AllIcons.Vcs.Patch_applied, branchName);
+    public ReleaseFinishAction(String actionTitle) {
+        super(actionTitle, GitFlowDescriptions.RELEASE_FINISH.getValue(), AllIcons.Vcs.Patch_applied);
     }
 
     @Override
@@ -47,7 +47,7 @@ public class ReleaseFinishAction extends BaseAction {
         Presentation presentation = e.getPresentation();
         presentation.setEnabled(
                 StringUtil.isNotEmpty(getMainBranch()) &&
-                        branchName.startsWith(getReleasePrefix())
+                        getBranchName().startsWith(getReleasePrefix())
         );
     }
 

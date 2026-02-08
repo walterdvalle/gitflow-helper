@@ -27,8 +27,8 @@ import java.util.List;
 @SuppressWarnings("unused")
 public class FeatureStartAction extends BaseAction {
 
-    public FeatureStartAction(String actionTitle, String branchName) {
-        super(actionTitle, GitFlowDescriptions.FEATURE_START.getValue(), AllIcons.Actions.Execute, branchName);
+    public FeatureStartAction(String actionTitle) {
+        super(actionTitle, GitFlowDescriptions.FEATURE_START.getValue(), AllIcons.Actions.Execute);
     }
 
     public void actionPerformed(@NotNull AnActionEvent e) {
@@ -54,7 +54,7 @@ public class FeatureStartAction extends BaseAction {
         Presentation presentation = e.getPresentation();
         presentation.setEnabled(
                 StringUtil.isNotEmpty(getMainBranch()) &&
-                        branchName.equals(getDevelopBranch())
+                        getBranchName().equals(getDevelopBranch())
         );
     }
 

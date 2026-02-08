@@ -10,21 +10,15 @@ public class ActionBuilder {
 
     public static BaseAction createActionInstance(
             String actionClassName,
-            String actionTitle,
-            String branchName) {
+            String actionTitle) {
 
         BaseAction actionObj;
         try {
             Class<?> clazz = Class.forName("br.com.gitflowhelper.actions."+actionClassName);
 
-            Constructor<?> ctor = clazz.getConstructor(
-                    String.class,
-                    String.class
-            );
+            Constructor<?> ctor = clazz.getConstructor(String.class);
 
-            Object instance = ctor.newInstance(
-                    actionTitle, branchName
-            );
+            Object instance = ctor.newInstance(actionTitle);
             actionObj = (BaseAction) instance;
         } catch (ClassNotFoundException | NoSuchMethodException | InstantiationException | IllegalAccessException |
                  InvocationTargetException e) {

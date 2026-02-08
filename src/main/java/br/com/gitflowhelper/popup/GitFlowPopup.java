@@ -1,7 +1,7 @@
 package br.com.gitflowhelper.popup;
 
 import br.com.gitflowhelper.actions.ActionBuilder;
-import br.com.gitflowhelper.actions.ActionParamsService;
+import br.com.gitflowhelper.util.ActionParamsService;
 import br.com.gitflowhelper.actions.BaseAction;
 import br.com.gitflowhelper.actions.InitAction;
 import br.com.gitflowhelper.actions.branches.CheckoutLocalBranchAction;
@@ -37,10 +37,8 @@ import java.util.function.Function;
 
 public final class GitFlowPopup extends PropertyObserver {
     private ListPopup listPopup;
-    private String branchName;
 
     public GitFlowPopup() {
-        this.branchName = "";
         Project project = ActionParamsService.getProject();
 
         DataManager.getInstance()
@@ -56,9 +54,11 @@ public final class GitFlowPopup extends PropertyObserver {
                 );
                 this.listPopup.setCaptionIcon(PluginIcons.GitFlow);
 
+                addPropertyChangeListener(ActionParamsService.getInstance());
+
                 ApplicationManager.getApplication().executeOnPooledThread(() -> {
-                    this.branchName = GitBranchUtils.getCurrentBranchName(project);
-                    firePropertyChange("branchName", "", this.branchName);
+                    String branchName = GitBranchUtils.getCurrentBranchName(project);
+                    firePropertyChange("branchName", "", branchName);
                 });
 
                 this.listPopup.addListener(new JBPopupListener() {
@@ -109,9 +109,7 @@ public final class GitFlowPopup extends PropertyObserver {
         String actionTitle = action.substring(0, 1).toUpperCase(Locale.ROOT) + action.substring(1);
         BaseAction act = ActionBuilder.createActionInstance(
                 type+actionTitle+"Action",
-                actionTitle,
-                branchName);
-        addPropertyChangeListener(act);
+                actionTitle);
         return act;
     }
 

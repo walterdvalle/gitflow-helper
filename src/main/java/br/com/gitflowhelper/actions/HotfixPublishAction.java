@@ -24,8 +24,8 @@ import java.util.List;
 @SuppressWarnings("unused")
 public class HotfixPublishAction extends BaseAction {
 
-    public HotfixPublishAction(String actionTitle, String branchName) {
-        super(actionTitle, GitFlowDescriptions.HOTFIX_PUBLISH.getValue(), AllIcons.CodeWithMe.CwmShared, branchName);
+    public HotfixPublishAction(String actionTitle) {
+        super(actionTitle, GitFlowDescriptions.HOTFIX_PUBLISH.getValue(), AllIcons.CodeWithMe.CwmShared);
     }
 
     @Override
@@ -48,7 +48,7 @@ public class HotfixPublishAction extends BaseAction {
         Presentation presentation = e.getPresentation();
         presentation.setEnabled(
                 StringUtil.isNotEmpty(getMainBranch()) &&
-                        branchName.startsWith(getHotfixPrefix())
+                        getBranchName().startsWith(getHotfixPrefix())
         );
     }
 
