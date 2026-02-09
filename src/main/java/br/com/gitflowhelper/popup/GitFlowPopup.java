@@ -145,12 +145,12 @@ public final class GitFlowPopup extends PropertyObserver {
 
         orderedLocalBranches.forEach(branch -> {
             boolean isCurrent = branch.getName().equals(currentBranch);
-
-            group.add(new CheckoutLocalBranchAction(
-                    repository,
+            var newbranchAction = new CheckoutLocalBranchAction(
                     branch.getName(),
                     isCurrent
-            ));
+            );
+            ActionParamsService.addRepo(newbranchAction, repository);
+            group.add(newbranchAction);
         });
 
         group.addSeparator();
@@ -176,11 +176,12 @@ public final class GitFlowPopup extends PropertyObserver {
         );
         orderedRemoteBranches.forEach(branch -> {
             boolean isCurrent = branch.getName().equals(BaseAction.REMOTE+"/"+currentBranch);
-            group.add(new CheckoutRemoteBranchAction(
-                    repository,
+            var newbranchAction =new CheckoutRemoteBranchAction(
                     branch.getName(),
                     isCurrent
-            ));
+            );
+            ActionParamsService.addRepo(newbranchAction, repository);
+            group.add(newbranchAction);
         });
 
         return group;

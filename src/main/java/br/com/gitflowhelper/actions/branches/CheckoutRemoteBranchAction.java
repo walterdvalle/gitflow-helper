@@ -8,6 +8,7 @@ import br.com.gitflowhelper.settings.GitFlowSettingsService;
 import br.com.gitflowhelper.util.NotificationUtil;
 import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.AnActionEvent;
+import com.intellij.openapi.actionSystem.ex.ActionUtil;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.project.Project;
 import git4idea.GitBranch;
@@ -17,14 +18,11 @@ import org.jetbrains.annotations.NotNull;
 
 public class CheckoutRemoteBranchAction extends BaseAction {
 
-    private final GitRepository repository;
-
     public CheckoutRemoteBranchAction(
-            GitRepository repository,
             String remoteBranchName,
             boolean isCurrent
     ) {
-        super(remoteBranchName,
+        super(remoteBranchName.replaceAll("_", "__"),
                 "Checkout remote branch "+remoteBranchName,
                 (isCurrent ?
                         AllIcons.Gutter.Bookmark :
@@ -32,7 +30,6 @@ public class CheckoutRemoteBranchAction extends BaseAction {
                                 AllIcons.Nodes.Favorite :
                                 AllIcons.Vcs.BranchNode
                 ));
-        this.repository = repository;
     }
 
     @Override
@@ -43,8 +40,9 @@ public class CheckoutRemoteBranchAction extends BaseAction {
     @Override
     public void actionPerformed(@NotNull AnActionEvent e) {
         Project project = getProject();
+        GitRepository repository = ActionParamsService.getRepo(this);
         String currentBranchName = repository.getCurrentBranchName();
-        String checkoutBranchName = getTemplatePresentation().getText();
+        String checkoutBranchName = getTemplatePresentation().getText().replaceAll("__", "_");
         boolean isCurrent = currentBranchName.equals(checkoutBranchName);
 
         if (isCurrent) return;
@@ -54,11 +52,10 @@ public class CheckoutRemoteBranchAction extends BaseAction {
         String localBranch =
                 checkoutBranchName.substring(checkoutBranchName.indexOf('/') + 1);
 
-        GitBranch branch = this.repository.getBranches().findLocalBranch(localBranch);
+        GitBranch branch = repository.getBranches().findLocalBranch(localBranch);
         if (branch != null) {
-            new CheckoutLocalBranchAction(
-                    this.repository, localBranch, false
-            ).actionPerformed(e);
+            new CheckoutLocalBranchAction(localBranch, false)
+                    .checkout(repository, project, localBranch);
             return;
         }
 

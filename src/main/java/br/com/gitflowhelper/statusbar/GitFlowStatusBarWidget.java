@@ -39,6 +39,7 @@ public class GitFlowStatusBarWidget implements StatusBarWidget {
     public void dispose() {
         ActionParamsService.setBranchName(null);
         ActionParamsService.setProject(null);
+        ActionParamsService.clearRepos();
     }
 
     public void setLoadding(boolean loadding) {

@@ -7,6 +7,7 @@ import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.StatusBar;
 import com.intellij.openapi.wm.WindowManager;
+import git4idea.repo.GitRepository;
 
 import javax.swing.*;
 
@@ -54,6 +55,8 @@ public abstract class BaseAction extends AnAction /*implements PropertyChangeLis
     public String getBranchName() {
         return ActionParamsService.getBranchName();
     }
+    public void addRepo(AnAction action, GitRepository repo) { ActionParamsService.addRepo(action, repo); }
+    public GitRepository getRepo(AnAction action) { return ActionParamsService.getRepo(action); }
 
     public void setLoading(boolean loading) {
         StatusBar statusBar = WindowManager.getInstance().getStatusBar(getProject());

@@ -16,22 +16,18 @@ import org.jetbrains.annotations.NotNull;
 
 public class CheckoutLocalBranchAction extends BaseAction {
 
-    private final GitRepository repository;
-
     public CheckoutLocalBranchAction(
-            GitRepository repository,
             String localBranchName,
             boolean isCurrent
     ) {
         //cheating intellij
         super(localBranchName.replaceAll("_", "__"),
-                "Checkout local branch "+localBranchName,
+                "Checkout local branch " + localBranchName,
                 (isCurrent ?
-                    AllIcons.Gutter.Bookmark :
-                    localBranchName.equals(GitFlowSettingsService.getInstance(ActionParamsService.getProject()).getMainBranch()) ?
-                            AllIcons.Nodes.Favorite :
-                            AllIcons.Vcs.BranchNode));
-        this.repository = repository;
+                        AllIcons.Gutter.Bookmark :
+                        localBranchName.equals(GitFlowSettingsService.getInstance(ActionParamsService.getProject()).getMainBranch()) ?
+                                AllIcons.Nodes.Favorite :
+                                AllIcons.Vcs.BranchNode));
     }
 
     @Override
@@ -42,29 +38,34 @@ public class CheckoutLocalBranchAction extends BaseAction {
     @Override
     public void actionPerformed(@NotNull AnActionEvent e) {
         Project project = getProject();
+        GitRepository repository = ActionParamsService.getRepo(this);
         String currentBranchName = repository.getCurrentBranchName();
         String checkoutBranchName = getTemplatePresentation().getText().replaceAll("__", "_");
         boolean isCurrent = currentBranchName.equals(checkoutBranchName);
 
         if (isCurrent) return;
 
-        GitExecutor executor = new GitExecutor(project);
-
-        ApplicationManager.getApplication().executeOnPooledThread(() -> {
-            setLoading(true);
-            try {
-                executor.execute(
-                        repository.getRoot(),
-                        GitCommand.CHECKOUT,
-                        checkoutBranchName
-                );
-                repository.update();
-                NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Local branch "+checkoutBranchName+" checked out successfully");
-            } catch (GitException ex) {
-                NotificationUtil.showGitFlowErrorNotification(project, "Error", ex.getGitResult().getProcessMessage());
-            }
-            setLoading(false);
-        });
+        setLoading(true);
+        try {
+            checkout(repository, project, checkoutBranchName);
+            NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Local branch "+checkoutBranchName+" checked out successfully");
+        } catch (GitException ex) {
+            NotificationUtil.showGitFlowErrorNotification(project, "Error", ex.getGitResult().getProcessMessage());
+        }
+        setLoading(false);
         //VirtualFileManager.getInstance().asyncRefresh(null);
+    }
+
+    //can be called from outside
+    public void checkout(GitRepository repository, Project project, String checkoutBranchName) {
+        GitExecutor executor = new GitExecutor(project);
+        ApplicationManager.getApplication().executeOnPooledThread(() -> {
+            executor.execute(
+                    repository.getRoot(),
+                    GitCommand.CHECKOUT,
+                    checkoutBranchName
+            );
+            repository.update();
+        });
     }
 }
