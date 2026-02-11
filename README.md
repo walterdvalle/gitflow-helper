@@ -1,5 +1,11 @@
 # GitFlow Helper
 
+<a href="https://ko-fi.com/waltervalle">
+  <img src="https://storage.ko-fi.com/cdn/kofi5.png?v=3" 
+       alt="Buy Me a Coffee" 
+       height="50">
+</a>
+
 **GitFlow Helper** is an IntelliJ plugin that provides a complete and intuitive implementation of the **Git Flow** workflow, fully integrated into the IDE menus, status bar, and tool windows.
 ![Start Screen](src/main/resources/screens/gitflow.png)
 
