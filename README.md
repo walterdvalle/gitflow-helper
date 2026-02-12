@@ -7,8 +7,6 @@
 </a>
 
 **GitFlow Helper** is an IntelliJ plugin that provides a complete and intuitive implementation of the **Git Flow** workflow, fully integrated into the IDE menus, status bar, and tool windows.
-![Start Screen](src/main/resources/screens/gitflow.png)
-
 
 The plugin allows developers to work with Git Flow without relying on external tools or memorizing Git commands, offering a clean, menu-driven and IDE-native experience.
 
@@ -51,6 +49,8 @@ The plugin follows the standard Git Flow strategy:
 - **Hotfix branches**
     - Created from `main` for urgent production fixes.
     - Merged back into both `main` and `develop`.
+
+![Start Screen](src/main/resources/screens/gitflow.png)
 
 ---
 
