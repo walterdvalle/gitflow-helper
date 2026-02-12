@@ -117,10 +117,12 @@ public final class GitFlowPopup extends PropertyObserver {
         DefaultActionGroup group = new DefaultActionGroup(
                 repository.getProject().getName(),
                 GitFlowDescriptions.REPO_GROUP.getValue(),
-                AllIcons.Actions.CheckOut);
+                AllIcons.Actions.ProjectDirectory);
         group.setPopup(true);
 
         String currentBranch = repository.getCurrentBranchName();
+
+        //--------------------------------------------------------------------------------------------
 
         group.add(new AnAction("Local Branches", "", AllIcons.Actions.MenuOpen) {
             @Override
@@ -136,6 +138,8 @@ public final class GitFlowPopup extends PropertyObserver {
         });
         group.addSeparator();
 
+        //--------------------------------------------------------------------------------------------
+
         java.util.List<GitLocalBranch> orderedLocalBranches = sortBranches(
                 repository.getBranches().getLocalBranches(),
                 currentBranch,
@@ -145,13 +149,31 @@ public final class GitFlowPopup extends PropertyObserver {
 
         orderedLocalBranches.forEach(branch -> {
             boolean isCurrent = branch.getName().equals(currentBranch);
-            var newbranchAction = new CheckoutLocalBranchAction(
+            DefaultActionGroup checkoutDeleteGr = new DefaultActionGroup(
                     branch.getName(),
+                    GitFlowDescriptions.REPO_GROUP.getValue(),
+                    (isCurrent ?
+                            AllIcons.Gutter.Bookmark :
+                            branch.getName().equals(GitFlowSettingsService.getInstance(ActionParamsService.getProject()).getMainBranch()) ?
+                                    AllIcons.Nodes.Favorite :
+                                    AllIcons.Vcs.BranchNode));
+            checkoutDeleteGr.setPopup(true);
+            var newCheckoutAction = new CheckoutLocalBranchAction(
+                    "Checkout",
                     isCurrent
             );
-            ActionParamsService.addRepo(newbranchAction, repository);
-            group.add(newbranchAction);
+            var newDeleteAction = new CheckoutLocalBranchAction(
+                    "Delete",
+                    isCurrent
+            );
+            checkoutDeleteGr.add(newCheckoutAction);
+            checkoutDeleteGr.add(newDeleteAction);
+            ActionParamsService.addRepo(newCheckoutAction, repository);
+            ActionParamsService.addRepo(newDeleteAction, repository);
+            group.add(checkoutDeleteGr);
         });
+
+        //--------------------------------------------------------------------------------------------
 
         group.addSeparator();
         group.add(new AnAction("Remote Branches", "", AllIcons.Actions.MenuOpen) {
@@ -168,6 +190,8 @@ public final class GitFlowPopup extends PropertyObserver {
         });
         group.addSeparator();
 
+        //--------------------------------------------------------------------------------------------
+
         java.util.List<GitRemoteBranch> orderedRemoteBranches = sortBranches(
                 repository.getBranches().getRemoteBranches(),
                 BaseAction.REMOTE+"/"+currentBranch,
@@ -176,13 +200,32 @@ public final class GitFlowPopup extends PropertyObserver {
         );
         orderedRemoteBranches.forEach(branch -> {
             boolean isCurrent = branch.getName().equals(BaseAction.REMOTE+"/"+currentBranch);
-            var newbranchAction =new CheckoutRemoteBranchAction(
+            DefaultActionGroup checkoutDeleteGr = new DefaultActionGroup(
                     branch.getName(),
+                    GitFlowDescriptions.REPO_GROUP.getValue(),
+                    (isCurrent ?
+                            AllIcons.Gutter.Bookmark :
+                            branch.getName().equals(BaseAction.REMOTE+"/"+GitFlowSettingsService.getInstance(ActionParamsService.getProject()).getMainBranch()) ?
+                                    AllIcons.Nodes.Favorite :
+                                    AllIcons.Vcs.BranchNode
+                    ));
+            checkoutDeleteGr.setPopup(true);
+            var newCheckoutAction =new CheckoutRemoteBranchAction(
+                    "Checkout",
                     isCurrent
             );
-            ActionParamsService.addRepo(newbranchAction, repository);
-            group.add(newbranchAction);
+            var newDeleteAction =new CheckoutRemoteBranchAction(
+                    "Delete",
+                    isCurrent
+            );
+            checkoutDeleteGr.add(newCheckoutAction);
+            checkoutDeleteGr.add(newDeleteAction);
+            ActionParamsService.addRepo(newCheckoutAction, repository);
+            ActionParamsService.addRepo(newDeleteAction, repository);
+            group.add(checkoutDeleteGr);
         });
+
+        //--------------------------------------------------------------------------------------------
 
         return group;
     }

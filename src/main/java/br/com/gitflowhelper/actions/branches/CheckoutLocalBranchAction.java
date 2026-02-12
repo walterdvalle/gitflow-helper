@@ -23,11 +23,7 @@ public class CheckoutLocalBranchAction extends BaseAction {
         //cheating intellij
         super(localBranchName.replaceAll("_", "__"),
                 "Checkout local branch " + localBranchName,
-                (isCurrent ?
-                        AllIcons.Gutter.Bookmark :
-                        localBranchName.equals(GitFlowSettingsService.getInstance(ActionParamsService.getProject()).getMainBranch()) ?
-                                AllIcons.Nodes.Favorite :
-                                AllIcons.Vcs.BranchNode));
+                AllIcons.Actions.CheckOut);
     }
 
     @Override

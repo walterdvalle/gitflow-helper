@@ -24,12 +24,7 @@ public class CheckoutRemoteBranchAction extends BaseAction {
     ) {
         super(remoteBranchName.replaceAll("_", "__"),
                 "Checkout remote branch "+remoteBranchName,
-                (isCurrent ?
-                        AllIcons.Gutter.Bookmark :
-                        remoteBranchName.equals(BaseAction.REMOTE+"/"+GitFlowSettingsService.getInstance(ActionParamsService.getProject()).getMainBranch()) ?
-                                AllIcons.Nodes.Favorite :
-                                AllIcons.Vcs.BranchNode
-                ));
+                AllIcons.Actions.CheckOut);
     }
 
     @Override
