@@ -150,7 +150,7 @@ public final class GitFlowPopup extends PropertyObserver {
         orderedLocalBranches.forEach(branch -> {
             boolean isCurrent = branch.getName().equals(currentBranch);
             DefaultActionGroup checkoutDeleteGr = new DefaultActionGroup(
-                    branch.getName(),
+                    branch.getName().replaceAll("_", "__"),
                     GitFlowDescriptions.REPO_GROUP.getValue(),
                     (isCurrent ?
                             AllIcons.Gutter.Bookmark :
@@ -160,12 +160,14 @@ public final class GitFlowPopup extends PropertyObserver {
             checkoutDeleteGr.setPopup(true);
             var newCheckoutAction = new CheckoutLocalBranchAction(
                     "Checkout",
-                    isCurrent
+                    branch.getName()
             );
             var newDeleteAction = new CheckoutLocalBranchAction(
                     "Delete",
-                    isCurrent
+                    branch.getName()
             );
+            ActionParamsService.addName(newCheckoutAction, branch.getName());
+            ActionParamsService.addName(newDeleteAction, branch.getName());
             checkoutDeleteGr.add(newCheckoutAction);
             checkoutDeleteGr.add(newDeleteAction);
             ActionParamsService.addRepo(newCheckoutAction, repository);
@@ -201,7 +203,7 @@ public final class GitFlowPopup extends PropertyObserver {
         orderedRemoteBranches.forEach(branch -> {
             boolean isCurrent = branch.getName().equals(BaseAction.REMOTE+"/"+currentBranch);
             DefaultActionGroup checkoutDeleteGr = new DefaultActionGroup(
-                    branch.getName(),
+                    branch.getName().replaceAll("_", "__"),
                     GitFlowDescriptions.REPO_GROUP.getValue(),
                     (isCurrent ?
                             AllIcons.Gutter.Bookmark :
@@ -212,12 +214,14 @@ public final class GitFlowPopup extends PropertyObserver {
             checkoutDeleteGr.setPopup(true);
             var newCheckoutAction =new CheckoutRemoteBranchAction(
                     "Checkout",
-                    isCurrent
+                    branch.getName()
             );
             var newDeleteAction =new CheckoutRemoteBranchAction(
                     "Delete",
-                    isCurrent
+                    branch.getName()
             );
+            ActionParamsService.addName(newCheckoutAction, branch.getName());
+            ActionParamsService.addName(newDeleteAction, branch.getName());
             checkoutDeleteGr.add(newCheckoutAction);
             checkoutDeleteGr.add(newDeleteAction);
             ActionParamsService.addRepo(newCheckoutAction, repository);

@@ -17,11 +17,11 @@ import org.jetbrains.annotations.NotNull;
 public class CheckoutLocalBranchAction extends BaseAction {
 
     public CheckoutLocalBranchAction(
-            String localBranchName,
-            boolean isCurrent
+            String label,
+            String localBranchName
     ) {
         //cheating intellij
-        super(localBranchName.replaceAll("_", "__"),
+        super(label,
                 "Checkout local branch " + localBranchName,
                 AllIcons.Actions.CheckOut);
     }
@@ -36,7 +36,8 @@ public class CheckoutLocalBranchAction extends BaseAction {
         Project project = getProject();
         GitRepository repository = ActionParamsService.getRepo(this);
         String currentBranchName = repository.getCurrentBranchName();
-        String checkoutBranchName = getTemplatePresentation().getText().replaceAll("__", "_");
+        //String checkoutBranchName = getTemplatePresentation().getText().replaceAll("__", "_");
+        String checkoutBranchName = ActionParamsService.getName(this);
         boolean isCurrent = currentBranchName.equals(checkoutBranchName);
 
         if (isCurrent) return;

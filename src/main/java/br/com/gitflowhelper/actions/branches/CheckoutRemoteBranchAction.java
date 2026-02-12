@@ -19,10 +19,10 @@ import org.jetbrains.annotations.NotNull;
 public class CheckoutRemoteBranchAction extends BaseAction {
 
     public CheckoutRemoteBranchAction(
-            String remoteBranchName,
-            boolean isCurrent
+            String label,
+            String remoteBranchName
     ) {
-        super(remoteBranchName.replaceAll("_", "__"),
+        super(label,
                 "Checkout remote branch "+remoteBranchName,
                 AllIcons.Actions.CheckOut);
     }
@@ -37,7 +37,8 @@ public class CheckoutRemoteBranchAction extends BaseAction {
         Project project = getProject();
         GitRepository repository = ActionParamsService.getRepo(this);
         String currentBranchName = repository.getCurrentBranchName();
-        String checkoutBranchName = getTemplatePresentation().getText().replaceAll("__", "_");
+        //String checkoutBranchName = getTemplatePresentation().getText().replaceAll("__", "_");
+        String checkoutBranchName = ActionParamsService.getName(this);
         boolean isCurrent = currentBranchName.equals(checkoutBranchName);
 
         if (isCurrent) return;
@@ -49,7 +50,7 @@ public class CheckoutRemoteBranchAction extends BaseAction {
 
         GitBranch branch = repository.getBranches().findLocalBranch(localBranch);
         if (branch != null) {
-            new CheckoutLocalBranchAction(localBranch, false)
+            new CheckoutLocalBranchAction("", localBranch)
                     .checkout(repository, project, localBranch);
             return;
         }
