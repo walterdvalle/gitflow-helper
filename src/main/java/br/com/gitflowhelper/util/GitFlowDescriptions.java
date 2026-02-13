@@ -4,6 +4,7 @@ public enum GitFlowDescriptions {
 
     INIT("Initializes current repo to use Git Flow (git flow init)."),
     REPO_GROUP("Checkout or delete local or remote branches."),
+    REPO_ITEM("Checkout or delete this branch."),
 
     FEATURE_GROUP("Feature related commands."),
     RELEASE_GROUP("Release related commands."),

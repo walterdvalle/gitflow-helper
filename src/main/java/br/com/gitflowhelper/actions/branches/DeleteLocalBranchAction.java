@@ -1,33 +1,29 @@
 package br.com.gitflowhelper.actions.branches;
 
-import br.com.gitflowhelper.util.ActionParamsService;
 import br.com.gitflowhelper.actions.BaseAction;
 import br.com.gitflowhelper.git.GitException;
 import br.com.gitflowhelper.git.GitExecutor;
-import br.com.gitflowhelper.settings.GitFlowSettingsService;
+import br.com.gitflowhelper.util.ActionParamsService;
 import br.com.gitflowhelper.util.NotificationUtil;
 import com.intellij.icons.AllIcons;
-import com.intellij.openapi.actionSystem.AnActionEvent;
+import com.intellij.openapi.actionSystem.*;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.project.Project;
-import git4idea.commands.GitCommand;
+import com.intellij.openapi.ui.Messages;
 import git4idea.repo.GitRepository;
-import org.jetbrains.annotations.NotNull;
 
-public class CheckoutLocalBranchAction extends BaseAction {
+public class DeleteLocalBranchAction extends BaseAction {
 
-    public CheckoutLocalBranchAction(
+    public DeleteLocalBranchAction(
             String label,
-            String localBranchName
-    ) {
-        //cheating intellij
+            String localBranchName) {
         super(label,
-                "Checkout local branch " + localBranchName,
-                AllIcons.Actions.CheckOut);
+                "Delete local branch " + localBranchName,
+                AllIcons.Vcs.Remove);
     }
 
     @Override
-    public void update(@NotNull AnActionEvent e) {
+    public void update(AnActionEvent e) {
         GitRepository repo = ActionParamsService.getRepo(this);
         String remoteBranchName = ActionParamsService.getName(this);
 
@@ -37,40 +33,50 @@ public class CheckoutLocalBranchAction extends BaseAction {
                 e.getPresentation().setEnabled(false);
             }
         }
-
     }
 
     @Override
-    public void actionPerformed(@NotNull AnActionEvent e) {
+    public void actionPerformed(AnActionEvent e) {
         Project project = getProject();
         GitRepository repository = ActionParamsService.getRepo(this);
         String currentBranchName = repository.getCurrentBranchName();
-        String checkoutBranchName = ActionParamsService.getName(this);
-        boolean isCurrent = currentBranchName.equals(checkoutBranchName);
+        String localBranchName = ActionParamsService.getName(this);
+        boolean isCurrent = currentBranchName.equals(localBranchName);
 
         if (isCurrent) return;
 
+        int confirm = Messages.showYesNoDialog(
+                project,
+                "Delete local branch '" + localBranchName + "'?",
+                "Delete Branch",
+                Messages.getQuestionIcon()
+        );
+
+        if (confirm != Messages.YES) return;
+
         setLoading(true);
         try {
-            checkout(repository, project, checkoutBranchName);
-            NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Local branch "+checkoutBranchName+" checked out successfully");
+            delete(repository, project, localBranchName);
+            NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Local branch "+localBranchName+" deleted successfully");
         } catch (GitException ex) {
             NotificationUtil.showGitFlowErrorNotification(project, "Error", ex.getGitResult().getProcessMessage());
         }
         setLoading(false);
-        //VirtualFileManager.getInstance().asyncRefresh(null);
+
+
     }
 
-    //can be called from outside
-    public void checkout(GitRepository repository, Project project, String checkoutBranchName) {
+    private void delete(GitRepository repository, Project project, String localBranchName) {
         GitExecutor executor = new GitExecutor(project);
         ApplicationManager.getApplication().executeOnPooledThread(() -> {
             executor.execute(
                     repository.getRoot(),
-                    GitCommand.CHECKOUT,
-                    checkoutBranchName
+                    git4idea.commands.GitCommand.BRANCH,
+                    "-d",
+                    localBranchName
             );
-            repository.update();
         });
+        repository.update();
     }
+
 }

@@ -1,6 +1,8 @@
 package br.com.gitflowhelper.popup;
 
 import br.com.gitflowhelper.actions.ActionBuilder;
+import br.com.gitflowhelper.actions.branches.DeleteLocalBranchAction;
+import br.com.gitflowhelper.actions.branches.DeleteRemoteBranchAction;
 import br.com.gitflowhelper.util.ActionParamsService;
 import br.com.gitflowhelper.actions.BaseAction;
 import br.com.gitflowhelper.actions.InitAction;
@@ -151,7 +153,7 @@ public final class GitFlowPopup extends PropertyObserver {
             boolean isCurrent = branch.getName().equals(currentBranch);
             DefaultActionGroup checkoutDeleteGr = new DefaultActionGroup(
                     branch.getName().replaceAll("_", "__"),
-                    GitFlowDescriptions.REPO_GROUP.getValue(),
+                    GitFlowDescriptions.REPO_ITEM.getValue(),
                     (isCurrent ?
                             AllIcons.Gutter.Bookmark :
                             branch.getName().equals(GitFlowSettingsService.getInstance(ActionParamsService.getProject()).getMainBranch()) ?
@@ -162,7 +164,7 @@ public final class GitFlowPopup extends PropertyObserver {
                     "Checkout",
                     branch.getName()
             );
-            var newDeleteAction = new CheckoutLocalBranchAction(
+            var newDeleteAction = new DeleteLocalBranchAction(
                     "Delete",
                     branch.getName()
             );
@@ -204,7 +206,7 @@ public final class GitFlowPopup extends PropertyObserver {
             boolean isCurrent = branch.getName().equals(BaseAction.REMOTE+"/"+currentBranch);
             DefaultActionGroup checkoutDeleteGr = new DefaultActionGroup(
                     branch.getName().replaceAll("_", "__"),
-                    GitFlowDescriptions.REPO_GROUP.getValue(),
+                    GitFlowDescriptions.REPO_ITEM.getValue(),
                     (isCurrent ?
                             AllIcons.Gutter.Bookmark :
                             branch.getName().equals(BaseAction.REMOTE+"/"+GitFlowSettingsService.getInstance(ActionParamsService.getProject()).getMainBranch()) ?
@@ -216,7 +218,7 @@ public final class GitFlowPopup extends PropertyObserver {
                     "Checkout",
                     branch.getName()
             );
-            var newDeleteAction =new CheckoutRemoteBranchAction(
+            var newDeleteAction =new DeleteRemoteBranchAction(
                     "Delete",
                     branch.getName()
             );
