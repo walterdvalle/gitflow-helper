@@ -26,7 +26,7 @@ public class SampleTreeStructure extends AbstractTreeStructure {
         if ("Root".equals(element)) {
             return new Object[]{"Item 1", "Item 2"};
         }
-        return SimpleNode.EMPTY_ARRAY;
+        return new NodeDescriptor[0];
     }
 
     // 🔴 ESTA é a assinatura que o seu SDK exige

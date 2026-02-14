@@ -22,7 +22,6 @@ public class SampleTreeNode extends NodeDescriptor {
         setIcon(AllIcons.Nodes.Folder);
     }
 
-    // 🔴 OBRIGATÓRIO no seu SDK
     @Override
     public @NotNull Object getElement() {
         return element;

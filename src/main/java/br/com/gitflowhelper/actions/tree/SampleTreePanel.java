@@ -26,7 +26,7 @@ public class SampleTreePanel extends JPanel {
         tree.setRootVisible(true);
         tree.setShowsRootHandles(true);
 
-        new TreeSpeedSearch(tree);
+        TreeSpeedSearch.installOn(tree);
 
         add(new JScrollPane(tree), BorderLayout.CENTER);
     }

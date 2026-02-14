@@ -135,7 +135,6 @@ public final class GitFlowPopup extends PropertyObserver {
             public void update(@NotNull AnActionEvent e) {
                 Presentation presentation = e.getPresentation();
                 presentation.setEnabled(false);
-                presentation.setWeight(Presentation.HIGHER_WEIGHT);
             }
         });
         group.addSeparator();
@@ -189,7 +188,6 @@ public final class GitFlowPopup extends PropertyObserver {
             public void update(@NotNull AnActionEvent e) {
                 Presentation presentation = e.getPresentation();
                 presentation.setEnabled(false);
-                presentation.setWeight(Presentation.EVEN_HIGHER_WEIGHT);
             }
         });
         group.addSeparator();
