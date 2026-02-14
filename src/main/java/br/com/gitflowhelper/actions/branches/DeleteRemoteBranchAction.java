@@ -4,6 +4,7 @@ import br.com.gitflowhelper.actions.BaseAction;
 import br.com.gitflowhelper.git.GitException;
 import br.com.gitflowhelper.git.GitExecutor;
 import br.com.gitflowhelper.util.ActionParamsService;
+import br.com.gitflowhelper.util.GitFlowDescriptions;
 import br.com.gitflowhelper.util.NotificationUtil;
 import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.*;
@@ -19,7 +20,7 @@ public class DeleteRemoteBranchAction extends BaseAction {
             String label,
             String remoteBranchName) {
         super(label,
-                "Delete remote branch " + remoteBranchName,
+                GitFlowDescriptions.DELETE_REMOTE.getValue() + remoteBranchName,
                 AllIcons.Vcs.Remove);
     }
 
@@ -56,34 +57,33 @@ public class DeleteRemoteBranchAction extends BaseAction {
         if (confirm != Messages.YES) return;
 
 
-        setLoading(true);
-        try {
-            delete(repository, project, remoteBranchName);
-            NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Remote branch "+remoteBranchName+" deleted successfully");
-        } catch (GitException ex) {
-            NotificationUtil.showGitFlowErrorNotification(project, "Error", ex.getGitResult().getProcessMessage());
-        }
-        setLoading(false);
+        ApplicationManager.getApplication().executeOnPooledThread(() -> {
+            setLoading(true);
+            try {
+                delete(repository, project, remoteBranchName);
+                NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Remote branch "+remoteBranchName+" deleted successfully");
+            } catch (GitException ex) {
+                NotificationUtil.showGitFlowErrorNotification(project, "Error", ex.getGitResult().getProcessMessage());
+            }
+            setLoading(false);
+        });
     }
 
     private void delete(GitRepository repository, Project project, String remoteBranchName) {
         GitExecutor executor = new GitExecutor(project);
         String[] parts = remoteBranchName.split("/", 2);
-
         if (parts.length < 2) return;
 
-        ApplicationManager.getApplication().executeOnPooledThread(() -> {
-            String remote = parts[0];
-            String branch = parts[1];
+        String remote = parts[0];
+        String branch = parts[1];
 
-            executor.execute(
-                    repository.getRoot(),
-                    GitCommand.PUSH,
-                    remote,
-                    "--delete",
-                    branch
-            );
-        });
+        executor.execute(
+                repository.getRoot(),
+                GitCommand.PUSH,
+                remote,
+                "--delete",
+                branch
+        );
         repository.update();
     }
 }

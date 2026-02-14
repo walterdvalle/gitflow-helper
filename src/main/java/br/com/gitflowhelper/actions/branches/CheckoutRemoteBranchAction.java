@@ -5,6 +5,7 @@ import br.com.gitflowhelper.actions.BaseAction;
 import br.com.gitflowhelper.git.GitException;
 import br.com.gitflowhelper.git.GitExecutor;
 import br.com.gitflowhelper.settings.GitFlowSettingsService;
+import br.com.gitflowhelper.util.GitFlowDescriptions;
 import br.com.gitflowhelper.util.NotificationUtil;
 import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -23,7 +24,7 @@ public class CheckoutRemoteBranchAction extends BaseAction {
             String remoteBranchName
     ) {
         super(label,
-                "Checkout remote branch "+remoteBranchName,
+                GitFlowDescriptions.CHECKOUT_REMOTE.getValue() +remoteBranchName,
                 AllIcons.Actions.CheckOut);
     }
 
@@ -37,7 +38,6 @@ public class CheckoutRemoteBranchAction extends BaseAction {
         Project project = getProject();
         GitRepository repository = ActionParamsService.getRepo(this);
         String currentBranchName = repository.getCurrentBranchName();
-        //String checkoutBranchName = getTemplatePresentation().getText().replaceAll("__", "_");
         String checkoutBranchName = ActionParamsService.getName(this);
         boolean isCurrent = currentBranchName.equals(checkoutBranchName);
 

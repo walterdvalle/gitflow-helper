@@ -11,7 +11,7 @@ java {
 }
 
 group 'br.com.gitflowhelper'
-version '1.0.1'
+version '1.0.3'
 
 repositories {
     mavenCentral()
@@ -26,10 +26,7 @@ intellij {
 tasks {
     patchPluginXml {
         sinceBuild = '233'
-        untilBuild = provider { null
-
-
-        }
+        untilBuild = provider { null }
     }
 
     // Set the JVM compatibility versions

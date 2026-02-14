@@ -4,6 +4,7 @@ import br.com.gitflowhelper.actions.BaseAction;
 import br.com.gitflowhelper.git.GitException;
 import br.com.gitflowhelper.git.GitExecutor;
 import br.com.gitflowhelper.util.ActionParamsService;
+import br.com.gitflowhelper.util.GitFlowDescriptions;
 import br.com.gitflowhelper.util.NotificationUtil;
 import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.*;
@@ -18,7 +19,7 @@ public class DeleteLocalBranchAction extends BaseAction {
             String label,
             String localBranchName) {
         super(label,
-                "Delete local branch " + localBranchName,
+                GitFlowDescriptions.DELETE_LOCAL.getValue() + localBranchName,
                 AllIcons.Vcs.Remove);
     }
 
@@ -54,28 +55,28 @@ public class DeleteLocalBranchAction extends BaseAction {
 
         if (confirm != Messages.YES) return;
 
-        setLoading(true);
-        try {
-            delete(repository, project, localBranchName);
-            NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Local branch "+localBranchName+" deleted successfully");
-        } catch (GitException ex) {
-            NotificationUtil.showGitFlowErrorNotification(project, "Error", ex.getGitResult().getProcessMessage());
-        }
-        setLoading(false);
 
+        ApplicationManager.getApplication().executeOnPooledThread(() -> {
+            setLoading(true);
+            try {
+                delete(repository, project, localBranchName);
+                NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Local branch "+localBranchName+" deleted successfully");
+            } catch (GitException ex) {
+                NotificationUtil.showGitFlowErrorNotification(project, "Error", ex.getGitResult().getProcessMessage());
+            }
+            setLoading(false);
+        });
 
     }
 
     private void delete(GitRepository repository, Project project, String localBranchName) {
         GitExecutor executor = new GitExecutor(project);
-        ApplicationManager.getApplication().executeOnPooledThread(() -> {
-            executor.execute(
-                    repository.getRoot(),
-                    git4idea.commands.GitCommand.BRANCH,
-                    "-d",
-                    localBranchName
-            );
-        });
+        executor.execute(
+                repository.getRoot(),
+                git4idea.commands.GitCommand.BRANCH,
+                "-d",
+                localBranchName
+        );
         repository.update();
     }
 

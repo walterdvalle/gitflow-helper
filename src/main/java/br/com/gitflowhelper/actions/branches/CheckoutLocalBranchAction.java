@@ -5,6 +5,7 @@ import br.com.gitflowhelper.actions.BaseAction;
 import br.com.gitflowhelper.git.GitException;
 import br.com.gitflowhelper.git.GitExecutor;
 import br.com.gitflowhelper.settings.GitFlowSettingsService;
+import br.com.gitflowhelper.util.GitFlowDescriptions;
 import br.com.gitflowhelper.util.NotificationUtil;
 import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -22,7 +23,7 @@ public class CheckoutLocalBranchAction extends BaseAction {
     ) {
         //cheating intellij
         super(label,
-                "Checkout local branch " + localBranchName,
+                GitFlowDescriptions.CHECKOUT_LOCAL.getValue() + localBranchName,
                 AllIcons.Actions.CheckOut);
     }
 
@@ -50,27 +51,27 @@ public class CheckoutLocalBranchAction extends BaseAction {
 
         if (isCurrent) return;
 
-        setLoading(true);
-        try {
-            checkout(repository, project, checkoutBranchName);
-            NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Local branch "+checkoutBranchName+" checked out successfully");
-        } catch (GitException ex) {
-            NotificationUtil.showGitFlowErrorNotification(project, "Error", ex.getGitResult().getProcessMessage());
-        }
-        setLoading(false);
+        ApplicationManager.getApplication().executeOnPooledThread(() -> {
+            setLoading(true);
+            try {
+                checkout(repository, project, checkoutBranchName);
+                NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Local branch "+checkoutBranchName+" checked out successfully");
+            } catch (GitException ex) {
+                NotificationUtil.showGitFlowErrorNotification(project, "Error", ex.getGitResult().getProcessMessage());
+            }
+            setLoading(false);
+        });
         //VirtualFileManager.getInstance().asyncRefresh(null);
     }
 
     //can be called from outside
     public void checkout(GitRepository repository, Project project, String checkoutBranchName) {
         GitExecutor executor = new GitExecutor(project);
-        ApplicationManager.getApplication().executeOnPooledThread(() -> {
-            executor.execute(
-                    repository.getRoot(),
-                    GitCommand.CHECKOUT,
-                    checkoutBranchName
-            );
-            repository.update();
-        });
+        executor.execute(
+                repository.getRoot(),
+                GitCommand.CHECKOUT,
+                checkoutBranchName
+        );
+        repository.update();
     }
 }

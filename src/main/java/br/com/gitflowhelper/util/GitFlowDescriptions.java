@@ -3,8 +3,15 @@ package br.com.gitflowhelper.util;
 public enum GitFlowDescriptions {
 
     INIT("Initializes current repo to use Git Flow (git flow init)."),
-    REPO_GROUP("Checkout or delete local or remote branches."),
+    REPO_GROUP("Manage local and remote branches in this project."),
     REPO_ITEM("Checkout or delete this branch."),
+
+    CHECKOUT_LOCAL("Checkout local branch "),
+    CHECKOUT_REMOTE("Checkout remote branch "),
+
+    DELETE_LOCAL("Delete local branch "),
+    DELETE_REMOTE("Delete remote branch "),
+
 
     FEATURE_GROUP("Feature related commands."),
     RELEASE_GROUP("Release related commands."),
