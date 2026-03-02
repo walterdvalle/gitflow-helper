@@ -1,6 +1,7 @@
 package br.com.gitflowhelper.dialog;
 
 import br.com.gitflowhelper.util.PluginInfoUtil;
+import com.intellij.icons.AllIcons;
 import com.intellij.ide.BrowserUtil;
 import com.intellij.openapi.application.ApplicationInfo;
 import com.intellij.openapi.application.ApplicationNamesInfo;
@@ -100,19 +101,19 @@ public class AboutDialog extends DialogWrapper {
 
         // GitHub
         c.gridx = 0;
-        JButton githubBtn = new JButton("Open GitHub \uD83D\uDC19");
+        JButton githubBtn = new JButton("Open GitHub", AllIcons.Vcs.Vendors.Github);
         githubBtn.addActionListener(e -> BrowserUtil.browse(GITHUB_URL));
         links.add(githubBtn, c);
 
         // Marketplace
         c.gridx = 2;
-        JButton marketplaceBtn = new JButton("Open Marketplace \uD83E\uDDE9");
+        JButton marketplaceBtn = new JButton("Open Marketplace", AllIcons.Nodes.Toolbox);
         marketplaceBtn.addActionListener(e -> BrowserUtil.browse(MARKETPLACE_URL));
         links.add(marketplaceBtn, c);
 
         // Buy me a Coffee
         c.gridx = 1;
-        JButton coffeeBtn = new JButton("Buy me a Coffee ☕");
+        JButton coffeeBtn = new JButton("Buy me a Coffee", AllIcons.FileTypes.Java);
         coffeeBtn.addActionListener(e -> BrowserUtil.browse(KOFI_URL));
         links.add(coffeeBtn, c);
 
