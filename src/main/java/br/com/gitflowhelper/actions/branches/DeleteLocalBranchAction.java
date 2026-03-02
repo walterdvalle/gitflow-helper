@@ -3,6 +3,7 @@ package br.com.gitflowhelper.actions.branches;
 import br.com.gitflowhelper.actions.BaseAction;
 import br.com.gitflowhelper.git.GitException;
 import br.com.gitflowhelper.git.GitExecutor;
+import br.com.gitflowhelper.gittree.GitBranchPopupBuilder;
 import br.com.gitflowhelper.util.ActionParamsService;
 import br.com.gitflowhelper.util.GitFlowDescriptions;
 import br.com.gitflowhelper.util.NotificationUtil;
@@ -66,6 +67,8 @@ public class DeleteLocalBranchAction extends BaseAction {
             }
             setLoading(false);
         });
+
+        GitBranchPopupBuilder.getJbPopup().cancel();
 
     }
 

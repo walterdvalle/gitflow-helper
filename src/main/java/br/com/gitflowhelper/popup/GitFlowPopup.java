@@ -1,8 +1,10 @@
 package br.com.gitflowhelper.popup;
 
 import br.com.gitflowhelper.actions.ActionBuilder;
+import br.com.gitflowhelper.actions.ShowAboutAction;
 import br.com.gitflowhelper.actions.branches.DeleteLocalBranchAction;
 import br.com.gitflowhelper.actions.branches.DeleteRemoteBranchAction;
+import br.com.gitflowhelper.gittree.GitBranchPopupBuilder;
 import br.com.gitflowhelper.util.ActionParamsService;
 import br.com.gitflowhelper.actions.BaseAction;
 import br.com.gitflowhelper.actions.InitAction;
@@ -20,10 +22,8 @@ import com.intellij.openapi.actionSystem.DefaultActionGroup;
 import com.intellij.openapi.actionSystem.Presentation;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.project.Project;
-import com.intellij.openapi.ui.popup.JBPopupFactory;
-import com.intellij.openapi.ui.popup.JBPopupListener;
-import com.intellij.openapi.ui.popup.LightweightWindowEvent;
-import com.intellij.openapi.ui.popup.ListPopup;
+import com.intellij.openapi.ui.popup.*;
+import com.intellij.ui.awt.RelativePoint;
 import git4idea.GitLocalBranch;
 import git4idea.GitRemoteBranch;
 import git4idea.repo.GitRepository;
@@ -39,6 +39,7 @@ import java.util.function.Function;
 
 public final class GitFlowPopup extends PropertyObserver {
     private ListPopup listPopup;
+    private Point local = null;
 
     public GitFlowPopup() {
         Project project = ActionParamsService.getProject();
@@ -69,6 +70,7 @@ public final class GitFlowPopup extends PropertyObserver {
                            var oldPlace = listPopup.getLocationOnScreen();
                            var newPlace = new Point((int) oldPlace.getX(), (int) oldPlace.getY()+45);
                            listPopup.setLocation(newPlace);
+                           local = newPlace;
                            JBPopupListener.super.beforeShown(event);
                        }
                    }
@@ -82,6 +84,15 @@ public final class GitFlowPopup extends PropertyObserver {
         //group.add(new OpenTreePopupAction("Tree"));
         group.addSeparator();
 
+        group.add(new BaseAction("Show as tree...", GitFlowDescriptions.SHOW_AS_TREE.getValue(), AllIcons.General.Layout) {
+            @Override
+            public void actionPerformed(@NotNull AnActionEvent e) {
+                JBPopup tree = GitBranchPopupBuilder.createPopup(project);
+                tree.show(new RelativePoint(local));
+            }
+        });
+        group.addSeparator();
+
         GitRepositoryManager repoManager = GitRepositoryManager.getInstance(project);
         for (GitRepository repository : repoManager.getRepositories()) {
             group.add(repositoryBranchGroup(repository, project));
@@ -91,6 +102,8 @@ public final class GitFlowPopup extends PropertyObserver {
         group.add(flowGroup("Feature", AllIcons.Actions.AddFile, GitFlowDescriptions.FEATURE_GROUP.getValue()));
         group.add(flowGroup("Release", AllIcons.Nodes.UpFolder, GitFlowDescriptions.RELEASE_GROUP.getValue()));
         group.add(flowGroup("Hotfix", AllIcons.General.ExternalTools, GitFlowDescriptions.HOTFIX_GROUP.getValue()));
+        group.addSeparator();
+        group.add(new ShowAboutAction("About..."));
         return group;
     }
 
