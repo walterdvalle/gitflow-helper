@@ -28,7 +28,7 @@ The plugin allows developers to work with Git Flow without relying on external t
 - Configuration is stored and reused across all Git Flow operations.
 
 ![Start Screen](src/main/resources/screens/01-start.png)
-![Start Screen](src/main/resources/screens/02-init.png)
+![Init Screen](src/main/resources/screens/02-init.png)
 ---
 
 ### 🌳 Git Flow Branching Model
@@ -50,7 +50,7 @@ The plugin follows the standard Git Flow strategy:
     - Created from `main` for urgent production fixes.
     - Merged back into both `main` and `develop`.
 
-![Start Screen](src/main/resources/screens/gitflow.png)
+![Gitflow](src/main/resources/screens/gitflow.png)
 
 ---
 
@@ -74,7 +74,8 @@ The plugin follows the standard Git Flow strategy:
     - Switches to an existing local branch when available
     - Automatically tracks and checks out remote branches when needed
 
-![Start Screen](src/main/resources/screens/04-checkout.png)
+![Checkout Screen](src/main/resources/screens/04-checkout.png)
+![Tree Screen](src/main/resources/screens/10-tree-view.png)
 ---
 
 ### 📋 Menu-Based Workflow
@@ -83,9 +84,9 @@ The plugin follows the standard Git Flow strategy:
 - Each action corresponds to a specific Git Flow command.
 - Menu items are context-aware and dynamically enabled or disabled to prevent invalid operations.
 
-![Start Screen](src/main/resources/screens/05-new-feature.png)
-![Start Screen](src/main/resources/screens/06-new-feature-2.png)
-![Start Screen](src/main/resources/screens/07-feature-finish.png)
+![New Feature Screen](src/main/resources/screens/05-new-feature.png)
+![New Feature Screen](src/main/resources/screens/06-new-feature-2.png)
+![Feature Screen Screen](src/main/resources/screens/07-feature-finish.png)
 ---
 
 ### 📍 Status Bar Integration
@@ -108,7 +109,7 @@ The plugin follows the standard Git Flow strategy:
     - Debug Git issues more easily
     - Maintain full transparency of operations
 
-![Start Screen](src/main/resources/screens/03-toolwindow.png)
+![Toolwindow Screen](src/main/resources/screens/03-toolwindow.png)
 ---
 
 ### 🛈 Built-in Help Descriptions
@@ -129,7 +130,7 @@ The plugin follows the standard Git Flow strategy:
 - Does not rely on external Git Flow CLI tools.
 - Designed to be transparent, safe, and IDE-native.
 
-![Start Screen](src/main/resources/screens/08-checkout-branch.png)
+![Checkout Screen](src/main/resources/screens/08-checkout-branch.png)
 
 ---
 
