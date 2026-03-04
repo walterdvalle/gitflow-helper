@@ -193,6 +193,21 @@
         </p>
         ]]>
     </description>
+    <change-notes>
+        <![CDATA[
+            <ul>
+                <li><b>1.0.4</b></li>
+                <ul>
+                    <li>Initial release</li>
+                </ul>
+                <li><b>1.0.5</b></li>
+                <ul>
+                    <li>New branches in tree view</li>
+                    <li>Minor improvements</li>
+                </ul>
+            </ul>
+        ]]>
+    </change-notes>
     <depends>com.intellij.modules.platform</depends>
     <depends>Git4Idea</depends>
 
