@@ -47,26 +47,30 @@ public class CheckoutRemoteBranchAction extends BaseAction {
         String localBranch =
                 checkoutBranchName.substring(checkoutBranchName.indexOf('/') + 1);
 
-        GitBranch branch = repository.getBranches().findLocalBranch(localBranch);
-        if (branch != null) {
-            new CheckoutLocalBranchAction("", localBranch)
-                    .checkout(repository, project, localBranch);
-            return;
-        }
 
         ApplicationManager.getApplication().executeOnPooledThread(() -> {
+            boolean needsRemote = true;
             setLoading(true);
             try {
-                executor.execute(
-                        repository.getRoot(),
-                        GitCommand.CHECKOUT,
-                        "-b",
-                        localBranch,
-                        "--track",
-                        checkoutBranchName
-                );
+                GitBranch branch = repository.getBranches().findLocalBranch(localBranch);
+                if (branch != null) {
+                    new CheckoutLocalBranchAction("", localBranch)
+                            .checkout(repository, project, localBranch);
+                    needsRemote = false;
+
+                }
+                if (needsRemote) {
+                    executor.execute(
+                            repository.getRoot(),
+                            GitCommand.CHECKOUT,
+                            "-b",
+                            localBranch,
+                            "--track",
+                            checkoutBranchName
+                    );
+                }
                 repository.update();
-                NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Remote branch "+checkoutBranchName+" checked out successfully");
+                NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Remote branch " + checkoutBranchName + " checked out successfully");
             } catch (GitException ex) {
                 NotificationUtil.showGitFlowErrorNotification(project, "Error", ex.getGitResult().getProcessMessage());
             }

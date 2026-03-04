@@ -261,9 +261,9 @@ public final class GitFlowPopup extends PropertyObserver {
         List<T> result = new ArrayList<>();
 
         // 1) current branch
-        if (currentBranchName != null && byName.containsKey(currentBranchName)) {
-            result.add(byName.remove(currentBranchName));
-        }
+//        if (currentBranchName != null && byName.containsKey(currentBranchName)) {
+//            result.add(byName.remove(currentBranchName));
+//        }
 
         // 2) main
         if (byName.containsKey(service.getMainBranch())) {

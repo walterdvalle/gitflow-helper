@@ -1,9 +1,11 @@
 package br.com.gitflowhelper.gittree;
 
+import br.com.gitflowhelper.actions.BaseAction;
 import br.com.gitflowhelper.actions.branches.CheckoutLocalBranchAction;
 import br.com.gitflowhelper.actions.branches.CheckoutRemoteBranchAction;
 import br.com.gitflowhelper.actions.branches.DeleteLocalBranchAction;
 import br.com.gitflowhelper.actions.branches.DeleteRemoteBranchAction;
+import br.com.gitflowhelper.settings.GitFlowSettingsService;
 import br.com.gitflowhelper.util.ActionParamsService;
 import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.*;
@@ -35,6 +37,7 @@ import javax.swing.tree.TreePath;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionAdapter;
 import java.util.List;
 
 public class GitBranchPopupBuilder {
@@ -54,8 +57,8 @@ public class GitBranchPopupBuilder {
         List<GitRepository> repositories = manager.getRepositories();
 
         for (GitRepository repo : repositories) {
-            groupLocalBranches(repo, localRoot);
-            groupRemoteBranches(repo, remoteRoot);
+            groupLocalBranches(repo, localRoot, project);
+            groupRemoteBranches(repo, remoteRoot, project);
         }
 
         Tree tree = new Tree(new DefaultTreeModel(root));
@@ -113,37 +116,29 @@ public class GitBranchPopupBuilder {
     }
 
     private static void installMouseListener(Tree tree) {
-        //---------- listener for change background on hover (future implementation) --------
-//        tree.putClientProperty("HOVER_ROW", -1);
-//
-//        tree.addMouseMotionListener(new MouseMotionListener() {
-//            @Override
-//            public void mouseMoved(MouseEvent e) {
-//                int row = tree.getRowForLocation(e.getX(), e.getY());
-//                Integer hoverRow = (Integer) tree.getClientProperty("HOVER_ROW");
-//
-//                if (hoverRow == null || row != hoverRow) {
-//                    tree.putClientProperty("HOVER_ROW", row);
-//                    PluginUtils.logOutput(ActionParamsService.getProject(), "HOVER_ROW "+ row);
-//                    tree.repaint();
-//                }
-//            }
-//
-//            @Override
-//            public void mouseDragged(MouseEvent e) {
-//                // não precisa implementar nada
-//            }
-//        });
-//
-//        tree.addMouseListener(new MouseAdapter() {
-//            @Override
-//            public void mouseExited(MouseEvent e) {
-//                tree.putClientProperty("HOVER_ROW", -1);
-//                tree.repaint();
-//            }
-//        });
+        tree.addMouseMotionListener(new MouseMotionAdapter() {
+            @Override
+            public void mouseMoved(MouseEvent e) {
 
-        //----------------------------------------------
+                int row = tree.getClosestRowForLocation(0, e.getY());
+
+                if (row != -1) {
+                    TreePath path = tree.getPathForRow(row);
+                    DefaultMutableTreeNode node =
+                            (DefaultMutableTreeNode) path.getLastPathComponent();
+
+                    if (node.isLeaf()) {
+                        tree.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+                    } else {
+                        tree.setCursor(Cursor.getDefaultCursor());
+                    }
+
+                } else {
+                    tree.setCursor(Cursor.getDefaultCursor());
+                }
+            }
+        });
+
         tree.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseReleased(MouseEvent e) {
@@ -151,7 +146,7 @@ public class GitBranchPopupBuilder {
                     return;
                 }
 
-                TreePath path = tree.getPathForLocation(e.getX(), e.getY());
+                TreePath path = getPathByY(e.getY());
                 if (path == null) {
                     return;
                 }
@@ -160,25 +155,29 @@ public class GitBranchPopupBuilder {
                         (DefaultMutableTreeNode) path.getLastPathComponent();
 
                 if (node.isLeaf()) {
-                    showPopup(e);
+                    showPopup(node, e);
                 }
             }
 
-            private void showPopup(MouseEvent e) {
-                TreePath path = tree.getPathForLocation(e.getX(), e.getY());
-                if (path == null) return;
+            private TreePath getPathByY(int y) {
+                int row = tree.getClosestRowForLocation(0, y);
+                if (row < 0) return null;
 
-                tree.setSelectionPath(path);
+                Rectangle r = tree.getRowBounds(row);
+                if (r == null) return null;
 
-                DefaultMutableTreeNode node =
-                        (DefaultMutableTreeNode) path.getLastPathComponent();
+                // VERY IMPORTANT: prevents “sticking” to the last item when clicking outside the rows
+                if (y < r.y || y >= r.y + r.height) return null;
 
+                return tree.getPathForRow(row);
+            }
+
+            private void showPopup(DefaultMutableTreeNode node, MouseEvent e) {
                 BranchNode branchNode = (BranchNode) node.getUserObject();
                 DefaultActionGroup group = branchNode.getGroup();
                 ActionPopupMenu popupMenu = ActionManager.getInstance()
                                 .createActionPopupMenu("MyTreePopup", group);
-
-                popupMenu.getComponent().show(tree, tree.getX()+ tree.getWidth(), e.getY());
+                popupMenu.getComponent().show(tree, tree.getX()+ tree.getWidth(), e.getY()-5);
             }
         });
     }
@@ -233,23 +232,6 @@ public class GitBranchPopupBuilder {
                     panel.add(chevronWrapper, BorderLayout.EAST);
                 }
 
-                //---------- change background on hover (future implementation) --------
-                // Integer hoverRow = (Integer) tree.getClientProperty("HOVER_ROW");
-//                boolean isHover = hoverRow != null && row == hoverRow;
-//                if (selected) {
-//                    PluginUtils.logOutput(ActionParamsService.getProject(), "selected HOVER_ROW "+ hoverRow);
-//                    panel.setBackground(UIUtil.getTreeSelectionBackground(true));
-//                    panel.setOpaque(true);
-//                } else if (isHover) {
-//                    PluginUtils.logOutput(ActionParamsService.getProject(), "isHover HOVER_ROW "+ hoverRow);
-//                    panel.setEnabled(false);
-//                    panel.setBackground(UIUtil.getTreeSelectionBackground());
-//                    panel.setOpaque(true);
-//                } else {
-//                    PluginUtils.logOutput(ActionParamsService.getProject(), "Comum HOVER_ROW "+ hoverRow);
-//                    panel.setOpaque(false);
-//                }
-
                 return panel;
             }
         });
@@ -264,13 +246,14 @@ public class GitBranchPopupBuilder {
         }, true);
     }
 
-    private static void groupLocalBranches(GitRepository repo, DefaultMutableTreeNode parent) {
+    private static void groupLocalBranches(GitRepository repo, DefaultMutableTreeNode parent, Project project) {
         DefaultMutableTreeNode feature = new DefaultMutableTreeNode("feature");
         DefaultMutableTreeNode release = new DefaultMutableTreeNode("release");
         DefaultMutableTreeNode hotfix = new DefaultMutableTreeNode("hotfix");
 
         for (GitLocalBranch branch : repo.getBranches().getLocalBranches()) {
-            addBranchNode(branch.getName(), parent, feature, release, hotfix, false, repo);
+            boolean current = branch.getName().endsWith(repo.getCurrentBranchName());
+            addBranchNode(branch.getName(), parent, feature, release, hotfix, false, repo, project, current);
         }
 
         attachIfNotEmpty(parent, feature);
@@ -278,13 +261,14 @@ public class GitBranchPopupBuilder {
         attachIfNotEmpty(parent, hotfix);
     }
 
-    private static void groupRemoteBranches(GitRepository repo, DefaultMutableTreeNode parent) {
+    private static void groupRemoteBranches(GitRepository repo, DefaultMutableTreeNode parent, Project project) {
         DefaultMutableTreeNode feature = new DefaultMutableTreeNode("feature");
         DefaultMutableTreeNode release = new DefaultMutableTreeNode("release");
         DefaultMutableTreeNode hotfix = new DefaultMutableTreeNode("hotfix");
 
         for (GitRemoteBranch branch : repo.getBranches().getRemoteBranches()) {
-            addBranchNode(branch.getName(), parent, feature, release, hotfix, true, repo);
+            boolean current = branch.getName().endsWith(repo.getCurrentBranchName());
+            addBranchNode(branch.getName(), parent, feature, release, hotfix, true, repo, project, current);
         }
 
         attachIfNotEmpty(parent, feature);
@@ -298,12 +282,22 @@ public class GitBranchPopupBuilder {
                                       DefaultMutableTreeNode release,
                                       DefaultMutableTreeNode hotfix,
                                       Boolean remote,
-                                      GitRepository repo) {
+                                      GitRepository repo,
+                                      Project project,
+                                      Boolean current) {
+
         DefaultActionGroup group = new DefaultActionGroup();
+        Icon icon = null;
+        icon = (current ?
+                AllIcons.Gutter.Bookmark :
+                name.endsWith(GitFlowSettingsService.getInstance(ActionParamsService.getProject()).getMainBranch()) ?
+                        AllIcons.Nodes.Favorite :
+                        AllIcons.Vcs.BranchNode);
+
         var node = new DefaultMutableTreeNode(
                 new BranchNode(
                         name,
-                        AllIcons.Vcs.Branch,
+                        icon,
                         false,
                         remote,
                         group
@@ -319,6 +313,15 @@ public class GitBranchPopupBuilder {
             ActionParamsService.addName(newDeleteAction, branchNode.getName());
             group.add(newCheckoutAction);
             group.add(newDeleteAction);
+            if (name.startsWith(BaseAction.REMOTE+"/"+GitFlowSettingsService.getInstance(project).getFeaturePrefix())) {
+                feature.add(node);
+            } else if (name.startsWith(BaseAction.REMOTE+"/"+GitFlowSettingsService.getInstance(project).getReleasePrefix())) {
+                release.add(node);
+            } else if (name.startsWith(BaseAction.REMOTE+"/"+GitFlowSettingsService.getInstance(project).getHotfixPrefix())) {
+                hotfix.add(node);
+            } else {
+                parent.add(node);
+            }
         } else {
             var newCheckoutAction = new CheckoutLocalBranchAction("Checkout", branchNode.getName());
             var newDeleteAction = new DeleteLocalBranchAction("Delete", branchNode.getName());
@@ -328,17 +331,17 @@ public class GitBranchPopupBuilder {
             ActionParamsService.addName(newDeleteAction, branchNode.getName());
             group.add(newCheckoutAction);
             group.add(newDeleteAction);
+            if (name.startsWith(GitFlowSettingsService.getInstance(project).getFeaturePrefix())) {
+                feature.add(node);
+            } else if (name.startsWith(GitFlowSettingsService.getInstance(project).getReleasePrefix())) {
+                release.add(node);
+            } else if (name.startsWith(GitFlowSettingsService.getInstance(project).getHotfixPrefix())) {
+                hotfix.add(node);
+            } else {
+                parent.add(node);
+            }
         }
 
-        if (name.startsWith("feature/")) {
-            feature.add(node);
-        } else if (name.startsWith("release/")) {
-            release.add(node);
-        } else if (name.startsWith("hotfix/")) {
-            hotfix.add(node);
-        } else {
-            parent.add(node);
-        }
     }
 
     private static void attachIfNotEmpty(DefaultMutableTreeNode parent, DefaultMutableTreeNode node) {
