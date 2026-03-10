@@ -15,7 +15,7 @@ public final class ActionParamsService implements PropertyChangeListener {
     private static final ActionParamsService INSTANCE = new ActionParamsService();
     private static Project project;
     private static String branchName;
-    private static Map<AnAction, GitRepository> repos = new IdentityHashMap<AnAction, GitRepository>();
+    private static Map<AnAction, GitRepository> repos;
     private static Map<AnAction, String> names = new IdentityHashMap<AnAction, String>();
 
     private ActionParamsService() { }
@@ -43,9 +43,15 @@ public final class ActionParamsService implements PropertyChangeListener {
     }
 
     public static void addRepo(AnAction action, GitRepository repo) {
+        if (repos == null) {
+            repos = new IdentityHashMap<AnAction, GitRepository>();
+        }
         repos.put(action, repo);
     }
     public static GitRepository getRepo(AnAction action) {
+        if (repos == null) {
+            repos = new IdentityHashMap<AnAction, GitRepository>();
+        }
         return repos.get(action);
     }
 
@@ -57,11 +63,15 @@ public final class ActionParamsService implements PropertyChangeListener {
     }
 
     public static void clearRepos() {
-        repos.clear();
-        repos = null;
+        if (repos != null) {
+            repos.clear();
+            repos = null;
+        }
     }
     public static void clearNames() {
-        names.clear();
-        names = null;
+        if (names != null) {
+            names.clear();
+            names = null;
+        }
     }
 }

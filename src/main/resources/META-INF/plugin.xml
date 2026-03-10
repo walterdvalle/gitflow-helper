@@ -205,6 +205,10 @@
                     <li>New branches in tree view</li>
                     <li>Minor improvements</li>
                 </ul>
+                <li><b>1.0.6</b></li>
+                <ul>
+                    <li>NPE reading config params in a non initialized project.</li>
+                </ul>
             </ul>
         ]]>
     </change-notes>

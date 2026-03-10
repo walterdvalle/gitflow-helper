@@ -288,9 +288,18 @@ public class GitBranchPopupBuilder {
 
         DefaultActionGroup group = new DefaultActionGroup();
         Icon icon = null;
+        String mainBranch = GitFlowSettingsService.getInstance(project).getMainBranch() != null  ?
+                GitFlowSettingsService.getInstance(project).getMainBranch() : "";
+        String featurePrefix = GitFlowSettingsService.getInstance(project).getFeaturePrefix() != null  ?
+                GitFlowSettingsService.getInstance(project).getFeaturePrefix() : "";
+        String releasePrefix = GitFlowSettingsService.getInstance(project).getReleasePrefix() != null  ?
+                GitFlowSettingsService.getInstance(project).getReleasePrefix() : "";
+        String hotfixPrefix = GitFlowSettingsService.getInstance(project).getHotfixPrefix() != null  ?
+                GitFlowSettingsService.getInstance(project).getHotfixPrefix() : "";
+        
         icon = (current ?
                 AllIcons.Gutter.Bookmark :
-                name.endsWith(GitFlowSettingsService.getInstance(ActionParamsService.getProject()).getMainBranch()) ?
+                name.endsWith(mainBranch) ?
                         AllIcons.Nodes.Favorite :
                         AllIcons.Vcs.BranchNode);
 
@@ -313,11 +322,11 @@ public class GitBranchPopupBuilder {
             ActionParamsService.addName(newDeleteAction, branchNode.getName());
             group.add(newCheckoutAction);
             group.add(newDeleteAction);
-            if (name.startsWith(BaseAction.REMOTE+"/"+GitFlowSettingsService.getInstance(project).getFeaturePrefix())) {
+            if (name.startsWith(BaseAction.REMOTE+"/"+featurePrefix)) {
                 feature.add(node);
-            } else if (name.startsWith(BaseAction.REMOTE+"/"+GitFlowSettingsService.getInstance(project).getReleasePrefix())) {
+            } else if (name.startsWith(BaseAction.REMOTE+"/"+releasePrefix)) {
                 release.add(node);
-            } else if (name.startsWith(BaseAction.REMOTE+"/"+GitFlowSettingsService.getInstance(project).getHotfixPrefix())) {
+            } else if (name.startsWith(BaseAction.REMOTE+"/"+hotfixPrefix)) {
                 hotfix.add(node);
             } else {
                 parent.add(node);
@@ -331,11 +340,11 @@ public class GitBranchPopupBuilder {
             ActionParamsService.addName(newDeleteAction, branchNode.getName());
             group.add(newCheckoutAction);
             group.add(newDeleteAction);
-            if (name.startsWith(GitFlowSettingsService.getInstance(project).getFeaturePrefix())) {
+            if (name.startsWith(featurePrefix)) {
                 feature.add(node);
-            } else if (name.startsWith(GitFlowSettingsService.getInstance(project).getReleasePrefix())) {
+            } else if (name.startsWith(releasePrefix)) {
                 release.add(node);
-            } else if (name.startsWith(GitFlowSettingsService.getInstance(project).getHotfixPrefix())) {
+            } else if (name.startsWith(hotfixPrefix)) {
                 hotfix.add(node);
             } else {
                 parent.add(node);
