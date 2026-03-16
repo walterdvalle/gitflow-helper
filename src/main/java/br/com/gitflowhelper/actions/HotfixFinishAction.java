@@ -37,7 +37,7 @@ public class HotfixFinishAction extends BaseAction {
                 hotfixFinish(project,true, true, true);
                 NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Hotfix finished and tag pushed successfully");
             } catch (GitException ex) {
-                NotificationUtil.showGitFlowErrorNotification(project, "Error", ex.getGitResult().getProcessMessage());
+                NotificationUtil.showGitFlowErrorNotification(project, "Error", ex.getDetailMessage());
             }
             setLoading(false);
         });

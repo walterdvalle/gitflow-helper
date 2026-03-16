@@ -36,7 +36,7 @@ public class ReleaseFinishAction extends BaseAction {
                 releaseFinish(project, true, true, true);
                 NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Released finished and tag pushed successfully");
             } catch (GitException ex) {
-                NotificationUtil.showGitFlowErrorNotification(project, "Error", ex.getGitResult().getProcessMessage());
+                NotificationUtil.showGitFlowErrorNotification(project, "Error", ex.getDetailMessage());
             }
             setLoading(false);
         });

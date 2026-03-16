@@ -38,7 +38,7 @@ public class ReleasePublishAction extends BaseAction {
                 releasePublish(project);
                 NotificationUtil.showGitFlowSuccessNotification(project, "Success", "New release published successfully");
             } catch (GitException ex) {
-                NotificationUtil.showGitFlowErrorNotification(project, "Error", ex.getGitResult().getProcessMessage());
+                NotificationUtil.showGitFlowErrorNotification(project, "Error", ex.getDetailMessage());
             }
             setLoading(false);
         });

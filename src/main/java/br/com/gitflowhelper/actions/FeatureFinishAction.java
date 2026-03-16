@@ -72,7 +72,7 @@ public class FeatureFinishAction extends BaseAction {
                             branchName);
                         NotificationUtil.showGitFlowSuccessNotification(project, "Success",  postAction[0]);
                     } catch (GitException ex) {
-                        NotificationUtil.showGitFlowErrorNotification(project, "Error", "Error message: "+ex.getGitResult().getProcessMessage());
+                        NotificationUtil.showGitFlowErrorNotification(project, "Error", "Error message: "+ex.getDetailMessage());
                     }
                     setLoading(false);
             });

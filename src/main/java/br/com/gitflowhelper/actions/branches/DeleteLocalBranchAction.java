@@ -63,7 +63,7 @@ public class DeleteLocalBranchAction extends BaseAction {
                 delete(repository, project, localBranchName);
                 NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Local branch "+localBranchName+" deleted successfully");
             } catch (GitException ex) {
-                NotificationUtil.showGitFlowErrorNotification(project, "Error", ex.getGitResult().getProcessMessage());
+                NotificationUtil.showGitFlowErrorNotification(project, "Error", ex.getDetailMessage());
             }
             setLoading(false);
         });

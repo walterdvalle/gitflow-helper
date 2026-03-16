@@ -17,4 +17,15 @@ public class GitException extends RuntimeException {
     public GitResult getGitResult() {
         return gitResult;
     }
+
+    public String getDetailMessage() {
+        if (getGitResult() != null) {
+            return getGitResult().getProcessMessage();
+        } else if (getGitResult() == null) {
+            return getMessage();
+        }
+        return null;
+    }
+
+
 }

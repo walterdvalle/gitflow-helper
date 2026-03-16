@@ -53,7 +53,7 @@ public class InitAction extends BaseAction {
                 init(true, project);
                 NotificationUtil.showGitFlowSuccessNotification(project, "Success", "Git Flow Initialization Successful");
             } catch (GitException ex) {
-                NotificationUtil.showGitFlowErrorNotification(project, "Error", ex.getGitResult().getProcessMessage());
+                NotificationUtil.showGitFlowErrorNotification(project, "Error", ex.getDetailMessage());
             }
             setLoading(false);
         });

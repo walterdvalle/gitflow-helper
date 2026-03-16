@@ -35,7 +35,7 @@ public class FeaturePublishAction extends BaseAction {
                 featurePublish(project);
                 NotificationUtil.showGitFlowSuccessNotification(project, "Success", "New feature published successfully");
             } catch (GitException ex) {
-                NotificationUtil.showGitFlowErrorNotification(project, "Error", ex.getGitResult().getProcessMessage());
+                NotificationUtil.showGitFlowErrorNotification(project, "Error", ex.getDetailMessage());
             }
             setLoading(false);
         });
