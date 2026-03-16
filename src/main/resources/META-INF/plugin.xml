@@ -209,6 +209,10 @@
                 <ul>
                     <li>NPE reading config params in a non initialized project.</li>
                 </ul>
+                <li><b>1.0.7</b></li>
+                <ul>
+                    <li>NPE processing exception messages.</li>
+                </ul>
             </ul>
         ]]>
     </change-notes>
